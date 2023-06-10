@@ -9,9 +9,25 @@
 
 
 # :hammer: Funcionalidades do projeto
-- 
--
--
+### O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
+
+- Adicionar Tarefas: Os usuários podem adicionar novas tarefas ao quadro do Kanban, fornecendo informações como título, descrição e detalhes adicionais.
+
+- Definir Prioridades: Os usuários podem atribuir prioridades às tarefas, indicando sua importância ou urgência.
+
+- Agendar Datas: Os usuários podem definir datas de vencimento ou prazos para as tarefas, ajudando a acompanhar o progresso e cumprir os prazos.
+
+- Quadro Kanban: O aplicativo exibirá as tarefas em um quadro Kanban, com colunas como "A fazer", "Em progresso" e "Concluído", permitindo que os usuários visualizem e gerenciem facilmente o status de cada tarefa.
+
+- Movimentação de Tarefas: Os usuários poderão mover as tarefas entre as colunas do quadro Kanban, refletindo seu progresso e estágio atual.
+
+- Classificação de Tarefas: O aplicativo poderá oferecer recursos de classificação de tarefas, permitindo que os usuários as organizem por prioridade, data de vencimento ou outros critérios relevantes.
+
+- Visualização Geral: O aplicativo poderá oferecer uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as tarefas em um único local, independentemente de sua localização no quadro Kanban.
+
+- Relatórios e Estatísticas: O sistema poderá gerar relatórios ou fornecer estatísticas sobre o desempenho da equipe, como o número de tarefas concluídas, média de tempo de conclusão, etc.
+
+Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.
 
 
 
