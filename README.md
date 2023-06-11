@@ -95,27 +95,49 @@ O Merge Sort é um algoritmo de ordenação eficiente e baseado no princípio "d
 A busca binária é um algoritmo eficiente para encontrar um elemento em uma lista ordenada. Ele divide repetidamente a lista ao meio e compara o elemento buscado com o elemento do meio. Se forem iguais, a busca é concluída. Caso contrário, a busca continua na metade superior ou inferior da lista, dependendo da comparação. Esse processo é repetido até encontrar o elemento ou reduzir a lista a zero. A busca binária tem uma complexidade de tempo de **O(log n)**, tornando-a mais rápida que a busca linear para listas grandes. No entanto, requer uma lista ordenada para funcionar corretamente.
 
 # :wrench: Como compilar?
-O projeto utiliza um Makefile para automatizar o processo de compilação e criação do executável. O Makefile define o compilador, as opções de compilação e os diretórios para os arquivos objeto e executável. 
+O projeto utiliza um Makefile para automatizar o processo de compilação e criação do executável. O Makefile define o compilador, as opções de compilação e os diretórios para os arquivos objeto e executável. Siga as etapas abaixo para compilar o projeto usando o Makefile fornecido:
 
-### Para compilar o projeto, siga os passos abaixo:
+## Pré-requisitos
+Certifique-se de ter o compilador g++ instalado em seu sistema antes de prosseguir.
 
-1. Certifique-se de que você possui o compilador GCC instalado em seu sistema.
-2. Abra o terminal e navegue até o diretório raiz do projeto.
-3. Execute o seguinte comando para compilar o programa: <br>
-**`make`** <br> 
-Isso irá utilizar o Makefile fornecido para compilar o código fonte e gerar o arquivo executável na pasta "/bin" e os arquivos objetos (.o) na pasta "/build".<br>
+### Passo 1: Obtenha o código-fonte
+Clone o repositório do projeto em seu ambiente local ou faça o download dos arquivos fonte em um diretório de sua escolha.
 
-- Após a conclusão da compilação, você pode executar o programa usando o seguinte comando: <br>
+### Passo 2: Navegue para o diretório do projeto
+Abra um terminal e navegue até o diretório raiz do projeto usando o comando cd:<br>
+**`cd caminho/para/o/diretorio/do/projeto`**<br>
+
+### Passo 3: Compile o projeto
+Execute o seguinte comando para compilar o projeto:<br>
+**`make all`**<br>
+Isso irá compilar o código-fonte, criar os arquivos objeto (.o) na pasta "/build", e gerar o executável na pasta "/bin.
+
+### Passo 4: Execute o programa
+Após a compilação bem-sucedida, você pode executar o programa usando o seguinte comando:<br>
 **`make run`** <br>
-Isso irá executar o programa compilado.<br>
-
-- Para limpar os arquivos gerados durante a compilação, você pode executar o seguinte comando: <br>
-**`make clean`** <br>
-Isso irá remover os arquivos objeto e o executável do projeto.
+Isso executará o programa com base no executável gerado.
 
 
+## Comandos Disponíveis
+`make`: <br>
+Cria os diretórios necessários se ainda não existirem.
 
+`make all`: <br>
+Compila o projeto, criando os arquivos objeto e o executável. Os diretórios necessários serão criados automaticamente, se ainda não existirem.
 
+`make run`: <br>
+ Executa o programa após a compilação. Certifique-se de ter compilado o projeto antes de executar este comando. 
+
+`make clean`: <br>
+ Remove todos os arquivos gerados durante a compilação, incluindo arquivos objeto, arquivo executável e os diretórios.
+
+`make clean_files`:<br>
+Remove apenas os arquivos gerados durante a compilação, mantendo os diretórios de build e bin. 
+
+## Observações
+- Certifique-se de que o arquivo Makefile esteja no diretório raiz do projeto antes de executar os comandos;
+- Após a compilação bem-sucedida, o arquivo executável kanban será criado no diretório bin;
+- Ao executar o programa com o comando make run, certifique-se de estar no diretório raiz do projeto.
 
 
 # :busts_in_silhouette: Autores

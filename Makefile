@@ -7,6 +7,9 @@ CXXFLAGS = -fsanitize=address -std=c++11 -Wall -O0 -g -W -ansi -pedantic
 # Nome do arquivo de saída
 TARGET = kanban
 
+# Diretório para o código fonte
+SRC_DIR = src
+
 # Diretório para os arquivos objeto
 BUILD_DIR = build
 
@@ -14,16 +17,25 @@ BUILD_DIR = build
 BIN_DIR = bin
 
 # Arquivos de origem
-SOURCES = src/main.cpp src/functions.cpp src/classes.cpp
+SOURCES =  $(wildcard $(SRC_DIR)/*$(SRC_EXT))
 
 # Gera os nomes dos arquivos objeto com base nos arquivos de origem
 OBJECTS = $(patsubst src/%.cpp,$(BUILD_DIR)/%.o,$(SOURCES))
+
+create_directories:
+	mkdir -p $(BUILD_DIR) $(BIN_DIR)
+
 
 # Caminho para o arquivo executável
 EXECUTABLE = $(BIN_DIR)/$(TARGET)
 
 # Regra principal para a compilação
-all: $(EXECUTABLE)
+all: create_directories $(EXECUTABLE)
+
+# Regra para compilar os objetos
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | create_directories
+	@echo "Compilando o arquivo objeto $@..."
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Regra para gerar o arquivo executável
 $(EXECUTABLE): $(OBJECTS)
@@ -47,7 +59,12 @@ run:
 	@echo "Executando o programa..."
 	./$(EXECUTABLE)
 
-# Limpa os arquivos objeto e o executável
+# Limpa os arquivos objeto, o executável e os diretórios
 clean:
-	@echo "Removendo arquivos.."
+	@echo "Removendo arquivos e diretórios.."
+	rm -rf $(BUILD_DIR) $(BIN_DIR)
+
+# Limpa somente os arquivos
+clean_files:
+	@echo "Removendo arquivos..."
 	rm -f $(OBJECTS) $(EXECUTABLE)
