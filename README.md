@@ -8,11 +8,11 @@ Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Desenvolva um ap
 </p>
 
 ## Índice
-- [Funcionalidades do projeto](#funcionalidades-do-projeto)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
-- [Como compilar](#como-compilar)
-- [Autores](#autores)
+- [Funcionalidades do projeto](#-funcionalidades-do-projeto)
+- [Estrutura do projeto](#-estrutura-do-projeto)
+- [Técnicas e tecnologias utilizadas](#-técnicas-e-tecnologias-utilizadas)
+- [Como compilar](#-como-compilar)
+- [Autores](#-autores)
 
 
 # 🔨 Funcionalidades do projeto
@@ -37,7 +37,7 @@ O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban poss
 Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.
 
 
-# 📁  Estrutura do projeto
+# 📁 Estrutura do projeto
 - /bin:
     Arquivos binários do projeto;
 
