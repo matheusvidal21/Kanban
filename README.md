@@ -60,7 +60,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
     Comandos de compilação;
 
 - README.md:
-    Todas as intruções sobre o projeto.
+    Documentação do projeto.
 
 
 # :computer: Técnicas e tecnologias utilizadas
@@ -74,8 +74,22 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
 ## Estruturas de TADs (Tipos Abstratos de Dados)
 Este assunto é implementado no arquivo [estruturas_tads.hpp](include/estruturas_tads.hpp). Consulte esse arquivo para obter mais detalhes e implementação relacionada.
 
-- **Lista encadeada:** <br>
-- 
+- **🔗 Lista Duplamente Encadeada:**  <br>
+Uma lista duplamente encadeada é uma estrutura de dados em que os nós são conectados em duas direções, por meio de ponteiros para o próximo nó e para o nó anterior. Isso significa que cada nó possui referências tanto para o nó anterior quanto para o próximo nó na sequência. Essa característica permite a navegação eficiente tanto para frente quanto para trás na lista. A lista duplamente encadeada oferece vantagens, como a capacidade de inserir e remover elementos de forma eficiente em qualquer posição, além de possibilitar a iteração reversa pelos elementos da lista. Os métodos da Lista Duplamente Encadeada são: <br>
+    1. `pushFront()`: Adiciona um novo elemento no início da lista; <br>
+    2. `pushBack()`: Adiciona um novo elemento no final da lista; <br>
+    3. `removeFront()`: Remove o primeiro elemento; <br>
+    4. `removeBack()`: Remove o último elemento da lista; <br>
+    5. `isEmpity()`: Verifica se a lista está vazia; <br>
+    6. `print()`: Imprime os elementos da lista; <br>
+    7. `getSize()`: Retorna o tamanho da lista; <br>
+    8. `removeValue()`: Remove um valor específico; <br>
+
+- **📚 Pilha**: <br> 
+Uma pilha é uma estrutura de dados que segue a abordagem "último a entrar, primeiro a sair" (LIFO - Last-In-First-Out). Os elementos são inseridos e removidos apenas em uma extremidade, chamada de topo da pilha. As operações básicas em uma pilha são `"push"` para adicionar um elemento no topo, `"pop"` para remover o elemento do topo, e `"peek"` para visualizar o elemento no topo sem removê-lo.
+
+- **🚦 Fila:** <br>
+Uma fila é uma estrutura de dados linear que segue a abordagem "primeiro a entrar, primeiro a sair" (FIFO - First-In-First-Out). Os elementos são inseridos no final da fila e removidos do início da fila. As operações básicas em uma fila são `"enqueue"` para adicionar um elemento no final da fila e `"dequeue"` para remover o elemento do início da fila, e `"peek"` para visualizar o elemento na frente sem removê-lo. A fila segue um comportamento semelhante a uma fila real, onde o primeiro elemento a entrar é o primeiro a ser atendido. 
 
 ## Templates
 Este assunto é implementado no arquivo [templates.hpp](include/templates.hpp). Consulte esse arquivo para obter mais detalhes e implementação relacionada.
@@ -84,7 +98,7 @@ Este assunto é implementado no arquivo [templates.hpp](include/templates.hpp). 
 - **Selection Sort:** <br>
 O Selection Sort é um algoritmo de ordenação simples e intuitivo. Ele funciona selecionando repetidamente o elemento de menor valor da lista não ordenada e colocando-o no início da lista ordenada. Esse processo é repetido até que toda a lista esteja ordenada. O Selection Sort é eficiente para listas de tamanho pequeno a moderado, mas possui uma complexidade de tempo quadrática **O(n²)**, o que o torna menos eficiente em grandes conjuntos de dados. No entanto, sua simplicidade e facilidade de implementação o tornam uma opção viável em certos cenários.
 
-- **Bubble Sort:** <br>
+- **Bubble Sort:** <br> 
 O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista a ser ordenada, comparando pares de elementos adjacentes e realizando trocas se estiverem fora de ordem. Esse processo de comparação e troca é repetido até que a lista esteja completamente ordenada. O Bubble Sort possui uma complexidade de tempo de execução quadrática, ou seja, **O(n²)**, onde "n" é o tamanho da lista. Isso significa que o tempo de execução do algoritmo aumenta rapidamente à medida que o tamanho da lista aumenta. 
 
 - **Merge Sort:** <br>

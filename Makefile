@@ -59,12 +59,16 @@ run:
 	@echo "Executando o programa..."
 	./$(EXECUTABLE)
 
+.PHONY: clean
 # Limpa os arquivos objeto, o executável e os diretórios
 clean:
 	@echo "Removendo arquivos e diretórios.."
 	rm -rf $(BUILD_DIR) $(BIN_DIR)
+	clear
+
 
 # Limpa somente os arquivos
 clean_files:
 	@echo "Removendo arquivos..."
 	rm -f $(OBJECTS) $(EXECUTABLE)
+	clear
