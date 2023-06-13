@@ -8,11 +8,11 @@ Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Desenvolva um ap
 </p>
 
 ## Índice
-- [Funcionalidades do projeto](#-funcionalidades-do-projeto)
-- [Estrutura do projeto](#-estrutura-do-projeto)
-- [Técnicas e tecnologias utilizadas](#-técnicas-e-tecnologias-utilizadas)
-- [Como compilar](#-como-compilar)
-- [Autores](#-autores)
+- 🔨 [Funcionalidades do projeto](#-funcionalidades-do-projeto)
+- 📁 [Estrutura do projeto](#-estrutura-do-projeto)
+- 💻 [Técnicas e tecnologias utilizadas](#-técnicas-e-tecnologias-utilizadas)
+- 🔧 [Como compilar](#-como-compilar)
+- 👥 [Autores](#-autores)
 
 
 # 🔨 Funcionalidades do projeto
