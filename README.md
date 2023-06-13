@@ -15,7 +15,7 @@ Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Desenvolva um ap
 - [Autores](#autores)
 
 
-# 🔨 :hammer: Funcionalidades do projeto
+# 🔨 Funcionalidades do projeto
 O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
 
 - Adicionar Tarefas: Os usuários podem adicionar novas tarefas ao quadro do Kanban, fornecendo informações como título, descrição e detalhes adicionais.
@@ -37,8 +37,7 @@ O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban poss
 Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.
 
 
-
-# 📁  :file_folder: Estrutura do projeto
+# 📁  Estrutura do projeto
 - /bin:
     Arquivos binários do projeto;
 
@@ -70,7 +69,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
     Documentação do projeto.
 
 
-# 💻 :computer: Técnicas e tecnologias utilizadas
+# 💻 Técnicas e tecnologias utilizadas
 <img src="imgs/cpplogo.png" alt="Logo C++"  height="80"/><br>
 - C++;
 - Programação Orientada a Objetos; <br>
@@ -115,7 +114,7 @@ O Merge Sort é um algoritmo de ordenação eficiente e baseado no princípio "d
 ### 2. Algoritmo de busca binária
 A busca binária é um algoritmo eficiente para encontrar um elemento em uma lista ordenada. Ele divide repetidamente a lista ao meio e compara o elemento buscado com o elemento do meio. Se forem iguais, a busca é concluída. Caso contrário, a busca continua na metade superior ou inferior da lista, dependendo da comparação. Esse processo é repetido até encontrar o elemento ou reduzir a lista a zero. A busca binária tem uma complexidade de tempo de **O(log n)**, tornando-a mais rápida que a busca linear para listas grandes. No entanto, requer uma lista ordenada para funcionar corretamente.
 
-# 🔧 :wrench: Como compilar?
+# 🔧 Como compilar?
 O projeto utiliza um Makefile para automatizar o processo de compilação e criação do executável. O Makefile define o compilador, as opções de compilação e os diretórios para os arquivos objeto e executável. Siga as etapas abaixo para compilar o projeto usando o Makefile fornecido:
 
 ## Pré-requisitos
@@ -161,7 +160,7 @@ Remove apenas os arquivos gerados durante a compilação, mantendo os diretório
 - Ao executar o programa com o comando make run, certifique-se de estar no diretório raiz do projeto.
 
 
-# 👥 :busts_in_silhouette: Autores
+# 👥 Autores
 
 | [<img src="https://avatars.githubusercontent.com/u/129897959?v=4" width=115><br><sub>Isabela Gomes</sub>](https://github.com/cyberisa) |  [<img src="https://avatars.githubusercontent.com/u/102569695?s=400&u=f20bbb53cc46ec2bae01f8d60a28492bfdccbdd5&v=4" width=115><br><sub>Matheus Vidal</sub>](https://github.com/matheusvidal21) |
 | :---: | :---: | 
