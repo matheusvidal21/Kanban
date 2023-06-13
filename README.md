@@ -110,7 +110,7 @@ Abra um terminal e navegue até o diretório raiz do projeto usando o comando cd
 ### Passo 3: Compile o projeto
 Execute o seguinte comando para compilar o projeto:<br>
 **`make all`**<br>
-Isso irá compilar o código-fonte, criar os arquivos objeto (.o) na pasta "/build", e gerar o executável na pasta "/bin.
+Isso irá compilar o código-fonte, criar os arquivos objeto (.o) na pasta "/build", e gerar o executável na pasta "/bin".
 
 ### Passo 4: Execute o programa
 Após a compilação bem-sucedida, você pode executar o programa usando o seguinte comando:<br>
