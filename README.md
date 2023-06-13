@@ -1,15 +1,22 @@
 > :construction: Projeto em construção :construction:
 
 # :clipboard: Kanban
-#### Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Desenvolva um aplicativo de gerenciamento de tarefas com recursos do quadro do Método Kanban como adicionar tarefas, definir prioridades, agendar datas e classificar as tarefas usando algoritmos de ordenação.
+Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Desenvolva um aplicativo de gerenciamento de tarefas com recursos do quadro do Método Kanban como adicionar tarefas, definir prioridades, agendar datas e classificar as tarefas usando algoritmos de ordenação.
 
 <p align="center">
   <img src="imgs/quadro.png" alt="Exemplo de Quadro Kanban">
 </p>
 
+## Índice
+- [Funcionalidades do projeto](#funcionalidades-do-projeto)
+- [Estrutura do projeto](#estrutura-do-projeto)
+- [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
+- [Como compilar](#como-compilar)
+- [Autores](#autores)
 
-# :hammer: Funcionalidades do projeto
-### O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
+
+# 🔨 :hammer: Funcionalidades do projeto
+O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
 
 - Adicionar Tarefas: Os usuários podem adicionar novas tarefas ao quadro do Kanban, fornecendo informações como título, descrição e detalhes adicionais.
 
@@ -31,7 +38,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
 
 
 
-# :file_folder: Estruta do projeto
+# 📁  :file_folder: Estrutura do projeto
 - /bin:
     Arquivos binários do projeto;
 
@@ -63,7 +70,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
     Documentação do projeto.
 
 
-# :computer: Técnicas e tecnologias utilizadas
+# 💻 :computer: Técnicas e tecnologias utilizadas
 <img src="imgs/cpplogo.png" alt="Logo C++"  height="80"/><br>
 - C++;
 - Programação Orientada a Objetos; <br>
@@ -108,7 +115,7 @@ O Merge Sort é um algoritmo de ordenação eficiente e baseado no princípio "d
 ### 2. Algoritmo de busca binária
 A busca binária é um algoritmo eficiente para encontrar um elemento em uma lista ordenada. Ele divide repetidamente a lista ao meio e compara o elemento buscado com o elemento do meio. Se forem iguais, a busca é concluída. Caso contrário, a busca continua na metade superior ou inferior da lista, dependendo da comparação. Esse processo é repetido até encontrar o elemento ou reduzir a lista a zero. A busca binária tem uma complexidade de tempo de **O(log n)**, tornando-a mais rápida que a busca linear para listas grandes. No entanto, requer uma lista ordenada para funcionar corretamente.
 
-# :wrench: Como compilar?
+# 🔧 :wrench: Como compilar?
 O projeto utiliza um Makefile para automatizar o processo de compilação e criação do executável. O Makefile define o compilador, as opções de compilação e os diretórios para os arquivos objeto e executável. Siga as etapas abaixo para compilar o projeto usando o Makefile fornecido:
 
 ## Pré-requisitos
@@ -154,7 +161,7 @@ Remove apenas os arquivos gerados durante a compilação, mantendo os diretório
 - Ao executar o programa com o comando make run, certifique-se de estar no diretório raiz do projeto.
 
 
-# :busts_in_silhouette: Autores
+# 👥 :busts_in_silhouette: Autores
 
 | [<img src="https://avatars.githubusercontent.com/u/129897959?v=4" width=115><br><sub>Isabela Gomes</sub>](https://github.com/cyberisa) |  [<img src="https://avatars.githubusercontent.com/u/102569695?s=400&u=f20bbb53cc46ec2bae01f8d60a28492bfdccbdd5&v=4" width=115><br><sub>Matheus Vidal</sub>](https://github.com/matheusvidal21) |
 | :---: | :---: | 
