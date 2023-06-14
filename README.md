@@ -1,7 +1,7 @@
 > :construction: Projeto em construção :construction:
 
 # :clipboard: Kanban
-Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Desenvolva um aplicativo de gerenciamento de tarefas com recursos do quadro do Método Kanban como adicionar tarefas, definir prioridades, agendar datas e classificar as tarefas usando algoritmos de ordenação.
+Gerenciador de Tarefas de Metodologia Ágil com Método Kanban: Aplicativo de gerenciamento de tarefas com recursos do quadro do Método Kanban como adicionar tarefas, definir prioridades, agendar datas e classificar as tarefas usando algoritmos de ordenação.
 
 <p align="center">
   <img src="imgs/quadro.png" alt="Exemplo de Quadro Kanban">
