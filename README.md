@@ -125,16 +125,24 @@ Clone o repositório do projeto em seu ambiente local ou faça o download dos ar
 
 ### Passo 2: Navegue para o diretório do projeto
 Abra um terminal e navegue até o diretório raiz do projeto usando o comando cd:<br>
-**`cd caminho/para/o/diretorio/do/projeto`**<br>
+```
+cd caminho/para/o/diretorio/do/projeto
+```
 
 ### Passo 3: Compile o projeto
-Execute o seguinte comando para compilar o projeto:<br>
-**`make all`**<br>
+Execute o seguinte comando para compilar o projeto: <br>
+```
+make all
+```
+<br>
 Isso irá compilar o código-fonte, criar os arquivos objeto (.o) na pasta "/build", e gerar o executável na pasta "/bin".
 
 ### Passo 4: Execute o programa
 Após a compilação bem-sucedida, você pode executar o programa usando o seguinte comando:<br>
-**`make run`** <br>
+```
+make run
+```
+<br>
 Isso executará o programa com base no executável gerado.
 
 
