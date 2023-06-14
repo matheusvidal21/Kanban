@@ -41,6 +41,7 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | create_directories
 $(EXECUTABLE): $(OBJECTS)
 	@echo "Compilando o programa..."
 	$(CXX) $(CXXFLAGS) $(OBJECTS) -o $(EXECUTABLE)
+	clear
 	@echo "Executável criado no diretório 'bin'"
 
 # Regra para compilar os arquivos objeto
@@ -56,6 +57,7 @@ $(shell mkdir -p $(BIN_DIR))
 
 # Regra para executar o programa
 run:
+	clear
 	@echo "Executando o programa..."
 	./$(EXECUTABLE)
 
