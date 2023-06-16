@@ -26,6 +26,10 @@ class Tarefa{
         Tarefa(int id, const std::string& titulo) 
         : id(id), titulo(titulo) {}
 
+        
+    //Destrutor
+        ~Tarefa(){};
+
     //Métodos getters
         int getId() const { return id; }
         std::string getTitulo() const { return titulo; }
@@ -39,6 +43,10 @@ class Tarefa{
         void setDescricao(std::string descricao) { this->descricao = descricao; }
         void setPrioridade(int prioridade) { this->prioridade = prioridade; }
         void setVencimento(std::string dataVencimento) { this->dataVencimento = dataVencimento; }
+
+    //Método virtual puro
+        virtual void Print() const = 0;
+
             
 };
 
@@ -60,9 +68,23 @@ class KanbanTask : public Tarefa {
         KanbanTask(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento)
             : Tarefa(id, titulo, descricao, prioridade, dataVencimento) {}
 
+    //Destrutor
+        ~KanbanTask(){}
+
     //Método set
         void setStatus(const std::string& status) { this->status = status; }
         std::string getStatus() const { return status; }
+
+
+    //Polimorfismo do método virtual
+        void Print() const override {
+        std::cout << "ID: " << id << std::endl;
+        std::cout << "Título: " << titulo << std::endl;
+        std::cout << "Descrição: " << descricao << std::endl;
+        std::cout << "Prioridade: " << prioridade << std::endl;
+        std::cout << "Data de Vencimento: " << dataVencimento << std::endl;
+        std::cout << "Status: " << status << std::endl;
+    }
 };
 
 class TaskManagement {
@@ -78,6 +100,8 @@ public:
 
     void sortTarefas(){}
     void moveTask(int taskId, const std::string& sourceStatus, const std::string& destinationStatus) {}
+
+
 };
 
 
