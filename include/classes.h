@@ -69,6 +69,9 @@ class KanbanTask : public Task {
         KanbanTask(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento)
             : Task(id, titulo, descricao, prioridade, dataVencimento) {}
 
+        KanbanTask(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento, const std::string& status)
+            : Task(id, titulo, descricao, prioridade, dataVencimento), status(status) {}   
+
     //Destrutor
         ~KanbanTask(){}
 
@@ -96,12 +99,12 @@ public:
     void addTask(KanbanTask* task) { tarefas.pushBack(task); }
     void removeTask(KanbanTask* task) { tarefas.removeValue(task); }
 
-    //Método get
-    ListaDuplamenteEncadeada<KanbanTask*> getTarefas() const { return tarefas; }
-
     void sortTasks(int prioridade){}
-    void moveTask(int taskId, const std::string& sourceStatus, const std::string& destinationStatus) {}
+    void moveTask(int taskId, const std::string& statusAtual, const std::string& statusDestino){}
+    void printBoard(){}
 
+    //Método get
+    ListaDuplamenteEncadeada<KanbanTask*> getTasks() const { return tarefas; }
 
 };
 
