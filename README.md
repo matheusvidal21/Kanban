@@ -76,15 +76,47 @@ O diagrama de classes UML é uma representação visual da estrutura e das rela�
   <img src="docs/diagramaKanban.png" alt="Diagrama de Classes">
 </p>
 
-- **Task:** <br>
-- **KanbanTask:** <br>
-- **KanbanBoard:** <br>
-- **ListaDuplamenteEncadeada<T>:** <br>
-- **No<T>** <br>
-- **Fila<T>:** <br>
-- **Pilha<T>:** <br>
-- **AlgoritmosDeOrdenacao<T>:** <br>
-- **AlgoritmosDeBuscaBinaria<T>:** <br>
+### Task: <br>
+- Classe abstrata que representa uma tarefa genérica;
+- Possui atributos como id, titulo, descricao, prioridade e dataVencimento;
+- Fornece construtores para criar tarefas com diferentes combinações de atributos;
+- Possui métodos getters e setters para acessar e modificar os atributos;
+- Define um método virtual puro printTask() para imprimir informações da tarefa.
+### KanbanTask: <br>
+- Subclasse de Task que representa uma tarefa específica para um Kanban;
+- Adiciona o atributo status à tarefa;
+- Fornece construtores para criar tarefas Kanban com diferentes combinações de atributos;
+- Possui métodos getters e setters para acessar e modificar o atributo status;
+- Implementa o método printTask() para imprimir informações específicas de tarefas Kanban.
+### KanbanBoard: <br>
+- Representa um quadro Kanban que contém uma lista de tarefas;
+- Utiliza a classe ListaDuplamenteEncadeada para armazenar as tarefas;
+- Fornece métodos para adicionar, remover e gerenciar as tarefas do quadro;
+- Inclui métodos para classificar as tarefas, mover tarefas entre os status e imprimir o quadro Kanban;
+- Possui um método getter para obter a lista de tarefas do quadro.
+### ListaDuplamenteEncadeada<T>: <br>
+- Implementa uma lista duplamente encadeada;
+- Utiliza os nós da classe No para armazenar os elementos;
+- Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da lista;
+- Fornece métodos para adicionar elementos no início (pushFront) e no final (pushBack) da lista;
+- Inclui métodos para remover o primeiro elemento (removeFront) e o último elemento (removeBack) da lista;
+- Implementa métodos para verificar se a lista está vazia (isEmpty), imprimir os elementos (print), obter o tamanho da lista - (getSize), remover um valor específico da lista (removeValue) e limpar a lista completamente (clear).
+### Fila<T>: <br>
+- Implementa uma pilha utilizando uma lista encadeada;
+- Utiliza os nós para armazenar os elementos da pilha;
+- Possui um ponteiro para o elemento do topo (top) da pilha;
+- Fornece métodos para verificar se a pilha está vazia (isEmpty), adicionar um elemento no topo da pilha (push), remover o elemento do topo da pilha (pop) e obter o elemento do topo da pilha (peek).
+### Pilha<T>: <br>
+- Implementa uma fila utilizando uma lista encadeada;
+- Utiliza os nós para armazenar os elementos da fila;
+- Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da fila;
+- Fornece métodos para verificar se a fila está vazia (isEmpty), adicionar um elemento no final da fila (enqueue), remover o elemento na frente da fila (dequeue) e obter o elemento na frente da fila (peek).
+### AlgoritmosDeOrdenacao<T>: <br>
+- Implementa algoritmos de ordenação genéricos, como Bubble Sort, Selection Sort e Merge Sort;
+- Fornece métodos para realizar a ordenação de um array.
+### AlgoritmosDeBuscaBinaria<T>: <br>
+- Implementa algoritmos de busca binária genéricos, incluindo versões iterativas e recursivas;
+- Fornece métodos para buscar um elemento em um array ordenado e retornar o índice do elemento se encontrado.
 
 # 💻 Técnicas e tecnologias utilizadas
 <img src="imgs/cpplogo.png" alt="Logo C++"  height="80"/><br>
