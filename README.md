@@ -70,7 +70,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
     Documentação do projeto.
 
 # 📊 Diagrama de classes
-O diagrama de classes UML é uma representação visual da estrutura e das relações entre as classes em um projeto. Ele fornece uma visão geral da organização das classes, seus atributos e métodos, bem como as associações, heranças e dependências entre elas. Este diagrama é uma ferramenta poderosa para entender a arquitetura do sistema, identificar as principais entidades e suas interações, e facilitar o desenvolvimento, a manutenção e a comunicação entre os membros da equipe. Se você deseja explorar mais detalhes do diagrama de classes [clique aqui](docs/diagramaKaban.pdf) para ser redirecionado ao arquivo PDF correspondente.
+O diagrama de classes UML é uma representação visual da estrutura e das relações entre as classes em um projeto. Ele fornece uma visão geral da organização das classes, seus atributos e métodos, bem como as associações, heranças e dependências entre elas. Este diagrama é uma ferramenta poderosa para entender a arquitetura do sistema, identificar as principais entidades e suas interações, e facilitar o desenvolvimento, a manutenção e a comunicação entre os membros da equipe. Se você deseja explorar mais detalhes do diagrama de classes [clique aqui](docs/diagramaKanban.pdf) para ser redirecionado ao arquivo PDF correspondente.
 
 <p align="center">
   <img src="docs/diagramaKanban.png" alt="Diagrama de Classes">
