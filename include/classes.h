@@ -4,7 +4,8 @@
 #include "functions.h"
 #include "estruturas_tads.hpp"
 
-class Tarefa{
+//CLASSE ABSTRATA
+class Task{
     protected:
         int id;
         std::string titulo;
@@ -13,22 +14,22 @@ class Tarefa{
         std::string dataVencimento; 
     public:
     //Contrutores
-        Tarefa();
-        Tarefa(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento) 
+        Task();
+        Task(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento) 
         : id(id), titulo(titulo), descricao(descricao), prioridade(prioridade), dataVencimento(dataVencimento) {}
 
-        Tarefa(int id, const std::string& titulo, const std::string& descricao, int prioridade) 
+        Task(int id, const std::string& titulo, const std::string& descricao, int prioridade) 
         : id(id), titulo(titulo), descricao(descricao), prioridade(prioridade) {}
 
-        Tarefa(int id, const std::string& titulo, const std::string& descricao) 
+        Task(int id, const std::string& titulo, const std::string& descricao) 
         : id(id), titulo(titulo), descricao(descricao) {}
 
-        Tarefa(int id, const std::string& titulo) 
+        Task(int id, const std::string& titulo) 
         : id(id), titulo(titulo) {}
 
         
     //Destrutor
-        ~Tarefa(){};
+        ~Task(){};
 
     //Métodos getters
         int getId() const { return id; }
@@ -45,28 +46,28 @@ class Tarefa{
         void setVencimento(std::string dataVencimento) { this->dataVencimento = dataVencimento; }
 
     //Método virtual puro
-        virtual void Print() const = 0;
+        virtual void printTask() const = 0;
 
             
 };
 
-class KanbanTask : public Tarefa {
+class KanbanTask : public Task {
     private:
         std::string status;
 
     public:
     //Contrutores
         KanbanTask(int id, const std::string& titulo)
-            : Tarefa(id, titulo) {}
+            : Task(id, titulo) {}
 
         KanbanTask(int id, const std::string& titulo, const std::string& descricao)
-            : Tarefa(id, titulo, descricao) {}
+            : Task(id, titulo, descricao) {}
 
         KanbanTask(int id, const std::string& titulo, const std::string& descricao, int prioridade)
-            : Tarefa(id, titulo, descricao, prioridade) {}
+            : Task(id, titulo, descricao, prioridade) {}
 
         KanbanTask(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento)
-            : Tarefa(id, titulo, descricao, prioridade, dataVencimento) {}
+            : Task(id, titulo, descricao, prioridade, dataVencimento) {}
 
     //Destrutor
         ~KanbanTask(){}
@@ -77,7 +78,7 @@ class KanbanTask : public Tarefa {
 
 
     //Polimorfismo do método virtual
-        void Print() const override {
+        void printTask() const override {
         std::cout << "ID: " << id << std::endl;
         std::cout << "Título: " << titulo << std::endl;
         std::cout << "Descrição: " << descricao << std::endl;
@@ -87,18 +88,18 @@ class KanbanTask : public Tarefa {
     }
 };
 
-class TaskManagement {
+class KanbanBoard {
 private:
-    ListaDuplamenteEncadeada<Tarefa*> tarefas;
+    ListaDuplamenteEncadeada<KanbanTask*> tarefas;
 
 public:
-    void addTask(Tarefa* task) { tarefas.pushBack(task); }
-    void removeTask(Tarefa* task) { tarefas.removeValue(task); }
+    void addTask(KanbanTask* task) { tarefas.pushBack(task); }
+    void removeTask(KanbanTask* task) { tarefas.removeValue(task); }
 
     //Método get
-    ListaDuplamenteEncadeada<Tarefa*> getTarefas() const { return tarefas; }
+    ListaDuplamenteEncadeada<KanbanTask*> getTarefas() const { return tarefas; }
 
-    void sortTarefas(){}
+    void sortTasks(int prioridade){}
     void moveTask(int taskId, const std::string& sourceStatus, const std::string& destinationStatus) {}
 
 
