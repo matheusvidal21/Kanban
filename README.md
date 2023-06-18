@@ -91,12 +91,12 @@ O diagrama de classes UML é uma representação visual da estrutura e das rela�
 - Fornece métodos para adicionar elementos no início (pushFront) e no final (pushBack) da lista;
 - Inclui métodos para remover o primeiro elemento (removeFront) e o último elemento (removeBack) da lista;
 - Implementa métodos para verificar se a lista está vazia (isEmpty), imprimir os elementos (print), obter o tamanho da lista - (getSize), remover um valor específico da lista (removeValue) e limpar a lista completamente (clear).
-5. **Fila<T>:** <br>
+5. **Pilha<T>:** <br>
 - Implementa uma pilha utilizando uma lista encadeada;
 - Utiliza os nós para armazenar os elementos da pilha;
 - Possui um ponteiro para o elemento do topo (top) da pilha;
 - Fornece métodos para verificar se a pilha está vazia (isEmpty), adicionar um elemento no topo da pilha (push), remover o elemento do topo da pilha (pop) e obter o elemento do topo da pilha (peek).
-6. **Pilha<T>:** <br>
+6. **Fila<T>:** <br>
 - Implementa uma fila utilizando uma lista encadeada;
 - Utiliza os nós para armazenar os elementos da fila;
 - Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da fila;
