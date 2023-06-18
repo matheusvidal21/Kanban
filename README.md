@@ -53,7 +53,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
 
 - **/tests:** Códigos para testes unitários de testes de funções (.cpp);
 
-- **gitignore:** Arquivo do Git para ignorar arquivos no contro  le de versão;
+- **.gitignore:** Arquivo do Git para ignorar arquivos no controle de versão;
 
 - **Makefile:** Comandos de compilação;
 
