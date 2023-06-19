@@ -32,18 +32,18 @@ class Task{
         ~Task(){};
 
     //Métodos getters
-        int getId() const { return id; }
-        std::string getTitulo() const { return titulo; }
-        std::string getDescricao() const { return descricao; }
-        int  getPrioridade() const { return prioridade; }
-        std::string getVencimento() const { return dataVencimento; }
+        int getId() const;
+        std::string getTitulo() const;
+        std::string getDescricao() const;
+        int  getPrioridade() const;
+        std::string getVencimento() const;
 
     //Métodos setters
-        void setId(int id) {this->id = id; }
-        void setTitulo(std::string titulo) { this->titulo = titulo; }
-        void setDescricao(std::string descricao) { this->descricao = descricao; }
-        void setPrioridade(int prioridade) { this->prioridade = prioridade; }
-        void setVencimento(std::string dataVencimento) { this->dataVencimento = dataVencimento; }
+        void setId(int id);
+        void setTitulo(std::string titulo);
+        void setDescricao(std::string descricao);
+        void setPrioridade(int prioridade);
+        void setVencimento(std::string dataVencimento);
 
     //Método virtual puro
         virtual void printTask() const = 0;
@@ -57,6 +57,7 @@ class KanbanTask : public Task {
 
     public:
     //Contrutores
+        KanbanTask();
         KanbanTask(int id, const std::string& titulo)
             : Task(id, titulo) {}
 
@@ -76,12 +77,12 @@ class KanbanTask : public Task {
         ~KanbanTask(){}
 
     //Método set
-        void setStatus(const std::string& status) { this->status = status; }
-        std::string getStatus() const { return status; }
+        void setStatus(const std::string& status);
+        std::string getStatus() const;
 
 
     //Polimorfismo do método virtual
-        void printTask() const override {
+    void printTask() const{
         std::cout << "ID: " << id << std::endl;
         std::cout << "Título: " << titulo << std::endl;
         std::cout << "Descrição: " << descricao << std::endl;
@@ -93,19 +94,18 @@ class KanbanTask : public Task {
 
 class KanbanBoard {
 private:
-    ListaDuplamenteEncadeada<KanbanTask*> tarefas;
+    ListaDuplamenteEncadeada<KanbanTask*> listaTarefas;
 
 public:
-    void addTask(KanbanTask* task) { tarefas.pushBack(task); }
-    void removeTask(KanbanTask* task) { tarefas.removeValue(task); }
-
-    void sortTasks(int prioridade){}
-    void moveTask(int taskId, const std::string& statusAtual, const std::string& statusDestino){}
-    void printBoard(){}
+    KanbanBoard();
+    void addTask(KanbanTask* task);
+    void removeTask(KanbanTask* task);
+    void sortTasks(int prioridade);
+    void moveTask(int taskId, const std::string& statusAtual, const std::string& statusDestino);
+    void printBoard();
 
     //Método get
-    ListaDuplamenteEncadeada<KanbanTask*> getTasks() const { return tarefas; }
-
+    ListaDuplamenteEncadeada<KanbanTask*> getTasks() const;
 };
 
 
