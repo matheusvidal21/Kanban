@@ -14,7 +14,7 @@ class Task{
         std::string dataVencimento; 
     public:
     //Contrutores
-        Task();
+        Task(){}
         Task(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento) 
         : id(id), titulo(titulo), descricao(descricao), prioridade(prioridade), dataVencimento(dataVencimento) {}
 
@@ -57,7 +57,7 @@ class KanbanTask : public Task {
 
     public:
     //Contrutores
-        KanbanTask();
+        KanbanTask(){}
         KanbanTask(int id, const std::string& titulo)
             : Task(id, titulo) {}
 
@@ -74,7 +74,7 @@ class KanbanTask : public Task {
             : Task(id, titulo, descricao, prioridade, dataVencimento), status(status) {}   
 
     //Destrutor
-        ~KanbanTask(){}
+        virtual ~KanbanTask(){}
 
     //Método set
         void setStatus(const std::string& status);
@@ -97,7 +97,7 @@ private:
     ListaDuplamenteEncadeada<KanbanTask*> listaTarefas;
 
 public:
-    KanbanBoard();
+    KanbanBoard(){};
     void addTask(KanbanTask* task);
     void removeTask(KanbanTask* task);
     void sortTasks(int prioridade);
