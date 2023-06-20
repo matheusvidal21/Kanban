@@ -56,16 +56,20 @@ int main(){
     task->setStatus(status);
 
     tabela->addTask(task); // ADICIONANDO UMA NOVA TAREFA A LISTA ENCADEADA
-
-        break;
+        break;  
     
     default:
         break;
     }
 
     
+    //tabela->printTasks("em análise");
+
     delete tabela;
+    tabela = NULL;
     delete task;
+    task = NULL;
+
 
 
     return 0;

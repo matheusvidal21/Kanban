@@ -22,7 +22,15 @@ class ListaDuplamenteEncadeada{
 
   public:
     ListaDuplamenteEncadeada() : head(NULL), tail(NULL){}
-    ~ListaDuplamenteEncadeada(){};
+    ~ListaDuplamenteEncadeada(){
+      clear();
+    }
+
+    No<T>* getHead() const {
+      return head;
+    }
+
+
   /*Método para adicionar um novo elemento no início da lista*/
     void pushFront(T value){
       No<T>* newNo = new No<T>(value);

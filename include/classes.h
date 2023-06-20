@@ -102,6 +102,9 @@ public:
     void removeTask(KanbanTask* task);
     void sortTasks(int prioridade);
     void moveTask(int taskId, const std::string& statusAtual, const std::string& statusDestino);
+
+    //void printTasks(const std::string& status);
+
     void printBoard();
 
     //Método get

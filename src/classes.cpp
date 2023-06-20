@@ -23,23 +23,40 @@
         std::string KanbanTask::getStatus() const { return status; }
 
 
-    //Polimorfismo do método virtual
-    /*    void KanbanTask::printTask() const override{
-        std::cout << "ID: " << id << std::endl;
-        std::cout << "Título: " << titulo << std::endl;
-        std::cout << "Descrição: " << descricao << std::endl;
-        std::cout << "Prioridade: " << prioridade << std::endl;
-        std::cout << "Data de Vencimento: " << dataVencimento << std::endl;
-        std::cout << "Status: " << status << std::endl;
-    } */
+
+
+
+
 
 // ---------- IMPLEMENTANDO A CLASSE KANBAN BOARD -----------
 
     void KanbanBoard::addTask(KanbanTask* task) { listaTarefas.pushBack(task); }
     void KanbanBoard::removeTask(KanbanTask* task) { listaTarefas.removeValue(task); }
 
+    /*
+    void KanbanBoard::printTasks(const std::string& status) {
+    std::cout << "Tarefas com o status \"" << status << "\":" << std::endl;
+
+    ListaDuplamenteEncadeada<KanbanTask*> tasks = getTasks();
+    No<KanbanTask*>* current = tasks.getHead();
+
+    while (current != NULL) {
+        KanbanTask* task = current->valor;
+
+        if (task->getStatus() == status) {
+        task->printTask();
+        std::cout << std::endl;
+        }
+
+        current = current->next;
+    }
+    }*/
+
+
     //void KanbanBoard::sortTasks(int prioridade){}
     //void KanbanBoard::moveTask(int taskId, const std::string& statusAtual, const std::string& statusDestino){}
+
+
     void KanbanBoard::printBoard(){
     std::cout << "+-----------------------------------------------+\n";
     std::cout << "|         GERENCIADOR DE TAREFAS KANBAN         |\n";
