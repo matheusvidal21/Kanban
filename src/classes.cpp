@@ -29,11 +29,11 @@
 
 
 // ---------- IMPLEMENTANDO A CLASSE KANBAN BOARD -----------
-
+/*
     void KanbanBoard::addTask(KanbanTask* task) { listaTarefas.pushBack(task); }
     void KanbanBoard::removeTask(KanbanTask* task) { listaTarefas.removeValue(task); }
 
-    /*
+    
     void KanbanBoard::printTasks(const std::string& status) {
     std::cout << "Tarefas com o status \"" << status << "\":" << std::endl;
 
@@ -49,8 +49,8 @@
         }
 
         current = current->next;
+        }
     }
-    }*/
 
 
     //void KanbanBoard::sortTasks(int prioridade){}
@@ -70,4 +70,4 @@
 }
 
     //Método get
-    ListaDuplamenteEncadeada<KanbanTask*> KanbanBoard::getTasks() const { return listaTarefas; }
+    ListaDuplamenteEncadeada<KanbanTask*> KanbanBoard::getTasks() const { return listaTarefas; }*/

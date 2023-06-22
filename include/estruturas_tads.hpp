@@ -30,6 +30,26 @@ class ListaDuplamenteEncadeada{
       return head;
     }
 
+    // Obter o elemento em um índice específico da lista
+    T& get(int index) const {
+        if (index < 0 || index >= getSize()) {
+            throw std::out_of_range("Index out of range");
+        }
+
+        No<T>* current = head;
+        int currentIndex = 0;
+
+        while (current != NULL) {
+            if (currentIndex == index) {
+                return current->valor;
+            }
+            current = current->next;
+            currentIndex++;
+        }
+
+        throw std::out_of_range("Index out of range");
+    }
+
 
   /*Método para adicionar um novo elemento no início da lista*/
     void pushFront(T value){
@@ -193,6 +213,7 @@ class ListaDuplamenteEncadeada{
       head = tail = NULL;
     }
 
+
 };
 /*==========================================================================================*/
 
@@ -252,6 +273,7 @@ public:
         }
         return top->valor;
     }
+    
 };
 /*==========================================================================================*/
 
