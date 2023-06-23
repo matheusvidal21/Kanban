@@ -130,11 +130,11 @@ Uma lista duplamente encadeada é uma estrutura de dados em que os nós são con
     7. `getSize()`: Retorna o tamanho da lista; <br>
     8. `removeValue()`: Remove um valor específico; <br>
 
-- **📚 Pilha**: <br> 
+- **📚 Pilha**: <br>
 Uma pilha é uma estrutura de dados que segue a abordagem "último a entrar, primeiro a sair" (LIFO - Last-In-First-Out). Os elementos são inseridos e removidos apenas em uma extremidade, chamada de topo da pilha. As operações básicas em uma pilha são `"push"` para adicionar um elemento no topo, `"pop"` para remover o elemento do topo, e `"peek"` para visualizar o elemento no topo sem removê-lo.
 
 - **🚦 Fila:** <br>
-Uma fila é uma estrutura de dados linear que segue a abordagem "primeiro a entrar, primeiro a sair" (FIFO - First-In-First-Out). Os elementos são inseridos no final da fila e removidos do início da fila. As operações básicas em uma fila são `"enqueue"` para adicionar um elemento no final da fila e `"dequeue"` para remover o elemento do início da fila, e `"peek"` para visualizar o elemento na frente sem removê-lo. A fila segue um comportamento semelhante a uma fila real, onde o primeiro elemento a entrar é o primeiro a ser atendido. 
+Uma fila é uma estrutura de dados linear que segue a abordagem "primeiro a entrar, primeiro a sair" (FIFO - First-In-First-Out). Os elementos são inseridos no final da fila e removidos do início da fila. As operações básicas em uma fila são `"enqueue"` para adicionar um elemento no final da fila e `"dequeue"` para remover o elemento do início da fila, e `"peek"` para visualizar o elemento na frente sem removê-lo. A fila segue um comportamento semelhante a uma fila real, onde o primeiro elemento a entrar é o primeiro a ser atendido.
 
 ## Templates
 Este assunto é implementado no arquivo [templates.hpp](include/templates.hpp). Consulte esse arquivo para obter mais detalhes e implementação relacionada.
@@ -143,8 +143,8 @@ Este assunto é implementado no arquivo [templates.hpp](include/templates.hpp). 
 - **Selection Sort:** <br>
 O Selection Sort é um algoritmo de ordenação simples e intuitivo. Ele funciona selecionando repetidamente o elemento de menor valor da lista não ordenada e colocando-o no início da lista ordenada. Esse processo é repetido até que toda a lista esteja ordenada. O Selection Sort é eficiente para listas de tamanho pequeno a moderado, mas possui uma complexidade de tempo quadrática **O(n²)**, o que o torna menos eficiente em grandes conjuntos de dados. No entanto, sua simplicidade e facilidade de implementação o tornam uma opção viável em certos cenários.
 
-- **Bubble Sort:** <br> 
-O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista a ser ordenada, comparando pares de elementos adjacentes e realizando trocas se estiverem fora de ordem. Esse processo de comparação e troca é repetido até que a lista esteja completamente ordenada. O Bubble Sort possui uma complexidade de tempo de execução quadrática, ou seja, **O(n²)**, onde "n" é o tamanho da lista. Isso significa que o tempo de execução do algoritmo aumenta rapidamente à medida que o tamanho da lista aumenta. 
+- **Bubble Sort:** <br>
+O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista a ser ordenada, comparando pares de elementos adjacentes e realizando trocas se estiverem fora de ordem. Esse processo de comparação e troca é repetido até que a lista esteja completamente ordenada. O Bubble Sort possui uma complexidade de tempo de execução quadrática, ou seja, **O(n²)**, onde "n" é o tamanho da lista. Isso significa que o tempo de execução do algoritmo aumenta rapidamente à medida que o tamanho da lista aumenta.
 
 - **Merge Sort:** <br>
 O Merge Sort é um algoritmo de ordenação eficiente e baseado no princípio "dividir para conquistar". Ele divide a lista não ordenada em sublistas menores, recursivamente ordena cada sublista e, em seguida, combina as sublistas ordenadas para obter a lista final ordenada. O processo de combinação envolve mesclar duas sublistas ordenadas em uma única lista ordenada. O Merge Sort possui uma complexidade de tempo de **O(n log n)**, tornando-o adequado para lidar com grandes conjuntos de dados. Sua eficiência e estabilidade tornam o Merge Sort uma opção popular em muitas aplicações de ordenação.
@@ -184,6 +184,12 @@ make run
 <br>
 Isso executará o programa com base no executável gerado.
 
+## Compilando com um único comando
+Execute esse comando para limpar os arquivos, compilar os arquivos novamente e, em seguida, executar o programa.
+```
+make build
+```
+<br>
 
 ## Comandos Disponíveis
 `make`: <br>
@@ -193,13 +199,22 @@ Cria os diretórios necessários se ainda não existirem.
 Compila o projeto, criando os arquivos objeto e o executável. Os diretórios necessários serão criados automaticamente, se ainda não existirem.
 
 `make run`: <br>
- Executa o programa após a compilação. Certifique-se de ter compilado o projeto antes de executar este comando. 
+ Executa o programa após a compilação. Certifique-se de ter compilado o projeto antes de executar este comando.
+
+`make build`: <br>
+ O comando 'make build' compila, executa e limpa os arquivos, proporcionando um processo completo para construir e executar o programa.
 
 `make clean`: <br>
  Remove todos os arquivos gerados durante a compilação, incluindo arquivos objeto, arquivo executável e os diretórios.
 
 `make clean_files`:<br>
-Remove apenas os arquivos gerados durante a compilação, mantendo os diretórios de build e bin. 
+Remove apenas os arquivos gerados durante a compilação, mantendo os diretórios de build e bin.
+
+### Em caso de dúvidas:
+```
+make help
+```
+Utilize esse comando para exibir um guia de ajuda com uma lista dos comandos disponíveis, fornecendo informações sobre como utilizar o Makefile de forma eficaz.
 
 ## Observações
 - Certifique-se de que o arquivo Makefile esteja no diretório raiz do projeto antes de executar os comandos;
@@ -210,5 +225,4 @@ Remove apenas os arquivos gerados durante a compilação, mantendo os diretório
 # 👥 Autores
 
 | [<img src="https://avatars.githubusercontent.com/u/129897959?v=4" width=115><br><sub>Isabela Gomes</sub>](https://github.com/cyberisa) |  [<img src="https://avatars.githubusercontent.com/u/102569695?s=400&u=f20bbb53cc46ec2bae01f8d60a28492bfdccbdd5&v=4" width=115><br><sub>Matheus Vidal</sub>](https://github.com/matheusvidal21) |
-| :---: | :---: | 
-
+| :---: | :---: |

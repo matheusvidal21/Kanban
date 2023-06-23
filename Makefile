@@ -61,7 +61,6 @@ run:
 	@echo "Executando o programa..."
 	./$(EXECUTABLE)
 
-.PHONY: clean
 # Limpa os arquivos objeto, o executável e os diretórios
 clean:
 	@echo "Removendo arquivos e diretórios.."
@@ -74,3 +73,23 @@ clean_files:
 	@echo "Removendo arquivos..."
 	rm -f $(OBJECTS) $(EXECUTABLE)
 	clear
+
+
+# Regra principal para compilar, executar e limpar arquivos
+build: clean all run
+
+
+# Guia de ajuda
+help:
+	@echo "Comandos disponíveis:"
+	@echo "		make              Cria os diretórios necessários"
+	@echo "		make all          Compila o programa (padrão)"
+	@echo "		make run          Executa o programa compilado"
+	@echo "		make clean        Remove arquivos e diretórios gerados pela compilação"
+	@echo "		make clean_files  Remove apenas os arquivos gerados pela compilação"
+	@echo "		make build        Compila, executa e limpa arquivos (all, run, clean)"
+	@echo "		make help         Mostra este guia de ajuda"	
+
+.PHONY: build
+.PHONY: help
+.PHONY: clean
