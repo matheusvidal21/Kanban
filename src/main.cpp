@@ -31,7 +31,7 @@ int main(){
 
 
     std::cout << "Ótimo! Aqui está seu quadro:\n";
-    kanbanBoard->displayBoard();
+    kanbanBoard->printBoard();
     std::cout << "\n" << std::endl;
 
 

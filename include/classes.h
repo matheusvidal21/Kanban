@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
-//#include "functions.h"
+#include <sstream>
 #include "estruturas_tads.hpp"
 #include "templates.hpp"
 
@@ -23,7 +23,7 @@ class Task{
         Task(const std::string& titulo);
 
         //Destrutor
-        ~Task(){};
+        virtual ~Task(){};
 
         //Métodos getters
         std::string getTitulo() const;
@@ -55,17 +55,19 @@ class KanbanTask : public Task {
         KanbanTask(int id, const std::string& titulo, const std::string& descricao, int prioridade, const std::string& dataVencimento);
         
         //Destrutor
-        virtual ~KanbanTask();
+        ~KanbanTask();
 
         //Método getter e setter
         void setId(int id);
         int getId() const;
+        std::string getTituloId() const;
 
         //Sobrecarga de operador ==
         bool operator==(const KanbanTask& other) const;
 
         //Polimorfismo do método virtual
         void printTask() const;
+
 };
 
 class KanbanBoard {
@@ -91,6 +93,28 @@ public:
     // Adicionar uma tarefa a uma coluna específica do quadro Kanban
     void addTaskToColumn(int columnIndex, const KanbanTask& task);
 
+    // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
+    void moveTask(int destinoColumnIndex, int taskIndex);
+
+    // Exibir as tarefas de uma coluna específica do quadro Kanban
+    void printColumn(int columnIndex) const;
+
+    // Exibir o quadro Kanban
+    void printBoard() const;
+
+    KanbanTask* findTask(int id);
+
+    //ListaDuplamenteEncadeada<KanbanColumn> getColumns(){ return columns; }
+
+};
+
+
+#endif
+
+
+
+// ======== ANOTAÇÕES 
+
 /*
     // Adicionar uma tarefa a uma coluna específica do quadro Kanban
     void addTaskToColumn(const std::string& columnName, const KanbanTask& task) {
@@ -104,29 +128,3 @@ public:
     // Aqui, por exemplo, lançamos uma exceção std::runtime_error.
         throw std::runtime_error("Coluna não encontrada: " + columnName);
     }*/
-
-    // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
-    void moveTask(int origemColumnIndex, int destinoColumnIndex, int taskIndex);
-
-    // Exibir as tarefas de uma coluna específica do quadro Kanban
-    void displayColumn(int columnIndex) const;
-
-    // Exibir o quadro Kanban
-    void displayBoard() const;
-
-
-
-/*
-    void addTask(KanbanTask* task);
-    void removeTask(KanbanTask* task);
-    void sortTasks(int prioridade);
-    void moveTask(int taskId, const std::string& statusAtual, const std::string& statusDestino);
-    void printTasks(const std::string& status);
-    void printBoard();
-
-    //Método get
-    ListaDuplamenteEncadeada<KanbanTask*> getTasks() const;*/
-};
-
-
-#endif
