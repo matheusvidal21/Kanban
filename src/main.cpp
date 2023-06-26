@@ -9,6 +9,7 @@ using namespace std;
 
 int main(){
 
+
     KanbanBoard* kanbanBoard = new KanbanBoard();
 
     //Recebendo as colunas

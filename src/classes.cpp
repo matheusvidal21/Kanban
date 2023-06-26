@@ -218,4 +218,25 @@
         KanbanColumn* coluna = findTaskColumn(taskId);
         coluna->tasks.removeValue(*tarefa);
         return true;
+
+    
+    }
+
+// ATENCAO: ISSO NAO FUNCIONA
+    void KanbanBoard::sortColumn(int idcoluna) {
+        KanbanColumn& colunaOrdena = columns.get(idcoluna);
+        int tamanhoColuna = colunaOrdena.tasks.getSize();
+
+        for(int i = 0; i < tamanhoColuna - 1; i++) {
+            for (int j = 0; j < tamanhoColuna - i - 1; j++) {
+                    KanbanTask& task1 = colunaOrdena.tasks.get(j);
+                    KanbanTask& task2 = colunaOrdena.tasks.get(j + 1);      
+                    
+                    if (task1.getPrioridade() > task2.getPrioridade()) {
+                        colunaOrdena.tasks.swap(j, j + 1);
+                    }
+                          }
+        }
+
+
     }

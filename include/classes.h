@@ -108,6 +108,8 @@ public:
 
     KanbanTask* findTask(int id);
 
+    void sortColumn(int idcoluna);
+
     // Encontrar a coluna em que uma tarefa com o ID fornecido está localizada
     KanbanColumn* findTaskColumn(int taskId) const {
         for (int i = 0; i < columns.getSize(); i++) {

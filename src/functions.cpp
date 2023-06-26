@@ -28,8 +28,9 @@ void printMenu(){
     std::cout << "|  1. Adicionar nova tarefa               |" << std::endl;
     std::cout << "|  2. Editar tarefa existente             |" << std::endl;
     std::cout << "|  3. Ordernar tarefas por prioridade     |" << std::endl;
-    std::cout << "|  4. Exibir o quadro Kanban              |" << std::endl;
-    std::cout << "|  5. Sair                                |" << std::endl;
+    std::cout << "|  4. Ver informações de uma tarefa       |" << std::endl;
+    std::cout << "|  5. Exibir o quadro Kanban              |" << std::endl;
+    std::cout << "|  6. Sair                                |" << std::endl;
     std::cout << "|                                         |" << std::endl;
     std::cout << "*=========================================*" << std::endl;
     std::cout << std::endl;
@@ -62,9 +63,10 @@ void printMenuTarefa(){
         std::cout << "|  1. Adicionar nova tarefa              |        |  1. Editar informações          |" << std::endl;
         std::cout << "|  2. Editar tarefa existente ------------------> |  2. Mover tarefa                |" << std::endl;
         std::cout << "|  3. Ordernar tarefas por prioridade    |        |  3. Excluir tarefa              |" << std::endl;
-        std::cout << "|  4. Exibir o quadro Kanban             |        |  4. Voltar                      |" << std::endl;
-        std::cout << "|  5. Sair                               |        |                                 |" << std::endl;
-        std::cout << "|                                        |        *=================================*" << std::endl;
+        std::cout << "|  4. Ver informações de uma tarefa      |        |  4. Voltar                      |" << std::endl;
+        std::cout << "|  5. Exibir o quadro Kanban             |        |                                 |" << std::endl;
+        std::cout << "|  6. Sair                               |        *=================================*" << std::endl;
+        std::cout << "|                                        |                                           " << std::endl;
         std::cout << "*========================================*                                           " << std::endl;
         std::cout << std::endl;
 }
@@ -85,7 +87,7 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
     KanbanTask task;
     /*Editar tarefa*/
     int escolha, escolha2;
-    int indexTask;
+    int indexTask, index;
     int novoid, novaprioridade, colunadestino;
     std::string novotitulo, novadescricao, novadata;
     KanbanTask* taskChoice;
@@ -276,18 +278,56 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
 
 
     //===== CASO: ORDERNAR TAREFAS POR PRIORIDADE =====   
-    case 3:
+    case 3: // NAO ESTA FUNCIONANDO
+        clearTerminal();
+
+        for (int i = 0; i < numColunas; i++){
+                    kanbanBoard->printColumn(i);
+        }
+
+        std::cout << "Qual coluna deseja ordenar?";
+        std::cin >> index;
+        kanbanBoard->sortColumn(index-1);
+        clearTerminal();
+        std::cout << "Ótimo, sua coluna foi ordenada";
+        kanbanBoard->printColumn(index-1);
+        
+
+
+
+
         break;
 
 
     //===== CASO: EXIBIR QUADRO KANBAN =====   
-    case 4:
+    case 5:
         kanbanBoard->printBoard();
         break;
 
+    //===== CASO: EXIBIR INFORMAÇÕES DA TAREFA
+    case 4:
+        clearTerminal();
+
+
+        while (true) {
+                    kanbanBoard->printBoard();
+                    std::cout << "\nDigite o ID da tarefa que deseja ver as informações (ou digite -1 para sair): ";
+                    std::cin >> indexTask;
+
+                    if (indexTask == -1) {
+                        std::cout << "\nOperação cancelada.\n" << std::endl;
+                        clearTerminal();
+                        break;  // Sai do loop
+                    }
+
+                    taskChoice = kanbanBoard->findTask(indexTask);
+                    clearTerminal();
+                    taskChoice->printTask();
+         }
+    break;
 
    //===== CASO: SAIR =====           
-    case 5:
+    case 6:
         std::cout << "Encerrando o programa..." << std::endl;
         delete kanbanBoard; // Liberar a memória alocada
         kanbanBoard = NULL;
