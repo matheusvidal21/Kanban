@@ -94,7 +94,9 @@ public:
     void addTaskToColumn(int columnIndex, const KanbanTask& task);
 
     // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
-    void moveTask(int destinoColumnIndex, int taskIndex);
+    //void moveTask(int origemColumnIndex, int destinoColumnIndex, int taskIndex);
+
+    void moveTask(int taskId, int idcolunaOrigem, int idcolunaDestino);
 
     // Exibir as tarefas de uma coluna específica do quadro Kanban
     void printColumn(int columnIndex) const;

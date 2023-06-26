@@ -86,7 +86,7 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
     /*Editar tarefa*/
     int escolha, escolha2;
     int indexTask;
-    int novoid, novaprioridade;
+    int novoid, novaprioridade, colunadestino, colunaorigem;
     std::string novotitulo, novadescricao, novadata;
     KanbanTask* taskChoice;
     switch(choice){
@@ -211,23 +211,26 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
             break;
 
         //========= CASO: MOVER TAREFA
-        case 2:/*
+        case 2:
                 clearTerminal();
+
                 for (int i = 0; i < numColunas; i++){
                     kanbanBoard->printColumn(i);
                 }
+
                 std::cout << "\nDigite o ID da tarefa que deseja mover: ";
                 std::cin >> indexTask;
-                std::cout << "\nDigite o número da coluna que você deseja mover: ";
-                std::cin >> columnDestino;
-                kanbanBoard->moveTask((columnDestino-1), indexTask);
-                // Localizando a tarefa solicitada
+                std::cout << "\nDigite o número da coluna de origem: ";
+                std::cin >> colunaorigem;
+                std::cout << "\nDigite o número da coluna de destino: ";
+                std::cin >> colunadestino;
+                //kanbanBoard->moveTask((colunaorigem-1) , (colunadestino-1), indexTask);
                 
+                kanbanBoard->moveTask(indexTask, (colunaorigem-1) , (colunadestino-1));
+                // Localizando a tarefa solicitada           
                 clearTerminal();
                 std::cout << "\n Tarefa movida!";
                 kanbanBoard->printBoard();
-*/
-
 
             break;
 

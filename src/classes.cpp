@@ -92,46 +92,6 @@
         KanbanColumn& column = columns.get(columnIndex); // COLUNA TEMPORÁRIA
         column.tasks.pushBack(task);
     }
-
-/*
-    // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
-    void KanbanBoard::moveTask(int origemColumnIndex, int destinoColumnIndex, int taskIndex) {
-        KanbanColumn& origemColumn = columns.get(origemColumnIndex);
-        KanbanColumn& destinoColumn = columns.get(destinoColumnIndex);
-
-        KanbanTask task = origemColumn.tasks.get(taskIndex);
-        destinoColumn.tasks.pushBack(task);
-        origemColumn.tasks.removeValue(task);
-    }*/
-
-    /*
-    // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
-    void KanbanBoard::moveTask(int destinoColumnIndex, int taskIndex) {
-        KanbanTask *task = findTask(taskIndex);
-        KanbanColumn& destinoColumn = columns.get(destinoColumnIndex);
-
-        int maxTasks = 0;
-        for (int i = 0; i < columns.getSize(); ++i) {
-            int columnSize = columns.get(i).tasks.getSize();
-            if (columnSize > maxTasks) {
-                maxTasks = columnSize;
-            }
-        }
-
-        for (int i = 0; i < maxTasks; ++i) {
-            for(int j = 0; j < columns.getSize(); ++j) {
-                if ( !columns.get(j).tasks.isEmpty() && task->getId() == columns.get(j).tasks.get(i).getId()) { 
-                   const KanbanTask& task = columns.get(j).tasks.get(i); // pegando a tarefa
-                   columns.get(j).tasks.removeValue(task);
-                }
-            }
-        }
-        destinoColumn.tasks.pushBack(*task);
-
-    }*/
-
-
-
     
     // Exibir as tarefas de uma coluna específica do quadro Kanban
     void KanbanBoard::printColumn(int columnIndex) const {
@@ -235,7 +195,18 @@
         throw std::out_of_range("Index out of range");
     }
 
+    
+    void KanbanBoard::moveTask(int taskId, int idcolunaOrigem, int idcolunaDestino) {
+        KanbanTask* tarefaMover = findTask(taskId); // ponteiro apontando para a tarefa
 
+        KanbanColumn& colunaOrigem = columns.get(idcolunaOrigem);
+        KanbanColumn& colunaDestino = columns.get(idcolunaDestino);
+
+        colunaDestino.tasks.pushBack(*tarefaMover);
+        colunaOrigem.tasks.removeValue(*tarefaMover);
+
+
+    } 
 
 
     // =========== ANOTAÇÕES
@@ -253,3 +224,51 @@
         // Aqui, por exemplo, lançamos uma exceção std::runtime_error.
         throw std::runtime_error("Coluna não encontrada: " + columnName);
     }*/
+
+
+    /*
+    // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
+    void KanbanBoard::moveTask(int origemColumnIndex, int destinoColumnIndex, int taskIndex) {
+        KanbanColumn& origemColumn = columns.get(origemColumnIndex);
+        KanbanColumn& destinoColumn = columns.get(destinoColumnIndex);
+
+        KanbanTask task = origemColumn.tasks.get(taskIndex);
+        destinoColumn.tasks.pushBack(task);
+        origemColumn.tasks.removeValue(task);
+    }*/
+
+    
+  /*  // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
+    void KanbanBoard::moveTask(int destinoColumnIndex, int taskIndex) {
+        KanbanTask *task = findTask(taskIndex); // ponteiro apontando para tarefa que quero mover
+        KanbanColumn& destinoColumn = columns.get(destinoColumnIndex); // referencia coluna destino
+
+// Encontrando o máximo de tarefas que uma coluna possui
+        int maxTasks = 0;
+        for (int i = 0; i < columns.getSize(); ++i) {
+            int columnSize = columns.get(i).tasks.getSize();
+            if (columnSize > maxTasks) {
+                maxTasks = columnSize;
+            }
+        }
+
+
+        for (int i = 0; i < maxTasks; ++i) {
+            for(int j = 0; j < columns.getSize(); ++j) {
+
+
+
+
+                if ( !columns.get(j).tasks.isEmpty() && task->getId() == columns.get(j).tasks.get(i).getId()) { 
+
+
+
+                   const KanbanTask& task = columns.get(j).tasks.get(i); // pegando a tarefa
+                   columns.get(j).tasks.removeValue(task);
+                }
+            }
+        }
+        destinoColumn.tasks.pushBack(*task);
+
+    */
+
