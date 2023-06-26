@@ -128,21 +128,3 @@ public:
 
 
 #endif
-
-
-
-// ======== ANOTAÇÕES 
-
-/*
-    // Adicionar uma tarefa a uma coluna específica do quadro Kanban
-    void addTaskToColumn(const std::string& columnName, const KanbanTask& task) {
-    for (int i = 0; i < columns.getSize(); i++) {
-        if (columns.get(i).name == columnName) {
-            columns.get(i).tasks.pushBack(task);
-            return;
-        }
-    }
-   // Caso a coluna não seja encontrada, você pode lançar uma exceção, retornar um código de erro, ou tratar de outra forma, de acordo com a sua necessidade.
-    // Aqui, por exemplo, lançamos uma exceção std::runtime_error.
-        throw std::runtime_error("Coluna não encontrada: " + columnName);
-    }*/
