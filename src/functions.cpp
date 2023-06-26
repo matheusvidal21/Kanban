@@ -86,9 +86,10 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
     /*Editar tarefa*/
     int escolha, escolha2;
     int indexTask;
-    int novoid, novaprioridade, colunadestino, colunaorigem;
+    int novoid, novaprioridade, colunadestino;
     std::string novotitulo, novadescricao, novadata;
     KanbanTask* taskChoice;
+    
     switch(choice){
 
     //===== CASO: ADICIONAR TAREFAS  =====   
@@ -220,16 +221,16 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
 
                 std::cout << "\nDigite o ID da tarefa que deseja mover: ";
                 std::cin >> indexTask;
-                std::cout << "\nDigite o número da coluna de origem: ";
-                std::cin >> colunaorigem;
+                taskChoice = kanbanBoard->findTask(indexTask);
+                std::cout << "== Tarefa escolhida: " << taskChoice->getTituloId() << " ==" << std::endl;
+
                 std::cout << "\nDigite o número da coluna de destino: ";
                 std::cin >> colunadestino;
-                //kanbanBoard->moveTask((colunaorigem-1) , (colunadestino-1), indexTask);
                 
-                kanbanBoard->moveTask(indexTask, (colunaorigem-1) , (colunadestino-1));
-                // Localizando a tarefa solicitada           
+                kanbanBoard->moveTask(indexTask, (colunadestino-1));
+                      
                 clearTerminal();
-                std::cout << "\n Tarefa movida!";
+                std::cout << "\nTarefa movida!\n";
                 kanbanBoard->printBoard();
 
             break;
@@ -237,7 +238,27 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         //========= CASO: EXCLUIR TAREFA    
         case 3:
 
+                clearTerminal();
+                kanbanBoard->printBoard();
 
+                while (true) {
+                    std::cout << "\nDigite o ID da tarefa que deseja excluir (ou digite -1 para sair): ";
+                    std::cin >> indexTask;
+
+                    if (indexTask == -1) {
+                        std::cout << "\nOperação cancelada.\n" << std::endl;
+                        break;  // Sai do loop
+                    }
+
+                    if(kanbanBoard->removeTask(indexTask) == false){
+                        std::cout << "\nTarefa não encontrada. Digite o ID novamente." << std::endl;
+                    }else{
+                        clearTerminal();
+                        std::cout << "\nTarefa excluída.\n" << std::endl;
+                        kanbanBoard->printBoard();
+                        break;
+                    }
+                }
 
             break; 
 

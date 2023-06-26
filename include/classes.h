@@ -96,7 +96,9 @@ public:
     // Mover uma tarefa de uma coluna para outra coluna do quadro Kanban
     //void moveTask(int origemColumnIndex, int destinoColumnIndex, int taskIndex);
 
-    void moveTask(int taskId, int idcolunaOrigem, int idcolunaDestino);
+    void moveTask(int taskId, int idcolunaDestino);
+
+    bool removeTask(int taskId);
 
     // Exibir as tarefas de uma coluna específica do quadro Kanban
     void printColumn(int columnIndex) const;
@@ -105,6 +107,20 @@ public:
     void printBoard() const;
 
     KanbanTask* findTask(int id);
+
+    // Encontrar a coluna em que uma tarefa com o ID fornecido está localizada
+    KanbanColumn* findTaskColumn(int taskId) const {
+        for (int i = 0; i < columns.getSize(); i++) {
+            KanbanColumn& column = columns.get(i);
+            for (int j = 0; j < column.tasks.getSize(); j++) {
+                if (column.tasks.get(j).getId() == taskId) {
+                    return &column;
+                }
+            }
+        }
+        return NULL;
+    }
+
 
     //ListaDuplamenteEncadeada<KanbanColumn> getColumns(){ return columns; }
 

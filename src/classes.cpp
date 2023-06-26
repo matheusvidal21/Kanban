@@ -192,21 +192,42 @@
                 }
             }
         }
-        throw std::out_of_range("Index out of range");
+        return NULL;
     }
 
     
-    void KanbanBoard::moveTask(int taskId, int idcolunaOrigem, int idcolunaDestino) {
-        KanbanTask* tarefaMover = findTask(taskId); // ponteiro apontando para a tarefa
+    void KanbanBoard::moveTask(int taskId, int idcolunaDestino) {
+        KanbanTask* tarefa = findTask(taskId); // ponteiro apontando para a tarefa
 
-        KanbanColumn& colunaOrigem = columns.get(idcolunaOrigem);
+        if(tarefa ==  NULL) return;
+        
+        KanbanColumn* colunaOrigem = findTaskColumn(taskId);
         KanbanColumn& colunaDestino = columns.get(idcolunaDestino);
 
-        colunaDestino.tasks.pushBack(*tarefaMover);
-        colunaOrigem.tasks.removeValue(*tarefaMover);
-
+        colunaDestino.tasks.pushBack(*tarefa);
+        colunaOrigem->tasks.removeValue(*tarefa);
 
     } 
+
+
+    bool KanbanBoard::removeTask(int taskId) {
+        KanbanTask* tarefa = findTask(taskId);
+
+        if(tarefa ==  NULL) return false;
+        
+        KanbanColumn* coluna = findTaskColumn(taskId);
+        coluna->tasks.removeValue(*tarefa);
+        return true;
+    }
+
+    
+
+
+
+
+
+
+    
 
 
     // =========== ANOTAÇÕES
