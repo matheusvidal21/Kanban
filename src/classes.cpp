@@ -112,39 +112,35 @@
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
         std::cout << "|                                            GERENCIADOR DE TAREFAS KANBAN                                            |\n";
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
-        
-        //RESPONSIVIDADE
+
+        // RESPONSIVIDADE
         int numColumn = columns.getSize();
         int columnWidth = 0;
-        switch (numColumn){
-        case 1: columnWidth = 60;
-            break;
-        case 2: columnWidth = 40;
-            break;
-        case 3: columnWidth = 30;
-            break;
-        case 4: columnWidth = 25;
-            break;
-        case 5: columnWidth = 20;
-            break;
-        case 6: columnWidth = 19;
-            break;
-        case 7: columnWidth = 15;
-            break;
-        case 8: columnWidth = 14;
-            break;
-        case 9: columnWidth = 13;
-            break;
-        default: columnWidth = 25;
-            break;
+        switch (numColumn) {
+            case 1: columnWidth = 58;
+                    break;
+            case 2: columnWidth = 38;
+                    break;
+            case 3: columnWidth = 28;
+                    break;
+            case 4: columnWidth = 22;
+                    break;
+            case 5: columnWidth = 18;
+                    break;
+            case 6: columnWidth = 16;
+                    break;
+            case 7: columnWidth = 14;
+                    break;
+            default: columnWidth = 25;
+                    break;
         }
 
+        std::cout << std::right << std::setw(columnWidth) << "";
         // Imprime os títulos das colunas lado a lado
-        for(int i = 0; i < columns.getSize(); i++) {
-            std::cout << std::left << std::setw(columnWidth) << columns.get(i).name;
+        for (int i = 0; i < columns.getSize(); i++) {
+            std::cout << std::left << std::setw(columnWidth) << std::setfill(' ') << columns.get(i).name;
         }
         std::cout << std::endl;
-
 
         // Encontra a maior quantidade de tarefas em uma coluna
         int maxTasks = 0;
@@ -155,20 +151,23 @@
             }
         }
 
-
-
-        // Imprime as tarefas de cada coluna abaixo dos títulos
+        // Imprime as tarefas de cada linha em todas as colunas abaixo dos títulos
         for (int i = 0; i < maxTasks; ++i) {
-            for(int j = 0; j < columns.getSize(); ++j) {
-                if (i < columns.get(j).tasks.getSize()) { // se i for menor que o numero de tasks de uma coluna
+            std::cout << std::right << std::setw(columnWidth) << "";
+            for (int j = 0; j < columns.getSize(); ++j) {
+                std::cout << std::left << std::setw(columnWidth) << std::setfill(' ');
+
+                if (i < columns.get(j).tasks.getSize()) { // se i for menor que o número de tarefas de uma coluna
                     const KanbanTask& task = columns.get(j).tasks.get(i); // pegando a tarefa
-                    std::cout << std::left << std::setw(columnWidth) << task.getTituloId();
+                    std::string taskTitle = task.getTituloId();
+                    std::cout << taskTitle;
                 } else {
-                    std::cout << std::setw(columnWidth) << "";
+                    std::cout << "";
                 }
             }
             std::cout << std::endl;
         }
+
 
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
     }
@@ -222,7 +221,21 @@
     
     }
 
+    bool KanbanBoard::isBoardEmpty() const{
+        for (int i = 0; i < columns.getSize(); ++i) {
+            KanbanColumn& column = columns.get(i);
+            if (!column.tasks.isEmpty()){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+
 // ATENCAO: ISSO NAO FUNCIONA
+/*
     void KanbanBoard::sortColumn(int idcoluna) {
         KanbanColumn& colunaOrdena = columns.get(idcoluna);
         int tamanhoColuna = colunaOrdena.tasks.getSize();
@@ -239,4 +252,4 @@
         }
 
 
-    }
+    }*/

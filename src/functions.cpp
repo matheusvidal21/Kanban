@@ -87,7 +87,7 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
     KanbanTask task;
     /*Editar tarefa*/
     int escolha, escolha2;
-    int indexTask, index;
+    int indexTask;// index;
     int novoid, novaprioridade, colunadestino;
     std::string novotitulo, novadescricao, novadata;
     KanbanTask* taskChoice;
@@ -101,7 +101,6 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         std::cout << "ID (inteiro): ";
         std::cin >> id;
         task.setId(id);
-
         std::cout << "\nTítulo: ";
         std::cin.ignore(); // Limpar o buffer do teclado
         getline(std::cin, titulo);
@@ -132,13 +131,18 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         indexColuna -= 1;
         kanbanBoard->addTaskToColumn(indexColuna, task);
         clearTerminal();
-        std::cout << "===========  Tarefa adicionada na coluna =========== \n";
+        std::cout << "======= Tarefa adicionada na coluna ======= \n";
         kanbanBoard->printColumn(indexColuna);
 
         break;
 
     //===== CASO: EDITAR TAREFAS EXISTENTES =====    
     case 2:
+        if(kanbanBoard->isBoardEmpty()){
+            clearTerminal();
+            std::cout << "|!| Seu quadro está vazio, adicione uma tarefa primeiro. |!|" << std::endl;            
+            break;
+        }
 
         printMenuTarefa();
         escolha = getUserChoice();
@@ -216,24 +220,38 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         //========= CASO: MOVER TAREFA
         case 2:
                 clearTerminal();
+                while(true){
+                     
+                    for (int i = 0; i < numColunas; i++){
+                        kanbanBoard->printColumn(i);
+                    }
 
-                for (int i = 0; i < numColunas; i++){
-                    kanbanBoard->printColumn(i);
+                    std::cout << "\nDigite o ID da tarefa que deseja mover (ou digite -1 para sair): ";
+                    std::cin >> indexTask;
+
+                    if (indexTask == -1) {
+                        clearTerminal();
+                        std::cout << "\nOperação cancelada.\n" << std::endl;
+                        break;  // Sai do loop
+                    }
+
+                    taskChoice = kanbanBoard->findTask(indexTask);
+                    if(taskChoice == NULL){
+                        clearTerminal();
+                        std::cout << "|!| Tarefa não encontrada. Digite o ID novamente. |!|\n" << std::endl;
+                    }else{
+                        std::cout << "==> Tarefa escolhida: " << taskChoice->getTituloId() << " <==" << std::endl;
+
+                        std::cout << "\nDigite o número da coluna de destino: ";
+                        std::cin >> colunadestino;
+                        
+                        kanbanBoard->moveTask(indexTask, (colunadestino-1));
+                            
+                        clearTerminal();
+                        std::cout << "\nTarefa movida.\n";
+                        kanbanBoard->printBoard();
+                    }
                 }
-
-                std::cout << "\nDigite o ID da tarefa que deseja mover: ";
-                std::cin >> indexTask;
-                taskChoice = kanbanBoard->findTask(indexTask);
-                std::cout << "== Tarefa escolhida: " << taskChoice->getTituloId() << " ==" << std::endl;
-
-                std::cout << "\nDigite o número da coluna de destino: ";
-                std::cin >> colunadestino;
-                
-                kanbanBoard->moveTask(indexTask, (colunadestino-1));
-                      
-                clearTerminal();
-                std::cout << "\nTarefa movida!\n";
-                kanbanBoard->printBoard();
 
             break;
 
@@ -241,20 +259,24 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         case 3:
 
                 clearTerminal();
-                kanbanBoard->printBoard();
-
+                
                 while (true) {
+                    kanbanBoard->printBoard();
                     std::cout << "\nDigite o ID da tarefa que deseja excluir (ou digite -1 para sair): ";
                     std::cin >> indexTask;
 
                     if (indexTask == -1) {
+                        clearTerminal();
                         std::cout << "\nOperação cancelada.\n" << std::endl;
                         break;  // Sai do loop
                     }
+                    taskChoice = kanbanBoard->findTask(indexTask);
 
-                    if(kanbanBoard->removeTask(indexTask) == false){
-                        std::cout << "\nTarefa não encontrada. Digite o ID novamente." << std::endl;
+                    if(taskChoice == NULL){ //Verifica se o ID existe
+                        clearTerminal();
+                        std::cout << "\n|!| Tarefa não encontrada. Digite o ID novamente. |!|" << std::endl;
                     }else{
+                        kanbanBoard->removeTask(indexTask);
                         clearTerminal();
                         std::cout << "\nTarefa excluída.\n" << std::endl;
                         kanbanBoard->printBoard();
@@ -279,6 +301,12 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
 
     //===== CASO: ORDERNAR TAREFAS POR PRIORIDADE =====   
     case 3: // NAO ESTA FUNCIONANDO
+        if(kanbanBoard->isBoardEmpty()){
+            clearTerminal();
+            std::cout << "|!| Seu quadro está vazio, adicione uma tarefa primeiro. |!|" << std::endl;            
+            break;
+        }
+    /*
         clearTerminal();
 
         for (int i = 0; i < numColunas; i++){
@@ -293,7 +321,7 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         kanbanBoard->printColumn(index-1);
         
 
-
+*/
 
 
         break;
@@ -306,6 +334,11 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
 
     //===== CASO: EXIBIR INFORMAÇÕES DA TAREFA
     case 4:
+        if(kanbanBoard->isBoardEmpty()){
+            clearTerminal();
+            std::cout << "|!| Seu quadro está vazio, adicione uma tarefa primeiro. |!|" << std::endl;            
+            break;
+        }
         clearTerminal();
 
 

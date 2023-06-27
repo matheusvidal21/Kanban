@@ -123,6 +123,7 @@ public:
         return NULL;
     }
 
+    bool isBoardEmpty() const;
 
     //ListaDuplamenteEncadeada<KanbanColumn> getColumns(){ return columns; }
 
