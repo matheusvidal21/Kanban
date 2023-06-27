@@ -14,13 +14,13 @@ int main(){
 
     //Recebendo as colunas
     int numColunas;
-    std::cout << "=========== Bem vindo ao gerenciador de tarefas Kanban! ===========\n";
+    std::cout << "===========" << ANSI_GREEN << " Bem vindo ao gerenciador de tarefas Kanban! "  << ANSI_RESET << "===========\n";
     std::cout << "Quantas colunas você deseja adicionar no seu gerenciador?\n";
     std::cin >> numColunas;
     std::cin.ignore(); // Descarta o caractere de nova linha após a leitura do número
     clearTerminal();
 
-    std::cout << "=========== Informe os nomes das colunas ===========\n";
+    std::cout << "===========" << ANSI_GREEN << " Informe os nomes das colunas " << ANSI_RESET << "===========\n";
     for(int i = 0; i < numColunas; i++){
         std::string coluna;
         std::cout << (i + 1) << "ª coluna: ";

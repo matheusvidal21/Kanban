@@ -66,11 +66,20 @@
     //Método getter e setter
     void KanbanTask::setId(int id){ this->id = id; }
     int KanbanTask::getId() const { return id; }
+    
     std::string KanbanTask::getTituloId() const {
         std::stringstream ss;
         ss << id;
-        return titulo + " (ID:" + ss.str() + ")";
+        if(prioridade == 1){
+            return ANSI_GREEN + titulo + " (ID:" + ss.str() + ")" + ANSI_RESET;
+        }else if(prioridade == 2){
+            return ANSI_YELLOW + titulo + " (ID:" + ss.str() + ")" + ANSI_RESET;
+        }else{
+            return ANSI_RED + titulo + " (ID:" + ss.str() + ")" + ANSI_RESET;
+        }
+        
     }
+
 
 // ---------- IMPLEMENTANDO A CLASSE KANBAN BOARD -----------
 
@@ -88,8 +97,8 @@
     }
 
     // Adicionar uma tarefa a uma coluna específica do quadro Kanban
-    void KanbanBoard::addTaskToColumn(int columnIndex, const KanbanTask& task) {
-        KanbanColumn& column = columns.get(columnIndex); // COLUNA TEMPORÁRIA
+    void KanbanBoard::addTaskToColumn(int columnIndex, const KanbanTask& task) {    
+        KanbanColumn& column = columns.get(columnIndex); //Retorna a coluna desejada
         column.tasks.pushBack(task);
     }
     
@@ -107,10 +116,11 @@
 
 
     //Exibir o quadro Kanban
+    /// TEM QUE AJEITAR
     void KanbanBoard::printBoard() const {
         std::cout << "\n";
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
-        std::cout << "|                                            GERENCIADOR DE TAREFAS KANBAN                                            |\n";
+        std::cout << "|                                            " << ANSI_BLUE << "GERENCIADOR DE TAREFAS KANBAN" << ANSI_RESET <<"                                            |\n";
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
 
         // RESPONSIVIDADE
@@ -153,21 +163,25 @@
 
         // Imprime as tarefas de cada linha em todas as colunas abaixo dos títulos
         for (int i = 0; i < maxTasks; ++i) {
+            //std::cout << std::right<< std::setw(columnWidth) << "";
             std::cout << std::right << std::setw(columnWidth) << "";
             for (int j = 0; j < columns.getSize(); ++j) {
-                std::cout << std::left << std::setw(columnWidth) << std::setfill(' ');
+                
+                    //std::cout << std::right << std::setw(columnWidth-8) << "";
+                std::cout << std::left << std::setw(columnWidth+9) << std::setfill(' ');
+                
+                
 
                 if (i < columns.get(j).tasks.getSize()) { // se i for menor que o número de tarefas de uma coluna
                     const KanbanTask& task = columns.get(j).tasks.get(i); // pegando a tarefa
                     std::string taskTitle = task.getTituloId();
-                    std::cout << taskTitle;
+                    std::cout << taskTitle ;
                 } else {
                     std::cout << "";
                 }
             }
             std::cout << std::endl;
         }
-
 
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
     }
@@ -229,6 +243,10 @@
             }
         }
         return true;
+    }
+
+    int KanbanBoard::getNumColumns() const {
+        return columns.getSize();
     }
 
 
