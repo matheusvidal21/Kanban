@@ -15,6 +15,7 @@ public:
     quadrática do Bubble Sort ocorre porque, em cada passagem, são feitas comparações
     entre pares de elementos adjacentes e, se necessário, são feitas trocas. 
     */
+    //Ordena de forma crescente
     static void bubbleSort(T arr[], int size) {
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
@@ -32,11 +33,12 @@ public:
     Selection Sort ocorre porque, em cada iteração, é necessário
     percorrer a parte não ordenada para encontrar o menor elemento. 
     */
+   //Ordena de forma decrescente
     static void selectionSort(T arr[], int size) {
         for (int i = 0; i < size - 1; i++) {
             int indice_minimo = i;
             for (int j = i + 1; j < size; j++) {
-                if (arr[j] < arr[indice_minimo]) {
+                if (arr[j] > arr[indice_minimo]) {
                     indice_minimo = j;
                 }
             }

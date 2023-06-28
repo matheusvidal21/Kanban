@@ -212,83 +212,8 @@ class ListaDuplamenteEncadeada{
 
       head = tail = NULL;
     }
-/*
-     void swap(int index1, int index2) {
-        int size = getSize();
-        
-        if (index1 < 0 || index1 >= size || index2 < 0 || index2 >= size) {
-            throw std::out_of_range("Index out of range");
-        }
 
-        if (index1 == index2) {
-            return;  // Não é necessário fazer trocas se os índices forem iguais
-        }
-
-        No<T>* node1 = getNode(index1);
-        No<T>* node2 = getNode(index2);
-
-        // Troca dos ponteiros prev e next para os nós adjacentes aos nós a serem trocados
-        No<T>* prevNode1 = node1->prev;
-        No<T>* nextNode1 = node1->next;
-        No<T>* prevNode2 = node2->prev;
-        No<T>* nextNode2 = node2->next;
-
-        // Atualização dos ponteiros dos nós adjacentes
-        if (prevNode1 != NULL) {
-            prevNode1->next = node2;
-        } else {
-            head = node2;  // Atualiza o ponteiro head se node1 era o primeiro elemento
-        }
-
-        if (nextNode1 != NULL) {
-            nextNode1->prev = node2;
-        } else {
-            tail = node2;  // Atualiza o ponteiro tail se node1 era o último elemento
-        }
-
-        if (prevNode2 != NULL) {
-            prevNode2->next = node1;
-        } else {
-            head = node1;  // Atualiza o ponteiro head se node2 era o primeiro elemento
-        }
-
-        if (nextNode2 != NULL) {
-            nextNode2->prev = node1;
-        } else {
-            tail = node1;  // Atualiza o ponteiro tail se node2 era o último elemento
-        }
-
-        // Troca dos ponteiros prev e next entre os nós a serem trocados
-        node1->prev = prevNode2;
-        node1->next = nextNode2;
-        node2->prev = prevNode1;
-        node2->next = nextNode1;
-    }*/
-
-/*
-private:
-    // ...
-
-    // Método auxiliar para obter o nó em um determinado índice
-    No<T>* getNode(int index) const {
-        if (index < 0 || index >= getSize()) {
-            throw std::out_of_range("Index out of range");
-        }
-
-        No<T>* current = head;
-        int currentIndex = 0;
-
-        while (current != NULL) {
-            if (currentIndex == index) {
-                return current;
-            }
-            current = current->next;
-            currentIndex++;
-        }
-
-        throw std::out_of_range("Index out of range");
-    }*/
-
+  
 
 
 };

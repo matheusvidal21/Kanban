@@ -9,10 +9,10 @@ using namespace std;
 
 int main(){
 
-
+    // Alocando dinamicamnete um objeto de kanbanBoard na HEAP
     KanbanBoard* kanbanBoard = new KanbanBoard();
 
-    //Recebendo as colunas
+    // Recebendo as colunas
     int numColunas;
     std::cout << "===========" << ANSI_GREEN << " Bem vindo ao gerenciador de tarefas Kanban! "  << ANSI_RESET << "===========\n";
     std::cout << "Quantas colunas você deseja adicionar no seu gerenciador?\n";
@@ -28,14 +28,15 @@ int main(){
         stringMaiusculo(coluna);
         kanbanBoard->addColumn(coluna);
     }
+
     clearTerminal();
 
-
+    // Imprime o quadro com as colunas inseridas
     std::cout << "Ótimo! Aqui está seu quadro:\n";
     kanbanBoard->printBoard();
     std::cout << "\n" << std::endl;
 
-
+    // Loop principal do programa
     while(true){
         printMenu();
         int choice = getUserChoice();
@@ -43,6 +44,7 @@ int main(){
         executarOperacao(choice, kanbanBoard, numColunas);
     }
 
+    // Libera a memória alocada
     delete kanbanBoard;
     kanbanBoard = NULL;
 
