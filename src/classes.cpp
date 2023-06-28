@@ -127,7 +127,7 @@
         int numColumn = columns.getSize();
         int columnWidth = 0;
         switch (numColumn) {
-            case 1: columnWidth = 58;
+            case 1: columnWidth = 60;
                     break;
             case 2: columnWidth = 38;
                     break;
@@ -163,21 +163,18 @@
 
         // Imprime as tarefas de cada linha em todas as colunas abaixo dos títulos
         for (int i = 0; i < maxTasks; ++i) {
-            //std::cout << std::right<< std::setw(columnWidth) << "";
-            std::cout << std::right << std::setw(columnWidth) << "";
+            std::cout << std::left << std::setw(columnWidth) << "";
             for (int j = 0; j < columns.getSize(); ++j) {
                 
-                    //std::cout << std::right << std::setw(columnWidth-8) << "";
-                std::cout << std::left << std::setw(columnWidth+9) << std::setfill(' ');
-                
-                
-
                 if (i < columns.get(j).tasks.getSize()) { // se i for menor que o número de tarefas de uma coluna
+                    std::cout << std::left << std::setw(columnWidth+9) << std::setfill(' ');
                     const KanbanTask& task = columns.get(j).tasks.get(i); // pegando a tarefa
                     std::string taskTitle = task.getTituloId();
                     std::cout << taskTitle ;
                 } else {
+                   std::cout << std::left << std::setw(columnWidth) << std::setfill(' ');
                     std::cout << "";
+                    
                 }
             }
             std::cout << std::endl;
@@ -186,22 +183,12 @@
         std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
     }
 
-    //Retorna a task que tem o id passado como parâmetro
-    KanbanTask* KanbanBoard::findTask(int id){
-        // Encontra a maior quantidade de tarefas em uma coluna
-        int maxTasks = 0;
-        for (int i = 0; i < columns.getSize(); ++i) {
-            int columnSize = columns.get(i).tasks.getSize();
-            if (columnSize > maxTasks) {
-                maxTasks = columnSize;
-            }
-        }
-
-        for (int i = 0; i < maxTasks; ++i) {
-            for(int j = 0; j < columns.getSize(); ++j) {
-                if ( !columns.get(j).tasks.isEmpty() && id == columns.get(j).tasks.get(i).getId()) { 
-                    KanbanTask* task = &columns.get(j).tasks.get(i); // pegando a tarefa
-                    return task;
+    KanbanTask* KanbanBoard::findTask(int id) {
+        for (int j = 0; j < columns.getSize(); ++j) {
+            KanbanColumn& column = columns.get(j);
+            for (int i = 0; i < column.tasks.getSize(); ++i) {
+                if (id == column.tasks.get(i).getId() && column.tasks.isEmpty() == false) {
+                    return &column.tasks.get(i);
                 }
             }
         }
@@ -212,14 +199,21 @@
     void KanbanBoard::moveTask(int taskId, int idcolunaDestino) {
         KanbanTask* tarefa = findTask(taskId); // ponteiro apontando para a tarefa
 
-        if(tarefa ==  NULL) return;
+        if(tarefa == NULL){
+            std::cout << "Tarefa não encontrada." << std::endl;
+            return;
+        }
         
         KanbanColumn* colunaOrigem = findTaskColumn(taskId);
+        if (colunaOrigem == NULL) {
+            std::cout << "Coluna de origem não encontrada para a tarefa." << std::endl;
+            return;
+        }
+
         KanbanColumn& colunaDestino = columns.get(idcolunaDestino);
 
         colunaDestino.tasks.pushBack(*tarefa);
         colunaOrigem->tasks.removeValue(*tarefa);
-
     } 
 
 
@@ -230,9 +224,7 @@
         
         KanbanColumn* coluna = findTaskColumn(taskId);
         coluna->tasks.removeValue(*tarefa);
-        return true;
-
-    
+        return true;    
     }
 
     bool KanbanBoard::isBoardEmpty() const{
@@ -248,6 +240,24 @@
     int KanbanBoard::getNumColumns() const {
         return columns.getSize();
     }
+
+    bool KanbanBoard::existeIdDuplicado(int id) const {
+        for (int i = 0; i < columns.getSize(); ++i) {
+            const KanbanColumn& column = columns.get(i);
+            for (int j = 0; j < column.tasks.getSize(); ++j) {
+                const KanbanTask& task = column.tasks.get(j);
+                if (task.getId() == id) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
+
+
+
 
 
 
@@ -270,4 +280,30 @@
         }
 
 
+    }*/
+
+
+
+        //Retorna a task que tem o id passado como parâmetro
+    /*
+    KanbanTask* KanbanBoard::findTask(int id){
+        // Encontra a maior quantidade de tarefas em uma coluna
+        int maxTasks = 0;
+        for (int i = 0; i < columns.getSize(); ++i) {
+            int columnSize = columns.get(i).tasks.getSize();
+            if (columnSize > maxTasks) {
+                maxTasks = columnSize;
+            }
+        }
+        
+
+        for (int i = 0; i < maxTasks; ++i) {
+            for(int j = 0; j < columns.getSize(); ++j) {
+                if ( !columns.get(j).tasks.isEmpty() && id == columns.get(j).tasks.get(i).getId()) { 
+                    KanbanTask* task = &columns.get(j).tasks.get(i); // pegando a tarefa
+                    return task;
+                }
+            }
+        }
+        return NULL;
     }*/

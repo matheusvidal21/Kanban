@@ -134,6 +134,8 @@ public:
 
     int getNumColumns() const;
 
+    bool existeIdDuplicado(int id) const;
+
     //ListaDuplamenteEncadeada<KanbanColumn> getColumns(){ return columns; }
 
 };

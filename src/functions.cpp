@@ -44,7 +44,8 @@ int askForValidColumn(const KanbanBoard& kanbanBoard, int flag) {
         }
     }while (columnIndex <= 0 || columnIndex > numColumns);
 
-    return (columnIndex - 1);
+    columnIndex -= 1;
+    return columnIndex;
 }
 
 void printMenu(){
@@ -114,7 +115,7 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
     /*Editar tarefa*/
     int escolha, escolha2;
     int indexTask;// index;
-    int novoid, novaprioridade, colunadestino;
+    int novoid, novaprioridade, colunadestino = 0;
     std::string novotitulo, novadescricao, novadata;
     KanbanTask* taskChoice;
     
@@ -125,8 +126,15 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
 
         std::cout << "===========" << ANSI_GREEN << " Preencha os dados da tarefa " << ANSI_RESET << "===========\n";
         std::cout << "ID (inteiro): ";
-        std::cin >> id;
-        task.setId(id);
+        do{
+            std::cin >> id;
+            if (kanbanBoard->existeIdDuplicado(id)) {
+                std::cout << ANSI_RED << "|!| ID duplicado. Digite um ID diferente. |!|" << ANSI_RESET << std::endl;
+            }
+            task.setId(id);
+        }while(kanbanBoard->existeIdDuplicado(id));
+
+        
         std::cout << "*=====================*";
         std::cout << "\nTítulo: ";
         std::cin.ignore(); // Limpar o buffer do teclado
@@ -260,12 +268,13 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
         case 2:
                 clearTerminal();
                 while(true){
-                     
+                    indexTask = 0;
+                
                     for (int i = 0; i < numColunas; i++){
                         kanbanBoard->printColumn(i);
                     }
 
-                    std::cout << "\nDigite o ID da tarefa que deseja mover (ou digite -1 para sair): ";
+                    std::cout << std::endl << "Digite o ID da tarefa que deseja mover (ou digite -1 para sair): ";
                     std::cin >> indexTask;
 
                     if (indexTask == -1) {
@@ -279,17 +288,17 @@ void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas)
                         clearTerminal();
                         std::cout << ANSI_RED << "|!| Tarefa não encontrada. Digite o ID novamente. |!|\n" << ANSI_RESET << std::endl;
                     }else{
-                        std::cout << ANSI_GREEN << "==> Tarefa escolhida: " << taskChoice->getTituloId() << " <==" << ANSI_RESET << std::endl;
+                        
+                        std::cout << ANSI_GREEN << "==> Tarefa escolhida: " << taskChoice->getTituloId() << ANSI_GREEN << " <==" << ANSI_RESET << std::endl;
 
                         //Pede a coluna de destino para o usuário
                         colunadestino = askForValidColumn(*kanbanBoard, 2);
                         
-                        kanbanBoard->moveTask(indexTask, (colunadestino));
-                            
-                        taskChoice = kanbanBoard->findTask(indexTask);
+                        kanbanBoard->moveTask(indexTask, colunadestino);
 
                         clearTerminal();
-                        std::cout << ANSI_GREEN << "\nTarefa '" << taskChoice->getTitulo() << "' movida.\n" << ANSI_RESET;
+                        
+                        std::cout << ANSI_GREEN << "\nTarefa movida.\n" << ANSI_RESET;
                         kanbanBoard->printBoard();
                         std::cout << std::endl;
                     }

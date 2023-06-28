@@ -33,7 +33,7 @@ class ListaDuplamenteEncadeada{
     // Obter o elemento em um índice específico da lista
     T& get(int index) const {
         if (index < 0 || index >= getSize()) {
-            throw std::out_of_range("Index out of range");
+            throw std::out_of_range("Index não encontrado.");
         }
 
         No<T>* current = head;
@@ -47,7 +47,7 @@ class ListaDuplamenteEncadeada{
             currentIndex++;
         }
 
-        throw std::out_of_range("Index out of range");
+        throw std::out_of_range("Index não encontrado.");
     }
 
 
@@ -155,7 +155,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-/*Método para remover um valor específico da lista*/
+  /*Método para remover um valor específico da lista*/
     bool removeValue(const T& value){
       if(isEmpty()){
         return false;
@@ -212,7 +212,7 @@ class ListaDuplamenteEncadeada{
 
       head = tail = NULL;
     }
-
+/*
      void swap(int index1, int index2) {
         int size = getSize();
         
@@ -263,8 +263,9 @@ class ListaDuplamenteEncadeada{
         node1->next = nextNode2;
         node2->prev = prevNode1;
         node2->next = nextNode1;
-    }
+    }*/
 
+/*
 private:
     // ...
 
@@ -286,7 +287,7 @@ private:
         }
 
         throw std::out_of_range("Index out of range");
-    }
+    }*/
 
 
 
