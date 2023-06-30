@@ -3,7 +3,8 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include "classes.h"
+#include "menus.h"
+#include "kanbanboard.h"
 #include "estruturas_tads.hpp"
 #include "templates.hpp"
 
@@ -14,11 +15,19 @@
 #define ANSI_YELLOW "\033[33m"
 #define ANSI_BLUE "\033[34m"
 
-
-void stringMaiusculo(std::string& texto);
+// ==== Solicita ao usuário o número de colunas ====
+int receiveNumColumns();
+// ==== Solicita ao usuário o nome das colunas ====
+void receiveColumns(KanbanBoard *kanbanBoard, int numColunas);
+// ==== Função que transforma toda a string em maiúsculo ====
+void stringMaiusculo(std::string &texto);
+// ==== Limpa o terminal em diferentes sistemas operacionais ====
 void clearTerminal();
-void printMenu();
+// ==== Solicita ao usuário o número da coluna até que seja inserido um valor válido ====
+int askForValidColumn(const KanbanBoard &kanbanBoard, int flag);
+// ==== Pede para o usuário digitar uma operação ====
 int getUserChoice();
-void executarOperacao(int choice, KanbanBoard* kanbanBoard, int numColunas);
+// ==== Grande switch case do programa ====
+void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas);
 
 #endif
