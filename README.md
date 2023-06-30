@@ -33,8 +33,6 @@ O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban poss
 
 - **Visualização Geral:** O aplicativo poderá oferecer uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as tarefas em um único local, independentemente de sua localização no quadro Kanban.
 
-- **Relatórios e Estatísticas:** O sistema poderá gerar relatórios ou fornecer estatísticas sobre o desempenho da equipe, como o número de tarefas concluídas, média de tempo de conclusão, etc.
-
 Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.
 
 
@@ -68,22 +66,22 @@ O diagrama de classes UML é uma representação visual da estrutura e das rela�
 
 1. **Task:** <br>
 - Classe abstrata que representa uma tarefa genérica;
-- Possui atributos como id, titulo, descricao, prioridade e dataVencimento;
+- Possui atributos como titulo, descricao, prioridade e dataVencimento;
 - Fornece construtores para criar tarefas com diferentes combinações de atributos;
 - Possui métodos getters e setters para acessar e modificar os atributos;
 - Define um método virtual puro printTask() para imprimir informações da tarefa.
 2. **KanbanTask:** <br>
 - Subclasse de Task que representa uma tarefa específica para um Kanban;
-- Adiciona o atributo status à tarefa;
+- Adiciona o atributo ID à tarefa;
 - Fornece construtores para criar tarefas Kanban com diferentes combinações de atributos;
-- Possui métodos getters e setters para acessar e modificar o atributo status;
+- Possui métodos getters e setters para acessar e modificar o atributo ID;
 - Implementa o método printTask() para imprimir informações específicas de tarefas Kanban.
 3. **KanbanBoard:** <br>
-- Representa um quadro Kanban que contém uma lista de tarefas;
-- Utiliza a classe ListaDuplamenteEncadeada para armazenar as tarefas;
+- Representa um quadro Kanban que contém uma lista de colunas;
+- Uma lista de colunas representa uma Struct com o nome da coluna e uma lista de tarefas;
+- Utiliza a classe ListaDuplamenteEncadeada para armazenar as tarefas e colunas;
 - Fornece métodos para adicionar, remover e gerenciar as tarefas do quadro;
 - Inclui métodos para classificar as tarefas, mover tarefas entre os status e imprimir o quadro Kanban;
-- Possui um método getter para obter a lista de tarefas do quadro.
 4. **ListaDuplamenteEncadeada<T>:** <br>
 - Implementa uma lista duplamente encadeada;
 - Utiliza os nós da classe No para armazenar os elementos;
@@ -125,10 +123,12 @@ Uma lista duplamente encadeada é uma estrutura de dados em que os nós são con
     2. `pushBack()`: Adiciona um novo elemento no final da lista; <br>
     3. `removeFront()`: Remove o primeiro elemento; <br>
     4. `removeBack()`: Remove o último elemento da lista; <br>
-    5. `isEmpity()`: Verifica se a lista está vazia; <br>
-    6. `print()`: Imprime os elementos da lista; <br>
-    7. `getSize()`: Retorna o tamanho da lista; <br>
-    8. `removeValue()`: Remove um valor específico; <br>
+    5. `get()`: Retorna o valor do índice recebido; <br>
+    6. `isEmpity()`: Verifica se a lista está vazia; <br>
+    7. `print()`: Imprime os elementos da lista; <br>
+    8. `getSize()`: Retorna o tamanho da lista; <br>
+    9. `removeValue()`: Remove um valor específico; <br>
+    10. `clear()`: Remove todos os elementos da lista; <br>
 
 - **📚 Pilha**: <br>
 Uma pilha é uma estrutura de dados que segue a abordagem "último a entrar, primeiro a sair" (LIFO - Last-In-First-Out). Os elementos são inseridos e removidos apenas em uma extremidade, chamada de topo da pilha. As operações básicas em uma pilha são `"push"` para adicionar um elemento no topo, `"pop"` para remover o elemento do topo, e `"peek"` para visualizar o elemento no topo sem removê-lo.
@@ -221,6 +221,9 @@ Utilize esse comando para exibir um guia de ajuda com uma lista dos comandos dis
 - Após a compilação bem-sucedida, o arquivo executável kanban será criado no diretório bin;
 - Ao executar o programa com o comando make run, certifique-se de estar no diretório raiz do projeto.
 
+### ⚠️ Aviso
+Esse projeto utiliza sequências de escape ANSI para exibir cores no terminal. No entanto, é importante notar que nem todos os terminais ou sistemas operacionais suportam totalmente a exibição de fonte colorida com ANSI.
+Se você encontrar problemas com a exibição das cores ou caracteres estranhos, verifique se o seu terminal é compatível com a exibição de ANSI ou considere utilizar outro terminal que suporte essa funcionalidade. Caso contrário, o texto será exibido sem as cores especificadas.
 
 # 👥 Autores
 
