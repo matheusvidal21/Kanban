@@ -190,43 +190,58 @@ KanbanTask *KanbanBoard::findTask(int id)
 // ==== Imprime todo o quadro Kanban ====
 void KanbanBoard::printBoard() const
 {
-  std::cout << "\n";
-  std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
-  std::cout << "|                                            " << ANSI_BLUE << "GERENCIADOR DE TAREFAS KANBAN" << ANSI_RESET << "                                            |\n";
-  std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
-
+ 
   // RESPONSIVIDADE
   int numColumn = columns.getSize();
   int columnWidth = 0;
   switch (numColumn)
   {
   case 1:
-    columnWidth = 60;
+    columnWidth = 72;
     break;
   case 2:
-    columnWidth = 38;
+    columnWidth = 48;
     break;
   case 3:
-    columnWidth = 28;
+    columnWidth = 35;
     break;
   case 4:
-    columnWidth = 22;
+    columnWidth = 32;
     break;
   case 5:
-    columnWidth = 18;
+    columnWidth = 24;
     break;
   case 6:
-    columnWidth = 16;
+    columnWidth = 21;
     break;
   case 7:
-    columnWidth = 14;
+    columnWidth = 18;
     break;
   default:
     columnWidth = 25;
     break;
   }
 
-  std::cout << std::right << std::setw(columnWidth) << "";
+  int firstColumnWidth = 0;
+  if(numColumn <= 4){
+    firstColumnWidth = columnWidth - 14;
+  }else{
+    firstColumnWidth = columnWidth - 7;
+  }
+
+  if(numColumn < 4){
+     std::cout << "\n";
+    std::cout << "+-------------------------------------------------------------------------------------------------------------------------+\n";
+    std::cout << "|                                              " << ANSI_BLUE << "GERENCIADOR DE TAREFAS KANBAN" << ANSI_RESET << "                                              |\n";
+    std::cout << "+-------------------------------------------------------------------------------------------------------------------------+\n";
+  }else{
+     std::cout << "\n";
+    std::cout << "+-----------------------------------------------------------------------------------------------------------------------------------------+\n";
+    std::cout << "|                                                      " << ANSI_BLUE << "GERENCIADOR DE TAREFAS KANBAN" << ANSI_RESET << "                                                      |\n";
+    std::cout << "+-----------------------------------------------------------------------------------------------------------------------------------------+\n";
+  }
+
+  std::cout << std::right << std::setw(firstColumnWidth) << "";
   // Imprime os títulos das colunas lado a lado
   for (int i = 0; i < columns.getSize(); i++)
   {
@@ -248,7 +263,7 @@ void KanbanBoard::printBoard() const
   // Imprime as tarefas de cada linha em todas as colunas abaixo dos títulos
   for (int i = 0; i < maxTasks; ++i)
   {
-    std::cout << std::left << std::setw(columnWidth) << "";
+    std::cout << std::right << std::setw(firstColumnWidth) << "";
     for (int j = 0; j < columns.getSize(); ++j)
     {
 
@@ -268,7 +283,11 @@ void KanbanBoard::printBoard() const
     std::cout << std::endl;
   }
 
-  std::cout << "+---------------------------------------------------------------------------------------------------------------------+\n";
+  if(numColumn < 4){
+    std::cout << "+-------------------------------------------------------------------------------------------------------------------------+\n";
+  }else{
+    std::cout << "+-----------------------------------------------------------------------------------------------------------------------------------------+\n";
+  }
 }
 
 // Retorna a task que tem o id passado como parâmetro
