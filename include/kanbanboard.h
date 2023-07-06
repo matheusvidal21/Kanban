@@ -86,6 +86,46 @@ public:
     }
     return NULL;
   }
+
+  void saveToFile(const std::string& fileName) const {
+          std::ofstream file(fileName.c_str());
+          //std::ofstream file(fileName);
+
+          if (!file) {
+              std::cout << "Erro ao abrir o arquivo " << fileName << std::endl;
+              return;
+          }
+
+          int numTasks = 1;
+          for (int i = 0; i < columns.getSize(); i++) {
+              const KanbanColumn& column = columns.get(i);
+              file << "*======================================*\n";
+              file << "           Coluna " << (i + 1) << ": " << column.name << std::endl;
+              file << "\n" << std::endl;
+              const ListaDuplamenteEncadeada<KanbanTask>& tasks = column.tasks;
+              for (int j = 0; j < tasks.getSize(); j++) {
+                  const KanbanTask& task = tasks.get(j);
+                  /*file << "  - Tarefa " << (j + 1) << ": " << task.getDescricao() << std::endl;
+                  file << "  - Tarefa " << (numTasks) << ": " << task.getTitulo() << std::endl;
+                  file << "          " << task.getDescricao() << std::endl;*/
+                  file << "+-------------------------------------+\n";
+                  file << "|              Tarefa " << numTasks << "               |\n"; 
+                  file << "+-------------------------------------+\n";
+                  file << " Título: " << task.getTitulo() << "\n";
+                  file << " Descrição: " << task.getDescricao() << "\n";
+                  file << "+-------------------------------------+\n\n";
+                  numTasks++; 
+              }
+              file << std::endl;
+              file << "*======================================*\n";
+              file << "\n" << std::endl;
+          }
+
+          file.close();
+
+          std::cout << ANSI_GREEN << "Tabela salva no arquivo " << fileName << " com sucesso." << ANSI_RESET << std::endl;
+      }
+  
 };
 
 #endif

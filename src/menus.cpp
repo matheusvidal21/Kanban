@@ -13,8 +13,9 @@ void printMenu()
   std::cout << "|  2. Editar tarefa existente             |" << std::endl;
   std::cout << "|  3. Ver informações de uma tarefa       |" << std::endl;
   std::cout << "|  4. Ordernar tarefas por prioridade     |" << std::endl;
-  std::cout << "|  5. Exibir o quadro Kanban              |" << std::endl;
-  std::cout << "|  6. Sair                                |" << std::endl;
+  std::cout << "|  5. Salvar em um arquivo 'txt'          |" << std::endl;
+  std::cout << "|  6. Exibir o quadro Kanban              |" << std::endl;
+  std::cout << "|  7. Sair                                |" << std::endl;
   std::cout << "|                                         |" << std::endl;
   std::cout << "*=========================================*" << std::endl;
 }
@@ -52,8 +53,9 @@ void printMenuTarefa()
   std::cout << "|  " << ANSI_BLUE << "2. Editar tarefa existente ------------------>" << ANSI_RESET << " |  2. Mover tarefa                |" << std::endl;
   std::cout << "|  3. Ver informações de uma tarefa      |        |  3. Excluir tarefa              |" << std::endl;
   std::cout << "|  4. Ordernar tarefas por prioridade    |        |  4. Voltar                      |" << std::endl;
-  std::cout << "|  5. Exibir o quadro Kanban             |        |                                 |" << std::endl;
-  std::cout << "|  6. Sair                               |        *=================================*" << std::endl;
+  std::cout << "|  5. Salvar em um arquivo 'txt'         |        |                                 |" << std::endl;
+  std::cout << "|  6. Exibir o quadro Kanban             |        |                                 |" << std::endl;
+  std::cout << "|  7. Sair                               |        *=================================*" << std::endl;
   std::cout << "|                                        |                                           " << std::endl;
   std::cout << "*========================================*                                           " << std::endl;
 }
@@ -72,8 +74,9 @@ void printMenuOrdenar()
   std::cout << "|  2. Editar tarefa existente            |        |  2. Ordenação decrescente " << ANSI_RED << "(3-1)" << ANSI_RESET << " |" << std::endl;
   std::cout << "|  3. Ver informações de uma tarefa      |        |  3. Ordenar todas as colunas    |" << std::endl;
   std::cout << "|  " << ANSI_BLUE << "4. Ordernar tarefas por prioridade ---------->" << ANSI_RESET << " |  4. Voltar                      |" << std::endl;
-  std::cout << "|  5. Exibir o quadro Kanban             |        |                                 |" << std::endl;
-  std::cout << "|  6. Sair                               |        *=================================*" << std::endl;
+  std::cout << "|  5. Salvar em um arquivo 'txt'         |        |                                 |" << std::endl;
+  std::cout << "|  6. Exibir o quadro Kanban             |        |                                 |" << std::endl;
+  std::cout << "|  7. Sair                               |        *=================================*" << std::endl;
   std::cout << "|                                        |                                           " << std::endl;
   std::cout << "*========================================*                                           " << std::endl;
 }

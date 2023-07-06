@@ -601,8 +601,18 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
         break;
 
-    // ==== CASO: EXIBIR QUADRO KANBAN ====
+
+    // ==== CASO: SALVAR EM UM ARQUIVO 'TXT' ====
     case 5:
+        clearTerminal();
+        //std::cout << "Informe o nome do arquivo: ";
+        //getline(std::cin, titulo);
+        kanbanBoard->saveToFile("titulo.txt");
+        break;  
+
+
+    // ==== CASO: EXIBIR QUADRO KANBAN ====
+    case 6:
         while (true)
         {
             kanbanBoard->printBoard();
@@ -619,14 +629,16 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
         break;
 
-        // ==== CASO: SAIR ====
-    case 6:
+
+    // ==== CASO: SAIR ====
+    case 7:
         std::cout << ANSI_RED << "Encerrando o programa..." << ANSI_RESET << std::endl;
         delete kanbanBoard; // Libera a memória alocada
         kanbanBoard = NULL;
         std::exit(0);
+        break;
 
-        // ==== CASO: OPÇÃO INVÁLIDA ====
+    // ==== CASO: OPÇÃO INVÁLIDA ====
     default:
         std::cout << ANSI_RED << "|!| Opção inválida. Por favor, escolha uma opção válida. |!|\n"
                   << ANSI_RESET << std::endl;
