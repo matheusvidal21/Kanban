@@ -17,5 +17,7 @@ void printMenuEditar();
 void printMenuTarefa();
 // ==== SUBMENU PARA ORDENAR TAREFAS
 void printMenuOrdenar();
+// ==== SUBMENU PARA ORDENAR O QUADRO
+void printMenuSalvar();
 
 #endif

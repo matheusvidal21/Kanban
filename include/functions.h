@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
+#include <dirent.h> //M anipulação de diretórios
 #include "menus.h"
 #include "kanbanboard.h"
 #include "estruturas_tads.hpp"
@@ -15,6 +16,8 @@
 #define ANSI_YELLOW "\033[33m"
 #define ANSI_BLUE "\033[34m"
 
+// ==== Retorna uma lista dos arquivos em uma pasta ====
+ListaDuplamenteEncadeada<std::string> listarArquivos(const std::string& pasta);
 // ==== Solicita ao usuário o número de colunas ====
 int receiveNumColumns();
 // ==== Solicita ao usuário o nome das colunas ====

@@ -328,7 +328,7 @@ void KanbanBoard::saveToFile(const std::string& filename) const
 
     file.close();
 
-    std::cout << ANSI_GREEN << "Quadro Kanban salvo no arquivo " << filename << " com sucesso." << ANSI_RESET << std::endl;
+    std::cout << ANSI_GREEN << "Quadro Kanban salvo no arquivo '" << filename << "' com sucesso." << ANSI_RESET << std::endl;
 }
 
 
@@ -396,7 +396,7 @@ void KanbanBoard::loadFromFile(const std::string& filename)
 
     file.close();
 
-    std::cout << ANSI_GREEN << "Quadro Kanban carregado do arquivo " << filename << " com sucesso." << ANSI_RESET << std::endl;
+    std::cout << ANSI_GREEN << "Quadro Kanban restaurado do arquivo '" << filename << "' com sucesso." << ANSI_RESET << std::endl;
 }
 
 
