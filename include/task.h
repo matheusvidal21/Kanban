@@ -6,37 +6,41 @@
 // ==== CLASSE ABSTRATA TASK ====
 class Task
 {
-protected: // Atributos da classe base
-    std::string titulo;
-    std::string descricao;
-    int prioridade;
-    std::string dataVencimento;
+    protected: // Atributos da classe base
+        std::string titulo;
+        std::string descricao;
+        int prioridade;
+        std::string dataVencimento;
 
-public:
-    // Contrutores
-    Task();
-    Task(const std::string &titulo, const std::string &descricao, int prioridade, const std::string &dataVencimento);
-    Task(const std::string &titulo, const std::string &descricao, int prioridade);
-    Task(const std::string &titulo, const std::string &descricao);
-    Task(const std::string &titulo);
+    public:
+        // Contrutores
+        Task();
+        Task(const std::string &titulo, const std::string &descricao, int prioridade, const std::string &dataVencimento);
+        Task(const std::string &titulo, const std::string &descricao, int prioridade);
+        Task(const std::string &titulo, const std::string &descricao);
+        Task(const std::string &titulo);
 
-    // Destrutor
-    virtual ~Task(){};
+        //teste
+        Task(const Task& other)
+        : titulo(other.titulo), descricao(other.descricao), prioridade(other.prioridade), dataVencimento(other.dataVencimento){}
 
-    // Métodos getters
-    std::string getTitulo() const;
-    std::string getDescricao() const;
-    int getPrioridade() const;
-    std::string getVencimento() const;
+        // Destrutor
+        virtual ~Task(){};
 
-    // Métodos setters
-    void setTitulo(std::string titulo);
-    void setDescricao(std::string descricao);
-    void setPrioridade(int prioridade);
-    void setVencimento(std::string dataVencimento);
+        // Métodos getters
+        std::string getTitulo() const;
+        std::string getDescricao() const;
+        int getPrioridade() const;
+        std::string getVencimento() const;
 
-    // Método virtual puro
-    virtual void printTask() const = 0;
+        // Métodos setters
+        void setTitulo(std::string titulo);
+        void setDescricao(std::string descricao);
+        void setPrioridade(int prioridade);
+        void setVencimento(std::string dataVencimento);
+
+        // Método virtual puro
+        virtual void printTask() const = 0;
 };
 
 #endif

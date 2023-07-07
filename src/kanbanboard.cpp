@@ -170,22 +170,6 @@ bool KanbanBoard::existeIdDuplicado(int id) const
   return false;
 }
 
-// ==== Procura e retorna a tarefa do ID recebido ====
-KanbanTask *KanbanBoard::findTask(int id)
-{
-  for (int j = 0; j < columns.getSize(); ++j)
-  {
-    KanbanColumn &column = columns.get(j);
-    for (int i = 0; i < column.tasks.getSize(); ++i)
-    {
-      if (id == column.tasks.get(i).getId() && column.tasks.isEmpty() == false)
-      {
-        return &column.tasks.get(i);
-      }
-    }
-  }
-  return NULL;
-}
 
 // ==== Imprime todo o quadro Kanban ====
 void KanbanBoard::printBoard() const
@@ -290,26 +274,188 @@ void KanbanBoard::printBoard() const
   }
 }
 
-// Retorna a task que tem o id passado como parâmetro
-/*
-KanbanTask* KanbanBoard::findTask(int id){
-    // Encontra a maior quantidade de tarefas em uma coluna
-    int maxTasks = 0;
-    for (int i = 0; i < columns.getSize(); ++i) {
-        int columnSize = columns.get(i).tasks.getSize();
-        if (columnSize > maxTasks) {
-            maxTasks = columnSize;
+
+// ==== Salva todo o quadro Kanban em um arquivo bin ====
+void KanbanBoard::saveToFile(const std::string& filename) const
+{
+    std::ofstream file(filename.c_str(), std::ios::binary);
+    if (!file) {
+        std::cout << "Erro ao abrir o arquivo de salvamento." << std::endl;
+        return;
+    }
+
+    int numColumns = columns.getSize();
+    file.write(reinterpret_cast<const char*>(&numColumns), sizeof(numColumns));
+
+    // Faz a gravação dos dados
+    for (int i = 0; i < numColumns; i++)
+    {
+        const KanbanColumn& column = columns.get(i);
+        int columnNameSize = column.name.size();
+        file.write(reinterpret_cast<const char*>(&columnNameSize), sizeof(columnNameSize));
+        file.write(column.name.c_str(), columnNameSize);
+
+        const ListaDuplamenteEncadeada<KanbanTask>& tasks = column.tasks;
+        int columnSize = tasks.getSize();
+        file.write(reinterpret_cast<const char*>(&columnSize), sizeof(columnSize));
+
+        for (int j = 0; j < columnSize; j++){
+            const KanbanTask& task = tasks.get(j);
+
+            // Escrever os dados da tarefa no arquivo
+            int taskId = task.getId();
+            file.write(reinterpret_cast<const char*>(&taskId), sizeof(taskId));
+
+            std::string taskTitle = task.getTitulo();
+            int taskTitleSize = taskTitle.size();
+            file.write(reinterpret_cast<const char*>(&taskTitleSize), sizeof(taskTitleSize));
+            file.write(taskTitle.c_str(), taskTitleSize);
+
+            std::string taskDescription = task.getDescricao();
+            int taskDescriptionSize = taskDescription.size();
+            file.write(reinterpret_cast<const char*>(&taskDescriptionSize), sizeof(taskDescriptionSize));
+            file.write(taskDescription.c_str(), taskDescriptionSize);
+
+            int taskPriority = task.getPrioridade();
+            file.write(reinterpret_cast<const char*>(&taskPriority), sizeof(taskPriority));
+
+            std::string taskDueDate = task.getVencimento();
+            int taskDueDateSize = taskDueDate.size();
+            file.write(reinterpret_cast<const char*>(&taskDueDateSize), sizeof(taskDueDateSize));
+            file.write(taskDueDate.c_str(), taskDueDateSize);
         }
     }
 
+    file.close();
 
-    for (int i = 0; i < maxTasks; ++i) {
-        for(int j = 0; j < columns.getSize(); ++j) {
-            if ( !columns.get(j).tasks.isEmpty() && id == columns.get(j).tasks.get(i).getId()) {
-                KanbanTask* task = &columns.get(j).tasks.get(i); // pegando a tarefa
-                return task;
-            }
+    std::cout << ANSI_GREEN << "Quadro Kanban salvo no arquivo " << filename << " com sucesso." << ANSI_RESET << std::endl;
+}
+
+
+// ==== Lê um quadro Kanban de um arquivo bin ====
+void KanbanBoard::loadFromFile(const std::string& filename)
+{
+    std::ifstream file(filename.c_str(), std::ios::binary);
+
+    if (!file) {
+        std::cout << "Erro ao abrir o arquivo de carregamento." << std::endl;
+        return;
+    }
+
+    columns.clear(); // Limpa o quadro antes de carregar os dados
+
+    int numColumns;
+    file.read(reinterpret_cast<char*>(&numColumns), sizeof(numColumns));
+
+    // Faz a leitura dos dados
+    for (int i = 0; i < numColumns; i++) {
+        int columnNameSize;
+        file.read(reinterpret_cast<char*>(&columnNameSize), sizeof(columnNameSize));
+
+        std::string columnName(columnNameSize, '\0');
+        file.read(&columnName[0], columnNameSize);
+
+        addColumn(columnName);
+
+        int columnSize;
+        file.read(reinterpret_cast<char*>(&columnSize), sizeof(columnSize));
+
+        for (int j = 0; j < columnSize; j++) {
+            KanbanTask task;
+
+            // Ler os dados da tarefa do arquivo
+            int taskId;
+            file.read(reinterpret_cast<char*>(&taskId), sizeof(taskId));
+            task.setId(taskId);
+
+            int taskTitleSize;
+            file.read(reinterpret_cast<char*>(&taskTitleSize), sizeof(taskTitleSize));
+            std::string taskTitle(taskTitleSize, '\0');
+            file.read(&taskTitle[0], taskTitleSize);
+            task.setTitulo(taskTitle);
+
+            int taskDescriptionSize;
+            file.read(reinterpret_cast<char*>(&taskDescriptionSize), sizeof(taskDescriptionSize));
+            std::string taskDescription(taskDescriptionSize, '\0');
+            file.read(&taskDescription[0], taskDescriptionSize);
+            task.setDescricao(taskDescription);
+
+            int taskPriority;
+            file.read(reinterpret_cast<char*>(&taskPriority), sizeof(taskPriority));
+            task.setPrioridade(taskPriority);
+
+            int taskDueDateSize;
+            file.read(reinterpret_cast<char*>(&taskDueDateSize), sizeof(taskDueDateSize));
+            std::string taskDueDate(taskDueDateSize, '\0');
+            file.read(&taskDueDate[0], taskDueDateSize);
+            task.setVencimento(taskDueDate);
+
+            addTaskToColumn(i, task);
         }
     }
-    return NULL;
-}*/
+
+    file.close();
+
+    std::cout << ANSI_GREEN << "Quadro Kanban carregado do arquivo " << filename << " com sucesso." << ANSI_RESET << std::endl;
+}
+
+
+// ==== Salva o quadro Kanban em um arquivo txt para visualização ====
+void KanbanBoard::saveToFileTxt(const std::string& fileName) const
+{
+          std::ofstream file(fileName.c_str());
+          //std::ofstream file(fileName);
+
+          if (!file) {
+              std::cout << "Erro ao abrir o arquivo " << fileName << std::endl;
+              return;
+          }
+
+          int numTasks = 1;
+          // Imprime no arquivo txt
+          for (int i = 0; i < columns.getSize(); i++) {
+              const KanbanColumn& column = columns.get(i);
+              file << "*======================================*\n";
+              file << "           Coluna " << (i + 1) << ": " << column.name << std::endl;
+              file << "\n" << std::endl;
+              const ListaDuplamenteEncadeada<KanbanTask>& tasks = column.tasks;
+              for (int j = 0; j < tasks.getSize(); j++) {
+                  const KanbanTask& task = tasks.get(j);
+                  /*file << "  - Tarefa " << (j + 1) << ": " << task.getDescricao() << std::endl;
+                  file << "  - Tarefa " << (numTasks) << ": " << task.getTitulo() << std::endl;
+                  file << "          " << task.getDescricao() << std::endl;*/
+                  file << "+-------------------------------------+\n";
+                  file << "|              Tarefa " << numTasks << "               |\n"; 
+                  file << "+-------------------------------------+\n";
+                  file << " Título: " << task.getTitulo() << "\n";
+                  file << " Descrição: " << task.getDescricao() << "\n";
+                  file << "+-------------------------------------+\n\n";
+                  numTasks++; 
+              }
+              file << std::endl;
+              file << "*======================================*\n";
+              file << "\n" << std::endl;
+          }
+
+          file.close();
+
+          std::cout << ANSI_GREEN << "Tabela salva no arquivo " << fileName << " com sucesso." << ANSI_RESET << std::endl;
+}
+
+
+// ==== Procura e retorna a tarefa do ID recebido ====
+KanbanTask *KanbanBoard::findTask(int id)
+{
+  for (int j = 0; j < columns.getSize(); ++j)
+  {
+    KanbanColumn &column = columns.get(j);
+    for (int i = 0; i < column.tasks.getSize(); ++i)
+    {
+      if (id == column.tasks.get(i).getId() && column.tasks.isEmpty() == false)
+      {
+        return &column.tasks.get(i);
+      }
+    }
+  }
+  return NULL;
+}

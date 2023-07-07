@@ -11,13 +11,36 @@ int main()
     // Alocando dinamicamnete um objeto de kanbanBoard na HEAP
     KanbanBoard *kanbanBoard = new KanbanBoard();
 
-    // Recebendo o número de colunas
-    int numColunas = receiveNumColumns();
-    clearTerminal();
+    int numColunas;
 
-    // Recebendo os nomes das colunas
-    receiveColumns(kanbanBoard, numColunas);
-    clearTerminal();
+    std::cout << "Deseja ler um arquivo?" << std::endl;
+    std::cout << "1. Sim" << std::endl;
+    std::cout << "2. Não" << std::endl;
+    int escolha;
+    std::cin >> escolha;
+    switch (escolha) {
+    // Caso: ler arquivo
+    case 1:
+        kanbanBoard->loadFromFile("dados.bin");
+        break;
+
+    // Caso: não ler um arquivo
+    case 2:
+        // Recebendo o número de colunas
+        numColunas = receiveNumColumns();
+        clearTerminal();
+
+        // Recebendo os nomes das colunas
+        receiveColumns(kanbanBoard, numColunas);
+        clearTerminal();
+        break;
+    
+    default:
+        std::cout << "Informe uma opção válida.";
+        break;
+    }
+
+    numColunas = kanbanBoard->getNumColumns();
 
     // Imprime o quadro com as colunas inseridas
     std::cout << "Ótimo! Aqui está seu quadro:\n";

@@ -603,11 +603,19 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
 
     // ==== CASO: SALVAR EM UM ARQUIVO 'TXT' ====
-    case 5:
+    case 5:/*
         clearTerminal();
         //std::cout << "Informe o nome do arquivo: ";
         //getline(std::cin, titulo);
-        kanbanBoard->saveToFile("titulo.txt");
+        kanbanBoard->saveToFile("titulo.txt");*/
+
+
+        kanbanBoard->saveToFile("dados.bin");
+        std::cout << "Dados salvos no arquivo 'dados.bin'";
+
+
+
+
         break;  
 
 
