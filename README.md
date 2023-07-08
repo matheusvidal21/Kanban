@@ -24,41 +24,55 @@ Este projeto utiliza o terminal para imprimir e receber dados, o que pode result
 
 # 🔨 Funcionalidades do projeto
 
-<img src="docs/imgs/menu.png" alt="Menu principal"> 
-<img src="docs/imgs/preenchertask.png" alt="Menu: preencher tarefa"> 
-<img src="docs/imgs/menueditar.png" alt="Menu: editar tarefa"> 
-<img src="docs/imgs/menuordenar.png" alt="Menu: ordenar o quadro"> 
-<img src="docs/imgs/menusalvar.png" alt="Menu: salvar o quadri"> 
+<table>
+  <tr>
+    <td>
+      <img src="docs/imgs/menu.png" alt="Menu principal">
+    </td>
+        <td>
+      <img src="docs/imgs/menueditar.png" alt="Menu: editar tarefa">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="docs/imgs/menuordenar.png" alt="Menu: ordenar o quadro">
+    </td>
+    <td>
+      <img src="docs/imgs/menusalvar.png" alt="Menu: salvar o quadri">
+    </td>
+  </tr>
+</table>
+
 
 O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
 
-- **Adicionar Coluna (Status):** Os usuários podem adicionar novas colunas ao quadro Kanban para representar diferentes estados ou etapas do processo;
+- **Adicionar Coluna (Status): 📊** Os usuários podem adicionar novas colunas ao quadro Kanban para representar diferentes estados ou etapas do processo;
 
-- **Adicionar Tarefas:** Os usuários podem adicionar novas tarefas ao quadro do Kanban, fornecendo informações como título, descrição, prioridade e data de vencimento;
+- **Adicionar Tarefas: ➕** Os usuários podem adicionar novas tarefas ao quadro do Kanban, fornecendo informações como título, descrição, prioridade e data de vencimento;
 
-- **Definir Prioridades:** Os usuários podem atribuir prioridades às tarefas, indicando sua importância ou urgência;
+- **Definir Prioridades: ⭐️** Os usuários podem atribuir prioridades às tarefas, indicando sua importância ou urgência;
 
-- **Agendar datas:** Os usuários podem definir datas de vencimento ou prazos para as tarefas, ajudando a acompanhar o progresso e cumprir os prazos;
+- **Agendar datas: 📅** Os usuários podem definir datas de vencimento ou prazos para as tarefas, ajudando a acompanhar o progresso e cumprir os prazos;
 
-- **Movimentação de Tarefas:** Os usuários poderão mover as tarefas entre as colunas do quadro Kanban, refletindo seu progresso e estágio atual;
+- **Movimentação de Tarefas: 🚀** Os usuários poderão mover as tarefas entre as colunas do quadro Kanban, refletindo seu progresso e estágio atual;
 
-- **Ordenação de Tarefas:** O quadro Kanban oferece a opção de ordenar as tarefas de forma crescente ou decrescente com base em sua prioridade, permitindo uma melhor organização e visualização das tarefas mais importantes;
+- **Ordenação de Tarefas: 🔢** O quadro Kanban oferece a opção de ordenar as tarefas de forma crescente ou decrescente com base em sua prioridade, permitindo uma melhor organização e visualização das tarefas mais importantes;
 
-- **Editar Informações de uma Tarefa Existente:** Os usuários podem editar as informações de uma tarefa existente no quadro Kanban, como título, descrição, prioridade ou data de vencimento;
+- **Editar Informações de uma Tarefa Existente: ✏️** Os usuários podem editar as informações de uma tarefa existente no quadro Kanban, como título, descrição, prioridade ou data de vencimento;
 
-- **Excluir uma Tarefa:** Os usuários podem remover uma tarefa do quadro Kanban, excluindo completamente suas informações;
+- **Excluir uma Tarefa: 🗑️** Os usuários podem remover uma tarefa do quadro Kanban, excluindo completamente suas informações;
 
-- **Visualização Geral:** O aplicativo oferece uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as informações das tarefas em um único local, independentemente de sua localização no quadro Kanban;
+- **Visualização Geral: 👀** O aplicativo oferece uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as informações das tarefas em um único local, independentemente de sua localização no quadro Kanban;
 
-- **Quadro Kanban:** O aplicativo exibirá as tarefas em um quadro Kanban, com colunas como "A fazer", "Em progresso" e "Concluído", permitindo que os usuários visualizem e gerenciem facilmente o status de cada tarefa;
+- **Quadro Kanban: 📌** O aplicativo exibirá as tarefas em um quadro Kanban, com colunas como "A fazer", "Em progresso" e "Concluído", permitindo que os usuários visualizem e gerenciem facilmente o status de cada tarefa;
 
-- **Armazenamento em Arquivo Binário:** O quadro Kanban pode ser armazenado em um arquivo binário, permitindo salvar as informações do quadro para uso posterior;
+- **Armazenamento em Arquivo Binário: 📁** O quadro Kanban pode ser armazenado em um arquivo binário, permitindo salvar as informações do quadro para uso posterior;
 
-- **Carregamento de Arquivo Binário:** Os usuários podem carregar as informações previamente salvas do quadro Kanban a partir de um arquivo binário, recuperando o estado anterior do quadro;
+- **Carregamento de Arquivo Binário: ⬆️** Os usuários podem carregar as informações previamente salvas do quadro Kanban a partir de um arquivo binário, recuperando o estado anterior do quadro;
 
-- **Gravação em Arquivo de Texto (txt):** O aplicativo oferece a opção de exportar o quadro Kanban para um arquivo de texto, permitindo salvar as informações em um formato legível;
+- **Gravação em Arquivo de Texto (txt): 📝** O aplicativo oferece a opção de exportar o quadro Kanban para um arquivo de texto, permitindo salvar as informações em um formato legível;
 
-- **Interface de Linha de Comando:** O projeto tem uma interface de linha de comando (CLI) para interagir com o quadro Kanban, permitindo que os usuários executem ações e visualizem as informações por meio de comandos de texto.
+- **Interface de Linha de Comando: 💻** O projeto tem uma interface de linha de comando (CLI) para interagir com o quadro Kanban, permitindo que os usuários executem ações e visualizem as informações por meio de comandos de texto.
 
 Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.
 
