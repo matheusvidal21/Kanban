@@ -16,7 +16,7 @@ Este projeto utiliza o terminal para imprimir e receber dados, o que pode result
 - 📊 [Diagrama de classes](#-diagrama-de-classes)
 - 💻 [Técnicas e tecnologias utilizadas](#-técnicas-e-tecnologias-utilizadas)
   - 📚 [Bibliotecas](#-bibliotecas)
-  - 🗃️ [Estruturas de TADs](#-estruturas-de-tads-tipos-abstratos-de-dados)
+  - 🗃️ [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados)
   - 🧩 [Templates](#-templates)
 - 🔧 [Como compilar](#-como-compilar)
 - 👥 [Autores](#-autores)
@@ -42,13 +42,13 @@ O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban poss
 
 - **Movimentação de Tarefas:** Os usuários poderão mover as tarefas entre as colunas do quadro Kanban, refletindo seu progresso e estágio atual;
 
-- **Ordenação de Tarefas:** O quadro Kanban oferece a opção de ordenar as tarefas de forma crescente ou decrescente com base em sua prioridade, permitindo uma melhor organização e visualização das tarefas mais importantes.
+- **Ordenação de Tarefas:** O quadro Kanban oferece a opção de ordenar as tarefas de forma crescente ou decrescente com base em sua prioridade, permitindo uma melhor organização e visualização das tarefas mais importantes;
 
 - **Editar Informações de uma Tarefa Existente:** Os usuários podem editar as informações de uma tarefa existente no quadro Kanban, como título, descrição, prioridade ou data de vencimento;
 
 - **Excluir uma Tarefa:** Os usuários podem remover uma tarefa do quadro Kanban, excluindo completamente suas informações;
 
-- **Visualização Geral:** O aplicativo oferece uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as informações das tarefas em um único local, independentemente de sua localização no quadro Kanban.
+- **Visualização Geral:** O aplicativo oferece uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as informações das tarefas em um único local, independentemente de sua localização no quadro Kanban;
 
 - **Quadro Kanban:** O aplicativo exibirá as tarefas em um quadro Kanban, com colunas como "A fazer", "Em progresso" e "Concluído", permitindo que os usuários visualizem e gerenciem facilmente o status de cada tarefa;
 
@@ -58,7 +58,7 @@ O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban poss
 
 - **Gravação em Arquivo de Texto (txt):** O aplicativo oferece a opção de exportar o quadro Kanban para um arquivo de texto, permitindo salvar as informações em um formato legível;
 
-- **Interface de Linha de Comando:** O projeto tem uma interface de linha de comando (CLI) para interagir com o quadro Kanban, permitindo que os usuários executem ações e visualizem as informações por meio de comandos de texto;
+- **Interface de Linha de Comando:** O projeto tem uma interface de linha de comando (CLI) para interagir com o quadro Kanban, permitindo que os usuários executem ações e visualizem as informações por meio de comandos de texto.
 
 Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.
 
@@ -123,19 +123,19 @@ O diagrama de classes UML é uma representação visual da estrutura e das rela�
 - Utiliza os nós da classe No para armazenar os elementos;
 - Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da lista;
 - Utilizado para criar uma Lista Duplamente Encadeada de colunas e de tarefas;
-- Esse tópico é melhor abordado em [Estruturas de TADs](#-estruturas-de-tads-tipos-abstratos-de-dados).
+- Esse tópico é melhor abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
 
 5. **Pilha<T>:** <br>
 - Implementa uma pilha utilizando uma lista encadeada;
 - Utiliza os nós para armazenar os elementos da pilha;
 - Possui um ponteiro para o elemento do topo (top) da pilha;
-- Esse tópico é melhor abordado em [Estruturas de TADs](#-estruturas-de-tads-tipos-abstratos-de-dados).
+- Esse tópico é melhor abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
 
 6. **Fila<T>:** <br>
 - Implementa uma fila utilizando uma lista encadeada;
 - Utiliza os nós para armazenar os elementos da fila;
 - Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da fila;
-- Esse tópico é melhor abordado em [Estruturas de TADs](#-estruturas-de-tads-tipos-abstratos-de-dados).
+- Esse tópico é melhor abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
 
 7. **AlgoritmosDeOrdenacao<T>:** <br>
 - Implementa algoritmos de ordenação genéricos, como Bubble Sort, Selection Sort e Merge Sort;
@@ -170,7 +170,7 @@ Esse tópico é melhor abordado em [Templates](#-templates).
 - Separation of Concerns;
 - Manipulação de arquivos;
 - GNU Compiler Collection (GCC); 
-- Programação Orientada a Objetos;
+- Programação Orientada a Objetos.
 
 ## 📚 Bibliotecas
 - **&lt;iostream&gt;:**  Biblioteca para entrada e saída de dados em C++;
