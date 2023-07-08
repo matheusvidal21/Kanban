@@ -27,14 +27,13 @@ class KanbanBoard
       KanbanColumn(const std::string& columnName) : name(columnName) {}
 
       // Método para obter a lista de tarefas da coluna
-      ListaDuplamenteEncadeada<KanbanTask>& getTasks()
-      {
+      ListaDuplamenteEncadeada<KanbanTask>& getTasks() {
           return tasks;
       }
   };
 
-
     ListaDuplamenteEncadeada<KanbanColumn> columns; // Lista duplamente encadeada de colunas
+
 
   public:
     // Construtor e destrutor

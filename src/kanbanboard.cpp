@@ -58,11 +58,9 @@ void KanbanBoard::moveTask(int taskId, int idcolunaDestino)
   colunaOrigem->tasks.removeValue(*tarefa);
 }
 
-// ==== Ordena a coluna recebida como parâmetro com base nas prioridades das tarefas ====
-void KanbanBoard::sortColumn(int columnIndex, int flag)
-{
-  if (columnIndex < 0 || columnIndex >= columns.getSize())
-  {
+void KanbanBoard::sortColumn(int columnIndex, int flag){
+
+  if (columnIndex < 0 || columnIndex >= columns.getSize()){
     std::cout << "Coluna inválida." << std::endl;
     return;
   }
@@ -71,39 +69,22 @@ void KanbanBoard::sortColumn(int columnIndex, int flag)
   ListaDuplamenteEncadeada<KanbanTask> &tasks = column.tasks;
   int numTasks = tasks.getSize();
 
-  // Array auxiliar para armazenar as prioridades das tarefas
-  int *prioridades = new int[numTasks];
-
-  // Preenche o array auxiliar com as prioridades das tarefas
-  for (int i = 0; i < numTasks; i++)
-  {
-    KanbanTask &task = tasks.get(i);
-    prioridades[i] = task.getPrioridade();
-  }
-
   // Chama o algoritmo de ordenação apropriado com base na flag
-  switch (flag)
-  {
+  switch (flag){
+
   case 1: // Ordenar da prioridade mais baixa para a mais alta (crescente)
-    AlgoritmosDeOrdenacao<int>::bubbleSort(prioridades, numTasks);
+    AlgoritmosDeOrdenacao<KanbanTask>::bubbleSort(tasks, numTasks);
     break;
+
   case 2: // Ordenar da prioridade mais alta para a mais baixa (decrescente)
-    AlgoritmosDeOrdenacao<int>::selectionSort(prioridades, numTasks);
+    AlgoritmosDeOrdenacao<KanbanTask>::selectionSort(tasks, numTasks);
     break;
+
   default:
-    delete[] prioridades;
     return;
   }
-
-  // Atualiza a ordem das tarefas com base na ordenação das prioridades
-  for (int i = 0; i < numTasks; i++)
-  {
-    KanbanTask &task = tasks.get(i);
-    task.setPrioridade(prioridades[i]);
-  }
-
-  delete[] prioridades;
 }
+
 
 // ==== Retorne o número de colunas do quadro kanban ====
 int KanbanBoard::getNumColumns() const
@@ -404,8 +385,7 @@ void KanbanBoard::loadFromFile(const std::string& filename)
 void KanbanBoard::saveToFileTxt(const std::string& fileName) const
 {
           std::ofstream file(fileName.c_str());
-          //std::ofstream file(fileName);
-
+          
           if (!file) {
               std::cout << "Erro ao abrir o arquivo " << fileName << std::endl;
               return;

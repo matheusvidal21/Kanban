@@ -1,11 +1,21 @@
 #ifndef TEMPLATES_H
 #define TEMPLATES_H
 #include <iostream>
+#include "estruturas_tads.hpp"
+
 
 /*Código auxiliar com template genérico com algoritimos de ordenação:
   Bubble Sort, Selection Sort e Merge Sort.*/
 template<typename T>
 class AlgoritmosDeOrdenacao {
+private:
+    // Faz o 'swap' das tasks
+    static void swapTasks(T& task1, T& task2) {
+        T temp = task1;
+        task1 = task2;
+        task2 = temp;
+    }
+
 public:
 
     /*A complexidade do Bubble Sort é O(n^2), onde "n" é 
@@ -15,13 +25,18 @@ public:
     quadrática do Bubble Sort ocorre porque, em cada passagem, são feitas comparações
     entre pares de elementos adjacentes e, se necessário, são feitas trocas. 
     */
-    //Ordena de forma crescente
-    static void bubbleSort(T arr[], int size) {
+    // Ordena de forma crescente
+    static void bubbleSort(ListaDuplamenteEncadeada<T>& list, int size) {
+
         for (int i = 0; i < size - 1; i++) {
             for (int j = 0; j < size - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    std::swap(arr[j], arr[j + 1]);
+
+                T& task1 = list.get(j);
+                T& task2 = list.get(j + 1);
+                if (task1.getPrioridade() > task2.getPrioridade()) {
+                    swapTasks(task1, task2);
                 }
+
             }
         }
     }
@@ -33,16 +48,27 @@ public:
     Selection Sort ocorre porque, em cada iteração, é necessário
     percorrer a parte não ordenada para encontrar o menor elemento. 
     */
-   //Ordena de forma decrescente
-    static void selectionSort(T arr[], int size) {
+    // Ordena de forma decrescente
+    static void selectionSort(ListaDuplamenteEncadeada<T>& list, int size) {
+
         for (int i = 0; i < size - 1; i++) {
-            int indice_minimo = i;
+            int minIndex = i;
+
             for (int j = i + 1; j < size; j++) {
-                if (arr[j] > arr[indice_minimo]) {
-                    indice_minimo = j;
+
+                T& task1 = list.get(j);
+                T& task2 = list.get(minIndex);
+                if (task1.getPrioridade() > task2.getPrioridade()){
+                    minIndex = j;
                 }
+
             }
-            std::swap(arr[i], arr[indice_minimo]);
+
+            if (minIndex != i) {
+                T& task1 = list.get(i);
+                T& task2 = list.get(minIndex);
+                swapTasks(task1, task2);
+            }
         }
     }
 
@@ -53,7 +79,7 @@ public:
     algoritmo divide repetidamente a lista em duas metades, até que sejam
     formadas sublistas com apenas um elemento. 
     */
-    static void mergeSort(T arr[], int left, int right) {
+    static void mergeSort(ListaDuplamenteEncadeada<T>& arr, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -64,7 +90,7 @@ public:
     }
 
 private:
-    static void merge(T arr[], int left, int mid, int right) {
+    static void merge(ListaDuplamenteEncadeada<T>& arr, int left, int mid, int right) {
         int left_size = mid - left + 1;
         int right_size = right - mid;
         
@@ -113,7 +139,7 @@ class AlgoritmosDeBuscaBinaria {
 public:
 
     // Busca binária iterativa
-    static int BuscaBinariaIterativa(T arr[], int tamanho, T chave){
+    static int BuscaBinariaIterativa(ListaDuplamenteEncadeada<T>& arr, int tamanho, T chave){
         int inicio = 0;
         int fim = tamanho - 1;
 
@@ -131,7 +157,7 @@ public:
     }
 
     // Busca binária recursiva
-    static int BuscaBinariaRecursiva(T arr[], int inicio, int fim, T chave){
+    static int BuscaBinariaRecursiva(ListaDuplamenteEncadeada<T>& arr, int inicio, int fim, T chave){
         if(inicio > fim) return -1;// Retorna -1 se a chave não for encontrada
 
         int meio = (inicio+fim)/2;

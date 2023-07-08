@@ -168,18 +168,18 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
             }
         } while (kanbanBoard->existeIdDuplicado(id));
 
-        std::cout << "*=====================*";
+        std::cout << "*=================================*";
         std::cout << "\nTítulo: ";
         std::cin.ignore(); // Limpar o buffer do teclado
         getline(std::cin, titulo);
         task.setTitulo(titulo);
 
-        std::cout << "*=====================*";
+        std::cout << "*=================================*";
         std::cout << "\nDescrição: ";
         getline(std::cin, descricao);
         task.setDescricao(descricao);
 
-        std::cout << "*=====================*";
+        std::cout << "*=================================*";
         std::cout << "\n(" << ANSI_GREEN << "1: Baixa" << ANSI_RESET << "," << ANSI_YELLOW << " 2: Média" << ANSI_RESET << "," << ANSI_RED << " 3: Alta" << ANSI_RESET << ")";
         std::cout << "\nPrioridade: ";
         while (true)
@@ -196,7 +196,7 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
             }
         }
 
-        std::cout << "*=====================*";
+        std::cout << "*=================================*";
         std::cout << "\nData de vencimento (dd/mm/aaaa): ";
         std::cin.ignore(); // Limpar o buffer do teclado
         getline(std::cin, dataVencimento);
@@ -677,11 +677,12 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
             switch (escolha){
                 case 1:
                     clearTerminal();
-                    std::cout << ANSI_BLUE << "|!| Todas os arquivos são salvos na pasta '/data'.\n"<< ANSI_RESET << std::endl;
+                    std::cout << ANSI_BLUE << "|!| Todas os arquivos '.bin' são salvos na pasta '/data/bin' |!|\n"<< ANSI_RESET << std::endl;
+
                     std::cout << "Insira o nome do arquivo para salvar os dados (exemplo.bin): ";
                     std::cin >> nameFile;
 
-                    caminhoFile = "data/" + nameFile;
+                    caminhoFile = "data/bin/" + nameFile;
 
                     arquivoExiste = false;
                     while(!arquivoExiste){
@@ -693,23 +694,31 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
                             std::cout << ANSI_RED << "\nIsso apagará todo o conteúdo gravado em " << nameFile << ". Você tem certeza? " << ANSI_RESET << std::endl;
                             std::cout << "1. Sim" << std::endl;
                             std::cout << "2. Não" << std::endl;
-                            std::cin >> escolha;
 
-                            if(escolha == 2){
-                                clearTerminal();
-                                std::cout << ANSI_RED << "|!| Operação cancelada |!|" << ANSI_RESET << std::endl;
-                                break;
-                            }
+                            do{
+                                std::cin >> escolha;
 
-                            clearTerminal();
-                            kanbanBoard->saveToFile(caminhoFile);
+                                if(escolha == 2){
+                                    clearTerminal();
+                                    std::cout << ANSI_RED << "|!| Operação cancelada |!|" << ANSI_RESET << std::endl;
+                                    break;
+                                }else if (escolha == 1){
+                                    clearTerminal();
+                                    kanbanBoard->saveToFile(caminhoFile);
+                                    break;
+                                }else{
+                                    std::cout << ANSI_RED << "|!| Digite uma opção válida: "<< ANSI_RESET;
+                                }
+                                
+                            }while(escolha != 1 || escolha != 2);
+                           
                             arquivoExiste = true;
                             arquivo.close();
                             break;
 
                         } else {
                             clearTerminal();
-                            std::cout << ANSI_RED << "\nO arquivo " << nameFile << " não existe |!|" << ANSI_RESET << std::endl;
+                            std::cout << ANSI_RED << "|!| O arquivo " << nameFile << " não existe |!|" << ANSI_RESET << std::endl;
                             break;
                         }
                     }
@@ -719,11 +728,28 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
                 case 2:
                     clearTerminal();
-                    std::cout << ANSI_BLUE << "|!| Todas os arquivos são salvos na pasta '/data'.\n"<< ANSI_RESET << std::endl;
-                    std::cout << "Insira o nome do arquivo para salvar os dados (exemplo.bin): ";
-                    std::cin >> nameFile;
 
-                    caminhoFile = "data/" + nameFile;
+                    do{
+                        std::cout << ANSI_BLUE << "|!| Todas os arquivos '.bin' são salvos na pasta '/data/bin' |!|\n"<< ANSI_RESET << std::endl;
+                        std::cout << "Insira o nome do arquivo para salvar os dados (exemplo.bin): ";
+                        std::cin >> nameFile;
+
+                        if (nameFile.length() <= 4 || nameFile.substr(nameFile.length() - 4) != ".bin") {
+                            clearTerminal();
+                            std::cout << ANSI_RED << "|!| Nome de arquivo inválido! Por favor, inclua a extensão '.bin' |!|" << ANSI_RESET << std::endl;
+                        }
+
+                    }while(nameFile.length() <= 4 || nameFile.substr(nameFile.length() - 4) != ".bin");
+
+                    caminhoFile = "data/bin/" + nameFile;
+
+                    arquivo.open(caminhoFile.c_str());
+                    if(arquivo.is_open()){
+                        clearTerminal();
+                        std::cout << ANSI_RED << "|!| O arquivo " << nameFile << " já existe. Entre na primeira opção para salvar em um arquivo existente |!|" << ANSI_RESET << std::endl;
+                        break;
+                    }
+
                     clearTerminal();
                     kanbanBoard->saveToFile(caminhoFile);
 
@@ -731,13 +757,25 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
                 case 3:
                     clearTerminal();
-                    std::cout << ANSI_BLUE << "|!| Todas os arquivos são salvos na pasta '/data'.\n"<< ANSI_RESET << std::endl;
-                    std::cout << "Insira o nome do arquivo que o programa escreverá (exemplo.txt): ";
-                    std::cin >> nameFile;
-                    caminhoFile = "../data/" + nameFile;
+                    arquivoExiste = false;
+
+                    do{
+                        std::cout << ANSI_BLUE << "|!| Todas os arquivos '.txt' são salvos na pasta '/data/txt' |!|\n"<< ANSI_RESET << std::endl;
+                        std::cout << "Insira o nome do arquivo que o programa escreverá (exemplo.txt): ";
+                        std::cin >> nameFile;
+                         
+                        if (nameFile.length() <= 4 || nameFile.substr(nameFile.length() - 4) != ".txt") {
+                            clearTerminal();
+                            std::cout << ANSI_RED << "|!| Nome de arquivo inválido! Por favor, inclua a extensão '.txt' |!|" << ANSI_RESET << std::endl;
+                        }
+
+                    }while(nameFile.length() <= 4 || nameFile.substr(nameFile.length() - 4) != ".txt");
+
+
+                    caminhoFile = "data/txt/" + nameFile;
 
                     clearTerminal();
-                    kanbanBoard->saveToFileTxt(nameFile);
+                    kanbanBoard->saveToFileTxt(caminhoFile);
                     break;
                     
                     break;
@@ -755,10 +793,8 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
             }
         }
-        
 
         break;  
-
 
 
     // ==== CASO: SAIR ====

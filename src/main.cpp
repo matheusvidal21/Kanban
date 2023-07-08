@@ -22,10 +22,7 @@ int main()
     int numColunas;
     std::string nameFile, caminhoFile;
     bool arquivoExiste = false;
-    std::string pasta = "data/";
-
-    // Lista dos arquivos da pasta /data
-    ListaDuplamenteEncadeada<std::string> arquivos = listarArquivos(pasta);
+    std::string pasta = "data/bin";
 
     // Primeira parte do programa, antes do menu
     while(true){
@@ -40,7 +37,9 @@ int main()
 
         // Caso: ler arquivo
         if(escolha == 1) {
-
+            
+            // Lista dos arquivos da pasta /data
+            ListaDuplamenteEncadeada<std::string> arquivos = listarArquivos(pasta);
 
             clearTerminal();
 
@@ -60,7 +59,7 @@ int main()
                     
                     std::cout << "\nInsira o nome do arquivo com os dados (exemplo.bin): ";
                     std::cin >> nameFile;
-                    caminhoFile = "data/" + nameFile;
+                    caminhoFile = "data/bin/" + nameFile;
 
                     // Verifique se o arquivo existe
                     std::ifstream arquivo(caminhoFile.c_str());

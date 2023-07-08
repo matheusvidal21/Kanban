@@ -21,16 +21,21 @@ class ListaDuplamenteEncadeada{
     No<T>* tail; //Último elemento
 
   public:
+
+    /* Construtor e destrutor */
     ListaDuplamenteEncadeada() : head(NULL), tail(NULL){}
     ~ListaDuplamenteEncadeada(){
       clear();
     }
 
+
+  /* Método para retornar a 'head' da lista */
     No<T>* getHead() const {
       return head;
     }
 
-    // Obter o elemento em um índice específico da lista
+
+  /* Método para obter o elemento em um índice específico da lista */
     T& get(int index) const {
         if (index < 0 || index >= getSize()) {
             throw std::out_of_range("Index não encontrado.");
@@ -51,7 +56,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-  /*Método para adicionar um novo elemento no início da lista*/
+  /* Método para adicionar um novo elemento no início da lista */
     void pushFront(T value){
       No<T>* newNo = new No<T>(value);
         if (isEmpty()){
@@ -64,7 +69,7 @@ class ListaDuplamenteEncadeada{
     }  
 
 
-  /*Método para adicionar um novo elemento no final da lista*/
+  /* Método para adicionar um novo elemento no final da lista */
     void pushBack(T value){
       No<T>* newNo = new No<T>(value);
         if(isEmpty()){
@@ -77,7 +82,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-  /*Método para remover o primeiro elemento da lista*/
+  /* Método para remover o primeiro elemento da lista */
     void removeFront() {
       if(isEmpty()){
         std::cout << "A lista está vazia." << std::endl;
@@ -96,7 +101,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-  /*Método para remover o último elemento da lista*/
+  /* Método para remover o último elemento da lista */
     void removeBack() {
       if(isEmpty()){
         std::cout << "A lista está vazia." << std::endl;
@@ -115,7 +120,8 @@ class ListaDuplamenteEncadeada{
       delete temp;
     }
 
-/*Método para verificar se a lista está vazia*/
+
+  /* Método para verificar se a lista está vazia */
     bool isEmpty() const {
       if(head == NULL){
         return true;
@@ -125,7 +131,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-/*Método para imprimir os elementos da lista*/
+  /* Método para imprimir os elementos da lista */
     void print() const{
       if(isEmpty()){
         std::cout << "A lista está vazia." << std::endl;
@@ -141,7 +147,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-/*Método que retorna o tamanho da lista*/
+  /* Método que retorna o tamanho da lista */
     int getSize() const{
       int size = 0;
       No<T>* current = head;
@@ -155,7 +161,7 @@ class ListaDuplamenteEncadeada{
     }
 
 
-  /*Método para remover um valor específico da lista*/
+  /* Método para remover um valor específico da lista */
     bool removeValue(const T& value){
       if(isEmpty()){
         return false;
@@ -200,7 +206,8 @@ class ListaDuplamenteEncadeada{
       return false;
     }
 
-  /*Método para excluir toda a lista*/
+
+  /* Método para excluir toda a lista */
     void clear(){
       No<T>* current = head;
 
@@ -213,13 +220,11 @@ class ListaDuplamenteEncadeada{
       head = tail = NULL;
     }
 
-  
-
-
 };
+
+
+
 /*==========================================================================================*/
-
-
 /*Pilha*/
 template <typename T>
 class Pilha{
@@ -241,7 +246,7 @@ public:
       }
     }
 
-  /*Método para verificar se a pilha está vazia*/
+  /* Método para verificar se a pilha está vazia */
     bool isEmpty() const {
       if(top == NULL){
         return true;
@@ -250,14 +255,14 @@ public:
       }
     }
 
-  /*Método para adicionar um elemento no topo da pilha*/
+  /* Método para adicionar um elemento no topo da pilha */
     void push(T value) {
         No* newNo = new No(value);
         newNo->next = top;
         top = newNo;
     }
 
-  /*Método para remover o elemento do topo da pilha*/
+  /* Método para remover o elemento do topo da pilha */
     void pop() {
       if(isEmpty()){
         std::cout << "A pilha está vazia." << std::endl;
@@ -268,7 +273,7 @@ public:
       delete temp;
     }
 
-  /*Retorna o elemento do topo da pilha*/
+  /* Retorna o elemento do topo da pilha */
     T& peek(){
         if (isEmpty()) {
             throw std::runtime_error("A pilha está vazia.");
@@ -277,9 +282,10 @@ public:
     }
     
 };
+
+
+
 /*==========================================================================================*/
-
-
 /*Fila*/
 template <typename T>
 class Fila{
@@ -302,7 +308,7 @@ public:
       }
     }
 
-  /*Método para verificar se a fila está vazia*/
+  /* Método para verificar se a fila está vazia */
     bool isEmpty() const {
       if(head == NULL){
         return true;
@@ -311,7 +317,7 @@ public:
       }
     }
 
-  /*Método para adicionar um elemento no final da fila*/
+  /* Método para adicionar um elemento no final da fil */
     void enqueue(T value){
       No* newNo = new No(value);
       if(isEmpty()){
@@ -322,7 +328,7 @@ public:
       }
     }
 
-  /*Método para remover o elemento na frente da fila*/
+  /* Método para remover o elemento na frente da fila */
     void dequeue(){
       if(isEmpty()){
         std::cout << "A fila está vazia." << std::endl;
@@ -336,7 +342,7 @@ public:
       delete temp;
     }
 
-  /*Retorna o elemento da frente da fila*/
+  /* Retorna o elemento da frente da fila */
     T& peek(){
         if (isEmpty()) {
             throw std::runtime_error("A fila está vazia.");
@@ -344,7 +350,7 @@ public:
         return head->valor;
     }
 };
-/*==========================================================================================*/
 
+/*==========================================================================================*/
 
 #endif
