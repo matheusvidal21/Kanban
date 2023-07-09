@@ -7,9 +7,6 @@ Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com supor
   <img src="docs/imgs/quadro.png" alt="Exemplo de Quadro Kanban">
 </p>
 
-### ⚠️ Aviso
-Este projeto utiliza o terminal para imprimir e receber dados, o que pode resultar em desalinhamentos em alguns terminais, dependendo de suas configurações individuais. Gostaríamos de ressaltar que isso é uma limitação inerente ao uso de terminais e está além do controle deste projeto. Além disso, o projeto também utiliza sequências de escape ANSI para exibir cores no terminal. No entanto, é importante notar que nem todos os terminais ou sistemas operacionais suportam totalmente a exibição de fonte colorida com ANSI. Se você encontrar problemas com a exibição das cores ou caracteres estranhos, verifique se o seu terminal é compatível com a exibição de ANSI ou considere utilizar outro terminal que suporte essa funcionalidade. Caso contrário, o texto será exibido sem as cores especificadas ou com desalinhamentos. Se for necessário, é possível ajustar a largura das palavras exibidas no gerenciador, você pode modificar o espaçamento entre as colunas no arquivo [kanbanboard.cpp](src/kanbanboard.cpp), mais precisamente no método "printBoard()".
-
 ## Índice
 - 🔨 [Funcionalidades do projeto](#-funcionalidades-do-projeto)
 - 📁 [Estrutura do projeto](#-estrutura-do-projeto)
@@ -19,29 +16,21 @@ Este projeto utiliza o terminal para imprimir e receber dados, o que pode result
   - 🗃️ [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados)
   - 🧩 [Templates](#-templates)
 - 🔧 [Como compilar](#-como-compilar)
+- ⚠️ [Aviso](#-aviso)
 - 👥 [Autores](#-autores)
 
 
 # 🔨 Funcionalidades do projeto
 
-<table>
-  <tr>
-    <td>
-      <img src="docs/imgs/menu.png" alt="Menu principal">
-    </td>
-        <td>
+<p align="center">
+  <img src="docs/imgs/menu.png" alt="Menu principal">
+</p>
+
+<p align="center">
       <img src="docs/imgs/menueditar.png" alt="Menu: editar tarefa">
-    </td>
-  </tr>
-  <tr>
-    <td>
       <img src="docs/imgs/menuordenar.png" alt="Menu: ordenar o quadro">
-    </td>
-    <td>
       <img src="docs/imgs/menusalvar.png" alt="Menu: salvar o quadri">
-    </td>
-  </tr>
-</table>
+</p>
 
 
 O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
@@ -163,14 +152,18 @@ Esse tópico é melhor abordado em [Templates](#-templates).
 Esse tópico é melhor abordado em [Templates](#-templates).
 
 # 💻 Técnicas e tecnologias utilizadas
-<img src="docs/imgs/cpplogo.png" alt="Logo C++" height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/vscode.png" alt="Logo C++" height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/estrutura.png" alt="Logo Doxygen" height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/gcc.png" alt="Logo Doxygen"  height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/git.png" alt="Logo Doxygen"  height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/github.png" alt="Logo Doxygen"  height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/uml.png" alt="Logo Doxygen"  height="70" style="margin-right: 15px;"/>
-<img src="docs/imgs/doxygen.png" alt="Logo Doxygen" height="50" style="margin-right: 15px;"/>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
+  <img src="docs/imgs/cpplogo.png" alt="Logo C++" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/vscode.png" alt="Logo VSCode" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/estrutura.png" alt="Logo Estrutura" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/gcc.png" alt="Logo GCC" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/github.png" alt="Logo GitHub" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/git.png" alt="Logo Git" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/uml.png" alt="Logo UML" height="70" style="margin-right: 20px;">
+  <img src="docs/imgs/doxygen.png" alt="Logo Doxygen" height="50" style="margin-right: 20px;">
+</div>
+
+
 
 - C++;
 - VS Code;
@@ -311,6 +304,8 @@ Utilize esse comando para exibir um guia de ajuda com uma lista dos comandos dis
 - Após a compilação bem-sucedida, o arquivo executável kanban será criado no diretório bin;
 - Ao executar o programa com o comando make run, certifique-se de estar no diretório raiz do projeto.
 
+# ⚠️ Aviso
+Este projeto utiliza o terminal para imprimir e receber dados, o que pode resultar em desalinhamentos em alguns terminais, dependendo de suas configurações individuais. Gostaríamos de ressaltar que isso é uma limitação inerente ao uso de terminais e está além do controle deste projeto. Além disso, o projeto também utiliza sequências de escape ANSI para exibir cores no terminal. No entanto, é importante notar que nem todos os terminais ou sistemas operacionais suportam totalmente a exibição de fonte colorida com ANSI. Se você encontrar problemas com a exibição das cores ou caracteres estranhos, verifique se o seu terminal é compatível com a exibição de ANSI ou considere utilizar outro terminal que suporte essa funcionalidade. Caso contrário, o texto será exibido sem as cores especificadas ou com desalinhamentos. Se for necessário, é possível ajustar a largura das palavras exibidas no gerenciador, você pode modificar o espaçamento entre as colunas no arquivo [kanbanboard.cpp](src/kanbanboard.cpp), mais precisamente no método "printBoard()".
 
 # 👥 Autores
 
