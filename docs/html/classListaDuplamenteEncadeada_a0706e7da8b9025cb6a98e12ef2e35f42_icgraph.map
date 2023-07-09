@@ -1,0 +1,9 @@
+<map id="ListaDuplamenteEncadeada::pushBack" name="ListaDuplamenteEncadeada::pushBack">
+<area shape="rect" id="node1" title="Método que adiciona um novo elemento no final da lista." alt="" coords="640,49,844,90"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a901d595d906b4532b32718f4d8e0757b" title="Método que adiciona uma tarefa a uma coluna específica do Quadro Kanban." alt="" coords="357,56,592,83"/>
+<area shape="rect" id="node6" href="$functions_8h.html#aa1fbbb2203c4879b8bf3566732284ac3" title="Função que retorna uma lista dos arquivos em uma pasta. Utilizado para listar os nomes dos arquivos (..." alt="" coords="153,107,265,133"/>
+<area shape="rect" id="node7" href="$classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="383,5,566,32"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" id="node5" href="$classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,56,60,83"/>
+</map>

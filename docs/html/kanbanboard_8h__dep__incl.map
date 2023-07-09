@@ -1,0 +1,7 @@
+<map id="/home/isa/Área de Trabalho/Kanban/include/kanbanboard.h" name="/home/isa/Área de Trabalho/Kanban/include/kanbanboard.h">
+<area shape="rect" id="node1" title="Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban." alt="" coords="173,5,358,61"/>
+<area shape="rect" id="node2" href="$functions_8h.html" title="Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com ..." alt="" coords="42,109,227,165"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban." alt="" coords="187,213,344,269"/>
+<area shape="rect" id="node5" href="$kanbanboard_8cpp.html" title="Este arquivo contém a implementação da classe KanbanBoard." alt="" coords="303,109,460,165"/>
+<area shape="rect" id="node3" href="$functions_8cpp.html" title="Este arquivo contém a implementação das funções desenvolvidas." alt="" coords="5,213,163,269"/>
+</map>

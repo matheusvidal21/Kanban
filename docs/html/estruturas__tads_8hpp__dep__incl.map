@@ -1,0 +1,9 @@
+<map id="/home/isa/Área de Trabalho/Kanban/include/estruturas_tads.hpp" name="/home/isa/Área de Trabalho/Kanban/include/estruturas_tads.hpp">
+<area shape="rect" id="node1" title="Implementação de templates dos Tipos Abstratos de Dados: Lista Duplamente Encadeada,..." alt="" coords="187,5,373,61"/>
+<area shape="rect" id="node2" href="$functions_8h.html" title="Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com ..." alt="" coords="17,317,202,373"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban." alt="" coords="187,421,344,477"/>
+<area shape="rect" id="node5" href="$kanbanboard_8h.html" title="Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban." alt="" coords="173,213,358,269"/>
+<area shape="rect" id="node7" href="$templates_8hpp.html" title="Código&#45;fonte auxiliar com templates genéricos de algoritmos de ordenação e busca." alt="" coords="122,109,307,165"/>
+<area shape="rect" id="node3" href="$functions_8cpp.html" title="Este arquivo contém a implementação das funções desenvolvidas." alt="" coords="5,421,163,477"/>
+<area shape="rect" id="node6" href="$kanbanboard_8cpp.html" title="Este arquivo contém a implementação da classe KanbanBoard." alt="" coords="277,317,435,373"/>
+</map>

@@ -1,0 +1,234 @@
+\hypertarget{classFila}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Fila$<$ T $>$}
+\label{classFila}\index{Fila$<$ T $>$@{Fila$<$ T $>$}}
+
+
+Classe que implementa uma fila utilizando a estrutura de lista encadeada.  
+
+
+
+
+{\ttfamily \#include $<$estruturas\+\_\+tads.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Fila$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classFila__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structFila_1_1No}{No}}
+\begin{DoxyCompactList}\small\item\em Classe que representa um nó da fila. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFila_af202231829ccd3849a28f61eb20e5ebc}{Fila}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classFila}{Fila}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classFila_ad7a066d10db52b8281f2859da76e8995}{$\sim$\+Fila}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classFila}{Fila}}. Remove todos os elementos da fila. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFila_ac3d40b11117c7b3883420ed176c05e5e}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Verifica se a fila está vazia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFila_a79932de4fbf4304272a946f1423f96c3}{enqueue}} (T value)
+\begin{DoxyCompactList}\small\item\em Adiciona um elemento no final da fila. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFila_a76a477ea7bc08844b0e0632f33e690de}{dequeue}} ()
+\begin{DoxyCompactList}\small\item\em Remove o elemento na frente da fila. Se a fila estiver vazia, uma mensagem de erro é exibida. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classFila_adf817e6fe2ab8ff436f27a1503d5db4d}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o elemento da frente da fila. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structFila_1_1No}{No}} $\ast$ \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}}
+\item 
+\mbox{\hyperlink{structFila_1_1No}{No}} $\ast$ \mbox{\hyperlink{classFila_aa991ecbe0d6bac27b24ac701c33e7419}{tail}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class Fila$<$ T $>$}
+
+Classe que implementa uma fila utilizando a estrutura de lista encadeada. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & O tipo de dado armazenado na fila. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classFila_af202231829ccd3849a28f61eb20e5ebc}\label{classFila_af202231829ccd3849a28f61eb20e5ebc}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!Fila@{Fila}}
+\index{Fila@{Fila}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Fila()}{Fila()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::\mbox{\hyperlink{classFila}{Fila}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \mbox{\hyperlink{classFila}{Fila}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{438 : \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}}(NULL), \mbox{\hyperlink{classFila_aa991ecbe0d6bac27b24ac701c33e7419}{tail}}(NULL)\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFila_ad7a066d10db52b8281f2859da76e8995}\label{classFila_ad7a066d10db52b8281f2859da76e8995}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!````~Fila@{$\sim$Fila}}
+\index{````~Fila@{$\sim$Fila}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Fila()}{~Fila()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classFila}{Fila}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da classe \mbox{\hyperlink{classFila}{Fila}}. Remove todos os elementos da fila. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{445            \{}
+\DoxyCodeLine{446       \textcolor{keywordflow}{while}(!\mbox{\hyperlink{classFila_ac3d40b11117c7b3883420ed176c05e5e}{isEmpty}}()) \{}
+\DoxyCodeLine{447         \mbox{\hyperlink{classFila_a76a477ea7bc08844b0e0632f33e690de}{dequeue}}();}
+\DoxyCodeLine{448       \}}
+\DoxyCodeLine{449     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classFila_a76a477ea7bc08844b0e0632f33e690de}\label{classFila_a76a477ea7bc08844b0e0632f33e690de}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{dequeue()}{dequeue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::dequeue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove o elemento na frente da fila. Se a fila estiver vazia, uma mensagem de erro é exibida. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{486                   \{}
+\DoxyCodeLine{487       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classFila_ac3d40b11117c7b3883420ed176c05e5e}{isEmpty}}())\{}
+\DoxyCodeLine{488         std::cout << \textcolor{stringliteral}{"{}A fila está vazia."{}} << std::endl;}
+\DoxyCodeLine{489         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{490       \}}
+\DoxyCodeLine{491       \mbox{\hyperlink{classNo}{No}}* temp = \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}};}
+\DoxyCodeLine{492       \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}} = \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}}-\/>\mbox{\hyperlink{structFila_1_1No_a6ac34197d0c0b0967e3dbb9e54113cdc}{next}};}
+\DoxyCodeLine{493       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}} == NULL)\{}
+\DoxyCodeLine{494         \mbox{\hyperlink{classFila_aa991ecbe0d6bac27b24ac701c33e7419}{tail}} = NULL;}
+\DoxyCodeLine{495       \}}
+\DoxyCodeLine{496       \textcolor{keyword}{delete} temp;}
+\DoxyCodeLine{497     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFila_a79932de4fbf4304272a946f1423f96c3}\label{classFila_a79932de4fbf4304272a946f1423f96c3}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{enqueue()}{enqueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::enqueue (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adiciona um elemento no final da fila. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & O valor do elemento a ser adicionado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{471                          \{}
+\DoxyCodeLine{472       \mbox{\hyperlink{classNo}{No}}* newNo = \textcolor{keyword}{new} \mbox{\hyperlink{classNo}{No}}(value);}
+\DoxyCodeLine{473       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classFila_ac3d40b11117c7b3883420ed176c05e5e}{isEmpty}}())\{}
+\DoxyCodeLine{474         \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}} = \mbox{\hyperlink{classFila_aa991ecbe0d6bac27b24ac701c33e7419}{tail}} = newNo;}
+\DoxyCodeLine{475       \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{476         \mbox{\hyperlink{classFila_aa991ecbe0d6bac27b24ac701c33e7419}{tail}}-\/>\mbox{\hyperlink{structFila_1_1No_a6ac34197d0c0b0967e3dbb9e54113cdc}{next}} = newNo;}
+\DoxyCodeLine{477         \mbox{\hyperlink{classFila_aa991ecbe0d6bac27b24ac701c33e7419}{tail}} = newNo;}
+\DoxyCodeLine{478       \}}
+\DoxyCodeLine{479     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFila_ac3d40b11117c7b3883420ed176c05e5e}\label{classFila_ac3d40b11117c7b3883420ed176c05e5e}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica se a fila está vazia. 
+
+\begin{DoxyReturn}{Retorna}
+true se a fila estiver vazia, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{457                          \{}
+\DoxyCodeLine{458       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}} == NULL)\{}
+\DoxyCodeLine{459         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{460       \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{461         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{462       \}}
+\DoxyCodeLine{463     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classFila_adf817e6fe2ab8ff436f27a1503d5db4d}\label{classFila_adf817e6fe2ab8ff436f27a1503d5db4d}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o elemento da frente da fila. 
+
+\begin{DoxyReturn}{Retorna}
+Uma referência para o elemento da frente. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & Se a fila estiver vazia. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{506              \{}
+\DoxyCodeLine{507         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classFila_ac3d40b11117c7b3883420ed176c05e5e}{isEmpty}}()) \{}
+\DoxyCodeLine{508             \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}A fila está vazia."{}});}
+\DoxyCodeLine{509         \}}
+\DoxyCodeLine{510         \textcolor{keywordflow}{return} \mbox{\hyperlink{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}{head}}-\/>\mbox{\hyperlink{structFila_1_1No_af883424f42a52c737b39ad5bb56fd967}{valor}};}
+\DoxyCodeLine{511     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}\label{classFila_acf0dbf62b75d02f75fbcee9d81cd1ea9}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!head@{head}}
+\index{head@{head}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structFila_1_1No}{No}}$\ast$ \mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFila_aa991ecbe0d6bac27b24ac701c33e7419}\label{classFila_aa991ecbe0d6bac27b24ac701c33e7419}} 
+\index{Fila$<$ T $>$@{Fila$<$ T $>$}!tail@{tail}}
+\index{tail@{tail}!Fila$<$ T $>$@{Fila$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structFila_1_1No}{No}}$\ast$ \mbox{\hyperlink{classFila}{Fila}}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{estruturas__tads_8hpp}{estruturas\+\_\+tads.\+hpp}}\end{DoxyCompactItemize}

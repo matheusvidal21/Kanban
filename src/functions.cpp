@@ -1,3 +1,12 @@
+/**
+ * @file functions.cpp
+ * @brief Este arquivo contém a implementação das funções desenvolvidas.
+ * @author Isabela Gomes Mendes 
+ * @author Matheus Costa Vidal
+ * @since 14/06/2023
+ * @date 08/07/2023
+*/
+
 #include "../include/functions.h"
 
 
@@ -130,10 +139,11 @@ int getUserChoice()
 
 
 // ==== Grande switch case do programa ====
-void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
+void executarOperacao(int choice, KanbanBoard *kanbanBoard)
 {
 
     /*Dados utilizados*/
+    int numColunas = kanbanBoard->getNumColumns();
     bool arquivoExiste;
     std::ifstream arquivo;
     int escolha, escolha2;
@@ -149,7 +159,6 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
     // ==== SWITCH PRINCIPAL ====
     switch (choice)
     {
-
     // ==== CASO: ADICIONAR TAREFAS ====
     case 1:
 
@@ -219,6 +228,8 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
         kanbanBoard->printColumn(colunadestino);
 
         break;
+
+
 
     // ==== CASO: EDITAR TAREFAS EXISTENTES ====
     case 2:
@@ -459,6 +470,8 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
 
         break;
 
+
+
     // ==== CASO: EXIBIR INFORMAÇÕES DA TAREFA ====
     case 3:
         if (kanbanBoard->isBoardEmpty())
@@ -497,6 +510,8 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
             }
         }
         break;
+
+
 
     // ==== CASO: ORDERNAR TAREFAS POR PRIORIDADE ====
     case 4:
@@ -641,6 +656,7 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
         break;
 
 
+
     // ==== CASO: EXIBIR QUADRO KANBAN ====
     case 5:
         while (true)
@@ -658,6 +674,7 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
         clearTerminal();
 
         break;
+
 
 
     // ==== CASO: SALVAR EM UM ARQUIVO ====
@@ -789,12 +806,11 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
                     std::cout << ANSI_RED << "|!| Digite uma opção válida |!|\n"<< ANSI_RESET << std::endl;
                     break;
             
-
-
             }
         }
 
         break;  
+
 
 
     // ==== CASO: SAIR ====
@@ -805,6 +821,8 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
         std::exit(0);
         break;
 
+
+
     // ==== CASO: OPÇÃO INVÁLIDA ====
     default:
         std::cout << ANSI_RED << "|!| Opção inválida. Por favor, escolha uma opção válida. |!|\n"
@@ -812,7 +830,8 @@ void executarOperacao(int choice, KanbanBoard *kanbanBoard, int numColunas)
         break;
     }
 
+
+
     // ==== FIM DO SWITCH PRINCIPAL ====
     std::cout << "\n";
 }
-

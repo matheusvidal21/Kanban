@@ -1,0 +1,218 @@
+\hypertarget{classPilha}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Pilha$<$ T $>$}
+\label{classPilha}\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+
+
+Classe que implementa uma pilha utilizando a estrutura de lista encadeada.  
+
+
+
+
+{\ttfamily \#include $<$estruturas\+\_\+tads.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Pilha$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classPilha__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPilha_1_1No}{No}}
+\begin{DoxyCompactList}\small\item\em Classe que representa um nó da pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPilha_a066b054518499c60f560574c5c41ea4b}{Pilha}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classPilha}{Pilha}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPilha_a0c931f49acc17ce09b29c2d589d4fd0b}{$\sim$\+Pilha}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classPilha}{Pilha}}. Remove todos os elementos da pilha. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPilha_a83d1a9de83940286c0602ce850f1109a}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Verifica se a pilha está vazia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPilha_ad206838eb85bda1c13c254ce68ac73e4}{push}} (T value)
+\begin{DoxyCompactList}\small\item\em Adiciona um elemento no topo da pilha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPilha_a6e5080ba9e5c1631f6aeb8a2d26c8c2e}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Remove o elemento do topo da pilha. Se a pilha estiver vazia, uma mensagem de erro é exibida. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classPilha_a91e6a2a87eda84c0e750381a4da96118}{peek}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o elemento do topo da pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structPilha_1_1No}{No}} $\ast$ \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class Pilha$<$ T $>$}
+
+Classe que implementa uma pilha utilizando a estrutura de lista encadeada. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & O tipo de dado armazenado na pilha. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPilha_a066b054518499c60f560574c5c41ea4b}\label{classPilha_a066b054518499c60f560574c5c41ea4b}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!Pilha@{Pilha}}
+\index{Pilha@{Pilha}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Pilha()}{Pilha()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::\mbox{\hyperlink{classPilha}{Pilha}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \mbox{\hyperlink{classPilha}{Pilha}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{333 : \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}}(NULL)\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPilha_a0c931f49acc17ce09b29c2d589d4fd0b}\label{classPilha_a0c931f49acc17ce09b29c2d589d4fd0b}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!````~Pilha@{$\sim$Pilha}}
+\index{````~Pilha@{$\sim$Pilha}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pilha()}{~Pilha()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classPilha}{Pilha}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da classe \mbox{\hyperlink{classPilha}{Pilha}}. Remove todos os elementos da pilha. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{340             \{}
+\DoxyCodeLine{341       \textcolor{keywordflow}{while}(!\mbox{\hyperlink{classPilha_a83d1a9de83940286c0602ce850f1109a}{isEmpty}}()) \{}
+\DoxyCodeLine{342         \mbox{\hyperlink{classPilha_a6e5080ba9e5c1631f6aeb8a2d26c8c2e}{pop}}();}
+\DoxyCodeLine{343       \}}
+\DoxyCodeLine{344     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPilha_a83d1a9de83940286c0602ce850f1109a}\label{classPilha_a83d1a9de83940286c0602ce850f1109a}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica se a pilha está vazia. 
+
+\begin{DoxyReturn}{Retorna}
+true se a pilha estiver vazia, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{351                          \{}
+\DoxyCodeLine{352       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}} == NULL)\{}
+\DoxyCodeLine{353         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{354       \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{355         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{356       \}}
+\DoxyCodeLine{357     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPilha_a91e6a2a87eda84c0e750381a4da96118}\label{classPilha_a91e6a2a87eda84c0e750381a4da96118}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!peek@{peek}}
+\index{peek@{peek}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retorna o elemento do topo da pilha. 
+
+\begin{DoxyReturn}{Retorna}
+Uma referência para o elemento do topo. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::runtime\+\_\+error} & Se a pilha estiver vazia. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{392              \{}
+\DoxyCodeLine{393         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classPilha_a83d1a9de83940286c0602ce850f1109a}{isEmpty}}()) \{}
+\DoxyCodeLine{394             \textcolor{keywordflow}{throw} std::runtime\_error(\textcolor{stringliteral}{"{}A pilha está vazia."{}});}
+\DoxyCodeLine{395         \}}
+\DoxyCodeLine{396         \textcolor{keywordflow}{return} \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}}-\/>\mbox{\hyperlink{structPilha_1_1No_afdffcc9988a28e38448b0675e1dfc23c}{valor}};}
+\DoxyCodeLine{397     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPilha_a6e5080ba9e5c1631f6aeb8a2d26c8c2e}\label{classPilha_a6e5080ba9e5c1631f6aeb8a2d26c8c2e}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove o elemento do topo da pilha. Se a pilha estiver vazia, uma mensagem de erro é exibida. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{375                \{}
+\DoxyCodeLine{376       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classPilha_a83d1a9de83940286c0602ce850f1109a}{isEmpty}}())\{}
+\DoxyCodeLine{377         std::cout << \textcolor{stringliteral}{"{}A pilha está vazia."{}} << std::endl;}
+\DoxyCodeLine{378         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{379       \}}
+\DoxyCodeLine{380       \mbox{\hyperlink{classNo}{No}}* temp = \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}};}
+\DoxyCodeLine{381       \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}} = \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}}-\/>\mbox{\hyperlink{structPilha_1_1No_a34d44e58d7405ddde3ae5247f2b6d290}{next}};}
+\DoxyCodeLine{382       \textcolor{keyword}{delete} temp;}
+\DoxyCodeLine{383     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPilha_ad206838eb85bda1c13c254ce68ac73e4}\label{classPilha_ad206838eb85bda1c13c254ce68ac73e4}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!push@{push}}
+\index{push@{push}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adiciona um elemento no topo da pilha. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & O valor do elemento a ser adicionado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{364                        \{}
+\DoxyCodeLine{365         \mbox{\hyperlink{classNo}{No}}* newNo = \textcolor{keyword}{new} \mbox{\hyperlink{classNo}{No}}(value);}
+\DoxyCodeLine{366         newNo-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}} = \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}};}
+\DoxyCodeLine{367         \mbox{\hyperlink{classPilha_aab21a01f6263fd598dc72e2b8b24402a}{top}} = newNo;}
+\DoxyCodeLine{368     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPilha_aab21a01f6263fd598dc72e2b8b24402a}\label{classPilha_aab21a01f6263fd598dc72e2b8b24402a}} 
+\index{Pilha$<$ T $>$@{Pilha$<$ T $>$}!top@{top}}
+\index{top@{top}!Pilha$<$ T $>$@{Pilha$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structPilha_1_1No}{No}}$\ast$ \mbox{\hyperlink{classPilha}{Pilha}}$<$ T $>$\+::top\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{estruturas__tads_8hpp}{estruturas\+\_\+tads.\+hpp}}\end{DoxyCompactItemize}

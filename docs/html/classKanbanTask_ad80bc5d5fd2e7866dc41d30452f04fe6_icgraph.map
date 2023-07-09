@@ -1,0 +1,11 @@
+<map id="KanbanTask::getId" name="KanbanTask::getId">
+<area shape="rect" id="node1" title="Método getter que retorna o ID da tarefa." alt="" coords="847,132,988,159"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a8b1a8c7ae9788d22aab51292b161d653" title="Método que verifica se um ID recebido já existe." alt="" coords="296,5,531,32"/>
+<area shape="rect" id="node5" href="$classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="603,107,774,133"/>
+<area shape="rect" id="node8" href="$classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f" title="Método que encontra a coluna de uma tarefa com base em seu ID." alt="" coords="579,157,799,184"/>
+<area shape="rect" id="node9" href="$classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="596,208,781,235"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,107,248,133"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,107,60,133"/>
+<area shape="rect" id="node6" href="$classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="322,157,505,184"/>
+<area shape="rect" id="node7" href="$classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812" title="Método que exclui uma tarefa." alt="" coords="315,107,511,133"/>
+</map>

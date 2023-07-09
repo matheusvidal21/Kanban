@@ -1,0 +1,224 @@
+\hypertarget{main_8cpp}{}\doxysection{Referência do Arquivo /home/isa/Área de Trabalho/\+Kanban/src/main.cpp}
+\label{main_8cpp}\index{/home/isa/Área de Trabalho/Kanban/src/main.cpp@{/home/isa/Área de Trabalho/Kanban/src/main.cpp}}
+
+
+Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}../include/kanbanboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/functions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/estruturas\+\_\+tads.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_af77a445894f2f750d43cf2182cd29e55}{ANSI\+\_\+\+RESET}}~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a7f026776e12ac1b5e7736c24b756085d}{ANSI\+\_\+\+RED}}~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_ad050fd71ced44460a0c723a1715c40e5}{ANSI\+\_\+\+GREEN}}~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_af6e8b5c7b35e8bff4c581efd8019c798}{ANSI\+\_\+\+YELLOW}}~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{main_8cpp_a50a197ede59d7694515c3dad4557cf00}{ANSI\+\_\+\+BLUE}}~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Função principal que inicia o programa do gerenciador de tarefas Kanban. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban. 
+
+\begin{DoxyAuthor}{Autor}
+Isabela Gomes Mendes 
+
+Matheus Costa Vidal 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+14/06/2023 
+\end{DoxySince}
+\begin{DoxyDate}{Data}
+08/07/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Definições e macros}
+\mbox{\Hypertarget{main_8cpp_a50a197ede59d7694515c3dad4557cf00}\label{main_8cpp_a50a197ede59d7694515c3dad4557cf00}} 
+\index{main.cpp@{main.cpp}!ANSI\_BLUE@{ANSI\_BLUE}}
+\index{ANSI\_BLUE@{ANSI\_BLUE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ANSI\_BLUE}{ANSI\_BLUE}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+BLUE~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_ad050fd71ced44460a0c723a1715c40e5}\label{main_8cpp_ad050fd71ced44460a0c723a1715c40e5}} 
+\index{main.cpp@{main.cpp}!ANSI\_GREEN@{ANSI\_GREEN}}
+\index{ANSI\_GREEN@{ANSI\_GREEN}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ANSI\_GREEN}{ANSI\_GREEN}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+GREEN~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_a7f026776e12ac1b5e7736c24b756085d}\label{main_8cpp_a7f026776e12ac1b5e7736c24b756085d}} 
+\index{main.cpp@{main.cpp}!ANSI\_RED@{ANSI\_RED}}
+\index{ANSI\_RED@{ANSI\_RED}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ANSI\_RED}{ANSI\_RED}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+RED~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_af77a445894f2f750d43cf2182cd29e55}\label{main_8cpp_af77a445894f2f750d43cf2182cd29e55}} 
+\index{main.cpp@{main.cpp}!ANSI\_RESET@{ANSI\_RESET}}
+\index{ANSI\_RESET@{ANSI\_RESET}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ANSI\_RESET}{ANSI\_RESET}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+RESET~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}}
+
+\mbox{\Hypertarget{main_8cpp_af6e8b5c7b35e8bff4c581efd8019c798}\label{main_8cpp_af6e8b5c7b35e8bff4c581efd8019c798}} 
+\index{main.cpp@{main.cpp}!ANSI\_YELLOW@{ANSI\_YELLOW}}
+\index{ANSI\_YELLOW@{ANSI\_YELLOW}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ANSI\_YELLOW}{ANSI\_YELLOW}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+YELLOW~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}}
+
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função principal que inicia o programa do gerenciador de tarefas Kanban. 
+
+\begin{DoxyReturn}{Retorna}
+0 em caso de sucesso. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{comment}{// Alocando dinamicamnete um objeto de kanbanBoard na HEAP}}
+\DoxyCodeLine{34     \mbox{\hyperlink{classKanbanBoard}{KanbanBoard}} *kanbanBoard = \textcolor{keyword}{new} \mbox{\hyperlink{classKanbanBoard}{KanbanBoard}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} numColunas;}
+\DoxyCodeLine{37     std::string nameFile, caminhoFile;}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} arquivoExiste = \textcolor{keyword}{false};}
+\DoxyCodeLine{39     std::string pasta = \textcolor{stringliteral}{"{}data/bin"{}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{comment}{// Primeira parte do programa, antes do menu}}
+\DoxyCodeLine{42     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         std::cout << \textcolor{stringliteral}{"{}==========="{}} << \mbox{\hyperlink{main_8cpp_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{} Bem vindo ao gerenciador de tarefas Kanban! "{}} << \mbox{\hyperlink{main_8cpp_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}===========\(\backslash\)n"{}};}
+\DoxyCodeLine{45         std::cout << \textcolor{stringliteral}{"{}Deseja ler um arquivo?"{}} << std::endl;}
+\DoxyCodeLine{46         std::cout << \textcolor{stringliteral}{"{}1. Sim"{}} << std::endl;}
+\DoxyCodeLine{47         std::cout << \textcolor{stringliteral}{"{}2. Não"{}} << std::endl;}
+\DoxyCodeLine{48  }
+\DoxyCodeLine{49         \textcolor{keywordtype}{int} escolha;}
+\DoxyCodeLine{50         std::cin >> escolha;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{comment}{// Caso: ler arquivo}}
+\DoxyCodeLine{53         \textcolor{keywordflow}{if}(escolha == 1) \{}
+\DoxyCodeLine{54             }
+\DoxyCodeLine{55             \textcolor{comment}{// Lista dos arquivos da pasta /data}}
+\DoxyCodeLine{56             \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<std::string>}} arquivos = \mbox{\hyperlink{functions_8h_aa1fbbb2203c4879b8bf3566732284ac3}{listarArquivos}}(pasta);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58             \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60             \textcolor{comment}{// Verificar se há arquivos na pasta}}
+\DoxyCodeLine{61             \textcolor{keywordflow}{if} (arquivos.\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{62                 std::cout << \mbox{\hyperlink{main_8cpp_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}Nenhum arquivo encontrado na pasta '"{}} << pasta << \textcolor{stringliteral}{"{}'"{}} << \mbox{\hyperlink{main_8cpp_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{63         }
+\DoxyCodeLine{64             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66                 \textcolor{keywordflow}{while}(!arquivoExiste) \{}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68                     \textcolor{comment}{// Exibir os arquivos disponíveis}}
+\DoxyCodeLine{69                     std::cout << \textcolor{stringliteral}{"{}Arquivos disponíveis na pasta '"{}} << pasta << \textcolor{stringliteral}{"{}':"{}} << std::endl;}
+\DoxyCodeLine{70                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < arquivos.\mbox{\hyperlink{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}{getSize}}(); i++) \{}
+\DoxyCodeLine{71                         std::cout << \mbox{\hyperlink{main_8cpp_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << i + 1 << \textcolor{stringliteral}{"{}. "{}} << arquivos.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(i) << \mbox{\hyperlink{main_8cpp_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{72                     \}}
+\DoxyCodeLine{73                     }
+\DoxyCodeLine{74                     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nInsira o nome do arquivo com os dados (exemplo.bin): "{}};}
+\DoxyCodeLine{75                     std::cin >> nameFile;}
+\DoxyCodeLine{76                     caminhoFile = \textcolor{stringliteral}{"{}data/bin/"{}} + nameFile;}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78                     \textcolor{comment}{// Verifique se o arquivo existe}}
+\DoxyCodeLine{79                     std::ifstream arquivo(caminhoFile.c\_str());}
+\DoxyCodeLine{80                     \textcolor{keywordflow}{if} (arquivo.is\_open()) \{}
+\DoxyCodeLine{81                         arquivoExiste = \textcolor{keyword}{true};}
+\DoxyCodeLine{82                         arquivo.close();}
+\DoxyCodeLine{83                     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{84                         \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{85                         std::cout << \mbox{\hyperlink{main_8cpp_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Arquivo não encontrado |!|"{}} << \mbox{\hyperlink{main_8cpp_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{86                     \}}
+\DoxyCodeLine{87                 \}}
+\DoxyCodeLine{88                 }
+\DoxyCodeLine{89                 \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{90                 kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_af172b2c66ddd65f49ba2f4aa765a7480}{loadFromFile}}(caminhoFile);}
+\DoxyCodeLine{91                 kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{92                 }
+\DoxyCodeLine{93                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95             \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         \textcolor{comment}{// Caso: não ler um arquivo}}
+\DoxyCodeLine{98        \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(escolha == 2)\{}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100             \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102             \textcolor{comment}{// Recebendo o número de colunas}}
+\DoxyCodeLine{103             numColunas = \mbox{\hyperlink{functions_8h_ae0e51e3688204d8be9b0c6fc6786585f}{receiveNumColumns}}();}
+\DoxyCodeLine{104             \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106             \textcolor{comment}{// Recebendo os nomes das colunas}}
+\DoxyCodeLine{107             \mbox{\hyperlink{functions_8h_a90237cd431706bf89edc6d2df56555d9}{receiveColumns}}(kanbanBoard, numColunas);}
+\DoxyCodeLine{108             \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{109             }
+\DoxyCodeLine{110             \textcolor{comment}{// Imprime o quadro com as colunas inseridas}}
+\DoxyCodeLine{111             std::cout << \textcolor{stringliteral}{"{}Ótimo! Aqui está seu quadro:\(\backslash\)n"{}};}
+\DoxyCodeLine{112             kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{113             std::cout << std::endl << std::endl;}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{118             \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{119             std::cout << \mbox{\hyperlink{main_8cpp_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Informe uma opção válida |!|"{}} << \mbox{\hyperlink{main_8cpp_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{120         \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     numColunas = kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae}{getNumColumns}}();}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{comment}{// Loop principal do programa (menu)}}
+\DoxyCodeLine{127     \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{128         \mbox{\hyperlink{menus_8h_ab13e858612c64eeef73aff1d8a03945e}{printMenu}}();}
+\DoxyCodeLine{129         \textcolor{keywordtype}{int} choice = \mbox{\hyperlink{functions_8h_a86d0de416ac3f84fbea7eafd2325946c}{getUserChoice}}();}
+\DoxyCodeLine{130         \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{131         \mbox{\hyperlink{functions_8h_a44b96e022f354245afa90fae9d21575e}{executarOperacao}}(choice, kanbanBoard);}
+\DoxyCodeLine{132         }
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \textcolor{comment}{// Libera a memória alocada}}
+\DoxyCodeLine{136     \textcolor{keyword}{delete} kanbanBoard;}
+\DoxyCodeLine{137     kanbanBoard = NULL;}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{140 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

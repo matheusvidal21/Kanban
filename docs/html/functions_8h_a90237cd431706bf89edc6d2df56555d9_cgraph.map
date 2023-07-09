@@ -1,0 +1,5 @@
+<map id="receiveColumns" name="receiveColumns">
+<area shape="rect" id="node1" title="Solicita ao usuário os nomes das colunas do quadro Kanban." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#ab9d36038c7308e28792da1563f5b4dc0" title="Método que adiciona uma nova coluna ao Quadro Kanban." alt="" coords="180,5,371,32"/>
+<area shape="rect" id="node3" href="$functions_8cpp.html#a228d1e0c636daad6578c44e22644fbc5" title="Função que converte uma string em letras maiúsculas." alt="" coords="213,56,338,83"/>
+</map>

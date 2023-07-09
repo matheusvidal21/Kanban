@@ -1,31 +1,39 @@
+/**
+ * @file templates.hpp
+ * @brief Código-fonte auxiliar com templates genéricos de algoritmos de ordenação e busca.
+ * @author Isabela Gomes Mendes 
+ * @author Matheus Costa Vidal
+ * @since 14/06/2023
+ * @date 08/07/2023
+*/
 #ifndef TEMPLATES_H
 #define TEMPLATES_H
 #include <iostream>
 #include "estruturas_tads.hpp"
 
 
-/*Código auxiliar com template genérico com algoritimos de ordenação:
-  Bubble Sort, Selection Sort e Merge Sort.*/
+/**
+ * @class AlgoritmosDeOrdenacao
+ * @brief Template de classe para algoritmos de ordenação.
+ * @tparam T O tipo de dado a ser ordenado.
+ * @details Esta classe contém implementações de algoritmos de ordenação como Bubble Sort (crescente), Selection Sort (decrescente) e Merge Sort (crescente).
+ */
 template<typename T>
 class AlgoritmosDeOrdenacao {
-private:
-    // Faz o 'swap' das tasks
-    static void swapTasks(T& task1, T& task2) {
-        T temp = task1;
-        task1 = task2;
-        task2 = temp;
-    }
-
 public:
 
-    /*A complexidade do Bubble Sort é O(n^2), onde "n" é 
-    o tamanho da lista a ser ordenada. Essa é uma complexidade
-    quadrática, o que significa que o tempo de execução aumenta 
-    rapidamente à medida que o tamanho da lista aumenta. A complexidade
-    quadrática do Bubble Sort ocorre porque, em cada passagem, são feitas comparações
-    entre pares de elementos adjacentes e, se necessário, são feitas trocas. 
+
+   /**
+    * @brief Ordena a lista de forma crescente usando o Bubble Sort.
+    * @param list A lista a ser ordenada.
+    * @param size O tamanho da lista.
+    *
+    * A complexidade do Bubble Sort é O(n^2), onde "n" é o tamanho da lista a ser ordenada.
+    * Essa é uma complexidade quadrática, o que significa que o tempo de execução aumenta
+    * rapidamente à medida que o tamanho da lista aumenta. A complexidade quadrática do Bubble Sort
+    * ocorre porque, em cada passagem, são feitas comparações entre pares de elementos adjacentes
+    * e, se necessário, são feitas trocas.
     */
-    // Ordena de forma crescente
     static void bubbleSort(ListaDuplamenteEncadeada<T>& list, int size) {
 
         for (int i = 0; i < size - 1; i++) {
@@ -41,14 +49,18 @@ public:
         }
     }
 
-    /*A complexidade do Selection Sort também é
-    O(n^2), onde "n" é o tamanho da lista a ser ordenada.
-    Assim como o Bubble Sort, o Selection Sort possui uma 
-    complexidade quadrática. A complexidade quadrática do 
-    Selection Sort ocorre porque, em cada iteração, é necessário
-    percorrer a parte não ordenada para encontrar o menor elemento. 
+
+
+   /**
+    * @brief Ordena a lista de forma decrescente usando o Selection Sort.
+    * @param list A lista a ser ordenada.
+    * @param size O tamanho da lista.
+    *
+    * A complexidade do Selection Sort também é O(n^2), onde "n" é o tamanho da lista a ser ordenada.
+    * Assim como o Bubble Sort, o Selection Sort possui uma complexidade quadrática. A complexidade
+    * quadrática do Selection Sort ocorre porque, em cada iteração, é necessário percorrer a parte não
+    * ordenada para encontrar o menor elemento.
     */
-    // Ordena de forma decrescente
     static void selectionSort(ListaDuplamenteEncadeada<T>& list, int size) {
 
         for (int i = 0; i < size - 1; i++) {
@@ -72,12 +84,18 @@ public:
         }
     }
 
-    /*A complexidade do Merge Sort é O(n log n), onde "n" é o 
-    tamanho da lista a ser ordenada. Essa é uma complexidade assintótica 
-    eficiente e torna o Merge Sort adequado para lidar com grandes 
-    conjuntos de dados. O Merge Sort possui essa complexidade porque o
-    algoritmo divide repetidamente a lista em duas metades, até que sejam
-    formadas sublistas com apenas um elemento. 
+
+
+   /**
+    * @brief Ordena a lista usando o Merge Sort.
+    * @param arr A lista a ser ordenada.
+    * @param left O índice de início da sublista.
+    * @param right O índice de fim da sublista.
+    *
+    * A complexidade do Merge Sort é O(n log n), onde "n" é o tamanho da lista a ser ordenada.
+    * Essa é uma complexidade assintótica eficiente e torna o Merge Sort adequado para lidar com
+    * grandes conjuntos de dados. O Merge Sort possui essa complexidade porque o algoritmo divide
+    * repetidamente a lista em duas metades, até que sejam formadas sublistas com apenas um elemento.
     */
     static void mergeSort(ListaDuplamenteEncadeada<T>& arr, int left, int right) {
         if (left >= right) {
@@ -90,6 +108,26 @@ public:
     }
 
 private:
+
+   /**
+    * @brief Realiza a troca de duas tarefas.
+    * @param task1 A primeira tarefa.
+    * @param task2 A segunda tarefa.
+    */
+    static void swapTasks(T& task1, T& task2) {
+        T temp = task1;
+        task1 = task2;
+        task2 = temp;
+    }
+
+
+   /**
+    * @brief Combina duas sublistas em uma única lista ordenada.
+    * @param arr A lista a ser combinada.
+    * @param left O índice de início da primeira sublista.
+    * @param mid O índice de fim da primeira sublista e início da segunda sublista.
+    * @param right O índice de fim da segunda sublista.
+    */
     static void merge(ListaDuplamenteEncadeada<T>& arr, int left, int mid, int right) {
         int left_size = mid - left + 1;
         int right_size = right - mid;
@@ -134,11 +172,24 @@ private:
     }  
 };
 
+
+
+/**
+ * @class AlgoritmosDeBuscaBinaria
+ * @brief Template de classe para algoritmo de busca binária genérico.
+ * @tparam T O tipo de dado a ser buscado.
+ */
 template<typename T>
 class AlgoritmosDeBuscaBinaria {
 public:
 
-    // Busca binária iterativa
+   /**
+    * @brief Realiza uma busca binária iterativa em uma lista ordenada.
+    * @param arr A lista ordenada.
+    * @param tamanho O tamanho da lista.
+    * @param chave O valor a ser buscado.
+    * @return O índice do valor encontrado ou -1 se não for encontrado.
+    */
     static int BuscaBinariaIterativa(ListaDuplamenteEncadeada<T>& arr, int tamanho, T chave){
         int inicio = 0;
         int fim = tamanho - 1;
@@ -156,7 +207,16 @@ public:
         return -1; // Retorna -1 se a chave não for encontrada
     }
 
-    // Busca binária recursiva
+
+
+   /**
+    * @brief Realiza uma busca binária recursiva em uma lista ordenada.
+    * @param arr A lista ordenada.
+    * @param inicio O índice de início da sublista.
+    * @param fim O índice de fim da sublista.
+    * @param chave O valor a ser buscado.
+    * @return O índice do valor encontrado ou -1 se não for encontrado.
+    */
     static int BuscaBinariaRecursiva(ListaDuplamenteEncadeada<T>& arr, int inicio, int fim, T chave){
         if(inicio > fim) return -1;// Retorna -1 se a chave não for encontrada
 

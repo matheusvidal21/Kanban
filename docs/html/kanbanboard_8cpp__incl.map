@@ -1,0 +1,13 @@
+<map id="/home/isa/Área de Trabalho/Kanban/src/kanbanboard.cpp" name="/home/isa/Área de Trabalho/Kanban/src/kanbanboard.cpp">
+<area shape="rect" id="node1" title="Este arquivo contém a implementação da classe KanbanBoard." alt="" coords="203,5,360,61"/>
+<area shape="rect" id="node2" href="$kanbanboard_8h.html" title="Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban." alt="" coords="191,109,372,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="333,333,413,360"/>
+<area shape="rect" id="node4" title=" " alt="" coords="29,184,104,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="129,184,202,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="56,333,115,360"/>
+<area shape="rect" id="node7" href="$kanbantask_8h.html" title="Este arquivo contém a declaração da classe KanbanTask, que representa uma tarefa específica do Kanban..." alt="" coords="227,184,336,211"/>
+<area shape="rect" id="node10" href="$estruturas__tads_8hpp.html" title="Implementação de templates dos Tipos Abstratos de Dados: Lista Duplamente Encadeada,..." alt="" coords="411,259,562,285"/>
+<area shape="rect" id="node11" href="$templates_8hpp.html" title="Código&#45;fonte auxiliar com templates genéricos de algoritmos de ordenação e busca." alt="" coords="462,184,578,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="211,259,285,285"/>
+<area shape="rect" id="node9" href="$task_8h.html" title="Este arquivo contém a declaração da classe abstrata Task, que representa uma tarefa genérica." alt="" coords="123,259,186,285"/>
+</map>

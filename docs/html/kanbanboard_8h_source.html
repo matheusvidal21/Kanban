@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kanban: Código-Fonte de /home/isa/Área de Trabalho/Kanban/include/kanbanboard.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logodoxygen.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kanban
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('kanbanboard_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">kanbanboard.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="kanbanboard_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef KANBANBOARD_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define KANBANBOARD_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kanbantask_8h.html">kanbantask.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="estruturas__tads_8hpp.html">estruturas_tads.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="templates_8hpp.html">templates.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Definição de cores</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="kanbanboard_8h.html#af77a445894f2f750d43cf2182cd29e55">   20</a></span>&#160;<span class="preprocessor">#define ANSI_RESET &quot;\033[0m&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="kanbanboard_8h.html#a7f026776e12ac1b5e7736c24b756085d">   21</a></span>&#160;<span class="preprocessor">#define ANSI_RED &quot;\033[31m&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="kanbanboard_8h.html#ad050fd71ced44460a0c723a1715c40e5">   22</a></span>&#160;<span class="preprocessor">#define ANSI_GREEN &quot;\033[32m&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="kanbanboard_8h.html#af6e8b5c7b35e8bff4c581efd8019c798">   23</a></span>&#160;<span class="preprocessor">#define ANSI_YELLOW &quot;\033[33m&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="kanbanboard_8h.html#a50a197ede59d7694515c3dad4557cf00">   24</a></span>&#160;<span class="preprocessor">#define ANSI_BLUE &quot;\033[34m&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classKanbanBoard.html">   53</a></span>&#160;<span class="keyword">class </span><a class="code" href="classKanbanBoard.html">KanbanBoard</a></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="structKanbanBoard_1_1KanbanColumn.html">   60</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structKanbanBoard_1_1KanbanColumn.html">KanbanColumn</a></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  {</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="structKanbanBoard_1_1KanbanColumn.html#a48304f90be7e54848711553b87510ec5">   62</a></span>&#160;    std::string <a class="code" href="structKanbanBoard_1_1KanbanColumn.html#a48304f90be7e54848711553b87510ec5">name</a>;                           <span class="comment">/*&lt; Nome da coluna */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="structKanbanBoard_1_1KanbanColumn.html#a3b32183eb126cf8b32588601b462ca3b">   63</a></span>&#160;    <a class="code" href="classListaDuplamenteEncadeada.html">ListaDuplamenteEncadeada&lt;KanbanTask&gt;</a> <a class="code" href="structKanbanBoard_1_1KanbanColumn.html#a3b32183eb126cf8b32588601b462ca3b">tasks</a>; <span class="comment">/*&lt; Lista de tarefas da coluna */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structKanbanBoard_1_1KanbanColumn.html#ad65db22137fe4c4d7211e200c7876b1e">   70</a></span>&#160;    <a class="code" href="structKanbanBoard_1_1KanbanColumn.html#ad65db22137fe4c4d7211e200c7876b1e">KanbanColumn</a>(<span class="keyword">const</span> std::string &amp;columnName) : <a class="code" href="structKanbanBoard_1_1KanbanColumn.html#a48304f90be7e54848711553b87510ec5">name</a>(columnName) {}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structKanbanBoard_1_1KanbanColumn.html#aa70ad225040752cc10c94eb75c4efeeb">   77</a></span>&#160;    <a class="code" href="classListaDuplamenteEncadeada.html">ListaDuplamenteEncadeada&lt;KanbanTask&gt;</a> &amp;<a class="code" href="structKanbanBoard_1_1KanbanColumn.html#aa70ad225040752cc10c94eb75c4efeeb">getTasks</a>()</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="structKanbanBoard_1_1KanbanColumn.html#a3b32183eb126cf8b32588601b462ca3b">tasks</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classKanbanBoard.html#a5da4be0acb446b8c357619350437e853">   83</a></span>&#160;  <a class="code" href="classListaDuplamenteEncadeada.html">ListaDuplamenteEncadeada&lt;KanbanColumn&gt;</a> <a class="code" href="classKanbanBoard.html#a5da4be0acb446b8c357619350437e853">columns</a>; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="classKanbanBoard.html#a059bfee7806ea52a72a9bb9b48868f4d">KanbanBoard</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classKanbanBoard.html#a18c629c5ed060609c35259bf9cdd9d32">~KanbanBoard</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#ab9d36038c7308e28792da1563f5b4dc0">addColumn</a>(<span class="keyword">const</span> std::string &amp;columnName);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#a901d595d906b4532b32718f4d8e0757b">addTaskToColumn</a>(<span class="keywordtype">int</span> columnIndex, <span class="keyword">const</span> <a class="code" href="classKanbanTask.html">KanbanTask</a> &amp;task);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#ad0cac8fde1059a5f0f3d2208a25752ee">printColumn</a>(<span class="keywordtype">int</span> columnIndex) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34">moveTask</a>(<span class="keywordtype">int</span> taskId, <span class="keywordtype">int</span> idcolunaDestino);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#a0c3f9292b3e44370fcdf66162beeef12">sortColumn</a>(<span class="keywordtype">int</span> columnIndex, <span class="keywordtype">int</span> flag);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classKanbanBoard.html#aa7f6f54e145aa7c3cea1f0ab1d5585ae">getNumColumns</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812">removeTask</a>(<span class="keywordtype">int</span> taskId);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classKanbanBoard.html#a7307f5be7fac353ccc43599261083c49">isBoardEmpty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classKanbanBoard.html#a61a796eef245f4428d9a2ee90861742c">columnEmpty</a>(<span class="keywordtype">int</span> columnIndex) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classKanbanBoard.html#a8b1a8c7ae9788d22aab51292b161d653">existeIdDuplicado</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#a13653cefc8ac7b1fb3b1b34e39c61b2b">printBoard</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2">saveToFile</a>(<span class="keyword">const</span> std::string &amp;filename) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480">loadFromFile</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classKanbanBoard.html#ac52cb43d40eb69b8663f67ab4dc88647">saveToFileTxt</a>(<span class="keyword">const</span> std::string &amp;fileName) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <a class="code" href="classKanbanTask.html">KanbanTask</a> *<a class="code" href="classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a">findTask</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f">  258</a></span>&#160;  <a class="code" href="structKanbanBoard_1_1KanbanColumn.html">KanbanColumn</a> *<a class="code" href="classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f">findTaskColumn</a>(<span class="keywordtype">int</span> taskId)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="keyword">  </span>{</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classKanbanBoard.html#a5da4be0acb446b8c357619350437e853">columns</a>.getSize(); i++)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <a class="code" href="structKanbanBoard_1_1KanbanColumn.html">KanbanColumn</a> &amp;column = <a class="code" href="classKanbanBoard.html#a5da4be0acb446b8c357619350437e853">columns</a>.get(i);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; column.<a class="code" href="structKanbanBoard_1_1KanbanColumn.html#a3b32183eb126cf8b32588601b462ca3b">tasks</a>.<a class="code" href="classListaDuplamenteEncadeada.html#ae2494348caf48de3d5b164c71f2dae73">getSize</a>(); j++)</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;      {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (column.<a class="code" href="structKanbanBoard_1_1KanbanColumn.html#a3b32183eb126cf8b32588601b462ca3b">tasks</a>.<a class="code" href="classListaDuplamenteEncadeada.html#ab31872ac12372cfca22051c24cdf066f">get</a>(j).<a class="code" href="classKanbanTask.html#ad80bc5d5fd2e7866dc41d30452f04fe6">getId</a>() == taskId)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;          <span class="keywordflow">return</span> &amp;column;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      }</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  }</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;};</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassKanbanBoard_html"><div class="ttname"><a href="classKanbanBoard.html">KanbanBoard</a></div><div class="ttdoc">Classe KanbanBoard representa o Quadro Kanban que contém colunas e tarefas.</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:54</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a059bfee7806ea52a72a9bb9b48868f4d"><div class="ttname"><a href="classKanbanBoard.html#a059bfee7806ea52a72a9bb9b48868f4d">KanbanBoard::KanbanBoard</a></div><div class="ttdeci">KanbanBoard()</div><div class="ttdoc">Construtor padrão da classe KanbanBoard.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:15</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a0b38a51b177c2a45ec706cd98c8076a2"><div class="ttname"><a href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2">KanbanBoard::saveToFile</a></div><div class="ttdeci">void saveToFile(const std::string &amp;filename) const</div><div class="ttdoc">Salva as informações do Quadro Kanban em um arquivo '.bin'.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:269</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a0c3f9292b3e44370fcdf66162beeef12"><div class="ttname"><a href="classKanbanBoard.html#a0c3f9292b3e44370fcdf66162beeef12">KanbanBoard::sortColumn</a></div><div class="ttdeci">void sortColumn(int columnIndex, int flag)</div><div class="ttdoc">Método que ordena uma coluna escolhida com base na prioridade das taredas.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:70</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a0c87862faa96b8225faeedc9de929812"><div class="ttname"><a href="classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812">KanbanBoard::removeTask</a></div><div class="ttdeci">bool removeTask(int taskId)</div><div class="ttdoc">Método que exclui uma tarefa.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:105</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a13653cefc8ac7b1fb3b1b34e39c61b2b"><div class="ttname"><a href="classKanbanBoard.html#a13653cefc8ac7b1fb3b1b34e39c61b2b">KanbanBoard::printBoard</a></div><div class="ttdeci">void printBoard() const</div><div class="ttdoc">Imprime o quadro Kanban.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:165</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a18c629c5ed060609c35259bf9cdd9d32"><div class="ttname"><a href="classKanbanBoard.html#a18c629c5ed060609c35259bf9cdd9d32">KanbanBoard::~KanbanBoard</a></div><div class="ttdeci">~KanbanBoard()</div><div class="ttdoc">Destrutor padrão da classe KanbanBoard.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:16</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a5da4be0acb446b8c357619350437e853"><div class="ttname"><a href="classKanbanBoard.html#a5da4be0acb446b8c357619350437e853">KanbanBoard::columns</a></div><div class="ttdeci">ListaDuplamenteEncadeada&lt; KanbanColumn &gt; columns</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:83</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a61a796eef245f4428d9a2ee90861742c"><div class="ttname"><a href="classKanbanBoard.html#a61a796eef245f4428d9a2ee90861742c">KanbanBoard::columnEmpty</a></div><div class="ttdeci">bool columnEmpty(int columnIndex) const</div><div class="ttdoc">Método que verifica se uma coluna está vazia.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:132</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a6a0df6660afcc91108d5f6ffd348251a"><div class="ttname"><a href="classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a">KanbanBoard::findTask</a></div><div class="ttdeci">KanbanTask * findTask(int id)</div><div class="ttdoc">Método que encontra uma tarefa com base em seu ID.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:436</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a7307f5be7fac353ccc43599261083c49"><div class="ttname"><a href="classKanbanBoard.html#a7307f5be7fac353ccc43599261083c49">KanbanBoard::isBoardEmpty</a></div><div class="ttdeci">bool isBoardEmpty() const</div><div class="ttdoc">Método que verifica se o Quadro Kanban possui tarefas.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:118</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a8b1a8c7ae9788d22aab51292b161d653"><div class="ttname"><a href="classKanbanBoard.html#a8b1a8c7ae9788d22aab51292b161d653">KanbanBoard::existeIdDuplicado</a></div><div class="ttdeci">bool existeIdDuplicado(int id) const</div><div class="ttdoc">Método que verifica se um ID recebido já existe.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:146</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a8b2d80954ef37e1e067f432ad0d2ed34"><div class="ttname"><a href="classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34">KanbanBoard::moveTask</a></div><div class="ttdeci">void moveTask(int taskId, int idcolunaDestino)</div><div class="ttdoc">Método que move uma tarefa de uma coluna para a outra.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:47</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_a901d595d906b4532b32718f4d8e0757b"><div class="ttname"><a href="classKanbanBoard.html#a901d595d906b4532b32718f4d8e0757b">KanbanBoard::addTaskToColumn</a></div><div class="ttdeci">void addTaskToColumn(int columnIndex, const KanbanTask &amp;task)</div><div class="ttdoc">Método que adiciona uma tarefa a uma coluna específica do Quadro Kanban.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:26</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_aa7f6f54e145aa7c3cea1f0ab1d5585ae"><div class="ttname"><a href="classKanbanBoard.html#aa7f6f54e145aa7c3cea1f0ab1d5585ae">KanbanBoard::getNumColumns</a></div><div class="ttdeci">int getNumColumns() const</div><div class="ttdoc">Método que retorna o número de colunas do Quadro Kanban.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:99</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_ab9d36038c7308e28792da1563f5b4dc0"><div class="ttname"><a href="classKanbanBoard.html#ab9d36038c7308e28792da1563f5b4dc0">KanbanBoard::addColumn</a></div><div class="ttdeci">void addColumn(const std::string &amp;columnName)</div><div class="ttdoc">Método que adiciona uma nova coluna ao Quadro Kanban.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:19</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_ac52cb43d40eb69b8663f67ab4dc88647"><div class="ttname"><a href="classKanbanBoard.html#ac52cb43d40eb69b8663f67ab4dc88647">KanbanBoard::saveToFileTxt</a></div><div class="ttdeci">void saveToFileTxt(const std::string &amp;fileName) const</div><div class="ttdoc">Método que salva o Quadro Kanban em um arquivo '.txt' para a visualizaçao.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:394</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_ad0cac8fde1059a5f0f3d2208a25752ee"><div class="ttname"><a href="classKanbanBoard.html#ad0cac8fde1059a5f0f3d2208a25752ee">KanbanBoard::printColumn</a></div><div class="ttdeci">void printColumn(int columnIndex) const</div><div class="ttdoc">Método que imprime as tarefas em uma coluna específica do Quadro Kanban.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:33</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_ae7f5eea9c72581a1e67621c65a43808f"><div class="ttname"><a href="classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f">KanbanBoard::findTaskColumn</a></div><div class="ttdeci">KanbanColumn * findTaskColumn(int taskId) const</div><div class="ttdoc">Método que encontra a coluna de uma tarefa com base em seu ID.</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:258</div></div>
+<div class="ttc" id="aclassKanbanBoard_html_af172b2c66ddd65f49ba2f4aa765a7480"><div class="ttname"><a href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480">KanbanBoard::loadFromFile</a></div><div class="ttdeci">void loadFromFile(const std::string &amp;filename)</div><div class="ttdoc">Lê um Quadro Kanban a partir de um arquivo '.bin'.</div><div class="ttdef"><b>Definition:</b> kanbanboard.cpp:326</div></div>
+<div class="ttc" id="aclassKanbanTask_html"><div class="ttname"><a href="classKanbanTask.html">KanbanTask</a></div><div class="ttdoc">Classe KanbanTask representa uma tarefa específica para o Kanban.</div><div class="ttdef"><b>Definition:</b> kanbantask.h:30</div></div>
+<div class="ttc" id="aclassKanbanTask_html_ad80bc5d5fd2e7866dc41d30452f04fe6"><div class="ttname"><a href="classKanbanTask.html#ad80bc5d5fd2e7866dc41d30452f04fe6">KanbanTask::getId</a></div><div class="ttdeci">int getId() const</div><div class="ttdoc">Método getter que retorna o ID da tarefa.</div><div class="ttdef"><b>Definition:</b> kanbantask.cpp:66</div></div>
+<div class="ttc" id="aclassListaDuplamenteEncadeada_html"><div class="ttname"><a href="classListaDuplamenteEncadeada.html">ListaDuplamenteEncadeada&lt; KanbanTask &gt;</a></div></div>
+<div class="ttc" id="aclassListaDuplamenteEncadeada_html_ab31872ac12372cfca22051c24cdf066f"><div class="ttname"><a href="classListaDuplamenteEncadeada.html#ab31872ac12372cfca22051c24cdf066f">ListaDuplamenteEncadeada::get</a></div><div class="ttdeci">T &amp; get(int index) const</div><div class="ttdoc">Método para obter o elemento em um índice específico da lista.</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:85</div></div>
+<div class="ttc" id="aclassListaDuplamenteEncadeada_html_ae2494348caf48de3d5b164c71f2dae73"><div class="ttname"><a href="classListaDuplamenteEncadeada.html#ae2494348caf48de3d5b164c71f2dae73">ListaDuplamenteEncadeada::getSize</a></div><div class="ttdeci">int getSize() const</div><div class="ttdoc">Método que retorna o tamanho da lista.</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:218</div></div>
+<div class="ttc" id="aestruturas__tads_8hpp_html"><div class="ttname"><a href="estruturas__tads_8hpp.html">estruturas_tads.hpp</a></div><div class="ttdoc">Implementação de templates dos Tipos Abstratos de Dados: Lista Duplamente Encadeada,...</div></div>
+<div class="ttc" id="akanbantask_8h_html"><div class="ttname"><a href="kanbantask_8h.html">kanbantask.h</a></div><div class="ttdoc">Este arquivo contém a declaração da classe KanbanTask, que representa uma tarefa específica do Kanban...</div></div>
+<div class="ttc" id="astructKanbanBoard_1_1KanbanColumn_html"><div class="ttname"><a href="structKanbanBoard_1_1KanbanColumn.html">KanbanBoard::KanbanColumn</a></div><div class="ttdoc">Estrutura interna que representa uma coluna do quadro Kanban. Cada coluna possui um nome e uma lista ...</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:61</div></div>
+<div class="ttc" id="astructKanbanBoard_1_1KanbanColumn_html_a3b32183eb126cf8b32588601b462ca3b"><div class="ttname"><a href="structKanbanBoard_1_1KanbanColumn.html#a3b32183eb126cf8b32588601b462ca3b">KanbanBoard::KanbanColumn::tasks</a></div><div class="ttdeci">ListaDuplamenteEncadeada&lt; KanbanTask &gt; tasks</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:63</div></div>
+<div class="ttc" id="astructKanbanBoard_1_1KanbanColumn_html_a48304f90be7e54848711553b87510ec5"><div class="ttname"><a href="structKanbanBoard_1_1KanbanColumn.html#a48304f90be7e54848711553b87510ec5">KanbanBoard::KanbanColumn::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:62</div></div>
+<div class="ttc" id="astructKanbanBoard_1_1KanbanColumn_html_aa70ad225040752cc10c94eb75c4efeeb"><div class="ttname"><a href="structKanbanBoard_1_1KanbanColumn.html#aa70ad225040752cc10c94eb75c4efeeb">KanbanBoard::KanbanColumn::getTasks</a></div><div class="ttdeci">ListaDuplamenteEncadeada&lt; KanbanTask &gt; &amp; getTasks()</div><div class="ttdoc">Obtém a lista de tarefas da coluna.</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:77</div></div>
+<div class="ttc" id="astructKanbanBoard_1_1KanbanColumn_html_ad65db22137fe4c4d7211e200c7876b1e"><div class="ttname"><a href="structKanbanBoard_1_1KanbanColumn.html#ad65db22137fe4c4d7211e200c7876b1e">KanbanBoard::KanbanColumn::KanbanColumn</a></div><div class="ttdeci">KanbanColumn(const std::string &amp;columnName)</div><div class="ttdoc">Construtor da estrutura KanbanColumn.</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:70</div></div>
+<div class="ttc" id="atemplates_8hpp_html"><div class="ttname"><a href="templates_8hpp.html">templates.hpp</a></div><div class="ttdoc">Código-fonte auxiliar com templates genéricos de algoritmos de ordenação e busca.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="kanbanboard_8h.html">kanbanboard.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

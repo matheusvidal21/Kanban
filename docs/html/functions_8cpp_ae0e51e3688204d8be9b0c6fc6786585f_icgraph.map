@@ -1,0 +1,4 @@
+<map id="receiveNumColumns" name="receiveNumColumns">
+<area shape="rect" id="node1" title="Solicita ao usuário qual número de colunas do Quadro Kanban que o mesmo deseja." alt="" coords="108,5,267,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,5,60,32"/>
+</map>

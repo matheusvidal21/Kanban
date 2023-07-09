@@ -1,0 +1,4 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$classTask.html" title="Classe abstrata Task representa uma tarefa." alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node2" href="$classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban." alt="" coords="104,5,204,32"/>
+</map>

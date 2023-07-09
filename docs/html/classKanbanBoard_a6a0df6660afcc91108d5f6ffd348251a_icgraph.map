@@ -1,0 +1,7 @@
+<map id="KanbanBoard::findTask" name="KanbanBoard::findTask">
+<area shape="rect" id="node1" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="540,24,711,51"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,24,248,51"/>
+<area shape="rect" id="node4" href="$classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="303,24,485,51"/>
+<area shape="rect" id="node5" href="$classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812" title="Método que exclui uma tarefa." alt="" coords="296,75,492,101"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,24,60,51"/>
+</map>

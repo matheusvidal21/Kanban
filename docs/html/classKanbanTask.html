@@ -1,0 +1,1296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kanban: Referência da Classe KanbanTask</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logodoxygen.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kanban
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classKanbanTask.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pro-attribs">Atributos Protegidos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="#friends">Amigas</a> &#124;
+<a href="classKanbanTask-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe KanbanTask</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> representa uma tarefa específica para o Kanban.  
+ <a href="classKanbanTask.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="kanbantask_8h_source.html">kanbantask.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia para KanbanTask:</div>
+<div class="dyncontent">
+<div class="center"><img src="classKanbanTask__inherit__graph.png" border="0" usemap="#aKanbanTask_inherit__map" alt="Inheritance graph"/></div>
+<map name="aKanbanTask_inherit__map" id="aKanbanTask_inherit__map">
+<area shape="rect" title="Classe KanbanTask representa uma tarefa específica para o Kanban." alt="" coords="5,80,105,107"/>
+<area shape="rect" href="classTask.html" title="Classe abstrata Task representa uma tarefa." alt="" coords="30,5,81,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboração para KanbanTask:</div>
+<div class="dyncontent">
+<div class="center"><img src="classKanbanTask__coll__graph.png" border="0" usemap="#aKanbanTask_coll__map" alt="Collaboration graph"/></div>
+<map name="aKanbanTask_coll__map" id="aKanbanTask_coll__map">
+<area shape="rect" title="Classe KanbanTask representa uma tarefa específica para o Kanban." alt="" coords="5,80,105,107"/>
+<area shape="rect" href="classTask.html" title="Classe abstrata Task representa uma tarefa." alt="" coords="30,5,81,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a334e6b78e61c78475d6e2ed3f239543d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a334e6b78e61c78475d6e2ed3f239543d">KanbanTask</a> ()</td></tr>
+<tr class="memdesc:a334e6b78e61c78475d6e2ed3f239543d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão de <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>.  <a href="classKanbanTask.html#a334e6b78e61c78475d6e2ed3f239543d">Mais...</a><br /></td></tr>
+<tr class="separator:a334e6b78e61c78475d6e2ed3f239543d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a50d9c66632dc03970fee38ad41ed57"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a0a50d9c66632dc03970fee38ad41ed57">KanbanTask</a> (int <a class="el" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>, const std::string &amp;<a class="el" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>)</td></tr>
+<tr class="memdesc:a0a50d9c66632dc03970fee38ad41ed57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID e o título especificados.  <a href="classKanbanTask.html#a0a50d9c66632dc03970fee38ad41ed57">Mais...</a><br /></td></tr>
+<tr class="separator:a0a50d9c66632dc03970fee38ad41ed57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5487965eecef14807c226138ef6918fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a5487965eecef14807c226138ef6918fa">KanbanTask</a> (int <a class="el" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>, const std::string &amp;<a class="el" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>, const std::string &amp;<a class="el" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>)</td></tr>
+<tr class="memdesc:a5487965eecef14807c226138ef6918fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID, o título e a descrição especificados.  <a href="classKanbanTask.html#a5487965eecef14807c226138ef6918fa">Mais...</a><br /></td></tr>
+<tr class="separator:a5487965eecef14807c226138ef6918fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0615561c7685a585a29c3fb68bc89d8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a0615561c7685a585a29c3fb68bc89d8f">KanbanTask</a> (int <a class="el" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>, const std::string &amp;<a class="el" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>, const std::string &amp;<a class="el" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>, int <a class="el" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>)</td></tr>
+<tr class="memdesc:a0615561c7685a585a29c3fb68bc89d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID, o título, a descrição e a prioridade especificados.  <a href="classKanbanTask.html#a0615561c7685a585a29c3fb68bc89d8f">Mais...</a><br /></td></tr>
+<tr class="separator:a0615561c7685a585a29c3fb68bc89d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e812f51783a3c013dc741e98f9fc94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a87e812f51783a3c013dc741e98f9fc94">KanbanTask</a> (int <a class="el" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>, const std::string &amp;<a class="el" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>, const std::string &amp;<a class="el" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>, int <a class="el" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>, const std::string &amp;<a class="el" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>)</td></tr>
+<tr class="memdesc:a87e812f51783a3c013dc741e98f9fc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID, o título, a descrição, a prioridade e a data de vencimento especificados.  <a href="classKanbanTask.html#a87e812f51783a3c013dc741e98f9fc94">Mais...</a><br /></td></tr>
+<tr class="separator:a87e812f51783a3c013dc741e98f9fc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a382032ee42cfc2ab091a42d8fc38b388"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a382032ee42cfc2ab091a42d8fc38b388">KanbanTask</a> (const <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;other)</td></tr>
+<tr class="memdesc:a382032ee42cfc2ab091a42d8fc38b388"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de cópia que cria um novo objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com os mesmos atributos de outro objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>.  <a href="classKanbanTask.html#a382032ee42cfc2ab091a42d8fc38b388">Mais...</a><br /></td></tr>
+<tr class="separator:a382032ee42cfc2ab091a42d8fc38b388"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064e32c0e62a5324d03da40c676f016d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a064e32c0e62a5324d03da40c676f016d">~KanbanTask</a> ()</td></tr>
+<tr class="memdesc:a064e32c0e62a5324d03da40c676f016d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor padrão de <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>.  <a href="classKanbanTask.html#a064e32c0e62a5324d03da40c676f016d">Mais...</a><br /></td></tr>
+<tr class="separator:a064e32c0e62a5324d03da40c676f016d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3176329dd62fafcd3a308dbc96a3ce54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a3176329dd62fafcd3a308dbc96a3ce54">setId</a> (int <a class="el" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>)</td></tr>
+<tr class="memdesc:a3176329dd62fafcd3a308dbc96a3ce54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método setter que define o ID da tarefa.  <a href="classKanbanTask.html#a3176329dd62fafcd3a308dbc96a3ce54">Mais...</a><br /></td></tr>
+<tr class="separator:a3176329dd62fafcd3a308dbc96a3ce54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad80bc5d5fd2e7866dc41d30452f04fe6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#ad80bc5d5fd2e7866dc41d30452f04fe6">getId</a> () const</td></tr>
+<tr class="memdesc:ad80bc5d5fd2e7866dc41d30452f04fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método getter que retorna o ID da tarefa.  <a href="classKanbanTask.html#ad80bc5d5fd2e7866dc41d30452f04fe6">Mais...</a><br /></td></tr>
+<tr class="separator:ad80bc5d5fd2e7866dc41d30452f04fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af316e839e8504c7e956f7ee6196b8629"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#af316e839e8504c7e956f7ee6196b8629">getTituloId</a> () const</td></tr>
+<tr class="memdesc:af316e839e8504c7e956f7ee6196b8629"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método que retorna o título da tarefa junto com o ID.  <a href="classKanbanTask.html#af316e839e8504c7e956f7ee6196b8629">Mais...</a><br /></td></tr>
+<tr class="separator:af316e839e8504c7e956f7ee6196b8629"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a16824a4ef9a3343f718d5037827eb0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a6a16824a4ef9a3343f718d5037827eb0">operator==</a> (const <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;other) const</td></tr>
+<tr class="memdesc:a6a16824a4ef9a3343f718d5037827eb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação "==" para verificar igualdade entre duas KanbanTasks.  <a href="classKanbanTask.html#a6a16824a4ef9a3343f718d5037827eb0">Mais...</a><br /></td></tr>
+<tr class="separator:a6a16824a4ef9a3343f718d5037827eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8db51050f3e27975c3bd6631ce3971e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#af8db51050f3e27975c3bd6631ce3971e">printTask</a> () const</td></tr>
+<tr class="memdesc:af8db51050f3e27975c3bd6631ce3971e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementação do método virtual puro <a class="el" href="classKanbanTask.html#af8db51050f3e27975c3bd6631ce3971e" title="Implementação do método virtual puro printTask() da classe base Task para imprimir os detalhes da tar...">printTask()</a> da classe base <a class="el" href="classTask.html" title="Classe abstrata Task representa uma tarefa.">Task</a> para imprimir os detalhes da tarefa, adicionando o atributo ID.  <a href="classKanbanTask.html#af8db51050f3e27975c3bd6631ce3971e">Mais...</a><br /></td></tr>
+<tr class="separator:af8db51050f3e27975c3bd6631ce3971e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2322021265eee6cc17865d0a832d712f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a2322021265eee6cc17865d0a832d712f">getTitulo</a> () const</td></tr>
+<tr class="memdesc:a2322021265eee6cc17865d0a832d712f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método getter que retorna o título da tarefa.  <a href="classTask.html#a2322021265eee6cc17865d0a832d712f">Mais...</a><br /></td></tr>
+<tr class="separator:a2322021265eee6cc17865d0a832d712f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef987b238c10ab8427885a65f8ec23bc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#aef987b238c10ab8427885a65f8ec23bc">getDescricao</a> () const</td></tr>
+<tr class="memdesc:aef987b238c10ab8427885a65f8ec23bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método getter que retorna a descrição da tarefa.  <a href="classTask.html#aef987b238c10ab8427885a65f8ec23bc">Mais...</a><br /></td></tr>
+<tr class="separator:aef987b238c10ab8427885a65f8ec23bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0da052621e550d4a26b0c3a276097cae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a0da052621e550d4a26b0c3a276097cae">getPrioridade</a> () const</td></tr>
+<tr class="memdesc:a0da052621e550d4a26b0c3a276097cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método getter que retorna a prioridade da tarefa.  <a href="classTask.html#a0da052621e550d4a26b0c3a276097cae">Mais...</a><br /></td></tr>
+<tr class="separator:a0da052621e550d4a26b0c3a276097cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fec1429f2e820fd564f9f13f0aec2e3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a0fec1429f2e820fd564f9f13f0aec2e3">getVencimento</a> () const</td></tr>
+<tr class="memdesc:a0fec1429f2e820fd564f9f13f0aec2e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método getter que retorna a data de vencimento da tarefa.  <a href="classTask.html#a0fec1429f2e820fd564f9f13f0aec2e3">Mais...</a><br /></td></tr>
+<tr class="separator:a0fec1429f2e820fd564f9f13f0aec2e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47f5d2599626b2dec1bc27be18adad09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a47f5d2599626b2dec1bc27be18adad09">setTitulo</a> (std::string <a class="el" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>)</td></tr>
+<tr class="memdesc:a47f5d2599626b2dec1bc27be18adad09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método setter que define o título da tarefa.  <a href="classTask.html#a47f5d2599626b2dec1bc27be18adad09">Mais...</a><br /></td></tr>
+<tr class="separator:a47f5d2599626b2dec1bc27be18adad09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae406177534ada5f25a57f87704f8b604"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#ae406177534ada5f25a57f87704f8b604">setDescricao</a> (std::string <a class="el" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>)</td></tr>
+<tr class="memdesc:ae406177534ada5f25a57f87704f8b604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método setter que define a descrição da tarefa.  <a href="classTask.html#ae406177534ada5f25a57f87704f8b604">Mais...</a><br /></td></tr>
+<tr class="separator:ae406177534ada5f25a57f87704f8b604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecc701a21bd98779172a1376dc03d096"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#aecc701a21bd98779172a1376dc03d096">setPrioridade</a> (int <a class="el" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>)</td></tr>
+<tr class="memdesc:aecc701a21bd98779172a1376dc03d096"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método setter que define a prioridade da tarefa.  <a href="classTask.html#aecc701a21bd98779172a1376dc03d096">Mais...</a><br /></td></tr>
+<tr class="separator:aecc701a21bd98779172a1376dc03d096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c248a9dae8386b36d896d607907e223"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a5c248a9dae8386b36d896d607907e223">setVencimento</a> (std::string <a class="el" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>)</td></tr>
+<tr class="memdesc:a5c248a9dae8386b36d896d607907e223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Método setter que define a data de vencimento da tarefa.  <a href="classTask.html#a5c248a9dae8386b36d896d607907e223">Mais...</a><br /></td></tr>
+<tr class="separator:a5c248a9dae8386b36d896d607907e223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos Protegidos</h2></td></tr>
+<tr class="memitem:a5ad0a0367e92906456d608021b381722"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a></td></tr>
+<tr class="separator:a5ad0a0367e92906456d608021b381722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ca86cd21fbef400cc093775e15627f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a></td></tr>
+<tr class="separator:af8ca86cd21fbef400cc093775e15627f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb7b6341aacc0483134e390b5866264"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a></td></tr>
+<tr class="separator:a2bb7b6341aacc0483134e390b5866264"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f0e2a404404c2a1f600fc15a5243977"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a></td></tr>
+<tr class="separator:a4f0e2a404404c2a1f600fc15a5243977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:ac8c35297f69392951a7b83dea31da0e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a></td></tr>
+<tr class="separator:ac8c35297f69392951a7b83dea31da0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:aa4f21f62dcd74a3fbef221c3811c4060"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#aa4f21f62dcd74a3fbef221c3811c4060">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;task)</td></tr>
+<tr class="memdesc:aa4f21f62dcd74a3fbef221c3811c4060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de inserção "&lt;&lt;" para imprimir os detalhes da <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> em um fluxo de saída.  <a href="classKanbanTask.html#aa4f21f62dcd74a3fbef221c3811c4060">Mais...</a><br /></td></tr>
+<tr class="separator:aa4f21f62dcd74a3fbef221c3811c4060"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb022bde1ffc71c77bfb283e3ba9781"><td class="memItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classKanbanTask.html#a5fb022bde1ffc71c77bfb283e3ba9781">operator&gt;&gt;</a> (std::istream &amp;is, <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;task)</td></tr>
+<tr class="memdesc:a5fb022bde1ffc71c77bfb283e3ba9781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de extração "&gt;&gt;" para ler os detalhes da <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> de um fluxo de entrada.  <a href="classKanbanTask.html#a5fb022bde1ffc71c77bfb283e3ba9781">Mais...</a><br /></td></tr>
+<tr class="separator:a5fb022bde1ffc71c77bfb283e3ba9781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> representa uma tarefa específica para o Kanban. </p>
+<p>Esta classe é uma classe derivada da classe <a class="el" href="classTask.html" title="Classe abstrata Task representa uma tarefa.">Task</a> e representa uma tarefa específica para o Kanban. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a334e6b78e61c78475d6e2ed3f239543d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334e6b78e61c78475d6e2ed3f239543d">&#9670;&nbsp;</a></span>KanbanTask() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::KanbanTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor padrão de <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>. </p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0a50d9c66632dc03970fee38ad41ed57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a50d9c66632dc03970fee38ad41ed57">&#9670;&nbsp;</a></span>KanbanTask() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::KanbanTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>titulo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID e o título especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificação única da tarefa no Kanban. </td></tr>
+    <tr><td class="paramname">titulo</td><td>Título da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;: <a class="code" href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task</a>(<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>), <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>(<span class="keywordtype">id</span>) {}</div>
+<div class="ttc" id="aclassKanbanTask_html_ac8c35297f69392951a7b83dea31da0e5"><div class="ttname"><a href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">KanbanTask::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> kanbantask.h:32</div></div>
+<div class="ttc" id="aclassTask_html_a0ca53354bdc006762a0fda68c64f7608"><div class="ttname"><a href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task::Task</a></div><div class="ttdeci">Task()</div><div class="ttdoc">Construtor padrão de Task.</div><div class="ttdef"><b>Definition:</b> task.cpp:15</div></div>
+<div class="ttc" id="aclassTask_html_a5ad0a0367e92906456d608021b381722"><div class="ttname"><a href="classTask.html#a5ad0a0367e92906456d608021b381722">Task::titulo</a></div><div class="ttdeci">std::string titulo</div><div class="ttdef"><b>Definition:</b> task.h:24</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5487965eecef14807c226138ef6918fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5487965eecef14807c226138ef6918fa">&#9670;&nbsp;</a></span>KanbanTask() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::KanbanTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>titulo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>descricao</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID, o título e a descrição especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificação única da tarefa no Kanban. </td></tr>
+    <tr><td class="paramname">titulo</td><td>Título da tarefa. </td></tr>
+    <tr><td class="paramname">descricao</td><td>Descrição da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    : <a class="code" href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task</a>(<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>, <a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>), <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>(<span class="keywordtype">id</span>) {}</div>
+<div class="ttc" id="aclassTask_html_af8ca86cd21fbef400cc093775e15627f"><div class="ttname"><a href="classTask.html#af8ca86cd21fbef400cc093775e15627f">Task::descricao</a></div><div class="ttdeci">std::string descricao</div><div class="ttdef"><b>Definition:</b> task.h:25</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0615561c7685a585a29c3fb68bc89d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0615561c7685a585a29c3fb68bc89d8f">&#9670;&nbsp;</a></span>KanbanTask() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::KanbanTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>titulo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>descricao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prioridade</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID, o título, a descrição e a prioridade especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificação única da tarefa no Kanban. </td></tr>
+    <tr><td class="paramname">titulo</td><td>Título da tarefa. </td></tr>
+    <tr><td class="paramname">descricao</td><td>Descrição da tarefa. </td></tr>
+    <tr><td class="paramname">prioridade</td><td>Prioridade da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    : <a class="code" href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task</a>(<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>, <a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>, <a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>), <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>(<span class="keywordtype">id</span>) {}</div>
+<div class="ttc" id="aclassTask_html_a2bb7b6341aacc0483134e390b5866264"><div class="ttname"><a href="classTask.html#a2bb7b6341aacc0483134e390b5866264">Task::prioridade</a></div><div class="ttdeci">int prioridade</div><div class="ttdef"><b>Definition:</b> task.h:26</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a87e812f51783a3c013dc741e98f9fc94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87e812f51783a3c013dc741e98f9fc94">&#9670;&nbsp;</a></span>KanbanTask() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::KanbanTask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>titulo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>descricao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prioridade</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>dataVencimento</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construtor que cria um objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com o ID, o título, a descrição, a prioridade e a data de vencimento especificados. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificação única da tarefa no Kanban. </td></tr>
+    <tr><td class="paramname">titulo</td><td>Título da tarefa. </td></tr>
+    <tr><td class="paramname">descricao</td><td>Descrição da tarefa. </td></tr>
+    <tr><td class="paramname">prioridade</td><td>Prioridade da tarefa. </td></tr>
+    <tr><td class="paramname">dataVencimento</td><td>Data de vencimento da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    : <a class="code" href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task</a>(<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>, <a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>, <a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>, <a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>), <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>(<span class="keywordtype">id</span>) {}</div>
+<div class="ttc" id="aclassTask_html_a4f0e2a404404c2a1f600fc15a5243977"><div class="ttname"><a href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">Task::dataVencimento</a></div><div class="ttdeci">std::string dataVencimento</div><div class="ttdef"><b>Definition:</b> task.h:27</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a382032ee42cfc2ab091a42d8fc38b388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a382032ee42cfc2ab091a42d8fc38b388">&#9670;&nbsp;</a></span>KanbanTask() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::KanbanTask </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de cópia que cria um novo objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> com os mesmos atributos de outro objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Objeto <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> a ser copiado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      : <a class="code" href="classTask.html#a0ca53354bdc006762a0fda68c64f7608">Task</a>(other), <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>(other.<a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>) {}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a064e32c0e62a5324d03da40c676f016d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064e32c0e62a5324d03da40c676f016d">&#9670;&nbsp;</a></span>~KanbanTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KanbanTask::~KanbanTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destrutor padrão de <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>. </p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="aef987b238c10ab8427885a65f8ec23bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef987b238c10ab8427885a65f8ec23bc">&#9670;&nbsp;</a></span>getDescricao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Task::getDescricao </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método getter que retorna a descrição da tarefa. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Descrição da tarefa. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_aef987b238c10ab8427885a65f8ec23bc_icgraph.png" border="0" usemap="#aclassTask_aef987b238c10ab8427885a65f8ec23bc_icgraph" alt=""/></div>
+<map name="aclassTask_aef987b238c10ab8427885a65f8ec23bc_icgraph" id="aclassTask_aef987b238c10ab8427885a65f8ec23bc_icgraph">
+<area shape="rect" title="Método getter que retorna a descrição da tarefa." alt="" coords="551,31,695,57"/>
+<area shape="rect" href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="307,5,492,32"/>
+<area shape="rect" href="classKanbanBoard.html#ac52cb43d40eb69b8663f67ab4dc88647" title="Método que salva o Quadro Kanban em um arquivo &#39;.txt&#39; para a visualizaçao." alt="" coords="296,56,503,83"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,31,248,57"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad80bc5d5fd2e7866dc41d30452f04fe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad80bc5d5fd2e7866dc41d30452f04fe6">&#9670;&nbsp;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int KanbanTask::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método getter que retorna o ID da tarefa. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Identificação única da tarefa no Kanban. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classKanbanTask_ad80bc5d5fd2e7866dc41d30452f04fe6_icgraph.png" border="0" usemap="#aclassKanbanTask_ad80bc5d5fd2e7866dc41d30452f04fe6_icgraph" alt=""/></div>
+<map name="aclassKanbanTask_ad80bc5d5fd2e7866dc41d30452f04fe6_icgraph" id="aclassKanbanTask_ad80bc5d5fd2e7866dc41d30452f04fe6_icgraph">
+<area shape="rect" title="Método getter que retorna o ID da tarefa." alt="" coords="847,132,988,159"/>
+<area shape="rect" href="classKanbanBoard.html#a8b1a8c7ae9788d22aab51292b161d653" title="Método que verifica se um ID recebido já existe." alt="" coords="296,5,531,32"/>
+<area shape="rect" href="classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="603,107,774,133"/>
+<area shape="rect" href="classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f" title="Método que encontra a coluna de uma tarefa com base em seu ID." alt="" coords="579,157,799,184"/>
+<area shape="rect" href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="596,208,781,235"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,107,248,133"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,107,60,133"/>
+<area shape="rect" href="classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="322,157,505,184"/>
+<area shape="rect" href="classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812" title="Método que exclui uma tarefa." alt="" coords="315,107,511,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0da052621e550d4a26b0c3a276097cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0da052621e550d4a26b0c3a276097cae">&#9670;&nbsp;</a></span>getPrioridade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Task::getPrioridade </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método getter que retorna a prioridade da tarefa. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Prioridade da tarefa. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_a0da052621e550d4a26b0c3a276097cae_icgraph.png" border="0" usemap="#aclassTask_a0da052621e550d4a26b0c3a276097cae_icgraph" alt=""/></div>
+<map name="aclassTask_a0da052621e550d4a26b0c3a276097cae_icgraph" id="aclassTask_a0da052621e550d4a26b0c3a276097cae_icgraph">
+<area shape="rect" title="Método getter que retorna a prioridade da tarefa." alt="" coords="529,5,676,32"/>
+<area shape="rect" href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="296,5,481,32"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,5,248,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2322021265eee6cc17865d0a832d712f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2322021265eee6cc17865d0a832d712f">&#9670;&nbsp;</a></span>getTitulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Task::getTitulo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método getter que retorna o título da tarefa. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Título da tarefa. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_a2322021265eee6cc17865d0a832d712f_icgraph.png" border="0" usemap="#aclassTask_a2322021265eee6cc17865d0a832d712f_icgraph" alt=""/></div>
+<map name="aclassTask_a2322021265eee6cc17865d0a832d712f_icgraph" id="aclassTask_a2322021265eee6cc17865d0a832d712f_icgraph">
+<area shape="rect" title="Método getter que retorna o título da tarefa." alt="" coords="551,31,668,57"/>
+<area shape="rect" href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="307,5,492,32"/>
+<area shape="rect" href="classKanbanBoard.html#ac52cb43d40eb69b8663f67ab4dc88647" title="Método que salva o Quadro Kanban em um arquivo &#39;.txt&#39; para a visualizaçao." alt="" coords="296,56,503,83"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,31,248,57"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af316e839e8504c7e956f7ee6196b8629"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af316e839e8504c7e956f7ee6196b8629">&#9670;&nbsp;</a></span>getTituloId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string KanbanTask::getTituloId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método que retorna o título da tarefa junto com o ID. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Título da tarefa concatenado com o ID. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  std::stringstream ss;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  ss &lt;&lt; <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a> == 1)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="functions_8h.html#ad050fd71ced44460a0c723a1715c40e5">ANSI_GREEN</a> + <a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> + <span class="stringliteral">&quot; (ID:&quot;</span> + ss.str() + <span class="stringliteral">&quot;)&quot;</span> + <a class="code" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a> == 2)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="functions_8h.html#af6e8b5c7b35e8bff4c581efd8019c798">ANSI_YELLOW</a> + <a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> + <span class="stringliteral">&quot; (ID:&quot;</span> + ss.str() + <span class="stringliteral">&quot;)&quot;</span> + <a class="code" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="functions_8h.html#a7f026776e12ac1b5e7736c24b756085d">ANSI_RED</a> + <a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> + <span class="stringliteral">&quot; (ID:&quot;</span> + ss.str() + <span class="stringliteral">&quot;)&quot;</span> + <a class="code" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div>
+<div class="ttc" id="afunctions_8h_html_a7f026776e12ac1b5e7736c24b756085d"><div class="ttname"><a href="functions_8h.html#a7f026776e12ac1b5e7736c24b756085d">ANSI_RED</a></div><div class="ttdeci">#define ANSI_RED</div><div class="ttdef"><b>Definition:</b> functions.h:22</div></div>
+<div class="ttc" id="afunctions_8h_html_ad050fd71ced44460a0c723a1715c40e5"><div class="ttname"><a href="functions_8h.html#ad050fd71ced44460a0c723a1715c40e5">ANSI_GREEN</a></div><div class="ttdeci">#define ANSI_GREEN</div><div class="ttdef"><b>Definition:</b> functions.h:23</div></div>
+<div class="ttc" id="afunctions_8h_html_af6e8b5c7b35e8bff4c581efd8019c798"><div class="ttname"><a href="functions_8h.html#af6e8b5c7b35e8bff4c581efd8019c798">ANSI_YELLOW</a></div><div class="ttdeci">#define ANSI_YELLOW</div><div class="ttdef"><b>Definition:</b> functions.h:24</div></div>
+<div class="ttc" id="afunctions_8h_html_af77a445894f2f750d43cf2182cd29e55"><div class="ttname"><a href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a></div><div class="ttdeci">#define ANSI_RESET</div><div class="ttdef"><b>Definition:</b> functions.h:21</div></div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classKanbanTask_af316e839e8504c7e956f7ee6196b8629_icgraph.png" border="0" usemap="#aclassKanbanTask_af316e839e8504c7e956f7ee6196b8629_icgraph" alt=""/></div>
+<map name="aclassKanbanTask_af316e839e8504c7e956f7ee6196b8629_icgraph" id="aclassKanbanTask_af316e839e8504c7e956f7ee6196b8629_icgraph">
+<area shape="rect" title="Método que retorna o título da tarefa junto com o ID." alt="" coords="541,24,720,51"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,24,248,51"/>
+<area shape="rect" href="classKanbanBoard.html#a13653cefc8ac7b1fb3b1b34e39c61b2b" title="Imprime o quadro Kanban." alt="" coords="302,75,487,101"/>
+<area shape="rect" href="classKanbanBoard.html#ad0cac8fde1059a5f0f3d2208a25752ee" title="Método que imprime as tarefas em uma coluna específica do Quadro Kanban." alt="" coords="296,24,493,51"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,49,60,76"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0fec1429f2e820fd564f9f13f0aec2e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fec1429f2e820fd564f9f13f0aec2e3">&#9670;&nbsp;</a></span>getVencimento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Task::getVencimento </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método getter que retorna a data de vencimento da tarefa. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Data de vencimento da tarefa. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_a0fec1429f2e820fd564f9f13f0aec2e3_icgraph.png" border="0" usemap="#aclassTask_a0fec1429f2e820fd564f9f13f0aec2e3_icgraph" alt=""/></div>
+<map name="aclassTask_a0fec1429f2e820fd564f9f13f0aec2e3_icgraph" id="aclassTask_a0fec1429f2e820fd564f9f13f0aec2e3_icgraph">
+<area shape="rect" title="Método getter que retorna a data de vencimento da tarefa." alt="" coords="529,5,687,32"/>
+<area shape="rect" href="classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="296,5,481,32"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,5,248,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6a16824a4ef9a3343f718d5037827eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a16824a4ef9a3343f718d5037827eb0">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool KanbanTask::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do operador de comparação "==" para verificar igualdade entre duas KanbanTasks. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> a ser comparada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se as tasks forem iguais, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> this-&gt;<span class="keywordtype">id</span> == other.<a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a> &amp;&amp; this-&gt;<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> == other.<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> &amp;&amp; this-&gt;<a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a> == other.<a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af8db51050f3e27975c3bd6631ce3971e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8db51050f3e27975c3bd6631ce3971e">&#9670;&nbsp;</a></span>printTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KanbanTask::printTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementação do método virtual puro <a class="el" href="classKanbanTask.html#af8db51050f3e27975c3bd6631ce3971e" title="Implementação do método virtual puro printTask() da classe base Task para imprimir os detalhes da tar...">printTask()</a> da classe base <a class="el" href="classTask.html" title="Classe abstrata Task representa uma tarefa.">Task</a> para imprimir os detalhes da tarefa, adicionando o atributo ID. </p>
+
+<p>Implementa <a class="el" href="classTask.html#a25e7d38173e97a7e43935d745c0b0dd8">Task</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;ID: &quot;</span> &lt;&lt; <span class="keywordtype">id</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Título: &quot;</span> &lt;&lt; <a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Descrição: &quot;</span> &lt;&lt; <a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Prioridade: &quot;</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">/*Imprime uma cor de acordo com a prioridade</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">      Prioridade baixa: VERDE</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">      Prioridade média: AMARELO</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">      Prioridade alta: VERMELHO */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">switch</span> (<a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::cout &lt;&lt; <a class="code" href="functions_8h.html#ad050fd71ced44460a0c723a1715c40e5">ANSI_GREEN</a> &lt;&lt; <span class="stringliteral">&quot;1 - Baixa&quot;</span> &lt;&lt; <a class="code" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::cout &lt;&lt; <a class="code" href="functions_8h.html#af6e8b5c7b35e8bff4c581efd8019c798">ANSI_YELLOW</a> &lt;&lt; <span class="stringliteral">&quot;2 - Média&quot;</span> &lt;&lt; <a class="code" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::cout &lt;&lt; <a class="code" href="functions_8h.html#a7f026776e12ac1b5e7736c24b756085d">ANSI_RED</a> &lt;&lt; <span class="stringliteral">&quot;3 - Alta&quot;</span> &lt;&lt; <a class="code" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">ANSI_RESET</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  std::cout &lt;&lt; <span class="stringliteral">&quot;Data de vencimento: &quot;</span> &lt;&lt; <a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classKanbanTask_af8db51050f3e27975c3bd6631ce3971e_icgraph.png" border="0" usemap="#aclassKanbanTask_af8db51050f3e27975c3bd6631ce3971e_icgraph" alt=""/></div>
+<map name="aclassKanbanTask_af8db51050f3e27975c3bd6631ce3971e_icgraph" id="aclassKanbanTask_af8db51050f3e27975c3bd6631ce3971e_icgraph">
+<area shape="rect" title="Implementação do método virtual puro printTask() da classe base Task para imprimir os detalhes da tar..." alt="" coords="296,5,463,32"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,5,248,32"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,5,60,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae406177534ada5f25a57f87704f8b604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae406177534ada5f25a57f87704f8b604">&#9670;&nbsp;</a></span>setDescricao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Task::setDescricao </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>descricao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método setter que define a descrição da tarefa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">descricao</td><td>Descrição da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{ this-&gt;<a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a> = <a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_ae406177534ada5f25a57f87704f8b604_icgraph.png" border="0" usemap="#aclassTask_ae406177534ada5f25a57f87704f8b604_icgraph" alt=""/></div>
+<map name="aclassTask_ae406177534ada5f25a57f87704f8b604_icgraph" id="aclassTask_ae406177534ada5f25a57f87704f8b604_icgraph">
+<area shape="rect" title="Método setter que define a descrição da tarefa." alt="" coords="357,31,500,57"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3176329dd62fafcd3a308dbc96a3ce54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3176329dd62fafcd3a308dbc96a3ce54">&#9670;&nbsp;</a></span>setId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void KanbanTask::setId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Método setter que define o ID da tarefa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Identificação única da tarefa no Kanban. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{ this-&gt;<span class="keywordtype">id</span> = <a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54_icgraph.png" border="0" usemap="#aclassKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54_icgraph" alt=""/></div>
+<map name="aclassKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54_icgraph" id="aclassKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54_icgraph">
+<area shape="rect" title="Método setter que define o ID da tarefa." alt="" coords="357,31,497,57"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aecc701a21bd98779172a1376dc03d096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecc701a21bd98779172a1376dc03d096">&#9670;&nbsp;</a></span>setPrioridade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Task::setPrioridade </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>prioridade</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método setter que define a prioridade da tarefa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prioridade</td><td>Prioridade da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{ this-&gt;<a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a> = <a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_aecc701a21bd98779172a1376dc03d096_icgraph.png" border="0" usemap="#aclassTask_aecc701a21bd98779172a1376dc03d096_icgraph" alt=""/></div>
+<map name="aclassTask_aecc701a21bd98779172a1376dc03d096_icgraph" id="aclassTask_aecc701a21bd98779172a1376dc03d096_icgraph">
+<area shape="rect" title="Método setter que define a prioridade da tarefa." alt="" coords="357,31,503,57"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a47f5d2599626b2dec1bc27be18adad09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47f5d2599626b2dec1bc27be18adad09">&#9670;&nbsp;</a></span>setTitulo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Task::setTitulo </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>titulo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método setter que define o título da tarefa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">titulo</td><td>Título da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{ this-&gt;<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> = <a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_a47f5d2599626b2dec1bc27be18adad09_icgraph.png" border="0" usemap="#aclassTask_a47f5d2599626b2dec1bc27be18adad09_icgraph" alt=""/></div>
+<map name="aclassTask_a47f5d2599626b2dec1bc27be18adad09_icgraph" id="aclassTask_a47f5d2599626b2dec1bc27be18adad09_icgraph">
+<area shape="rect" title="Método setter que define o título da tarefa." alt="" coords="357,31,473,57"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c248a9dae8386b36d896d607907e223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c248a9dae8386b36d896d607907e223">&#9670;&nbsp;</a></span>setVencimento()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Task::setVencimento </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>dataVencimento</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Método setter que define a data de vencimento da tarefa. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataVencimento</td><td>Data de vencimento da tarefa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{ this-&gt;<a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a> = <a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>; }</div>
+</div><!-- fragment --><div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><img src="classTask_a5c248a9dae8386b36d896d607907e223_icgraph.png" border="0" usemap="#aclassTask_a5c248a9dae8386b36d896d607907e223_icgraph" alt=""/></div>
+<map name="aclassTask_a5c248a9dae8386b36d896d607907e223_icgraph" id="aclassTask_a5c248a9dae8386b36d896d607907e223_icgraph">
+<area shape="rect" title="Método setter que define a data de vencimento da tarefa." alt="" coords="357,31,513,57"/>
+<area shape="rect" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" href="classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Amigas e Funções Relacionadas</h2>
+<a id="aa4f21f62dcd74a3fbef221c3811c4060"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f21f62dcd74a3fbef221c3811c4060">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do operador de inserção "&lt;&lt;" para imprimir os detalhes da <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> em um fluxo de saída. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">os</td><td>Fluxo de saída. </td></tr>
+    <tr><td class="paramname">task</td><td><a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> a ser impressa. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Fluxo de saída com os detalhes da <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> impressos. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                                                          {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        os &lt;&lt; task.<a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; task.<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; task.<a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; task.<a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; task.<a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5fb022bde1ffc71c77bfb283e3ba9781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb022bde1ffc71c77bfb283e3ba9781">&#9670;&nbsp;</a></span>operator&gt;&gt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>is</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classKanbanTask.html">KanbanTask</a> &amp;&#160;</td>
+          <td class="paramname"><em>task</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do operador de extração "&gt;&gt;" para ler os detalhes da <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> de um fluxo de entrada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is</td><td>Fluxo de entrada. </td></tr>
+    <tr><td class="paramname">task</td><td><a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a> a ser preenchida com os detalhes lidos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Fluxo de entrada após a leitura dos detalhes da <a class="el" href="classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban.">KanbanTask</a>. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        is &gt;&gt; task.<a class="code" href="classKanbanTask.html#ac8c35297f69392951a7b83dea31da0e5">id</a> &gt;&gt; task.<a class="code" href="classTask.html#a5ad0a0367e92906456d608021b381722">titulo</a> &gt;&gt; task.<a class="code" href="classTask.html#af8ca86cd21fbef400cc093775e15627f">descricao</a> &gt;&gt; task.<a class="code" href="classTask.html#a2bb7b6341aacc0483134e390b5866264">prioridade</a> &gt;&gt; task.<a class="code" href="classTask.html#a4f0e2a404404c2a1f600fc15a5243977">dataVencimento</a>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a4f0e2a404404c2a1f600fc15a5243977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0e2a404404c2a1f600fc15a5243977">&#9670;&nbsp;</a></span>dataVencimento</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Task::dataVencimento</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Data de vencimento da tarefa </p>
+
+</div>
+</div>
+<a id="af8ca86cd21fbef400cc093775e15627f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ca86cd21fbef400cc093775e15627f">&#9670;&nbsp;</a></span>descricao</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Task::descricao</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Descrição da tarefa </p>
+
+</div>
+</div>
+<a id="ac8c35297f69392951a7b83dea31da0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c35297f69392951a7b83dea31da0e5">&#9670;&nbsp;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int KanbanTask::id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identificação única da tarefa </p>
+
+</div>
+</div>
+<a id="a2bb7b6341aacc0483134e390b5866264"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb7b6341aacc0483134e390b5866264">&#9670;&nbsp;</a></span>prioridade</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Task::prioridade</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prioridade da tarefa </p>
+
+</div>
+</div>
+<a id="a5ad0a0367e92906456d608021b381722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ad0a0367e92906456d608021b381722">&#9670;&nbsp;</a></span>titulo</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Task::titulo</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Título da tarefa </p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>/home/isa/Área de Trabalho/Kanban/include/<a class="el" href="kanbantask_8h_source.html">kanbantask.h</a></li>
+<li>/home/isa/Área de Trabalho/Kanban/src/<a class="el" href="kanbantask_8cpp.html">kanbantask.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classKanbanTask.html">KanbanTask</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

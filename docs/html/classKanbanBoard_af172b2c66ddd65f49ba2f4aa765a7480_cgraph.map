@@ -1,0 +1,11 @@
+<map id="KanbanBoard::loadFromFile" name="KanbanBoard::loadFromFile">
+<area shape="rect" id="node1" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="5,157,207,184"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#ab9d36038c7308e28792da1563f5b4dc0" title="Método que adiciona uma nova coluna ao Quadro Kanban." alt="" coords="277,5,467,32"/>
+<area shape="rect" id="node3" href="$classKanbanBoard.html#a901d595d906b4532b32718f4d8e0757b" title="Método que adiciona uma tarefa a uma coluna específica do Quadro Kanban." alt="" coords="255,56,489,83"/>
+<area shape="rect" id="node5" href="$classTask.html#ae406177534ada5f25a57f87704f8b604" title="Método setter que define a descrição da tarefa." alt="" coords="301,107,443,133"/>
+<area shape="rect" id="node6" href="$classKanbanTask.html#a3176329dd62fafcd3a308dbc96a3ce54" title="Método setter que define o ID da tarefa." alt="" coords="302,157,442,184"/>
+<area shape="rect" id="node7" href="$classTask.html#aecc701a21bd98779172a1376dc03d096" title="Método setter que define a prioridade da tarefa." alt="" coords="299,208,445,235"/>
+<area shape="rect" id="node8" href="$classTask.html#a47f5d2599626b2dec1bc27be18adad09" title="Método setter que define o título da tarefa." alt="" coords="314,259,430,285"/>
+<area shape="rect" id="node9" href="$classTask.html#a5c248a9dae8386b36d896d607907e223" title="Método setter que define a data de vencimento da tarefa." alt="" coords="294,309,450,336"/>
+<area shape="rect" id="node4" href="$classListaDuplamenteEncadeada.html#a0706e7da8b9025cb6a98e12ef2e35f42" title="Método que adiciona um novo elemento no final da lista." alt="" coords="537,49,741,90"/>
+</map>

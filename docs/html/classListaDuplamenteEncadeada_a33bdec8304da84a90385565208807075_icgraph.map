@@ -1,0 +1,10 @@
+<map id="ListaDuplamenteEncadeada::isEmpty" name="ListaDuplamenteEncadeada::isEmpty">
+<area shape="rect" id="node1" title="Método que verifica se a lista está vazia." alt="" coords="807,46,1011,87"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a61a796eef245f4428d9a2ee90861742c" title="Método que verifica se uma coluna está vazia." alt="" coords="296,28,503,55"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,53,60,80"/>
+<area shape="rect" id="node5" href="$classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="569,155,740,181"/>
+<area shape="rect" id="node8" href="$classKanbanBoard.html#a7307f5be7fac353ccc43599261083c49" title="Método que verifica se o Quadro Kanban possui tarefas." alt="" coords="551,79,759,105"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,104,248,131"/>
+<area shape="rect" id="node6" href="$classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="308,180,491,207"/>
+<area shape="rect" id="node7" href="$classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812" title="Método que exclui uma tarefa." alt="" coords="301,231,497,257"/>
+</map>

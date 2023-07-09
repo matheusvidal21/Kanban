@@ -1,0 +1,305 @@
+\hypertarget{classAlgoritmosDeOrdenacao}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Algoritmos\+De\+Ordenacao$<$ T $>$}
+\label{classAlgoritmosDeOrdenacao}\index{AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}}
+
+
+Template de classe para algoritmos de ordenação.  
+
+
+
+
+{\ttfamily \#include $<$templates.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao_af608538ac09a154c0bfcfdd27b05f7fa}{bubble\+Sort}} (\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&list, int size)
+\begin{DoxyCompactList}\small\item\em Ordena a lista de forma crescente usando o Bubble Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao_ae686ed3ba3f4850c855710f0fc6950b8}{selection\+Sort}} (\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&list, int size)
+\begin{DoxyCompactList}\small\item\em Ordena a lista de forma decrescente usando o Selection Sort. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao_aef1b3aa9bbb605beb1f0a76cd8bd727e}{merge\+Sort}} (\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&arr, int left, int right)
+\begin{DoxyCompactList}\small\item\em Ordena a lista usando o Merge Sort. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Privados Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao_af0ac6625e3d403118691fd7808dbf6d4}{swap\+Tasks}} (T \&task1, T \&task2)
+\begin{DoxyCompactList}\small\item\em Realiza a troca de duas tarefas. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao_ab683332bb3b92afcc5b8a61bc69579fc}{merge}} (\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&arr, int left, int mid, int right)
+\begin{DoxyCompactList}\small\item\em Combina duas sublistas em uma única lista ordenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class Algoritmos\+De\+Ordenacao$<$ T $>$}
+
+Template de classe para algoritmos de ordenação. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & O tipo de dado a ser ordenado.\\
+\hline
+\end{DoxyTemplParams}
+Esta classe contém implementações de algoritmos de ordenação como Bubble Sort (crescente), Selection Sort (decrescente) e Merge Sort (crescente). 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAlgoritmosDeOrdenacao_af608538ac09a154c0bfcfdd27b05f7fa}\label{classAlgoritmosDeOrdenacao_af608538ac09a154c0bfcfdd27b05f7fa}} 
+\index{AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}!bubbleSort@{bubbleSort}}
+\index{bubbleSort@{bubbleSort}!AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bubbleSort()}{bubbleSort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao}{Algoritmos\+De\+Ordenacao}}$<$ T $>$\+::bubble\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&}]{list,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena a lista de forma crescente usando o Bubble Sort. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em list} & A lista a ser ordenada. \\
+\hline
+{\em size} & O tamanho da lista.\\
+\hline
+\end{DoxyParams}
+A complexidade do Bubble Sort é O(n$^\wedge$2), onde \char`\"{}n\char`\"{} é o tamanho da lista a ser ordenada. Essa é uma complexidade quadrática, o que significa que o tempo de execução aumenta rapidamente à medida que o tamanho da lista aumenta. A complexidade quadrática do Bubble Sort ocorre porque, em cada passagem, são feitas comparações entre pares de elementos adjacentes e, se necessário, são feitas trocas. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                                         \{}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size -\/ 1; i++) \{}
+\DoxyCodeLine{40             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < size -\/ i -\/ 1; j++) \{}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42                 T\& task1 = list.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(j);}
+\DoxyCodeLine{43                 T\& task2 = list.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(j + 1);}
+\DoxyCodeLine{44                 \textcolor{keywordflow}{if} (task1.getPrioridade() > task2.getPrioridade()) \{}
+\DoxyCodeLine{45                     \mbox{\hyperlink{classAlgoritmosDeOrdenacao_af0ac6625e3d403118691fd7808dbf6d4}{swapTasks}}(task1, task2);}
+\DoxyCodeLine{46                 \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48             \}}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50     \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_af608538ac09a154c0bfcfdd27b05f7fa_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_af608538ac09a154c0bfcfdd27b05f7fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAlgoritmosDeOrdenacao_ab683332bb3b92afcc5b8a61bc69579fc}\label{classAlgoritmosDeOrdenacao_ab683332bb3b92afcc5b8a61bc69579fc}} 
+\index{AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}!merge@{merge}}
+\index{merge@{merge}!AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao}{Algoritmos\+De\+Ordenacao}}$<$ T $>$\+::merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&}]{arr,  }\item[{int}]{left,  }\item[{int}]{mid,  }\item[{int}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Combina duas sublistas em uma única lista ordenada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arr} & A lista a ser combinada. \\
+\hline
+{\em left} & O índice de início da primeira sublista. \\
+\hline
+{\em mid} & O índice de fim da primeira sublista e início da segunda sublista. \\
+\hline
+{\em right} & O índice de fim da segunda sublista. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131                                                                                       \{}
+\DoxyCodeLine{132         \textcolor{keywordtype}{int} left\_size = mid -\/ left + 1;}
+\DoxyCodeLine{133         \textcolor{keywordtype}{int} right\_size = right -\/ mid;}
+\DoxyCodeLine{134         }
+\DoxyCodeLine{135         T* left\_arr = \textcolor{keyword}{new} T[left\_size];}
+\DoxyCodeLine{136         T* right\_arr = \textcolor{keyword}{new} T[right\_size];}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < left\_size; i++) \{}
+\DoxyCodeLine{140             left\_arr[i] = arr[left + i];}
+\DoxyCodeLine{141         \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < right\_size; j++) \{}
+\DoxyCodeLine{144             right\_arr[j] = arr[mid + 1 + j];}
+\DoxyCodeLine{145         \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147         \textcolor{keywordtype}{int} i = 0, j = 0, k = left;}
+\DoxyCodeLine{148         \textcolor{keywordflow}{while} (i < left\_size \&\& j < right\_size) \{}
+\DoxyCodeLine{149             \textcolor{keywordflow}{if} (left\_arr[i] <= right\_arr[j]) \{}
+\DoxyCodeLine{150                 arr[k] = left\_arr[i];}
+\DoxyCodeLine{151                 i++;}
+\DoxyCodeLine{152             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{153                 arr[k] = right\_arr[j];}
+\DoxyCodeLine{154                 j++;}
+\DoxyCodeLine{155             \}}
+\DoxyCodeLine{156             k++;}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159         \textcolor{keywordflow}{while} (i < left\_size) \{}
+\DoxyCodeLine{160             arr[k] = left\_arr[i];}
+\DoxyCodeLine{161             i++;}
+\DoxyCodeLine{162             k++;}
+\DoxyCodeLine{163         \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165         \textcolor{keywordflow}{while} (j < right\_size) \{}
+\DoxyCodeLine{166             arr[k] = right\_arr[j];}
+\DoxyCodeLine{167             j++;}
+\DoxyCodeLine{168             k++;}
+\DoxyCodeLine{169         \}}
+\DoxyCodeLine{170         \textcolor{keyword}{delete}[] left\_arr;}
+\DoxyCodeLine{171         \textcolor{keyword}{delete}[] right\_arr;}
+\DoxyCodeLine{172     \}  }
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_ab683332bb3b92afcc5b8a61bc69579fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAlgoritmosDeOrdenacao_aef1b3aa9bbb605beb1f0a76cd8bd727e}\label{classAlgoritmosDeOrdenacao_aef1b3aa9bbb605beb1f0a76cd8bd727e}} 
+\index{AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}!mergeSort@{mergeSort}}
+\index{mergeSort@{mergeSort}!AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mergeSort()}{mergeSort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao}{Algoritmos\+De\+Ordenacao}}$<$ T $>$\+::merge\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&}]{arr,  }\item[{int}]{left,  }\item[{int}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena a lista usando o Merge Sort. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arr} & A lista a ser ordenada. \\
+\hline
+{\em left} & O índice de início da sublista. \\
+\hline
+{\em right} & O índice de fim da sublista.\\
+\hline
+\end{DoxyParams}
+A complexidade do Merge Sort é O(n log n), onde \char`\"{}n\char`\"{} é o tamanho da lista a ser ordenada. Essa é uma complexidade assintótica eficiente e torna o Merge Sort adequado para lidar com grandes conjuntos de dados. O Merge Sort possui essa complexidade porque o algoritmo divide repetidamente a lista em duas metades, até que sejam formadas sublistas com apenas um elemento. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100                                                                                  \{}
+\DoxyCodeLine{101         \textcolor{keywordflow}{if} (left >= right) \{}
+\DoxyCodeLine{102             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{103         \}}
+\DoxyCodeLine{104         \textcolor{keywordtype}{int} mid = left + (right -\/ left) / 2;}
+\DoxyCodeLine{105         \mbox{\hyperlink{classAlgoritmosDeOrdenacao_aef1b3aa9bbb605beb1f0a76cd8bd727e}{mergeSort}}(arr, left, mid);}
+\DoxyCodeLine{106         \mbox{\hyperlink{classAlgoritmosDeOrdenacao_aef1b3aa9bbb605beb1f0a76cd8bd727e}{mergeSort}}(arr, mid + 1, right);}
+\DoxyCodeLine{107         \mbox{\hyperlink{classAlgoritmosDeOrdenacao_ab683332bb3b92afcc5b8a61bc69579fc}{merge}}(arr, left, mid, right);}
+\DoxyCodeLine{108     \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_aef1b3aa9bbb605beb1f0a76cd8bd727e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAlgoritmosDeOrdenacao_ae686ed3ba3f4850c855710f0fc6950b8}\label{classAlgoritmosDeOrdenacao_ae686ed3ba3f4850c855710f0fc6950b8}} 
+\index{AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}!selectionSort@{selectionSort}}
+\index{selectionSort@{selectionSort}!AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{selectionSort()}{selectionSort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao}{Algoritmos\+De\+Ordenacao}}$<$ T $>$\+::selection\+Sort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&}]{list,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Ordena a lista de forma decrescente usando o Selection Sort. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em list} & A lista a ser ordenada. \\
+\hline
+{\em size} & O tamanho da lista.\\
+\hline
+\end{DoxyParams}
+A complexidade do Selection Sort também é O(n$^\wedge$2), onde \char`\"{}n\char`\"{} é o tamanho da lista a ser ordenada. Assim como o Bubble Sort, o Selection Sort possui uma complexidade quadrática. A complexidade quadrática do Selection Sort ocorre porque, em cada iteração, é necessário percorrer a parte não ordenada para encontrar o menor elemento. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64                                                                            \{}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size -\/ 1; i++) \{}
+\DoxyCodeLine{67             \textcolor{keywordtype}{int} minIndex = i;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = i + 1; j < size; j++) \{}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71                 T\& task1 = list.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(j);}
+\DoxyCodeLine{72                 T\& task2 = list.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(minIndex);}
+\DoxyCodeLine{73                 \textcolor{keywordflow}{if} (task1.getPrioridade() > task2.getPrioridade())\{}
+\DoxyCodeLine{74                     minIndex = j;}
+\DoxyCodeLine{75                 \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77             \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79             \textcolor{keywordflow}{if} (minIndex != i) \{}
+\DoxyCodeLine{80                 T\& task1 = list.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(i);}
+\DoxyCodeLine{81                 T\& task2 = list.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(minIndex);}
+\DoxyCodeLine{82                 \mbox{\hyperlink{classAlgoritmosDeOrdenacao_af0ac6625e3d403118691fd7808dbf6d4}{swapTasks}}(task1, task2);}
+\DoxyCodeLine{83             \}}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85     \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_ae686ed3ba3f4850c855710f0fc6950b8_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_ae686ed3ba3f4850c855710f0fc6950b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAlgoritmosDeOrdenacao_af0ac6625e3d403118691fd7808dbf6d4}\label{classAlgoritmosDeOrdenacao_af0ac6625e3d403118691fd7808dbf6d4}} 
+\index{AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}!swapTasks@{swapTasks}}
+\index{swapTasks@{swapTasks}!AlgoritmosDeOrdenacao$<$ T $>$@{AlgoritmosDeOrdenacao$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{swapTasks()}{swapTasks()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static void \mbox{\hyperlink{classAlgoritmosDeOrdenacao}{Algoritmos\+De\+Ordenacao}}$<$ T $>$\+::swap\+Tasks (\begin{DoxyParamCaption}\item[{T \&}]{task1,  }\item[{T \&}]{task2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Realiza a troca de duas tarefas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em task1} & A primeira tarefa. \\
+\hline
+{\em task2} & A segunda tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{117                                               \{}
+\DoxyCodeLine{118         T temp = task1;}
+\DoxyCodeLine{119         task1 = task2;}
+\DoxyCodeLine{120         task2 = temp;}
+\DoxyCodeLine{121     \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classAlgoritmosDeOrdenacao_af0ac6625e3d403118691fd7808dbf6d4_icgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{templates_8hpp}{templates.\+hpp}}\end{DoxyCompactItemize}

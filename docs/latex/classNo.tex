@@ -1,0 +1,118 @@
+\hypertarget{classNo}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe No$<$ T $>$}
+\label{classNo}\index{No$<$ T $>$@{No$<$ T $>$}}
+
+
+Classe que representa um nó da lista duplamente encadeada.  
+
+
+
+
+{\ttfamily \#include $<$estruturas\+\_\+tads.\+hpp$>$}
+
+
+
+Diagrama de colaboração para No$<$ T $>$\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classNo__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNo_aacd3e12c16c871701dc9c3e1762ded1f}{No}} (T \mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}})
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classNo}{No}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNo_a7c88197a25b288087140cc567711f0ab}{$\sim$\+No}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classNo}{No}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}}
+\item 
+\mbox{\hyperlink{classNo}{No}} $\ast$ \mbox{\hyperlink{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}{prev}}
+\item 
+\mbox{\hyperlink{classNo}{No}} $\ast$ \mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class No$<$ T $>$}
+
+Classe que representa um nó da lista duplamente encadeada. 
+
+A classe \mbox{\hyperlink{classNo}{No}} possui um valor do tipo genérico T, e ponteiros para o nó anterior (prev) e próximo (next). 
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & O tipo de dado armazenado no nó. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classNo_aacd3e12c16c871701dc9c3e1762ded1f}\label{classNo_aacd3e12c16c871701dc9c3e1762ded1f}} 
+\index{No$<$ T $>$@{No$<$ T $>$}!No@{No}}
+\index{No@{No}!No$<$ T $>$@{No$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{No()}{No()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$\+::\mbox{\hyperlink{classNo}{No}} (\begin{DoxyParamCaption}\item[{T}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \mbox{\hyperlink{classNo}{No}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & O valor a ser armazenado no nó. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 : \mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}}(\mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}}), \mbox{\hyperlink{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}{prev}}(NULL), \mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}}(NULL)\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classNo_a7c88197a25b288087140cc567711f0ab}\label{classNo_a7c88197a25b288087140cc567711f0ab}} 
+\index{No$<$ T $>$@{No$<$ T $>$}!````~No@{$\sim$No}}
+\index{````~No@{$\sim$No}!No$<$ T $>$@{No$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$No()}{~No()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classNo}{No}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da classe \mbox{\hyperlink{classNo}{No}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35 \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}\label{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}} 
+\index{No$<$ T $>$@{No$<$ T $>$}!next@{next}}
+\index{next@{next}!No$<$ T $>$@{No$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$\ast$ \mbox{\hyperlink{classNo}{No}}$<$ T $>$\+::next}
+
+\mbox{\Hypertarget{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}\label{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}} 
+\index{No$<$ T $>$@{No$<$ T $>$}!prev@{prev}}
+\index{prev@{prev}!No$<$ T $>$@{No$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$\ast$ \mbox{\hyperlink{classNo}{No}}$<$ T $>$\+::prev}
+
+\mbox{\Hypertarget{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}\label{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}} 
+\index{No$<$ T $>$@{No$<$ T $>$}!valor@{valor}}
+\index{valor@{valor}!No$<$ T $>$@{No$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{valor}{valor}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classNo}{No}}$<$ T $>$\+::valor}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{estruturas__tads_8hpp}{estruturas\+\_\+tads.\+hpp}}\end{DoxyCompactItemize}

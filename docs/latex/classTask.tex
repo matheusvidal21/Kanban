@@ -1,0 +1,483 @@
+\hypertarget{classTask}{}\doxysection{Referência da Classe Task}
+\label{classTask}\index{Task@{Task}}
+
+
+Classe abstrata \mbox{\hyperlink{classTask}{Task}} representa uma tarefa.  
+
+
+
+
+{\ttfamily \#include $<$task.\+h$>$}
+
+
+
+Diagrama de hierarquia para Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classTask__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTask_a0ca53354bdc006762a0fda68c64f7608}{Task}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão de \mbox{\hyperlink{classTask}{Task}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTask_a6b576350d03750664411ea51e541f4a8}{Task}} (const std\+::string \&\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}, const std\+::string \&\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}, int \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}, const std\+::string \&\mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{data\+Vencimento}})
+\begin{DoxyCompactList}\small\item\em Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com os atributos especificados. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTask_a85a00846b0f0a3d1f72f220ef70a756b}{Task}} (const std\+::string \&\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}, const std\+::string \&\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}, int \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}})
+\begin{DoxyCompactList}\small\item\em Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com os atributos especificados, sem a data de vencimento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTask_a5d5f45e5a44c450b248c7f920e6d7aea}{Task}} (const std\+::string \&\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}, const std\+::string \&\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}})
+\begin{DoxyCompactList}\small\item\em Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com os atributos especificados, sem a prioridade e a data de vencimento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTask_ab21bc5370739fc166c0578b3c53116a9}{Task}} (const std\+::string \&\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}})
+\begin{DoxyCompactList}\small\item\em Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com o título especificado, sem a descrição, a prioridade e a data de vencimento. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTask_a4eeccb28177492d5f58a9ff18f64fc15}{Task}} (const \mbox{\hyperlink{classTask}{Task}} \&other)
+\begin{DoxyCompactList}\small\item\em Construtor de cópia que cria um novo objeto \mbox{\hyperlink{classTask}{Task}} com os mesmos atributos de outro objeto \mbox{\hyperlink{classTask}{Task}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classTask_a7bff79cc05fa4511c72048d33591503b}{$\sim$\+Task}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor virtual que permite a destruição adequada dos objetos derivados. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTask_a2322021265eee6cc17865d0a832d712f}{get\+Titulo}} () const
+\begin{DoxyCompactList}\small\item\em Método getter que retorna o título da tarefa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTask_aef987b238c10ab8427885a65f8ec23bc}{get\+Descricao}} () const
+\begin{DoxyCompactList}\small\item\em Método getter que retorna a descrição da tarefa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classTask_a0da052621e550d4a26b0c3a276097cae}{get\+Prioridade}} () const
+\begin{DoxyCompactList}\small\item\em Método getter que retorna a prioridade da tarefa. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTask_a0fec1429f2e820fd564f9f13f0aec2e3}{get\+Vencimento}} () const
+\begin{DoxyCompactList}\small\item\em Método getter que retorna a data de vencimento da tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTask_a47f5d2599626b2dec1bc27be18adad09}{set\+Titulo}} (std\+::string \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}})
+\begin{DoxyCompactList}\small\item\em Método setter que define o título da tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTask_ae406177534ada5f25a57f87704f8b604}{set\+Descricao}} (std\+::string \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}})
+\begin{DoxyCompactList}\small\item\em Método setter que define a descrição da tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTask_aecc701a21bd98779172a1376dc03d096}{set\+Prioridade}} (int \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}})
+\begin{DoxyCompactList}\small\item\em Método setter que define a prioridade da tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTask_a5c248a9dae8386b36d896d607907e223}{set\+Vencimento}} (std\+::string \mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{data\+Vencimento}})
+\begin{DoxyCompactList}\small\item\em Método setter que define a data de vencimento da tarefa. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classTask_a25e7d38173e97a7e43935d745c0b0dd8}{print\+Task}} () const =0
+\begin{DoxyCompactList}\small\item\em Método virtual puro que deve ser implementado pelas classes derivadas para imprimir os detalhes da tarefa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}
+\item 
+std\+::string \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}
+\item 
+int \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}
+\item 
+std\+::string \mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{data\+Vencimento}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe abstrata \mbox{\hyperlink{classTask}{Task}} representa uma tarefa. 
+
+Esta classe representa uma tarefa genérica. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classTask_a0ca53354bdc006762a0fda68c64f7608}\label{classTask_a0ca53354bdc006762a0fda68c64f7608}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão de \mbox{\hyperlink{classTask}{Task}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTask_a6b576350d03750664411ea51e541f4a8}\label{classTask_a6b576350d03750664411ea51e541f4a8}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{titulo,  }\item[{const std\+::string \&}]{descricao,  }\item[{int}]{prioridade,  }\item[{const std\+::string \&}]{data\+Vencimento }\end{DoxyParamCaption})}
+
+
+
+Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com os atributos especificados. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Título da tarefa. \\
+\hline
+{\em descricao} & Descrição da tarefa. \\
+\hline
+{\em prioridade} & Prioridade da tarefa. \\
+\hline
+{\em data\+Vencimento} & Data de vencimento da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{18     : \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}(\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}), \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}(\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}), \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}(\mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}), \mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}}(\mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTask_a85a00846b0f0a3d1f72f220ef70a756b}\label{classTask_a85a00846b0f0a3d1f72f220ef70a756b}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{titulo,  }\item[{const std\+::string \&}]{descricao,  }\item[{int}]{prioridade }\end{DoxyParamCaption})}
+
+
+
+Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com os atributos especificados, sem a data de vencimento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Título da tarefa. \\
+\hline
+{\em descricao} & Descrição da tarefa. \\
+\hline
+{\em prioridade} & Prioridade da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21     : \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}(\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}), \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}(\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}), \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}(\mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTask_a5d5f45e5a44c450b248c7f920e6d7aea}\label{classTask_a5d5f45e5a44c450b248c7f920e6d7aea}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{titulo,  }\item[{const std\+::string \&}]{descricao }\end{DoxyParamCaption})}
+
+
+
+Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com os atributos especificados, sem a prioridade e a data de vencimento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Título da tarefa. \\
+\hline
+{\em descricao} & Descrição da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24     : \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}(\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}), \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}(\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTask_ab21bc5370739fc166c0578b3c53116a9}\label{classTask_ab21bc5370739fc166c0578b3c53116a9}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{titulo }\end{DoxyParamCaption})}
+
+
+
+Construtor que cria um objeto \mbox{\hyperlink{classTask}{Task}} com o título especificado, sem a descrição, a prioridade e a data de vencimento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Título da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27     : \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}(\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}) \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTask_a4eeccb28177492d5f58a9ff18f64fc15}\label{classTask_a4eeccb28177492d5f58a9ff18f64fc15}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classTask}{Task}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor de cópia que cria um novo objeto \mbox{\hyperlink{classTask}{Task}} com os mesmos atributos de outro objeto \mbox{\hyperlink{classTask}{Task}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em other} & Objeto \mbox{\hyperlink{classTask}{Task}} a ser copiado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76         : \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}(other.\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}), \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}(other.\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}), \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}(other.\mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}), \mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}}(other.\mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}})\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classTask_a7bff79cc05fa4511c72048d33591503b}\label{classTask_a7bff79cc05fa4511c72048d33591503b}} 
+\index{Task@{Task}!````~Task@{$\sim$Task}}
+\index{````~Task@{$\sim$Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{$\sim$Task()}{~Task()}}
+{\footnotesize\ttfamily virtual Task\+::$\sim$\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destrutor virtual que permite a destruição adequada dos objetos derivados. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{\};}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classTask_aef987b238c10ab8427885a65f8ec23bc}\label{classTask_aef987b238c10ab8427885a65f8ec23bc}} 
+\index{Task@{Task}!getDescricao@{getDescricao}}
+\index{getDescricao@{getDescricao}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getDescricao()}{getDescricao()}}
+{\footnotesize\ttfamily std\+::string Task\+::get\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método getter que retorna a descrição da tarefa. 
+
+\begin{DoxyReturn}{Retorna}
+Descrição da tarefa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_aef987b238c10ab8427885a65f8ec23bc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_a0da052621e550d4a26b0c3a276097cae}\label{classTask_a0da052621e550d4a26b0c3a276097cae}} 
+\index{Task@{Task}!getPrioridade@{getPrioridade}}
+\index{getPrioridade@{getPrioridade}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getPrioridade()}{getPrioridade()}}
+{\footnotesize\ttfamily int Task\+::get\+Prioridade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método getter que retorna a prioridade da tarefa. 
+
+\begin{DoxyReturn}{Retorna}
+Prioridade da tarefa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_a0da052621e550d4a26b0c3a276097cae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_a2322021265eee6cc17865d0a832d712f}\label{classTask_a2322021265eee6cc17865d0a832d712f}} 
+\index{Task@{Task}!getTitulo@{getTitulo}}
+\index{getTitulo@{getTitulo}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTitulo()}{getTitulo()}}
+{\footnotesize\ttfamily std\+::string Task\+::get\+Titulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método getter que retorna o título da tarefa. 
+
+\begin{DoxyReturn}{Retorna}
+Título da tarefa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{30 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_a2322021265eee6cc17865d0a832d712f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_a0fec1429f2e820fd564f9f13f0aec2e3}\label{classTask_a0fec1429f2e820fd564f9f13f0aec2e3}} 
+\index{Task@{Task}!getVencimento@{getVencimento}}
+\index{getVencimento@{getVencimento}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getVencimento()}{getVencimento()}}
+{\footnotesize\ttfamily std\+::string Task\+::get\+Vencimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método getter que retorna a data de vencimento da tarefa. 
+
+\begin{DoxyReturn}{Retorna}
+Data de vencimento da tarefa. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_a0fec1429f2e820fd564f9f13f0aec2e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_a25e7d38173e97a7e43935d745c0b0dd8}\label{classTask_a25e7d38173e97a7e43935d745c0b0dd8}} 
+\index{Task@{Task}!printTask@{printTask}}
+\index{printTask@{printTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{printTask()}{printTask()}}
+{\footnotesize\ttfamily virtual void Task\+::print\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Método virtual puro que deve ser implementado pelas classes derivadas para imprimir os detalhes da tarefa. 
+
+
+
+Implementado por \mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{Kanban\+Task}}.
+
+\mbox{\Hypertarget{classTask_ae406177534ada5f25a57f87704f8b604}\label{classTask_ae406177534ada5f25a57f87704f8b604}} 
+\index{Task@{Task}!setDescricao@{setDescricao}}
+\index{setDescricao@{setDescricao}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{setDescricao()}{setDescricao()}}
+{\footnotesize\ttfamily void Task\+::set\+Descricao (\begin{DoxyParamCaption}\item[{std\+::string}]{descricao }\end{DoxyParamCaption})}
+
+
+
+Método setter que define a descrição da tarefa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em descricao} & Descrição da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37 \{ this-\/>\mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}} = \mbox{\hyperlink{classTask_af8ca86cd21fbef400cc093775e15627f}{descricao}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_ae406177534ada5f25a57f87704f8b604_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_aecc701a21bd98779172a1376dc03d096}\label{classTask_aecc701a21bd98779172a1376dc03d096}} 
+\index{Task@{Task}!setPrioridade@{setPrioridade}}
+\index{setPrioridade@{setPrioridade}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{setPrioridade()}{setPrioridade()}}
+{\footnotesize\ttfamily void Task\+::set\+Prioridade (\begin{DoxyParamCaption}\item[{int}]{prioridade }\end{DoxyParamCaption})}
+
+
+
+Método setter que define a prioridade da tarefa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em prioridade} & Prioridade da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{ this-\/>\mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}} = \mbox{\hyperlink{classTask_a2bb7b6341aacc0483134e390b5866264}{prioridade}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_aecc701a21bd98779172a1376dc03d096_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_a47f5d2599626b2dec1bc27be18adad09}\label{classTask_a47f5d2599626b2dec1bc27be18adad09}} 
+\index{Task@{Task}!setTitulo@{setTitulo}}
+\index{setTitulo@{setTitulo}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{setTitulo()}{setTitulo()}}
+{\footnotesize\ttfamily void Task\+::set\+Titulo (\begin{DoxyParamCaption}\item[{std\+::string}]{titulo }\end{DoxyParamCaption})}
+
+
+
+Método setter que define o título da tarefa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & Título da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{36 \{ this-\/>\mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}} = \mbox{\hyperlink{classTask_a5ad0a0367e92906456d608021b381722}{titulo}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_a47f5d2599626b2dec1bc27be18adad09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTask_a5c248a9dae8386b36d896d607907e223}\label{classTask_a5c248a9dae8386b36d896d607907e223}} 
+\index{Task@{Task}!setVencimento@{setVencimento}}
+\index{setVencimento@{setVencimento}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{setVencimento()}{setVencimento()}}
+{\footnotesize\ttfamily void Task\+::set\+Vencimento (\begin{DoxyParamCaption}\item[{std\+::string}]{data\+Vencimento }\end{DoxyParamCaption})}
+
+
+
+Método setter que define a data de vencimento da tarefa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em data\+Vencimento} & Data de vencimento da tarefa. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39 \{ this-\/>\mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}} = \mbox{\hyperlink{classTask_a4f0e2a404404c2a1f600fc15a5243977}{dataVencimento}}; \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTask_a5c248a9dae8386b36d896d607907e223_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classTask_a4f0e2a404404c2a1f600fc15a5243977}\label{classTask_a4f0e2a404404c2a1f600fc15a5243977}} 
+\index{Task@{Task}!dataVencimento@{dataVencimento}}
+\index{dataVencimento@{dataVencimento}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{dataVencimento}{dataVencimento}}
+{\footnotesize\ttfamily std\+::string Task\+::data\+Vencimento\hspace{0.3cm}{\ttfamily [protected]}}
+
+Data de vencimento da tarefa \mbox{\Hypertarget{classTask_af8ca86cd21fbef400cc093775e15627f}\label{classTask_af8ca86cd21fbef400cc093775e15627f}} 
+\index{Task@{Task}!descricao@{descricao}}
+\index{descricao@{descricao}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{descricao}{descricao}}
+{\footnotesize\ttfamily std\+::string Task\+::descricao\hspace{0.3cm}{\ttfamily [protected]}}
+
+Descrição da tarefa \mbox{\Hypertarget{classTask_a2bb7b6341aacc0483134e390b5866264}\label{classTask_a2bb7b6341aacc0483134e390b5866264}} 
+\index{Task@{Task}!prioridade@{prioridade}}
+\index{prioridade@{prioridade}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{prioridade}{prioridade}}
+{\footnotesize\ttfamily int Task\+::prioridade\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prioridade da tarefa \mbox{\Hypertarget{classTask_a5ad0a0367e92906456d608021b381722}\label{classTask_a5ad0a0367e92906456d608021b381722}} 
+\index{Task@{Task}!titulo@{titulo}}
+\index{titulo@{titulo}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{titulo}{titulo}}
+{\footnotesize\ttfamily std\+::string Task\+::titulo\hspace{0.3cm}{\ttfamily [protected]}}
+
+Título da tarefa 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{task_8h}{task.\+h}}\item 
+/home/isa/Área de Trabalho/\+Kanban/src/\mbox{\hyperlink{task_8cpp}{task.\+cpp}}\end{DoxyCompactItemize}

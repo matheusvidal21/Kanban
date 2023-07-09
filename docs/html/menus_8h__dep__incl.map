@@ -1,0 +1,7 @@
+<map id="/home/isa/Área de Trabalho/Kanban/include/menus.h" name="/home/isa/Área de Trabalho/Kanban/include/menus.h">
+<area shape="rect" id="node1" title="Este arquivo contém funções para imprimir os menus de operações do Quadro Kanban." alt="" coords="179,5,365,61"/>
+<area shape="rect" id="node2" href="$functions_8h.html" title="Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com ..." alt="" coords="82,109,267,165"/>
+<area shape="rect" id="node5" href="$menus_8cpp.html" title="Este arquivo contém a implementação das funções que imprimem os menus." alt="" coords="292,109,449,165"/>
+<area shape="rect" id="node3" href="$functions_8cpp.html" title="Este arquivo contém a implementação das funções desenvolvidas." alt="" coords="5,213,163,269"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban." alt="" coords="187,213,344,269"/>
+</map>

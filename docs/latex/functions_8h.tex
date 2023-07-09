@@ -1,0 +1,1171 @@
+\hypertarget{functions_8h}{}\doxysection{Referência do Arquivo /home/isa/Área de Trabalho/\+Kanban/include/functions.h}
+\label{functions_8h}\index{/home/isa/Área de Trabalho/Kanban/include/functions.h@{/home/isa/Área de Trabalho/Kanban/include/functions.h}}
+
+
+Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com o usuário.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$dirent.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}menus.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kanbanboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}estruturas\+\_\+tads.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}templates.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para functions.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{functions_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\+\_\+\+RESET}}~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\+\_\+\+RED}}~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\+\_\+\+GREEN}}~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{functions_8h_af6e8b5c7b35e8bff4c581efd8019c798}{ANSI\+\_\+\+YELLOW}}~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\+\_\+\+BLUE}}~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ std\+::string $>$ \mbox{\hyperlink{functions_8h_aa1fbbb2203c4879b8bf3566732284ac3}{listar\+Arquivos}} (const std\+::string \&pasta)
+\begin{DoxyCompactList}\small\item\em Função que retorna uma lista dos arquivos em uma pasta. Utilizado para listar os nomes dos arquivos (.bin) salvos com informações para preenchimento do quadro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8h_ae0e51e3688204d8be9b0c6fc6786585f}{receive\+Num\+Columns}} ()
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário qual número de colunas do Quadro Kanban que o mesmo deseja. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a90237cd431706bf89edc6d2df56555d9}{receive\+Columns}} (\mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} $\ast$kanban\+Board, int num\+Colunas)
+\begin{DoxyCompactList}\small\item\em Solicita ao usuário os nomes das colunas do quadro Kanban. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a228d1e0c636daad6578c44e22644fbc5}{string\+Maiusculo}} (std\+::string \&texto)
+\begin{DoxyCompactList}\small\item\em Função que converte uma string em letras maiúsculas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_aad531f6562212b82c481588c13bfa284}{clear\+Terminal}} ()
+\begin{DoxyCompactList}\small\item\em Função que limpa o terminal em diferentes sistemas operacionais. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8h_a1ea6093903cc01b2fec1e1db7f6bfe9d}{ask\+For\+Valid\+Column}} (const \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} \&kanban\+Board, int flag)
+\begin{DoxyCompactList}\small\item\em Função que solicita ao usuário o número da coluna em que se deseja realizar alguma operação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{functions_8h_a86d0de416ac3f84fbea7eafd2325946c}{get\+User\+Choice}} ()
+\begin{DoxyCompactList}\small\item\em Função que solicita ao usuário a escolha de uma operação. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{functions_8h_a44b96e022f354245afa90fae9d21575e}{executar\+Operacao}} (int choice, \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} $\ast$kanban\+Board)
+\begin{DoxyCompactList}\small\item\em Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com o usuário. 
+
+\begin{DoxyAuthor}{Autor}
+Isabela Gomes Mendes 
+
+Matheus Costa Vidal 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+14/06/2023 
+\end{DoxySince}
+\begin{DoxyDate}{Data}
+08/07/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Definições e macros}
+\mbox{\Hypertarget{functions_8h_a50a197ede59d7694515c3dad4557cf00}\label{functions_8h_a50a197ede59d7694515c3dad4557cf00}} 
+\index{functions.h@{functions.h}!ANSI\_BLUE@{ANSI\_BLUE}}
+\index{ANSI\_BLUE@{ANSI\_BLUE}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_BLUE}{ANSI\_BLUE}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+BLUE~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}}
+
+\mbox{\Hypertarget{functions_8h_ad050fd71ced44460a0c723a1715c40e5}\label{functions_8h_ad050fd71ced44460a0c723a1715c40e5}} 
+\index{functions.h@{functions.h}!ANSI\_GREEN@{ANSI\_GREEN}}
+\index{ANSI\_GREEN@{ANSI\_GREEN}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_GREEN}{ANSI\_GREEN}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+GREEN~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}}
+
+\mbox{\Hypertarget{functions_8h_a7f026776e12ac1b5e7736c24b756085d}\label{functions_8h_a7f026776e12ac1b5e7736c24b756085d}} 
+\index{functions.h@{functions.h}!ANSI\_RED@{ANSI\_RED}}
+\index{ANSI\_RED@{ANSI\_RED}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_RED}{ANSI\_RED}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+RED~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}}
+
+\mbox{\Hypertarget{functions_8h_af77a445894f2f750d43cf2182cd29e55}\label{functions_8h_af77a445894f2f750d43cf2182cd29e55}} 
+\index{functions.h@{functions.h}!ANSI\_RESET@{ANSI\_RESET}}
+\index{ANSI\_RESET@{ANSI\_RESET}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_RESET}{ANSI\_RESET}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+RESET~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}}
+
+\mbox{\Hypertarget{functions_8h_af6e8b5c7b35e8bff4c581efd8019c798}\label{functions_8h_af6e8b5c7b35e8bff4c581efd8019c798}} 
+\index{functions.h@{functions.h}!ANSI\_YELLOW@{ANSI\_YELLOW}}
+\index{ANSI\_YELLOW@{ANSI\_YELLOW}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_YELLOW}{ANSI\_YELLOW}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+YELLOW~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}}
+
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{functions_8h_a1ea6093903cc01b2fec1e1db7f6bfe9d}\label{functions_8h_a1ea6093903cc01b2fec1e1db7f6bfe9d}} 
+\index{functions.h@{functions.h}!askForValidColumn@{askForValidColumn}}
+\index{askForValidColumn@{askForValidColumn}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{askForValidColumn()}{askForValidColumn()}}
+{\footnotesize\ttfamily int ask\+For\+Valid\+Column (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} \&}]{kanban\+Board,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+
+
+Função que solicita ao usuário o número da coluna em que se deseja realizar alguma operação. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em kanban\+Board} & Referência a um objeto do tipo \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}, utilizado para obter o número de colunas \\
+\hline
+{\em flag} & Variável que será utilizada no switch case para indicar de qual operação a função vai se tratar no momento em que foi chamada\\
+\hline
+\end{DoxyParams}
+Essa função foi amplamente utilizada durante o programa para solicitar ao usuário uma coluna.
+\begin{DoxyItemize}
+\item Inicialmente, descobre-\/se o número de colunas no objeto kanban\+Board
+\item Utiliza-\/se a flag passada como parâmetro em um switch case para descobrir de qual operação se trata
+\item Lê-\/se o número da coluna digitado pelo usuário e o atribui a uma variável do tipo int chamada \char`\"{}column\+Index\char`\"{}. Caso o número digitado seja inválido pede por um novo número até que o mesmo seja válido
+\item Diminui-\/se -\/1 do número digitado pelo usuário pois os índices começam em 0. \begin{DoxyReturn}{Retorna}
+Indíce da coluna em que deve ser realizada alguma operação. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93 \{}
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} columnIndex;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} numColumns = kanbanBoard.\mbox{\hyperlink{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae}{getNumColumns}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97     \textcolor{keywordflow}{switch} (flag)}
+\DoxyCodeLine{98     \{}
+\DoxyCodeLine{99     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{100         std::cout << \textcolor{stringliteral}{"{}Tarefa criada. Informe agora o número da coluna que você deseja adicionar (1-\/"{}} << numColumns << \textcolor{stringliteral}{"{}): "{}};}
+\DoxyCodeLine{101         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{102     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{103         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nDigite o número da coluna de destino (1-\/"{}} << numColumns << \textcolor{stringliteral}{"{}): "{}};}
+\DoxyCodeLine{104         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{105     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{106         std::cout << \textcolor{stringliteral}{"{}Digite o número da coluna que você deseja ordenar (ou digite -\/1 para sair): "{}};}
+\DoxyCodeLine{107         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{108     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{109         std::cout << \textcolor{stringliteral}{"{}Digite o número da coluna (1-\/"{}} << numColumns << \textcolor{stringliteral}{"{}): "{}};}
+\DoxyCodeLine{110         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{114     \{}
+\DoxyCodeLine{115         std::cin >> columnIndex;}
+\DoxyCodeLine{116         \textcolor{keywordflow}{if} (columnIndex == -\/1)}
+\DoxyCodeLine{117         \{ \textcolor{comment}{//"{}Digite -\/1 para sair"{}}}
+\DoxyCodeLine{118             \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120         \textcolor{keywordflow}{if} (columnIndex <= 0 || columnIndex > numColumns)}
+\DoxyCodeLine{121         \{}
+\DoxyCodeLine{122             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Coluna inválida. Digite um número de coluna válido: "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{123         \}}
+\DoxyCodeLine{124     \} \textcolor{keywordflow}{while} (columnIndex <= 0 || columnIndex > numColumns);}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     columnIndex -\/= 1;}
+\DoxyCodeLine{127     \textcolor{keywordflow}{return} columnIndex;}
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a1ea6093903cc01b2fec1e1db7f6bfe9d_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a1ea6093903cc01b2fec1e1db7f6bfe9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_aad531f6562212b82c481588c13bfa284}\label{functions_8h_aad531f6562212b82c481588c13bfa284}} 
+\index{functions.h@{functions.h}!clearTerminal@{clearTerminal}}
+\index{clearTerminal@{clearTerminal}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{clearTerminal()}{clearTerminal()}}
+{\footnotesize\ttfamily void clear\+Terminal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que limpa o terminal em diferentes sistemas operacionais. 
+
+Essa função foi criada com fins estéticos e compatibilidade, para que tanto em sistemas Windows como em sistemas Linux, o terminal possa ser limpado periodicamente tornando-\/se mais agradável aos olhos do usuário.
+\begin{DoxyItemize}
+\item Para sistemas Windows, o comando \char`\"{}cls\char`\"{} é utilizado para limpar o terminal.
+\item Para sistemas Unix (Linux, mac\+OS, etc.), o comando \char`\"{}clear\char`\"{} é utilizado 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#ifdef \_WIN32 }\textcolor{comment}{// Para Windows}}
+\DoxyCodeLine{84     system(\textcolor{stringliteral}{"{}cls"{}});}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#else }\textcolor{comment}{// Para sistemas Unix (Linux, macOS, etc.)}}
+\DoxyCodeLine{86     system(\textcolor{stringliteral}{"{}clear"{}});}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{88 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_aad531f6562212b82c481588c13bfa284_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a44b96e022f354245afa90fae9d21575e}\label{functions_8h_a44b96e022f354245afa90fae9d21575e}} 
+\index{functions.h@{functions.h}!executarOperacao@{executarOperacao}}
+\index{executarOperacao@{executarOperacao}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{executarOperacao()}{executarOperacao()}}
+{\footnotesize\ttfamily void executar\+Operacao (\begin{DoxyParamCaption}\item[{int}]{choice,  }\item[{\mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} $\ast$}]{kanban\+Board }\end{DoxyParamCaption})}
+
+
+
+Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em choice} & Variável utilizada como parametro para a escolha do caso no primeiro switch case. \\
+\hline
+{\em kanban\+Board} & Ponteiro de um objeto do tipo \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}, será utilizado para realizar manipulações no Quadro Kanban.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classNo}{No}} switch case principal, realizadas 6 tipos de operações diferentes\+:
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item Adicionar uma tarefa
+\item Editar uma tarefa existente Neste caso é aberto outro switch case com novas opções\+: A. Editar informações de uma tarefa (Um novo switch case é aberto com os atributos editáveis\+: id, título, descrição, prioridade, data de vencimento e \char`\"{}voltar\char`\"{}) B. Mover tarefa C. Excluir tarefa D. Voltar
+\item Ver informações de uma tarefa
+\item Ordenar tarefas por prioridade (utiliza os algoritmos de ordenação Bubble Sort e Selection Sort)
+\item Exibir o Quadro Kanban
+\item Salvar o Quadro Kanban Neste caso é aberto um novo switch case com opções de salvamento\+: A. Arquivo \textquotesingle{}bin\textquotesingle{} existente B. Arquivo \textquotesingle{}bin\textquotesingle{} novo C. Arquivo \textquotesingle{}txt\textquotesingle{} D. Voltar
+\item Sair
+\item Caso uma opção inválida seja digitada, é solicitado uma nova opção ao usuário até que seja digitada uma das existentes. 
+\end{DoxyEnumerate}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143 \{}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145     \textcolor{comment}{/*Dados utilizados*/}}
+\DoxyCodeLine{146     \textcolor{keywordtype}{int} numColunas = kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae}{getNumColumns}}();}
+\DoxyCodeLine{147     \textcolor{keywordtype}{bool} arquivoExiste;}
+\DoxyCodeLine{148     std::ifstream arquivo;}
+\DoxyCodeLine{149     \textcolor{keywordtype}{int} escolha, escolha2;}
+\DoxyCodeLine{150     \textcolor{keywordtype}{int} id, prioridade, indexTask;}
+\DoxyCodeLine{151     \textcolor{keywordtype}{int} novoid, novaprioridade, colunadestino = 0;}
+\DoxyCodeLine{152     std::string novotitulo, novadescricao, novadata;}
+\DoxyCodeLine{153     std::string titulo, descricao, dataVencimento;}
+\DoxyCodeLine{154     std::string nameFile, caminhoFile;}
+\DoxyCodeLine{155     \mbox{\hyperlink{classKanbanTask}{KanbanTask}} *taskChoice;}
+\DoxyCodeLine{156     \mbox{\hyperlink{classKanbanTask}{KanbanTask}} task;}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{158 }
+\DoxyCodeLine{159     \textcolor{comment}{// ==== SWITCH PRINCIPAL ====}}
+\DoxyCodeLine{160     \textcolor{keywordflow}{switch} (choice)}
+\DoxyCodeLine{161     \{}
+\DoxyCodeLine{162     \textcolor{comment}{// ==== CASO: ADICIONAR TAREFAS ====}}
+\DoxyCodeLine{163     \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165         std::cout << \textcolor{stringliteral}{"{}==========="{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{} Preencha os dados da tarefa "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}===========\(\backslash\)n"{}};}
+\DoxyCodeLine{166         std::cout << \textcolor{stringliteral}{"{}ID (inteiro): "{}};}
+\DoxyCodeLine{167         \textcolor{keywordflow}{do}}
+\DoxyCodeLine{168         \{}
+\DoxyCodeLine{169             std::cin >> id;}
+\DoxyCodeLine{170             \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653}{existeIdDuplicado}}(\textcolor{keywordtype}{id}))}
+\DoxyCodeLine{171             \{}
+\DoxyCodeLine{172                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| ID já existente. Digite um ID diferente: "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{173             \}}
+\DoxyCodeLine{174             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{175             \{}
+\DoxyCodeLine{176                 task.\mbox{\hyperlink{classKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54}{setId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{177             \}}
+\DoxyCodeLine{178         \} \textcolor{keywordflow}{while} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653}{existeIdDuplicado}}(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180         std::cout << \textcolor{stringliteral}{"{}*=================================*"{}};}
+\DoxyCodeLine{181         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nTítulo: "{}};}
+\DoxyCodeLine{182         std::cin.ignore(); \textcolor{comment}{// Limpar o buffer do teclado}}
+\DoxyCodeLine{183         getline(std::cin, titulo);}
+\DoxyCodeLine{184         task.\mbox{\hyperlink{classTask_a47f5d2599626b2dec1bc27be18adad09}{setTitulo}}(titulo);}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186         std::cout << \textcolor{stringliteral}{"{}*=================================*"{}};}
+\DoxyCodeLine{187         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nDescrição: "{}};}
+\DoxyCodeLine{188         getline(std::cin, descricao);}
+\DoxyCodeLine{189         task.\mbox{\hyperlink{classTask_ae406177534ada5f25a57f87704f8b604}{setDescricao}}(descricao);}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191         std::cout << \textcolor{stringliteral}{"{}*=================================*"{}};}
+\DoxyCodeLine{192         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n("{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}1: Baixa"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{functions_8h_af6e8b5c7b35e8bff4c581efd8019c798}{ANSI\_YELLOW}} << \textcolor{stringliteral}{"{} 2: Média"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{} 3: Alta"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{193         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nPrioridade: "{}};}
+\DoxyCodeLine{194         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{195         \{}
+\DoxyCodeLine{196             std::cin >> prioridade;}
+\DoxyCodeLine{197             \textcolor{keywordflow}{if} (prioridade < 1 || prioridade > 3)}
+\DoxyCodeLine{198             \{}
+\DoxyCodeLine{199                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Digite uma prioridade válida: "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{200             \}}
+\DoxyCodeLine{201             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{202             \{}
+\DoxyCodeLine{203                 task.\mbox{\hyperlink{classTask_aecc701a21bd98779172a1376dc03d096}{setPrioridade}}(prioridade);}
+\DoxyCodeLine{204                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{205             \}}
+\DoxyCodeLine{206         \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208         std::cout << \textcolor{stringliteral}{"{}*=================================*"{}};}
+\DoxyCodeLine{209         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nData de vencimento (dd/mm/aaaa): "{}};}
+\DoxyCodeLine{210         std::cin.ignore(); \textcolor{comment}{// Limpar o buffer do teclado}}
+\DoxyCodeLine{211         getline(std::cin, dataVencimento);}
+\DoxyCodeLine{212         task.\mbox{\hyperlink{classTask_a5c248a9dae8386b36d896d607907e223}{setVencimento}}(dataVencimento);}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         \textcolor{comment}{// Imprime todas as colunas}}
+\DoxyCodeLine{217         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{218         \{}
+\DoxyCodeLine{219             kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}{printColumn}}(i);}
+\DoxyCodeLine{220         \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222         \textcolor{comment}{// Pede o index da coluna para o usuário}}
+\DoxyCodeLine{223         colunadestino = \mbox{\hyperlink{functions_8cpp_a1ea6093903cc01b2fec1e1db7f6bfe9d}{askForValidColumn}}(*kanbanBoard, 1);}
+\DoxyCodeLine{224         kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b}{addTaskToColumn}}(colunadestino, task);}
+\DoxyCodeLine{225         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         std::cout << \textcolor{stringliteral}{"{}======="{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{} Tarefa adicionada na coluna "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}======= \(\backslash\)n"{}};}
+\DoxyCodeLine{228         kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}{printColumn}}(colunadestino);}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234     \textcolor{comment}{// ==== CASO: EDITAR TAREFAS EXISTENTES ====}}
+\DoxyCodeLine{235     \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{236         \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a7307f5be7fac353ccc43599261083c49}{isBoardEmpty}}())}
+\DoxyCodeLine{237         \{}
+\DoxyCodeLine{238             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{239             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Seu quadro está vazio, adicione uma tarefa primeiro. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{240             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{241         \}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243         \mbox{\hyperlink{menus_8h_a3ebc3966cac22ea92469516f1f93c245}{printMenuTarefa}}();}
+\DoxyCodeLine{244         escolha = \mbox{\hyperlink{functions_8cpp_a86d0de416ac3f84fbea7eafd2325946c}{getUserChoice}}();}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246         \textcolor{keywordflow}{switch} (escolha)}
+\DoxyCodeLine{247         \{}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249         \textcolor{comment}{// ==== CASO: EDITAR INFORMAÇÕES DA TAREFA ====}}
+\DoxyCodeLine{250         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{253             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{254             \{}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256                 kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{257                 std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nDigite o ID da tarefa que deseja editar (ou digite -\/1 para sair): "{}};}
+\DoxyCodeLine{258                 std::cin >> indexTask;}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260                 \textcolor{keywordflow}{if} (indexTask == -\/1)}
+\DoxyCodeLine{261                 \{}
+\DoxyCodeLine{262                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{263                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{264                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{265                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{266                 \}}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268                 \textcolor{comment}{// Localizando a tarefa solicitada}}
+\DoxyCodeLine{269                 taskChoice = kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{findTask}}(indexTask);}
+\DoxyCodeLine{270                 \textcolor{keywordflow}{if} (taskChoice == NULL)}
+\DoxyCodeLine{271                 \{}
+\DoxyCodeLine{272                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{273                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Tarefa não encontrada. Digite o ID novamente. |!|\(\backslash\)n"{}}}
+\DoxyCodeLine{274                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{275                 \}}
+\DoxyCodeLine{276                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{277                 \{}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{280                     taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{281                     \mbox{\hyperlink{menus_8h_a7ab907c433f9f51b038d0962c2159877}{printMenuEditar}}();}
+\DoxyCodeLine{282                     escolha2 = \mbox{\hyperlink{functions_8cpp_a86d0de416ac3f84fbea7eafd2325946c}{getUserChoice}}();}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{284                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{285                     taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{286                     \textcolor{keywordflow}{switch} (escolha2)}
+\DoxyCodeLine{287                     \{}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{289                     \textcolor{keywordflow}{case} 1: \textcolor{comment}{// ==== CASO: EDITAR ID ====}}
+\DoxyCodeLine{290                         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nInforme um novo ID: "{}};}
+\DoxyCodeLine{291                         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{292                         \{}
+\DoxyCodeLine{293                             std::cin >> novoid;}
+\DoxyCodeLine{294                             \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653}{existeIdDuplicado}}(novoid))}
+\DoxyCodeLine{295                             \{}
+\DoxyCodeLine{296                                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| ID já existente. Digite um ID diferente: "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{297                             \}}
+\DoxyCodeLine{298                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{299                             \{}
+\DoxyCodeLine{300                                 taskChoice-\/>\mbox{\hyperlink{classKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54}{setId}}(novoid);}
+\DoxyCodeLine{301                                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{302                             \}}
+\DoxyCodeLine{303                         \}}
+\DoxyCodeLine{304 }
+\DoxyCodeLine{305                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{306                         std::cout << \textcolor{stringliteral}{"{}Aqui está sua tarefa atualizada:\(\backslash\)n"{}};}
+\DoxyCodeLine{307                         taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{308                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310                     \textcolor{keywordflow}{case} 2: \textcolor{comment}{// ==== CASO: EDITAR TÍTULO ====}}
+\DoxyCodeLine{311                         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nInforme o novo título: "{}};}
+\DoxyCodeLine{312                         std::cin.ignore();}
+\DoxyCodeLine{313                         getline(std::cin, novotitulo);}
+\DoxyCodeLine{314                         taskChoice-\/>\mbox{\hyperlink{classTask_a47f5d2599626b2dec1bc27be18adad09}{setTitulo}}(novotitulo);}
+\DoxyCodeLine{315                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{316                         std::cout << \textcolor{stringliteral}{"{}Aqui está sua tarefa atualizada:\(\backslash\)n"{}};}
+\DoxyCodeLine{317                         taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{318                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{320                     \textcolor{keywordflow}{case} 3: \textcolor{comment}{// ==== CASO: EDITAR DESCRICAO ====}}
+\DoxyCodeLine{321                         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nInforme a nova descrição: "{}};}
+\DoxyCodeLine{322                         std::cin.ignore();}
+\DoxyCodeLine{323                         getline(std::cin, novadescricao);}
+\DoxyCodeLine{324                         taskChoice-\/>\mbox{\hyperlink{classTask_ae406177534ada5f25a57f87704f8b604}{setDescricao}}(novadescricao);}
+\DoxyCodeLine{325                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{326                         std::cout << \textcolor{stringliteral}{"{}Aqui está sua tarefa atualizada:\(\backslash\)n"{}};}
+\DoxyCodeLine{327                         taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{328                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330                     \textcolor{keywordflow}{case} 4: \textcolor{comment}{// ==== CASO: EDITAR PRIORIDADE ====}}
+\DoxyCodeLine{331                         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n("{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}1: Baixa"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{functions_8h_af6e8b5c7b35e8bff4c581efd8019c798}{ANSI\_YELLOW}} << \textcolor{stringliteral}{"{} 2: Média"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{},"{}} << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{} 3: Alta"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{332                         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nInforme a nova prioridade: "{}};}
+\DoxyCodeLine{333                         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{334                         \{}
+\DoxyCodeLine{335                             std::cin >> novaprioridade;}
+\DoxyCodeLine{336                             \textcolor{keywordflow}{if} (novaprioridade < 1 || novaprioridade > 3)}
+\DoxyCodeLine{337                             \{}
+\DoxyCodeLine{338                                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Digite uma prioridade válida: "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{339                             \}}
+\DoxyCodeLine{340                             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{341                             \{}
+\DoxyCodeLine{342                                 taskChoice-\/>\mbox{\hyperlink{classTask_aecc701a21bd98779172a1376dc03d096}{setPrioridade}}(novaprioridade);}
+\DoxyCodeLine{343                                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{344                             \}}
+\DoxyCodeLine{345                         \}}
+\DoxyCodeLine{346                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{347                         std::cout << \textcolor{stringliteral}{"{}Aqui está sua tarefa atualizada:\(\backslash\)n"{}};}
+\DoxyCodeLine{348                         taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{349                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351                     \textcolor{keywordflow}{case} 5: \textcolor{comment}{// ==== CASO: EDITAR DATA DE VENCIMENTO ====}}
+\DoxyCodeLine{352                         std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nInforme a nova data de vencimento: "{}};}
+\DoxyCodeLine{353                         std::cin >> novadata;}
+\DoxyCodeLine{354                         taskChoice-\/>\mbox{\hyperlink{classTask_a5c248a9dae8386b36d896d607907e223}{setVencimento}}(novadata);}
+\DoxyCodeLine{355                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{356                         std::cout << \textcolor{stringliteral}{"{}Aqui está sua tarefa atualizada:\(\backslash\)n"{}};}
+\DoxyCodeLine{357                         taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{358                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360                     \textcolor{keywordflow}{case} 6: \textcolor{comment}{// ==== CASO: VOLTAR ====}}
+\DoxyCodeLine{361                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{362                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{363                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{364                         std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Informe uma opção válida. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{365                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{366                     \}}
+\DoxyCodeLine{367                 \}}
+\DoxyCodeLine{368             \}}
+\DoxyCodeLine{369             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{370 }
+\DoxyCodeLine{371         \textcolor{comment}{// ==== CASO: MOVER TAREFA ====}}
+\DoxyCodeLine{372         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{373             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{374             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{375             \{}
+\DoxyCodeLine{376                 indexTask = 0;}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{379                 \{}
+\DoxyCodeLine{380                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}{printColumn}}(i);}
+\DoxyCodeLine{381                 \}}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383                 std::cout << std::endl}
+\DoxyCodeLine{384                           << \textcolor{stringliteral}{"{}Digite o ID da tarefa que deseja mover (ou digite -\/1 para sair): "{}};}
+\DoxyCodeLine{385                 std::cin >> indexTask;}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387                 \textcolor{keywordflow}{if} (indexTask == -\/1)}
+\DoxyCodeLine{388                 \{}
+\DoxyCodeLine{389                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{390                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{391                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{392                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{393                 \}}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395                 taskChoice = kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{findTask}}(indexTask);}
+\DoxyCodeLine{396                 \textcolor{keywordflow}{if} (taskChoice == NULL)}
+\DoxyCodeLine{397                 \{}
+\DoxyCodeLine{398                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{399                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Tarefa não encontrada. Digite o ID novamente. |!|\(\backslash\)n"{}}}
+\DoxyCodeLine{400                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{401                 \}}
+\DoxyCodeLine{402                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{403                 \{}
+\DoxyCodeLine{404 }
+\DoxyCodeLine{405                     std::cout << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}==> Tarefa escolhida: "{}} << taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af316e839e8504c7e956f7ee6196b8629}{getTituloId}}() << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{} <=="{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{406 }
+\DoxyCodeLine{407                     \textcolor{comment}{// Pede a coluna de destino para o usuário}}
+\DoxyCodeLine{408                     colunadestino = \mbox{\hyperlink{functions_8cpp_a1ea6093903cc01b2fec1e1db7f6bfe9d}{askForValidColumn}}(*kanbanBoard, 2);}
+\DoxyCodeLine{409 }
+\DoxyCodeLine{410                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a8b2d80954ef37e1e067f432ad0d2ed34}{moveTask}}(indexTask, colunadestino);}
+\DoxyCodeLine{411 }
+\DoxyCodeLine{412                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{413 }
+\DoxyCodeLine{414                     std::cout << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}\(\backslash\)nTarefa movida.\(\backslash\)n"{}}}
+\DoxyCodeLine{415                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{416                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{417                     std::cout << std::endl;}
+\DoxyCodeLine{418                 \}}
+\DoxyCodeLine{419             \}}
+\DoxyCodeLine{420 }
+\DoxyCodeLine{421             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{423         \textcolor{comment}{// ==== CASO: EXCLUIR TAREFA ====}}
+\DoxyCodeLine{424         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{426             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{427 }
+\DoxyCodeLine{428             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{429             \{}
+\DoxyCodeLine{430                 kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{431                 std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nDigite o ID da tarefa que deseja excluir (ou digite -\/1 para sair): "{}};}
+\DoxyCodeLine{432                 std::cin >> indexTask;}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434                 \textcolor{keywordflow}{if} (indexTask == -\/1)}
+\DoxyCodeLine{435                 \{}
+\DoxyCodeLine{436                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{437                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{438                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{439                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{440                 \}}
+\DoxyCodeLine{441                 taskChoice = kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{findTask}}(indexTask);}
+\DoxyCodeLine{442 }
+\DoxyCodeLine{443                 \textcolor{keywordflow}{if} (taskChoice == NULL)}
+\DoxyCodeLine{444                 \{ \textcolor{comment}{// Verifica se o ID existe}}
+\DoxyCodeLine{445                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{446                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)n|!| Tarefa não encontrada. Digite o ID novamente. |!|"{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << std::endl;}
+\DoxyCodeLine{447                 \}}
+\DoxyCodeLine{448                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{449                 \{}
+\DoxyCodeLine{450                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0c87862faa96b8225faeedc9de929812}{removeTask}}(indexTask);}
+\DoxyCodeLine{451                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{452                     std::cout << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}\(\backslash\)nTarefa excluída.\(\backslash\)n"{}}}
+\DoxyCodeLine{453                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{454                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{455                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{456                 \}}
+\DoxyCodeLine{457             \}}
+\DoxyCodeLine{458 }
+\DoxyCodeLine{459             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{461         \textcolor{comment}{//==== CASO: VOLTAR ====}}
+\DoxyCodeLine{462         \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{463             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{464             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{465         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{466             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{467             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Opção inválida. Por favor, escolha uma opção válida. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{468             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{469         \}}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{471         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{472 }
+\DoxyCodeLine{473 }
+\DoxyCodeLine{474 }
+\DoxyCodeLine{475     \textcolor{comment}{// ==== CASO: EXIBIR INFORMAÇÕES DA TAREFA ====}}
+\DoxyCodeLine{476     \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{477         \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a7307f5be7fac353ccc43599261083c49}{isBoardEmpty}}())}
+\DoxyCodeLine{478         \{}
+\DoxyCodeLine{479             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{480             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Seu quadro está vazio, adicione uma tarefa primeiro. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{481             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{482         \}}
+\DoxyCodeLine{483         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{485         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{486         \{}
+\DoxyCodeLine{487             kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{488             std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nDigite o ID da tarefa que deseja ver as informações (ou digite -\/1 para sair): "{}};}
+\DoxyCodeLine{489             std::cin >> indexTask;}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{491             \textcolor{keywordflow}{if} (indexTask == -\/1)}
+\DoxyCodeLine{492             \{}
+\DoxyCodeLine{493                 \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{494                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{495                           << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{496                 \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{497             \}}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{499             taskChoice = kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{findTask}}(indexTask);}
+\DoxyCodeLine{500 }
+\DoxyCodeLine{501             \textcolor{keywordflow}{if} (taskChoice == NULL)}
+\DoxyCodeLine{502             \{ \textcolor{comment}{// Verifica se o ID existe}}
+\DoxyCodeLine{503                 \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{504                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)n|!| Tarefa não encontrada. Digite o ID novamente. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{505             \}}
+\DoxyCodeLine{506             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{507             \{}
+\DoxyCodeLine{508                 \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{509                 taskChoice-\/>\mbox{\hyperlink{classKanbanTask_af8db51050f3e27975c3bd6631ce3971e}{printTask}}();}
+\DoxyCodeLine{510             \}}
+\DoxyCodeLine{511         \}}
+\DoxyCodeLine{512         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{514 }
+\DoxyCodeLine{515 }
+\DoxyCodeLine{516     \textcolor{comment}{// ==== CASO: ORDERNAR TAREFAS POR PRIORIDADE ====}}
+\DoxyCodeLine{517     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{518         \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a7307f5be7fac353ccc43599261083c49}{isBoardEmpty}}())}
+\DoxyCodeLine{519         \{}
+\DoxyCodeLine{520             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{521             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Seu quadro está vazio, adicione uma tarefa primeiro. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{522             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{523         \}}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{525         \mbox{\hyperlink{menus_8h_a707396c394b23ba47a461a3423903a9b}{printMenuOrdenar}}();}
+\DoxyCodeLine{526         escolha = \mbox{\hyperlink{functions_8cpp_a86d0de416ac3f84fbea7eafd2325946c}{getUserChoice}}();}
+\DoxyCodeLine{527         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{528 }
+\DoxyCodeLine{529         \textcolor{keywordflow}{switch} (escolha)}
+\DoxyCodeLine{530         \{}
+\DoxyCodeLine{531 }
+\DoxyCodeLine{532         \textcolor{keywordflow}{case} 1: \textcolor{comment}{// ==== CASO: CRESCENTE ====}}
+\DoxyCodeLine{533             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{534             \{}
+\DoxyCodeLine{535                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{536                 \{}
+\DoxyCodeLine{537                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}{printColumn}}(i);}
+\DoxyCodeLine{538                 \}}
+\DoxyCodeLine{539                 \textcolor{comment}{// Pede a coluna para o usuário}}
+\DoxyCodeLine{540                 colunadestino = \mbox{\hyperlink{functions_8cpp_a1ea6093903cc01b2fec1e1db7f6bfe9d}{askForValidColumn}}(*kanbanBoard, 3);}
+\DoxyCodeLine{541 }
+\DoxyCodeLine{542                 \textcolor{keywordflow}{if} (colunadestino == -\/1)}
+\DoxyCodeLine{543                 \{}
+\DoxyCodeLine{544                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{545                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{546                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{547                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{548                 \}}
+\DoxyCodeLine{549 }
+\DoxyCodeLine{550                 \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c}{columnEmpty}}(colunadestino))}
+\DoxyCodeLine{551                 \{}
+\DoxyCodeLine{552                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{553                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| A coluna está vazia. Não é possível realizar a ordenação. |!|\(\backslash\)n"{}}}
+\DoxyCodeLine{554                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{555                     \textcolor{keywordflow}{continue}; \textcolor{comment}{// Volta para o início do loop}}
+\DoxyCodeLine{556                 \}}
+\DoxyCodeLine{557 }
+\DoxyCodeLine{558                 kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}{sortColumn}}(colunadestino, 1);}
+\DoxyCodeLine{559                 \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{560                 std::cout << \textcolor{stringliteral}{"{}Ótimo, a coluna "{}} << (colunadestino + 1) << \textcolor{stringliteral}{"{} foi ordenada de forma crescente.\(\backslash\)n"{}};}
+\DoxyCodeLine{561                 std::cout << std::endl;}
+\DoxyCodeLine{562             \}}
+\DoxyCodeLine{563 }
+\DoxyCodeLine{564             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{565 }
+\DoxyCodeLine{566         \textcolor{keywordflow}{case} 2: \textcolor{comment}{// ==== CASO: DECRESCENTE ====}}
+\DoxyCodeLine{567             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{568             \{}
+\DoxyCodeLine{569                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{570                 \{}
+\DoxyCodeLine{571                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}{printColumn}}(i);}
+\DoxyCodeLine{572                 \}}
+\DoxyCodeLine{573                 \textcolor{comment}{// Pede a coluna para o usuário}}
+\DoxyCodeLine{574                 colunadestino = \mbox{\hyperlink{functions_8cpp_a1ea6093903cc01b2fec1e1db7f6bfe9d}{askForValidColumn}}(*kanbanBoard, 3);}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{576                 \textcolor{keywordflow}{if} (colunadestino == -\/1)}
+\DoxyCodeLine{577                 \{}
+\DoxyCodeLine{578                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{579                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{580                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{581                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{582                 \}}
+\DoxyCodeLine{583 }
+\DoxyCodeLine{584                 \textcolor{keywordflow}{if} (kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c}{columnEmpty}}(colunadestino))}
+\DoxyCodeLine{585                 \{}
+\DoxyCodeLine{586                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{587                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| A coluna está vazia. Não é possível realizar a ordenação. |!|\(\backslash\)n"{}}}
+\DoxyCodeLine{588                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{589                     \textcolor{keywordflow}{continue}; \textcolor{comment}{// Volta para o início do loop}}
+\DoxyCodeLine{590                 \}}
+\DoxyCodeLine{591 }
+\DoxyCodeLine{592                 kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}{sortColumn}}(colunadestino, 2);}
+\DoxyCodeLine{593                 \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{594                 std::cout << \textcolor{stringliteral}{"{}Ótimo, a coluna "{}} << (colunadestino + 1) << \textcolor{stringliteral}{"{} foi ordenada de forma decrescente.\(\backslash\)n"{}};}
+\DoxyCodeLine{595                 std::cout << std::endl;}
+\DoxyCodeLine{596             \}}
+\DoxyCodeLine{597             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{598 }
+\DoxyCodeLine{599         \textcolor{keywordflow}{case} 3: \textcolor{comment}{// ==== CASO: ORDENAR TODAS AS COLUNAS ====}}
+\DoxyCodeLine{600             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{601             kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{602             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{603             \{}
+\DoxyCodeLine{604 }
+\DoxyCodeLine{605                 std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n1. Crescente ("{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}1: Baixo"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{} -\/ "{}} << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}3: Alto)"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{606                 std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n2. Decrescente ("{}} << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}3: Alto"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{} -\/ "{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}1: Baixo)"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{607                 std::cout << \textcolor{stringliteral}{"{}\(\backslash\)nVocê deseja ordenar de qual forma (ou digite -\/1 para sair): "{}};}
+\DoxyCodeLine{608                 std::cin >> escolha;}
+\DoxyCodeLine{609 }
+\DoxyCodeLine{610                 \textcolor{keywordflow}{if} (escolha == -\/1)}
+\DoxyCodeLine{611                 \{}
+\DoxyCodeLine{612                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{613                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}}}
+\DoxyCodeLine{614                               << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{615                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{616                 \}}
+\DoxyCodeLine{617 }
+\DoxyCodeLine{618                 \textcolor{keywordflow}{switch} (escolha)}
+\DoxyCodeLine{619                 \{}
+\DoxyCodeLine{620                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{621                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{622                     \{}
+\DoxyCodeLine{623                         kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}{sortColumn}}(i, 1);}
+\DoxyCodeLine{624                     \}}
+\DoxyCodeLine{625                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{626                     std::cout << \textcolor{stringliteral}{"{}Ótimo, todas as colunas foram ordenadas de forma crescente."{}};}
+\DoxyCodeLine{627                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{628                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{629                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{630                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{631                     \{}
+\DoxyCodeLine{632                         kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}{sortColumn}}(i, 2);}
+\DoxyCodeLine{633                     \}}
+\DoxyCodeLine{634                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{635                     std::cout << \textcolor{stringliteral}{"{}Ótimo, todas as colunas foram ordenadas de forma decrescente."{}};}
+\DoxyCodeLine{636                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{637                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{638                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{639                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{640                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Opção inválida |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{641                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{642                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{643                 \}}
+\DoxyCodeLine{644             \}}
+\DoxyCodeLine{645             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{647         \textcolor{keywordflow}{case} 4: \textcolor{comment}{// ==== CASO: VOLTAR ====}}
+\DoxyCodeLine{648             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{649             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{650         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{651             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{652             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Opção inválida. Por favor, escolha uma opção válida. |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{653             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{654         \}}
+\DoxyCodeLine{655 }
+\DoxyCodeLine{656         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{657 }
+\DoxyCodeLine{658 }
+\DoxyCodeLine{659 }
+\DoxyCodeLine{660     \textcolor{comment}{// ==== CASO: EXIBIR QUADRO KANBAN ====}}
+\DoxyCodeLine{661     \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{662         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{663         \{}
+\DoxyCodeLine{664             kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{printBoard}}();}
+\DoxyCodeLine{665             std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)n\(\backslash\)nDigite -\/1 para sair: "{}};}
+\DoxyCodeLine{666             std::cin >> indexTask;}
+\DoxyCodeLine{667 }
+\DoxyCodeLine{668             \textcolor{keywordflow}{if} (indexTask == -\/1)}
+\DoxyCodeLine{669             \{}
+\DoxyCodeLine{670                 \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{671             \}}
+\DoxyCodeLine{672             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{673         \}}
+\DoxyCodeLine{674         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{675 }
+\DoxyCodeLine{676         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{677 }
+\DoxyCodeLine{678 }
+\DoxyCodeLine{679 }
+\DoxyCodeLine{680     \textcolor{comment}{// ==== CASO: SALVAR EM UM ARQUIVO ====}}
+\DoxyCodeLine{681     \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{682     }
+\DoxyCodeLine{683         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{684         \textcolor{keywordflow}{while} (\textcolor{keyword}{true})\{}
+\DoxyCodeLine{685             \mbox{\hyperlink{menus_8h_af925906122711aca7c59ea138c248f0d}{printMenuSalvar}}();}
+\DoxyCodeLine{686             escolha = \mbox{\hyperlink{functions_8cpp_a86d0de416ac3f84fbea7eafd2325946c}{getUserChoice}}();}
+\DoxyCodeLine{687 }
+\DoxyCodeLine{688             \textcolor{keywordflow}{if}(escolha == 4)\{}
+\DoxyCodeLine{689                 \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{690                 std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nOperação cancelada.\(\backslash\)n"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{691                 \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{692             \}}
+\DoxyCodeLine{693 }
+\DoxyCodeLine{694             \textcolor{keywordflow}{switch} (escolha)\{}
+\DoxyCodeLine{695                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{696                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{697                     std::cout << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}|!| Todas os arquivos '.bin' são salvos na pasta '/data/bin' |!|\(\backslash\)n"{}}<< \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{698 }
+\DoxyCodeLine{699                     std::cout << \textcolor{stringliteral}{"{}Insira o nome do arquivo para salvar os dados (exemplo.bin): "{}};}
+\DoxyCodeLine{700                     std::cin >> nameFile;}
+\DoxyCodeLine{701 }
+\DoxyCodeLine{702                     caminhoFile = \textcolor{stringliteral}{"{}data/bin/"{}} + nameFile;}
+\DoxyCodeLine{703 }
+\DoxyCodeLine{704                     arquivoExiste = \textcolor{keyword}{false};}
+\DoxyCodeLine{705                     \textcolor{keywordflow}{while}(!arquivoExiste)\{}
+\DoxyCodeLine{706                         \textcolor{comment}{// Verifique se o arquivo existe}}
+\DoxyCodeLine{707             }
+\DoxyCodeLine{708                         arquivo.open(caminhoFile.c\_str());}
+\DoxyCodeLine{709                         \textcolor{comment}{//Arquivo existe}}
+\DoxyCodeLine{710                         \textcolor{keywordflow}{if} (arquivo.is\_open()) \{}
+\DoxyCodeLine{711                             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}\(\backslash\)nIsso apagará todo o conteúdo gravado em "{}} << nameFile << \textcolor{stringliteral}{"{}. Você tem certeza? "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{712                             std::cout << \textcolor{stringliteral}{"{}1. Sim"{}} << std::endl;}
+\DoxyCodeLine{713                             std::cout << \textcolor{stringliteral}{"{}2. Não"{}} << std::endl;}
+\DoxyCodeLine{714 }
+\DoxyCodeLine{715                             \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{716                                 std::cin >> escolha;}
+\DoxyCodeLine{717 }
+\DoxyCodeLine{718                                 \textcolor{keywordflow}{if}(escolha == 2)\{}
+\DoxyCodeLine{719                                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{720                                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Operação cancelada |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{721                                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{722                                 \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (escolha == 1)\{}
+\DoxyCodeLine{723                                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{724                                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2}{saveToFile}}(caminhoFile);}
+\DoxyCodeLine{725                                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{726                                 \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{727                                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Digite uma opção válida: "{}}<< \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{728                                 \}}
+\DoxyCodeLine{729                                 }
+\DoxyCodeLine{730                             \}\textcolor{keywordflow}{while}(escolha != 1 || escolha != 2);}
+\DoxyCodeLine{731                            }
+\DoxyCodeLine{732                             arquivoExiste = \textcolor{keyword}{true};}
+\DoxyCodeLine{733                             arquivo.close();}
+\DoxyCodeLine{734                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{735 }
+\DoxyCodeLine{736                         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{737                             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{738                             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| O arquivo "{}} << nameFile << \textcolor{stringliteral}{"{} não existe |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{739                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{740                         \}}
+\DoxyCodeLine{741                     \}}
+\DoxyCodeLine{742 }
+\DoxyCodeLine{743                     }
+\DoxyCodeLine{744                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{745 }
+\DoxyCodeLine{746                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{747                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{748 }
+\DoxyCodeLine{749                     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{750                         std::cout << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}|!| Todas os arquivos '.bin' são salvos na pasta '/data/bin' |!|\(\backslash\)n"{}}<< \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{751                         std::cout << \textcolor{stringliteral}{"{}Insira o nome do arquivo para salvar os dados (exemplo.bin): "{}};}
+\DoxyCodeLine{752                         std::cin >> nameFile;}
+\DoxyCodeLine{753 }
+\DoxyCodeLine{754                         \textcolor{keywordflow}{if} (nameFile.length() <= 4 || nameFile.substr(nameFile.length() -\/ 4) != \textcolor{stringliteral}{"{}.bin"{}}) \{}
+\DoxyCodeLine{755                             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{756                             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Nome de arquivo inválido! Por favor, inclua a extensão '.bin' |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{757                         \}}
+\DoxyCodeLine{758 }
+\DoxyCodeLine{759                     \}\textcolor{keywordflow}{while}(nameFile.length() <= 4 || nameFile.substr(nameFile.length() -\/ 4) != \textcolor{stringliteral}{"{}.bin"{}});}
+\DoxyCodeLine{760 }
+\DoxyCodeLine{761                     caminhoFile = \textcolor{stringliteral}{"{}data/bin/"{}} + nameFile;}
+\DoxyCodeLine{762 }
+\DoxyCodeLine{763                     arquivo.open(caminhoFile.c\_str());}
+\DoxyCodeLine{764                     \textcolor{keywordflow}{if}(arquivo.is\_open())\{}
+\DoxyCodeLine{765                         \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{766                         std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| O arquivo "{}} << nameFile << \textcolor{stringliteral}{"{} já existe. Entre na primeira opção para salvar em um arquivo existente |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{767                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{768                     \}}
+\DoxyCodeLine{769 }
+\DoxyCodeLine{770                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{771                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2}{saveToFile}}(caminhoFile);}
+\DoxyCodeLine{772 }
+\DoxyCodeLine{773                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{774 }
+\DoxyCodeLine{775                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{776                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{777                     arquivoExiste = \textcolor{keyword}{false};}
+\DoxyCodeLine{778 }
+\DoxyCodeLine{779                     \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{780                         std::cout << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}|!| Todas os arquivos '.txt' são salvos na pasta '/data/txt' |!|\(\backslash\)n"{}}<< \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{781                         std::cout << \textcolor{stringliteral}{"{}Insira o nome do arquivo que o programa escreverá (exemplo.txt): "{}};}
+\DoxyCodeLine{782                         std::cin >> nameFile;}
+\DoxyCodeLine{783                          }
+\DoxyCodeLine{784                         \textcolor{keywordflow}{if} (nameFile.length() <= 4 || nameFile.substr(nameFile.length() -\/ 4) != \textcolor{stringliteral}{"{}.txt"{}}) \{}
+\DoxyCodeLine{785                             \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{786                             std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Nome de arquivo inválido! Por favor, inclua a extensão '.txt' |!|"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{787                         \}}
+\DoxyCodeLine{788 }
+\DoxyCodeLine{789                     \}\textcolor{keywordflow}{while}(nameFile.length() <= 4 || nameFile.substr(nameFile.length() -\/ 4) != \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{790 }
+\DoxyCodeLine{791 }
+\DoxyCodeLine{792                     caminhoFile = \textcolor{stringliteral}{"{}data/txt/"{}} + nameFile;}
+\DoxyCodeLine{793 }
+\DoxyCodeLine{794                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{795                     kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ac52cb43d40eb69b8663f67ab4dc88647}{saveToFileTxt}}(caminhoFile);}
+\DoxyCodeLine{796                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{797                     }
+\DoxyCodeLine{798                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{799 }
+\DoxyCodeLine{800                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{801 }
+\DoxyCodeLine{802                     \textcolor{keywordflow}{break}; \textcolor{comment}{// Sai do loop}}
+\DoxyCodeLine{803                 }
+\DoxyCodeLine{804                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{805                     \mbox{\hyperlink{functions_8cpp_aad531f6562212b82c481588c13bfa284}{clearTerminal}}();}
+\DoxyCodeLine{806                     std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Digite uma opção válida |!|\(\backslash\)n"{}}<< \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{807                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{808             }
+\DoxyCodeLine{809             \}}
+\DoxyCodeLine{810         \}}
+\DoxyCodeLine{811 }
+\DoxyCodeLine{812         \textcolor{keywordflow}{break};  }
+\DoxyCodeLine{813 }
+\DoxyCodeLine{814 }
+\DoxyCodeLine{815 }
+\DoxyCodeLine{816     \textcolor{comment}{// ==== CASO: SAIR ====}}
+\DoxyCodeLine{817     \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{818         std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}Encerrando o programa..."{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{819         \textcolor{keyword}{delete} kanbanBoard; \textcolor{comment}{// Libera a memória alocada}}
+\DoxyCodeLine{820         kanbanBoard = NULL;}
+\DoxyCodeLine{821         std::exit(0);}
+\DoxyCodeLine{822         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{823 }
+\DoxyCodeLine{824 }
+\DoxyCodeLine{825 }
+\DoxyCodeLine{826     \textcolor{comment}{// ==== CASO: OPÇÃO INVÁLIDA ====}}
+\DoxyCodeLine{827     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{828         std::cout << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}|!| Opção inválida. Por favor, escolha uma opção válida. |!|\(\backslash\)n"{}}}
+\DoxyCodeLine{829                   << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{830         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{831     \}}
+\DoxyCodeLine{832 }
+\DoxyCodeLine{833 }
+\DoxyCodeLine{834 }
+\DoxyCodeLine{835     \textcolor{comment}{// ==== FIM DO SWITCH PRINCIPAL ====}}
+\DoxyCodeLine{836     std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{837 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a44b96e022f354245afa90fae9d21575e_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{functions_8h_a44b96e022f354245afa90fae9d21575e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a86d0de416ac3f84fbea7eafd2325946c}\label{functions_8h_a86d0de416ac3f84fbea7eafd2325946c}} 
+\index{functions.h@{functions.h}!getUserChoice@{getUserChoice}}
+\index{getUserChoice@{getUserChoice}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{getUserChoice()}{getUserChoice()}}
+{\footnotesize\ttfamily int get\+User\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função que solicita ao usuário a escolha de uma operação. 
+
+Essa função solicita e lê o número de uma operação escolhido pelo usuário. É utlizada posteriormente a impressão de um menu de opções. \begin{DoxyReturn}{Retorna}
+O número da operação que o usuário deseja realizar 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134     \textcolor{keywordtype}{int} operacao;}
+\DoxyCodeLine{135     std::cout << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}Digite o número da operação: "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}};}
+\DoxyCodeLine{136     std::cin >> operacao;}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} operacao;}
+\DoxyCodeLine{138 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a86d0de416ac3f84fbea7eafd2325946c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_aa1fbbb2203c4879b8bf3566732284ac3}\label{functions_8h_aa1fbbb2203c4879b8bf3566732284ac3}} 
+\index{functions.h@{functions.h}!listarArquivos@{listarArquivos}}
+\index{listarArquivos@{listarArquivos}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{listarArquivos()}{listarArquivos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$std\+::string$>$ listar\+Arquivos (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pasta }\end{DoxyParamCaption})}
+
+
+
+Função que retorna uma lista dos arquivos em uma pasta. Utilizado para listar os nomes dos arquivos (.bin) salvos com informações para preenchimento do quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em pasta} & Diretório que contém os arquivos onde o programa fará a leitura\\
+\hline
+\end{DoxyParams}
+A lógica proposta é uma vez aberto o diretório passado como parâmetro, lê-\/se o nome de cada arquivo, o atribui a uma string e no final adiciona-\/se a string ao final da lista duplamente encadeada chamada \char`\"{}arquivos\char`\"{} \begin{DoxyReturn}{Retorna}
+Uma lista duplamente encadeada de nomes de arquivos presentes no diretório passado como parâmetro 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<std::string>}} arquivos;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     DIR* dir;}
+\DoxyCodeLine{19     \textcolor{keyword}{struct }dirent* entrada;}
+\DoxyCodeLine{20     \textcolor{keywordflow}{if} ((dir = opendir(pasta.c\_str())) != NULL) \{}
+\DoxyCodeLine{21         \textcolor{keywordflow}{while} ((entrada = readdir(dir)) != NULL) \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23             std::string nomeArquivo = entrada-\/>d\_name;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25             \textcolor{keywordflow}{if} (nomeArquivo != \textcolor{stringliteral}{"{}."{}} \&\& nomeArquivo != \textcolor{stringliteral}{"{}.."{}}) \{}
+\DoxyCodeLine{26                 arquivos.\mbox{\hyperlink{classListaDuplamenteEncadeada_a0706e7da8b9025cb6a98e12ef2e35f42}{pushBack}}(nomeArquivo);}
+\DoxyCodeLine{27             \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \}}
+\DoxyCodeLine{30         closedir(dir);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{33         std::cout << \textcolor{stringliteral}{"{}Erro ao abrir a pasta: "{}} << pasta << std::endl;}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} arquivos;}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_aa1fbbb2203c4879b8bf3566732284ac3_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{functions_8h_aa1fbbb2203c4879b8bf3566732284ac3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a90237cd431706bf89edc6d2df56555d9}\label{functions_8h_a90237cd431706bf89edc6d2df56555d9}} 
+\index{functions.h@{functions.h}!receiveColumns@{receiveColumns}}
+\index{receiveColumns@{receiveColumns}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{receiveColumns()}{receiveColumns()}}
+{\footnotesize\ttfamily void receive\+Columns (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} $\ast$}]{kanban\+Board,  }\item[{int}]{num\+Colunas }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário os nomes das colunas do quadro Kanban. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em kanban\+Board} & Ponteiro do tipo \char`\"{}\+Kanban\+Board\char`\"{} que será usado para adicionar colunas ao Quadro Kanban. \\
+\hline
+{\em num\+Colunas} & Variável do tipo inteiro contendo o número de colunas escolhido pelo usuário, foi obtido previamente pela função \char`\"{}receive\+Num\+Columns\char`\"{}\\
+\hline
+\end{DoxyParams}
+Função utilizada no início do programa, logo após a função \char`\"{}receive\+Num\+Columns\char`\"{}, pede-\/se que o usuário nomeie as colunas uma a uma e conforme isso vai acontecendo, uma nova coluna é adicionada ao objeto \char`\"{}kanban\+Board\char`\"{} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     std::cout << \textcolor{stringliteral}{"{}==========="{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{} Informe os nomes das colunas "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}===========\(\backslash\)n"{}};}
+\DoxyCodeLine{56     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColunas; i++)}
+\DoxyCodeLine{57     \{}
+\DoxyCodeLine{58         std::string coluna;}
+\DoxyCodeLine{59         std::cout << (i + 1) << \textcolor{stringliteral}{"{}ª coluna: "{}};}
+\DoxyCodeLine{60         std::getline(std::cin, coluna);}
+\DoxyCodeLine{61         \mbox{\hyperlink{functions_8cpp_a228d1e0c636daad6578c44e22644fbc5}{stringMaiusculo}}(coluna);}
+\DoxyCodeLine{62         kanbanBoard-\/>\mbox{\hyperlink{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0}{addColumn}}(coluna);}
+\DoxyCodeLine{63     \}}
+\DoxyCodeLine{64 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a90237cd431706bf89edc6d2df56555d9_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{functions_8h_a90237cd431706bf89edc6d2df56555d9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_ae0e51e3688204d8be9b0c6fc6786585f}\label{functions_8h_ae0e51e3688204d8be9b0c6fc6786585f}} 
+\index{functions.h@{functions.h}!receiveNumColumns@{receiveNumColumns}}
+\index{receiveNumColumns@{receiveNumColumns}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{receiveNumColumns()}{receiveNumColumns()}}
+{\footnotesize\ttfamily int receive\+Num\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Solicita ao usuário qual número de colunas do Quadro Kanban que o mesmo deseja. 
+
+Função utilizada no início do programa para definir o número de colunas que o Quadro Kanban deve ter, escolhido pelo usuário. \begin{DoxyReturn}{Retorna}
+O número de colunas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42 \{}
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} numColunas;}
+\DoxyCodeLine{44     std::cout << \textcolor{stringliteral}{"{}==========="{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{} Bem vindo ao gerenciador de tarefas Kanban! "{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}===========\(\backslash\)n"{}};}
+\DoxyCodeLine{45     std::cout << \textcolor{stringliteral}{"{}Quantas colunas você deseja adicionar no seu gerenciador?\(\backslash\)n"{}};}
+\DoxyCodeLine{46     std::cin >> numColunas;}
+\DoxyCodeLine{47     std::cin.ignore(); \textcolor{comment}{// Descarta o caractere de nova linha após a leitura do número}}
+\DoxyCodeLine{48     \textcolor{keywordflow}{return} numColunas;}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{functions_8h_ae0e51e3688204d8be9b0c6fc6786585f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{functions_8h_a228d1e0c636daad6578c44e22644fbc5}\label{functions_8h_a228d1e0c636daad6578c44e22644fbc5}} 
+\index{functions.h@{functions.h}!stringMaiusculo@{stringMaiusculo}}
+\index{stringMaiusculo@{stringMaiusculo}!functions.h@{functions.h}}
+\doxysubsubsection{\texorpdfstring{stringMaiusculo()}{stringMaiusculo()}}
+{\footnotesize\ttfamily void string\+Maiusculo (\begin{DoxyParamCaption}\item[{std\+::string \&}]{texto }\end{DoxyParamCaption})}
+
+
+
+Função que converte uma string em letras maiúsculas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em texto} & String que deseja-\/se converter\\
+\hline
+\end{DoxyParams}
+Essa função foi criada para fins estéticos da exibição do Quadro Kanban, para que tudo fique padronizado em letras maiúsculas e mais agradável de ser exibido. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < texto.length(); ++i)}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if} (texto[i] >= \textcolor{charliteral}{'a'} \&\& texto[i] <= \textcolor{charliteral}{'z'})}
+\DoxyCodeLine{73         \{}
+\DoxyCodeLine{74             texto[i] = texto[i] -\/ \textcolor{charliteral}{'a'} + \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{75         \}}
+\DoxyCodeLine{76     \}}
+\DoxyCodeLine{77 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{functions_8h_a228d1e0c636daad6578c44e22644fbc5_icgraph}
+\end{center}
+\end{figure}

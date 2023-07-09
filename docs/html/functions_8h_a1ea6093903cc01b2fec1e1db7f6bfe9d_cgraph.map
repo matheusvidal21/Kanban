@@ -1,0 +1,4 @@
+<map id="askForValidColumn" name="askForValidColumn">
+<area shape="rect" id="node1" title="Função que solicita ao usuário o número da coluna em que se deseja realizar alguma operação." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#aa7f6f54e145aa7c3cea1f0ab1d5585ae" title="Método que retorna o número de colunas do Quadro Kanban." alt="" coords="200,5,427,32"/>
+</map>

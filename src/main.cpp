@@ -1,3 +1,12 @@
+/**
+ * @file main.cpp
+ * @brief Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban.
+ * @author Isabela Gomes Mendes 
+ * @author Matheus Costa Vidal
+ * @since 14/06/2023
+ * @date 08/07/2023
+*/
+
 #include <iostream>
 #include <string>
 #include "../include/kanbanboard.h"
@@ -13,6 +22,11 @@
 
 using namespace std;
 
+
+/**
+ * @brief Função principal que inicia o programa do gerenciador de tarefas Kanban.
+ * @return 0 em caso de sucesso.
+ */
 int main()
 {
 
@@ -114,7 +128,7 @@ int main()
         printMenu();
         int choice = getUserChoice();
         clearTerminal();
-        executarOperacao(choice, kanbanBoard, numColunas);
+        executarOperacao(choice, kanbanBoard);
         
     }
 

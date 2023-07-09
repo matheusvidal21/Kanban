@@ -1,0 +1,8 @@
+<map id="KanbanBoard::sortColumn" name="KanbanBoard::sortColumn">
+<area shape="rect" id="node1" title="Método que ordena uma coluna escolhida com base na prioridade das taredas." alt="" coords="5,78,197,105"/>
+<area shape="rect" id="node2" href="$classAlgoritmosDeOrdenacao.html#af608538ac09a154c0bfcfdd27b05f7fa" title="Ordena a lista de forma crescente usando o Bubble Sort." alt="" coords="257,71,438,112"/>
+<area shape="rect" id="node5" href="$classListaDuplamenteEncadeada.html#ae2494348caf48de3d5b164c71f2dae73" title="Método que retorna o tamanho da lista." alt="" coords="245,136,449,177"/>
+<area shape="rect" id="node6" href="$classAlgoritmosDeOrdenacao.html#ae686ed3ba3f4850c855710f0fc6950b8" title="Ordena a lista de forma decrescente usando o Selection Sort." alt="" coords="257,5,438,47"/>
+<area shape="rect" id="node3" href="$classListaDuplamenteEncadeada.html#ab31872ac12372cfca22051c24cdf066f" title="Método para obter o elemento em um índice específico da lista." alt="" coords="497,15,731,42"/>
+<area shape="rect" id="node4" href="$classAlgoritmosDeOrdenacao.html#af0ac6625e3d403118691fd7808dbf6d4" title="Realiza a troca de duas tarefas." alt="" coords="523,68,705,109"/>
+</map>

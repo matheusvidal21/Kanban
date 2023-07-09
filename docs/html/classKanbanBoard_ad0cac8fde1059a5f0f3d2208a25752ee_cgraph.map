@@ -1,0 +1,6 @@
+<map id="KanbanBoard::printColumn" name="KanbanBoard::printColumn">
+<area shape="rect" id="node1" title="Método que imprime as tarefas em uma coluna específica do Quadro Kanban." alt="" coords="5,64,203,91"/>
+<area shape="rect" id="node2" href="$classListaDuplamenteEncadeada.html#ab31872ac12372cfca22051c24cdf066f" title="Método para obter o elemento em um índice específico da lista." alt="" coords="251,5,484,32"/>
+<area shape="rect" id="node3" href="$classListaDuplamenteEncadeada.html#ae2494348caf48de3d5b164c71f2dae73" title="Método que retorna o tamanho da lista." alt="" coords="265,57,469,98"/>
+<area shape="rect" id="node4" href="$classKanbanTask.html#af316e839e8504c7e956f7ee6196b8629" title="Método que retorna o título da tarefa junto com o ID." alt="" coords="278,123,457,149"/>
+</map>

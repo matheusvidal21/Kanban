@@ -1,0 +1,4 @@
+<map id="KanbanBoard::printBoard" name="KanbanBoard::printBoard">
+<area shape="rect" id="node1" title="Imprime o quadro Kanban." alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node2" href="$classKanbanTask.html#af316e839e8504c7e956f7ee6196b8629" title="Método que retorna o título da tarefa junto com o ID." alt="" coords="239,5,417,32"/>
+</map>

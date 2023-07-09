@@ -1,0 +1,8 @@
+<map id="/home/isa/Área de Trabalho/Kanban/src/kanbantask.cpp" name="/home/isa/Área de Trabalho/Kanban/src/kanbantask.cpp">
+<area shape="rect" id="node1" title="Este arquivo contém a implementação da classe KanbanTask." alt="" coords="48,5,205,61"/>
+<area shape="rect" id="node2" href="$kanbantask_8h.html" title="Este arquivo contém a declaração da classe KanbanTask, que representa uma tarefa específica do Kanban..." alt="" coords="41,109,213,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,259,85,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="164,259,223,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="136,184,211,211"/>
+<area shape="rect" id="node6" href="$task_8h.html" title="Este arquivo contém a declaração da classe abstrata Task, que representa uma tarefa genérica." alt="" coords="49,184,111,211"/>
+</map>

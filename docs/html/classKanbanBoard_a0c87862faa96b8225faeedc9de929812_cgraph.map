@@ -1,0 +1,10 @@
+<map id="KanbanBoard::removeTask" name="KanbanBoard::removeTask">
+<area shape="rect" id="node1" title="Método que exclui uma tarefa." alt="" coords="5,107,201,133"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="274,107,445,133"/>
+<area shape="rect" id="node7" href="$classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f" title="Método que encontra a coluna de uma tarefa com base em seu ID." alt="" coords="249,56,469,83"/>
+<area shape="rect" id="node8" href="$classListaDuplamenteEncadeada.html#abeea4d2e76fca397e7ad5048d9ce3d65" title="Método que remove um valor específico da lista." alt="" coords="257,158,461,199"/>
+<area shape="rect" id="node3" href="$classListaDuplamenteEncadeada.html#ab31872ac12372cfca22051c24cdf066f" title="Método para obter o elemento em um índice específico da lista." alt="" coords="517,5,751,32"/>
+<area shape="rect" id="node4" href="$classKanbanTask.html#ad80bc5d5fd2e7866dc41d30452f04fe6" title="Método getter que retorna o ID da tarefa." alt="" coords="563,56,705,83"/>
+<area shape="rect" id="node5" href="$classListaDuplamenteEncadeada.html#ae2494348caf48de3d5b164c71f2dae73" title="Método que retorna o tamanho da lista." alt="" coords="532,107,736,149"/>
+<area shape="rect" id="node6" href="$classListaDuplamenteEncadeada.html#a33bdec8304da84a90385565208807075" title="Método que verifica se a lista está vazia." alt="" coords="532,173,736,214"/>
+</map>

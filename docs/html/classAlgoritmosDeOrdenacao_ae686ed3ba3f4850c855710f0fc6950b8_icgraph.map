@@ -1,0 +1,6 @@
+<map id="AlgoritmosDeOrdenacao::selectionSort" name="AlgoritmosDeOrdenacao::selectionSort">
+<area shape="rect" id="node1" title="Ordena a lista de forma decrescente usando o Selection Sort." alt="" coords="536,5,717,47"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a0c3f9292b3e44370fcdf66162beeef12" title="Método que ordena uma coluna escolhida com base na prioridade das taredas." alt="" coords="296,13,488,39"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,13,248,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,13,60,39"/>
+</map>

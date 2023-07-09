@@ -1,0 +1,92 @@
+\hypertarget{kanbantask_8h}{}\doxysection{Referência do Arquivo /home/isa/Área de Trabalho/\+Kanban/include/kanbantask.h}
+\label{kanbantask_8h}\index{/home/isa/Área de Trabalho/Kanban/include/kanbantask.h@{/home/isa/Área de Trabalho/Kanban/include/kanbantask.h}}
+
+
+Este arquivo contém a declaração da classe \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}, que representa uma tarefa específica do Kanban.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include \char`\"{}task.\+h\char`\"{}}\newline
+Gráfico de dependência de inclusões para kanbantask.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{kanbantask_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kanbantask_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}
+\begin{DoxyCompactList}\small\item\em Classe \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} representa uma tarefa específica para o Kanban. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{kanbantask_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\+\_\+\+RESET}}~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{kanbantask_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\+\_\+\+RED}}~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{kanbantask_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\+\_\+\+GREEN}}~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{kanbantask_8h_af6e8b5c7b35e8bff4c581efd8019c798}{ANSI\+\_\+\+YELLOW}}~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}
+\item 
+\#define \mbox{\hyperlink{kanbantask_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\+\_\+\+BLUE}}~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Este arquivo contém a declaração da classe \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}, que representa uma tarefa específica do Kanban. 
+
+\begin{DoxyAuthor}{Autor}
+Isabela Gomes Mendes 
+
+Matheus Costa Vidal 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+14/06/2023 
+\end{DoxySince}
+\begin{DoxyDate}{Data}
+08/07/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Definições e macros}
+\mbox{\Hypertarget{kanbantask_8h_a50a197ede59d7694515c3dad4557cf00}\label{kanbantask_8h_a50a197ede59d7694515c3dad4557cf00}} 
+\index{kanbantask.h@{kanbantask.h}!ANSI\_BLUE@{ANSI\_BLUE}}
+\index{ANSI\_BLUE@{ANSI\_BLUE}!kanbantask.h@{kanbantask.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_BLUE}{ANSI\_BLUE}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+BLUE~\char`\"{}\textbackslash{}033\mbox{[}34m\char`\"{}}
+
+\mbox{\Hypertarget{kanbantask_8h_ad050fd71ced44460a0c723a1715c40e5}\label{kanbantask_8h_ad050fd71ced44460a0c723a1715c40e5}} 
+\index{kanbantask.h@{kanbantask.h}!ANSI\_GREEN@{ANSI\_GREEN}}
+\index{ANSI\_GREEN@{ANSI\_GREEN}!kanbantask.h@{kanbantask.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_GREEN}{ANSI\_GREEN}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+GREEN~\char`\"{}\textbackslash{}033\mbox{[}32m\char`\"{}}
+
+\mbox{\Hypertarget{kanbantask_8h_a7f026776e12ac1b5e7736c24b756085d}\label{kanbantask_8h_a7f026776e12ac1b5e7736c24b756085d}} 
+\index{kanbantask.h@{kanbantask.h}!ANSI\_RED@{ANSI\_RED}}
+\index{ANSI\_RED@{ANSI\_RED}!kanbantask.h@{kanbantask.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_RED}{ANSI\_RED}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+RED~\char`\"{}\textbackslash{}033\mbox{[}31m\char`\"{}}
+
+\mbox{\Hypertarget{kanbantask_8h_af77a445894f2f750d43cf2182cd29e55}\label{kanbantask_8h_af77a445894f2f750d43cf2182cd29e55}} 
+\index{kanbantask.h@{kanbantask.h}!ANSI\_RESET@{ANSI\_RESET}}
+\index{ANSI\_RESET@{ANSI\_RESET}!kanbantask.h@{kanbantask.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_RESET}{ANSI\_RESET}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+RESET~\char`\"{}\textbackslash{}033\mbox{[}0m\char`\"{}}
+
+\mbox{\Hypertarget{kanbantask_8h_af6e8b5c7b35e8bff4c581efd8019c798}\label{kanbantask_8h_af6e8b5c7b35e8bff4c581efd8019c798}} 
+\index{kanbantask.h@{kanbantask.h}!ANSI\_YELLOW@{ANSI\_YELLOW}}
+\index{ANSI\_YELLOW@{ANSI\_YELLOW}!kanbantask.h@{kanbantask.h}}
+\doxysubsubsection{\texorpdfstring{ANSI\_YELLOW}{ANSI\_YELLOW}}
+{\footnotesize\ttfamily \#define ANSI\+\_\+\+YELLOW~\char`\"{}\textbackslash{}033\mbox{[}33m\char`\"{}}
+

@@ -1,0 +1,4 @@
+<map id="KanbanBoard" name="KanbanBoard">
+<area shape="rect" id="node1" title="Classe KanbanBoard representa o Quadro Kanban que contém colunas e tarefas." alt="" coords="74,109,183,136"/>
+<area shape="rect" id="node2" href="$classListaDuplamenteEncadeada.html" title=" " alt="" coords="5,5,252,47"/>
+</map>

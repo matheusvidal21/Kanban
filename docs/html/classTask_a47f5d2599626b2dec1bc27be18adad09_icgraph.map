@@ -1,0 +1,6 @@
+<map id="Task::setTitulo" name="Task::setTitulo">
+<area shape="rect" id="node1" title="Método setter que define o título da tarefa." alt="" coords="357,31,473,57"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="139,5,279,32"/>
+<area shape="rect" id="node4" href="$classKanbanBoard.html#af172b2c66ddd65f49ba2f4aa765a7480" title="Lê um Quadro Kanban a partir de um arquivo &#39;.bin&#39;." alt="" coords="108,56,309,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,31,60,57"/>
+</map>

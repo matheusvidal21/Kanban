@@ -1,0 +1,521 @@
+\hypertarget{classListaDuplamenteEncadeada}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Lista\+Duplamente\+Encadeada$<$ T $>$}
+\label{classListaDuplamenteEncadeada}\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+
+
+Classe que implementa uma lista duplamente encadeada.  
+
+
+
+
+{\ttfamily \#include $<$estruturas\+\_\+tads.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaDuplamenteEncadeada_a665baa7393cb4bc082add79518b74fac}{Lista\+Duplamente\+Encadeada}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaDuplamenteEncadeada_a84bd9cdbd3f6ec81f55da1fdc45e596f}{$\sim$\+Lista\+Duplamente\+Encadeada}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}. Remove todos os elementos da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classListaDuplamenteEncadeada_af33007da018beede9d0b01a2a597b46a}{get\+Head}} () const
+\begin{DoxyCompactList}\small\item\em Método getter que retorna o ponteiro para o primeiro elemento da lista. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}} (int index) const
+\begin{DoxyCompactList}\small\item\em Método para obter o elemento em um índice específico da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaDuplamenteEncadeada_a41c1f4bd9ac3b0a75bf18d1472c66f64}{push\+Front}} (T value)
+\begin{DoxyCompactList}\small\item\em Método que adiciona um novo elemento no início da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaDuplamenteEncadeada_a0706e7da8b9025cb6a98e12ef2e35f42}{push\+Back}} (T value)
+\begin{DoxyCompactList}\small\item\em Método que adiciona um novo elemento no final da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaDuplamenteEncadeada_a891195f7a0d6a42583b34fe4b6068e28}{remove\+Front}} ()
+\begin{DoxyCompactList}\small\item\em Método que remove o primeiro elemento da lista. Se a lista estiver vazia, uma mensagem de erro é exibida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaDuplamenteEncadeada_aa69d8c626deb78c906d839f9404ea2ab}{remove\+Back}} ()
+\begin{DoxyCompactList}\small\item\em Método que remove o último elemento da lista. Se a lista estiver vazia, uma mensagem de erro é exibida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Método que verifica se a lista está vazia. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaDuplamenteEncadeada_ad17f85be9bb5ce4739db3377849ee70b}{print}} () const
+\begin{DoxyCompactList}\small\item\em Método que imprime os elementos da lista. Se a lista estiver vazia, uma mensagem informando isso é exibida. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna o tamanho da lista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classListaDuplamenteEncadeada_abeea4d2e76fca397e7ad5048d9ce3d65}{remove\+Value}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Método que remove um valor específico da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classListaDuplamenteEncadeada_aaa929458830ac272bc345909c607a265}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Método que remove todos os elementos da lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}}
+\item 
+\mbox{\hyperlink{classNo}{No}}$<$ T $>$ $\ast$ \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class Lista\+Duplamente\+Encadeada$<$ T $>$}
+
+Classe que implementa uma lista duplamente encadeada. 
+
+A classe \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}} possui um ponteiro para o primeiro elemento (head) e um ponteiro para o último elemento (tail) da lista. Ela permite adicionar elementos no início (push\+Front) e no final (push\+Back), remover o primeiro elemento (remove\+Front) e o último elemento (remove\+Back), verificar se a lista está vazia (is\+Empty), imprimir os elementos da lista (print), obter o tamanho da lista (get\+Size), remover um valor específico (remove\+Value) e limpar toda a lista (clear). 
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & O tipo de dado armazenado na lista. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a665baa7393cb4bc082add79518b74fac}\label{classListaDuplamenteEncadeada_a665baa7393cb4bc082add79518b74fac}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!ListaDuplamenteEncadeada@{ListaDuplamenteEncadeada}}
+\index{ListaDuplamenteEncadeada@{ListaDuplamenteEncadeada}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ListaDuplamenteEncadeada()}{ListaDuplamenteEncadeada()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da classe \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{58 : \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}}(NULL), \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}}(NULL)\{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a84bd9cdbd3f6ec81f55da1fdc45e596f}\label{classListaDuplamenteEncadeada_a84bd9cdbd3f6ec81f55da1fdc45e596f}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!````~ListaDuplamenteEncadeada@{$\sim$ListaDuplamenteEncadeada}}
+\index{````~ListaDuplamenteEncadeada@{$\sim$ListaDuplamenteEncadeada}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ListaDuplamenteEncadeada()}{~ListaDuplamenteEncadeada()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destrutor da classe \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}. Remove todos os elementos da lista. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{65                                \{}
+\DoxyCodeLine{66       \mbox{\hyperlink{classListaDuplamenteEncadeada_aaa929458830ac272bc345909c607a265}{clear}}();}
+\DoxyCodeLine{67     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_aaa929458830ac272bc345909c607a265}\label{classListaDuplamenteEncadeada_aaa929458830ac272bc345909c607a265}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que remove todos os elementos da lista. 
+
+Remove todos os elementos da lista, liberando a memória alocada por cada nó. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{285                 \{}
+\DoxyCodeLine{286       \mbox{\hyperlink{classNo}{No<T>}}* current = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288       \textcolor{keywordflow}{while}(current != NULL) \{}
+\DoxyCodeLine{289         \mbox{\hyperlink{classNo}{No<T>}}* nextNo = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{290         \textcolor{keyword}{delete} current;}
+\DoxyCodeLine{291         current = nextNo;}
+\DoxyCodeLine{292       \}}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{294       \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = NULL;}
+\DoxyCodeLine{295     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}\label{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!get@{get}}
+\index{get@{get}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\& \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método para obter o elemento em um índice específico da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & O índice do elemento desejado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma referência para o elemento do índice especificado. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::out\+\_\+of\+\_\+range} & caso o índice esteja fora dos limites da lista. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                             \{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{if} (index < 0 || index >= \mbox{\hyperlink{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}{getSize}}()) \{}
+\DoxyCodeLine{87             \textcolor{keywordflow}{throw} std::out\_of\_range(\textcolor{stringliteral}{"{}Index não encontrado."{}});}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         \mbox{\hyperlink{classNo}{No<T>}}* current = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{91         \textcolor{keywordtype}{int} currentIndex = 0;}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{keywordflow}{while} (current != NULL) \{}
+\DoxyCodeLine{94             \textcolor{keywordflow}{if} (currentIndex == index) \{}
+\DoxyCodeLine{95                 \textcolor{keywordflow}{return} current-\/>\mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}};}
+\DoxyCodeLine{96             \}}
+\DoxyCodeLine{97             current = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{98             currentIndex++;}
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101         \textcolor{keywordflow}{throw} std::out\_of\_range(\textcolor{stringliteral}{"{}Index não encontrado."{}});}
+\DoxyCodeLine{102     \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_af33007da018beede9d0b01a2a597b46a}\label{classListaDuplamenteEncadeada_af33007da018beede9d0b01a2a597b46a}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!getHead@{getHead}}
+\index{getHead@{getHead}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método getter que retorna o ponteiro para o primeiro elemento da lista. 
+
+\begin{DoxyReturn}{Retorna}
+O ponteiro para o primeiro elemento da lista. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74                            \{}
+\DoxyCodeLine{75       \textcolor{keywordflow}{return} \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{76     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}\label{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que retorna o tamanho da lista. 
+
+\begin{DoxyReturn}{Retorna}
+O tamanho da lista. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{218                        \{}
+\DoxyCodeLine{219       \textcolor{keywordtype}{int} size = 0;}
+\DoxyCodeLine{220       \mbox{\hyperlink{classNo}{No<T>}}* current = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222       \textcolor{keywordflow}{while}(current != NULL) \{}
+\DoxyCodeLine{223         size++;}
+\DoxyCodeLine{224         current = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{225       \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227       \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{228     \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}\label{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que verifica se a lista está vazia. 
+
+\begin{DoxyReturn}{Retorna}
+true se a lista estiver vazia, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186                          \{}
+\DoxyCodeLine{187       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} == NULL)\{}
+\DoxyCodeLine{188         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{189       \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{190         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{191       \}}
+\DoxyCodeLine{192     \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_ad17f85be9bb5ce4739db3377849ee70b}\label{classListaDuplamenteEncadeada_ad17f85be9bb5ce4739db3377849ee70b}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!print@{print}}
+\index{print@{print}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que imprime os elementos da lista. Se a lista estiver vazia, uma mensagem informando isso é exibida. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{199                       \{}
+\DoxyCodeLine{200       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{201         std::cout << \textcolor{stringliteral}{"{}A lista está vazia."{}} << std::endl;}
+\DoxyCodeLine{202         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{203       \}}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205       \mbox{\hyperlink{classNo}{No<T>}}* current = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{206       \textcolor{keywordflow}{while} (current != NULL) \{}
+\DoxyCodeLine{207         std::cout << current-\/>\mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}} << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{208         current = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{209       \}}
+\DoxyCodeLine{210       std::cout << std::endl;}
+\DoxyCodeLine{211     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a0706e7da8b9025cb6a98e12ef2e35f42}\label{classListaDuplamenteEncadeada_a0706e7da8b9025cb6a98e12ef2e35f42}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!pushBack@{pushBack}}
+\index{pushBack@{pushBack}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushBack()}{pushBack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::push\+Back (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que adiciona um novo elemento no final da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & O valor do novo elemento a ser adicionado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                           \{}
+\DoxyCodeLine{126       \mbox{\hyperlink{classNo}{No<T>}}* newNo = \textcolor{keyword}{new} \mbox{\hyperlink{classNo}{No<T>}}(value);}
+\DoxyCodeLine{127         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{128           \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = newNo;}
+\DoxyCodeLine{129         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{130           \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}}-\/>next = newNo;}
+\DoxyCodeLine{131           newNo-\/>\mbox{\hyperlink{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}{prev}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}};}
+\DoxyCodeLine{132           \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = newNo;}
+\DoxyCodeLine{133         \}}
+\DoxyCodeLine{134     \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classListaDuplamenteEncadeada_a0706e7da8b9025cb6a98e12ef2e35f42_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a41c1f4bd9ac3b0a75bf18d1472c66f64}\label{classListaDuplamenteEncadeada_a41c1f4bd9ac3b0a75bf18d1472c66f64}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!pushFront@{pushFront}}
+\index{pushFront@{pushFront}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pushFront()}{pushFront()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::push\+Front (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que adiciona um novo elemento no início da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & O valor do novo elemento a ser adicionado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{109                            \{}
+\DoxyCodeLine{110       \mbox{\hyperlink{classNo}{No<T>}}* newNo = \textcolor{keyword}{new} \mbox{\hyperlink{classNo}{No<T>}}(value);}
+\DoxyCodeLine{111         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{112           \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = newNo;}
+\DoxyCodeLine{113         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{114           newNo-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{115           \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}}-\/>prev = newNo;}
+\DoxyCodeLine{116           \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = newNo;}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118     \}  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_aa69d8c626deb78c906d839f9404ea2ab}\label{classListaDuplamenteEncadeada_aa69d8c626deb78c906d839f9404ea2ab}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!removeBack@{removeBack}}
+\index{removeBack@{removeBack}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeBack()}{removeBack()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::remove\+Back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que remove o último elemento da lista. Se a lista estiver vazia, uma mensagem de erro é exibida. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                       \{}
+\DoxyCodeLine{164       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{165         std::cout << \textcolor{stringliteral}{"{}A lista está vazia."{}} << std::endl;}
+\DoxyCodeLine{166         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{167       \}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169       \mbox{\hyperlink{classNo}{No<T>}}* temp = \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}};}
+\DoxyCodeLine{170       \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}}-\/>prev;}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} == NULL)\{ \textcolor{comment}{//Caso só tenha um elemento}}
+\DoxyCodeLine{173         \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = NULL;}
+\DoxyCodeLine{174       \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{175         \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}}-\/>next = NULL;}
+\DoxyCodeLine{176       \}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178       \textcolor{keyword}{delete} temp;}
+\DoxyCodeLine{179     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a891195f7a0d6a42583b34fe4b6068e28}\label{classListaDuplamenteEncadeada_a891195f7a0d6a42583b34fe4b6068e28}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!removeFront@{removeFront}}
+\index{removeFront@{removeFront}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeFront()}{removeFront()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::remove\+Front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que remove o primeiro elemento da lista. Se a lista estiver vazia, uma mensagem de erro é exibida. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{141                        \{}
+\DoxyCodeLine{142       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{143         std::cout << \textcolor{stringliteral}{"{}A lista está vazia."{}} << std::endl;}
+\DoxyCodeLine{144         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{145       \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147       \mbox{\hyperlink{classNo}{No<T>}}* temp = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{148       \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}}-\/>next;}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150       \textcolor{keywordflow}{if} (\mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} == NULL)\{ \textcolor{comment}{//Caso só tenha um elemento}}
+\DoxyCodeLine{151         \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = NULL;}
+\DoxyCodeLine{152       \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{153         \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}}-\/>prev = NULL;}
+\DoxyCodeLine{154       \}}
+\DoxyCodeLine{155       \textcolor{keyword}{delete} temp;}
+\DoxyCodeLine{156     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_abeea4d2e76fca397e7ad5048d9ce3d65}\label{classListaDuplamenteEncadeada_abeea4d2e76fca397e7ad5048d9ce3d65}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!removeValue@{removeValue}}
+\index{removeValue@{removeValue}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{removeValue()}{removeValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::remove\+Value (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que remove um valor específico da lista. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em value} & O valor a ser removido. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se o valor foi removido com sucesso, false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{236                                     \{}
+\DoxyCodeLine{237       \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_a33bdec8304da84a90385565208807075}{isEmpty}}())\{}
+\DoxyCodeLine{238         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{239       \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241       \mbox{\hyperlink{classNo}{No<T>}}* current = \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}};}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243       \textcolor{comment}{// Caso o valor a ser removido esteja na cabeça da lista}}
+\DoxyCodeLine{244       \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}} == value)\{}
+\DoxyCodeLine{245         \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}} != NULL)\{}
+\DoxyCodeLine{248           \mbox{\hyperlink{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}{head}}-\/>prev = NULL;}
+\DoxyCodeLine{249         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{250           \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = NULL;}
+\DoxyCodeLine{251         \}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{253         \textcolor{keyword}{delete} current;}
+\DoxyCodeLine{254         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{255       \}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257       \textcolor{keywordflow}{while}(current != NULL) \{}
+\DoxyCodeLine{258         \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{classNo_ad4f5d2d85ae3e84f1a227b28e90e79df}{valor}} == value) \{}
+\DoxyCodeLine{259           \mbox{\hyperlink{classNo}{No<T>}}* prevNo = current-\/>\mbox{\hyperlink{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}{prev}};}
+\DoxyCodeLine{260           \mbox{\hyperlink{classNo}{No<T>}}* nextNo = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{261 }
+\DoxyCodeLine{262           \textcolor{keywordflow}{if}(prevNo != NULL) \{}
+\DoxyCodeLine{263             prevNo-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}} = nextNo;}
+\DoxyCodeLine{264           \}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266           \textcolor{keywordflow}{if}(nextNo != NULL) \{}
+\DoxyCodeLine{267             nextNo-\/>\mbox{\hyperlink{classNo_a3132ae32fc4eec2c2aa198d0e958b6ef}{prev}} = prevNo;}
+\DoxyCodeLine{268           \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{269             \mbox{\hyperlink{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}{tail}} = prevNo;}
+\DoxyCodeLine{270           \}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272           \textcolor{keyword}{delete} current;}
+\DoxyCodeLine{273           \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{274         \}}
+\DoxyCodeLine{275         current = current-\/>\mbox{\hyperlink{classNo_a13aa5eba9c8b3f5a23b88fb130bda239}{next}};}
+\DoxyCodeLine{276       \}}
+\DoxyCodeLine{277       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{278     \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classListaDuplamenteEncadeada_abeea4d2e76fca397e7ad5048d9ce3d65_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}\label{classListaDuplamenteEncadeada_acdf41cef5badad22aa74db29fb937765}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!head@{head}}
+\index{head@{head}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}\label{classListaDuplamenteEncadeada_a49dd26876ce4ef76746d8f18d63b9d24}} 
+\index{ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}!tail@{tail}}
+\index{tail@{tail}!ListaDuplamenteEncadeada$<$ T $>$@{ListaDuplamenteEncadeada$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tail}{tail}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classNo}{No}}$<$T$>$$\ast$ \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$\+::tail\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{estruturas__tads_8hpp}{estruturas\+\_\+tads.\+hpp}}\end{DoxyCompactItemize}

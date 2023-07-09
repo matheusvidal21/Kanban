@@ -1,3 +1,12 @@
+/**
+ * @file kanbanboard.cpp
+ * @brief Este arquivo contém a implementação da classe KanbanBoard.
+ * @author Isabela Gomes Mendes 
+ * @author Matheus Costa Vidal
+ * @since 14/06/2023
+ * @date 08/07/2023
+*/
+
 #include "../include/kanbanboard.h"
 
 // =========== IMPLEMENTANDO A CLASSE KANBAN BOARD ===========

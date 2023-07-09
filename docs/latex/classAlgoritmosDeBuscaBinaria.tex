@@ -1,0 +1,124 @@
+\hypertarget{classAlgoritmosDeBuscaBinaria}{}\doxysection{Referência do $<$em$>$Template$<$/em$>$ da Classe Algoritmos\+De\+Busca\+Binaria$<$ T $>$}
+\label{classAlgoritmosDeBuscaBinaria}\index{AlgoritmosDeBuscaBinaria$<$ T $>$@{AlgoritmosDeBuscaBinaria$<$ T $>$}}
+
+
+Template de classe para algoritmo de busca binária genérico.  
+
+
+
+
+{\ttfamily \#include $<$templates.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classAlgoritmosDeBuscaBinaria_aeb39a5ea84a348ea17fd45923ea3ae3a}{Busca\+Binaria\+Iterativa}} (\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&arr, int tamanho, T chave)
+\begin{DoxyCompactList}\small\item\em Realiza uma busca binária iterativa em uma lista ordenada. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classAlgoritmosDeBuscaBinaria_a618353cd9f3202b020a82e264afee421}{Busca\+Binaria\+Recursiva}} (\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&arr, int inicio, int fim, T chave)
+\begin{DoxyCompactList}\small\item\em Realiza uma busca binária recursiva em uma lista ordenada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class Algoritmos\+De\+Busca\+Binaria$<$ T $>$}
+
+Template de classe para algoritmo de busca binária genérico. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & O tipo de dado a ser buscado. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAlgoritmosDeBuscaBinaria_aeb39a5ea84a348ea17fd45923ea3ae3a}\label{classAlgoritmosDeBuscaBinaria_aeb39a5ea84a348ea17fd45923ea3ae3a}} 
+\index{AlgoritmosDeBuscaBinaria$<$ T $>$@{AlgoritmosDeBuscaBinaria$<$ T $>$}!BuscaBinariaIterativa@{BuscaBinariaIterativa}}
+\index{BuscaBinariaIterativa@{BuscaBinariaIterativa}!AlgoritmosDeBuscaBinaria$<$ T $>$@{AlgoritmosDeBuscaBinaria$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BuscaBinariaIterativa()}{BuscaBinariaIterativa()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classAlgoritmosDeBuscaBinaria}{Algoritmos\+De\+Busca\+Binaria}}$<$ T $>$\+::Busca\+Binaria\+Iterativa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&}]{arr,  }\item[{int}]{tamanho,  }\item[{T}]{chave }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Realiza uma busca binária iterativa em uma lista ordenada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arr} & A lista ordenada. \\
+\hline
+{\em tamanho} & O tamanho da lista. \\
+\hline
+{\em chave} & O valor a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O índice do valor encontrado ou -\/1 se não for encontrado. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193                                                                                             \{}
+\DoxyCodeLine{194         \textcolor{keywordtype}{int} inicio = 0;}
+\DoxyCodeLine{195         \textcolor{keywordtype}{int} fim = tamanho -\/ 1;}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197         \textcolor{keywordflow}{while}(inicio <= fim)\{}
+\DoxyCodeLine{198             \textcolor{keywordtype}{int} meio = (inicio + fim)/2;}
+\DoxyCodeLine{199             \textcolor{keywordflow}{if}(arr[meio] == chave)\{}
+\DoxyCodeLine{200                 \textcolor{keywordflow}{return} meio;}
+\DoxyCodeLine{201             \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(arr[meio] > chave)\{}
+\DoxyCodeLine{202                 fim = meio -\/ 1;}
+\DoxyCodeLine{203             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{204                 inicio = meio + 1;}
+\DoxyCodeLine{205             \}}
+\DoxyCodeLine{206         \}}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return} -\/1; \textcolor{comment}{// Retorna -\/1 se a chave não for encontrada}}
+\DoxyCodeLine{208     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classAlgoritmosDeBuscaBinaria_a618353cd9f3202b020a82e264afee421}\label{classAlgoritmosDeBuscaBinaria_a618353cd9f3202b020a82e264afee421}} 
+\index{AlgoritmosDeBuscaBinaria$<$ T $>$@{AlgoritmosDeBuscaBinaria$<$ T $>$}!BuscaBinariaRecursiva@{BuscaBinariaRecursiva}}
+\index{BuscaBinariaRecursiva@{BuscaBinariaRecursiva}!AlgoritmosDeBuscaBinaria$<$ T $>$@{AlgoritmosDeBuscaBinaria$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{BuscaBinariaRecursiva()}{BuscaBinariaRecursiva()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static int \mbox{\hyperlink{classAlgoritmosDeBuscaBinaria}{Algoritmos\+De\+Busca\+Binaria}}$<$ T $>$\+::Busca\+Binaria\+Recursiva (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ T $>$ \&}]{arr,  }\item[{int}]{inicio,  }\item[{int}]{fim,  }\item[{T}]{chave }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Realiza uma busca binária recursiva em uma lista ordenada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em arr} & A lista ordenada. \\
+\hline
+{\em inicio} & O índice de início da sublista. \\
+\hline
+{\em fim} & O índice de fim da sublista. \\
+\hline
+{\em chave} & O valor a ser buscado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O índice do valor encontrado ou -\/1 se não for encontrado. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{220                                                                                                     \{}
+\DoxyCodeLine{221         \textcolor{keywordflow}{if}(inicio > fim) \textcolor{keywordflow}{return} -\/1;\textcolor{comment}{// Retorna -\/1 se a chave não for encontrada}}
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223         \textcolor{keywordtype}{int} meio = (inicio+fim)/2;}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225         \textcolor{keywordflow}{if}(arr[meio] == chave)\{}
+\DoxyCodeLine{226             \textcolor{keywordflow}{return} meio;}
+\DoxyCodeLine{227         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(arr[meio] > chave)\{}
+\DoxyCodeLine{228             \textcolor{keywordflow}{return} \mbox{\hyperlink{classAlgoritmosDeBuscaBinaria_a618353cd9f3202b020a82e264afee421}{BuscaBinariaRecursiva}}(arr, inicio, (meio -\/ 1), chave);}
+\DoxyCodeLine{229         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{230             \textcolor{keywordflow}{return} \mbox{\hyperlink{classAlgoritmosDeBuscaBinaria_a618353cd9f3202b020a82e264afee421}{BuscaBinariaRecursiva}}(arr, (meio + 1), fim, chave);}
+\DoxyCodeLine{231         \}}
+\DoxyCodeLine{232     \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{templates_8hpp}{templates.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="KanbanBoard::removeTask" name="KanbanBoard::removeTask">
+<area shape="rect" id="node1" title="Método que exclui uma tarefa." alt="" coords="296,5,492,32"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,5,248,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,5,60,32"/>
+</map>

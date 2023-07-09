@@ -1,3 +1,12 @@
+/**
+ * @file menus.cpp
+ * @brief Este arquivo contém a implementação das funções que imprimem os menus.
+ * @author Isabela Gomes Mendes 
+ * @author Matheus Costa Vidal
+ * @since 14/06/2023
+ * @date 08/07/2023
+*/
+
 #include "../include/menus.h"
 
 // ==== MENU PRINCIPAL ====

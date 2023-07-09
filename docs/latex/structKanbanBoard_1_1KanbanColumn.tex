@@ -1,0 +1,99 @@
+\hypertarget{structKanbanBoard_1_1KanbanColumn}{}\doxysection{Referência da Estrutura Kanban\+Board\+::Kanban\+Column}
+\label{structKanbanBoard_1_1KanbanColumn}\index{KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}}
+
+
+Estrutura interna que representa uma coluna do quadro Kanban. Cada coluna possui um nome e uma lista duplamente encadeada de tarefas.  
+
+
+
+
+Diagrama de colaboração para Kanban\+Board\+::Kanban\+Column\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{structKanbanBoard_1_1KanbanColumn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_ad65db22137fe4c4d7211e200c7876b1e}{Kanban\+Column}} (const std\+::string \&column\+Name)
+\begin{DoxyCompactList}\small\item\em Construtor da estrutura \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} $>$ \& \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_aa70ad225040752cc10c94eb75c4efeeb}{get\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a lista de tarefas da coluna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a48304f90be7e54848711553b87510ec5}{name}}
+\item 
+\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} $>$ \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a3b32183eb126cf8b32588601b462ca3b}{tasks}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Estrutura interna que representa uma coluna do quadro Kanban. Cada coluna possui um nome e uma lista duplamente encadeada de tarefas. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{structKanbanBoard_1_1KanbanColumn_ad65db22137fe4c4d7211e200c7876b1e}\label{structKanbanBoard_1_1KanbanColumn_ad65db22137fe4c4d7211e200c7876b1e}} 
+\index{KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}!KanbanColumn@{KanbanColumn}}
+\index{KanbanColumn@{KanbanColumn}!KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}}
+\doxysubsubsection{\texorpdfstring{KanbanColumn()}{KanbanColumn()}}
+{\footnotesize\ttfamily Kanban\+Board\+::\+Kanban\+Column\+::\+Kanban\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor da estrutura \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column\+Name} & Nome da coluna. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70 : \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a48304f90be7e54848711553b87510ec5}{name}}(columnName) \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{structKanbanBoard_1_1KanbanColumn_aa70ad225040752cc10c94eb75c4efeeb}\label{structKanbanBoard_1_1KanbanColumn_aa70ad225040752cc10c94eb75c4efeeb}} 
+\index{KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}!getTasks@{getTasks}}
+\index{getTasks@{getTasks}!KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}}
+\doxysubsubsection{\texorpdfstring{getTasks()}{getTasks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$\mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}$>$\& Kanban\+Board\+::\+Kanban\+Column\+::get\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtém a lista de tarefas da coluna. 
+
+\begin{DoxyReturn}{Retorna}
+Referência para a lista de tarefas da coluna. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{78     \{}
+\DoxyCodeLine{79       \textcolor{keywordflow}{return} \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a3b32183eb126cf8b32588601b462ca3b}{tasks}};}
+\DoxyCodeLine{80     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{structKanbanBoard_1_1KanbanColumn_a48304f90be7e54848711553b87510ec5}\label{structKanbanBoard_1_1KanbanColumn_a48304f90be7e54848711553b87510ec5}} 
+\index{KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}!name@{name}}
+\index{name@{name}!KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Kanban\+Board\+::\+Kanban\+Column\+::name}
+
+\mbox{\Hypertarget{structKanbanBoard_1_1KanbanColumn_a3b32183eb126cf8b32588601b462ca3b}\label{structKanbanBoard_1_1KanbanColumn_a3b32183eb126cf8b32588601b462ca3b}} 
+\index{KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}!tasks@{tasks}}
+\index{tasks@{tasks}!KanbanBoard::KanbanColumn@{KanbanBoard::KanbanColumn}}
+\doxysubsubsection{\texorpdfstring{tasks}{tasks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$\mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}$>$ Kanban\+Board\+::\+Kanban\+Column\+::tasks}
+
+
+
+A documentação para essa estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{kanbanboard_8h}{kanbanboard.\+h}}\end{DoxyCompactItemize}

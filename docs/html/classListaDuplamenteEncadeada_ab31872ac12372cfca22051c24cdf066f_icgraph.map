@@ -1,0 +1,15 @@
+<map id="ListaDuplamenteEncadeada::get" name="ListaDuplamenteEncadeada::get">
+<area shape="rect" id="node1" title="Método para obter o elemento em um índice específico da lista." alt="" coords="847,187,1080,213"/>
+<area shape="rect" id="node2" href="$classAlgoritmosDeOrdenacao.html#af608538ac09a154c0bfcfdd27b05f7fa" title="Ordena a lista de forma crescente usando o Bubble Sort." alt="" coords="598,211,779,253"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,111,60,137"/>
+<area shape="rect" id="node6" href="$classKanbanBoard.html#a8b1a8c7ae9788d22aab51292b161d653" title="Método que verifica se um ID recebido já existe." alt="" coords="296,227,531,253"/>
+<area shape="rect" id="node7" href="$classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="603,379,774,405"/>
+<area shape="rect" id="node10" href="$classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f" title="Método que encontra a coluna de uma tarefa com base em seu ID." alt="" coords="579,328,799,355"/>
+<area shape="rect" id="node11" href="$classKanbanBoard.html#ad0cac8fde1059a5f0f3d2208a25752ee" title="Método que imprime as tarefas em uma coluna específica do Quadro Kanban." alt="" coords="315,52,512,79"/>
+<area shape="rect" id="node12" href="$classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="596,95,781,121"/>
+<area shape="rect" id="node13" href="$classAlgoritmosDeOrdenacao.html#ae686ed3ba3f4850c855710f0fc6950b8" title="Ordena a lista de forma decrescente usando o Selection Sort." alt="" coords="598,146,779,187"/>
+<area shape="rect" id="node3" href="$classKanbanBoard.html#a0c3f9292b3e44370fcdf66162beeef12" title="Método que ordena uma coluna escolhida com base na prioridade das taredas." alt="" coords="317,176,509,203"/>
+<area shape="rect" id="node4" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,201,248,228"/>
+<area shape="rect" id="node8" href="$classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="322,328,505,355"/>
+<area shape="rect" id="node9" href="$classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812" title="Método que exclui uma tarefa." alt="" coords="315,277,511,304"/>
+</map>

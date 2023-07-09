@@ -1,0 +1,5 @@
+<map id="KanbanBoard::saveToFileTxt" name="KanbanBoard::saveToFileTxt">
+<area shape="rect" id="node1" title="Método que salva o Quadro Kanban em um arquivo &#39;.txt&#39; para a visualizaçao." alt="" coords="5,31,212,57"/>
+<area shape="rect" id="node2" href="$classTask.html#aef987b238c10ab8427885a65f8ec23bc" title="Método getter que retorna a descrição da tarefa." alt="" coords="260,5,404,32"/>
+<area shape="rect" id="node3" href="$classTask.html#a2322021265eee6cc17865d0a832d712f" title="Método getter que retorna o título da tarefa." alt="" coords="273,56,391,83"/>
+</map>

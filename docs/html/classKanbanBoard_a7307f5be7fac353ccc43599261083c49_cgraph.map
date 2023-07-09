@@ -1,0 +1,4 @@
+<map id="KanbanBoard::isBoardEmpty" name="KanbanBoard::isBoardEmpty">
+<area shape="rect" id="node1" title="Método que verifica se o Quadro Kanban possui tarefas." alt="" coords="5,13,213,39"/>
+<area shape="rect" id="node2" href="$classListaDuplamenteEncadeada.html#a33bdec8304da84a90385565208807075" title="Método que verifica se a lista está vazia." alt="" coords="261,5,465,47"/>
+</map>

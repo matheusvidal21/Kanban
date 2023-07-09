@@ -1,3 +1,12 @@
+/**
+ * @file task.cpp
+ * @brief Este arquivo contém a implementação da classe abstrata Task.
+ * @author Isabela Gomes Mendes 
+ * @author Matheus Costa Vidal
+ * @since 14/06/2023
+ * @date 08/07/2023
+*/
+
 #include "../include/task.h"
 
 // =========== IMPLEMENTANDO A CLASSE TASK ===========

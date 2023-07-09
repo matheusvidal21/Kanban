@@ -1,0 +1,6 @@
+<map id="Task::getVencimento" name="Task::getVencimento">
+<area shape="rect" id="node1" title="Método getter que retorna a data de vencimento da tarefa." alt="" coords="529,5,687,32"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="296,5,481,32"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,5,248,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,5,60,32"/>
+</map>

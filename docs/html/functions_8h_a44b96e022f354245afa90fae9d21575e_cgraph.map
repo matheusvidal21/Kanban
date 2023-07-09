@@ -1,0 +1,44 @@
+<map id="executarOperacao" name="executarOperacao">
+<area shape="rect" id="node1" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="5,676,145,703"/>
+<area shape="rect" id="node2" href="$classKanbanBoard.html#a901d595d906b4532b32718f4d8e0757b" title="Método que adiciona uma tarefa a uma coluna específica do Quadro Kanban." alt="" coords="193,271,428,297"/>
+<area shape="rect" id="node4" href="$functions_8cpp.html#a1ea6093903cc01b2fec1e1db7f6bfe9d" title="Função que solicita ao usuário o número da coluna em que se deseja realizar alguma operação." alt="" coords="237,68,384,95"/>
+<area shape="rect" id="node5" href="$classKanbanBoard.html#aa7f6f54e145aa7c3cea1f0ab1d5585ae" title="Método que retorna o número de colunas do Quadro Kanban." alt="" coords="480,43,707,69"/>
+<area shape="rect" id="node6" href="$functions_8cpp.html#aad531f6562212b82c481588c13bfa284" title="Função que limpa o terminal em diferentes sistemas operacionais." alt="" coords="255,169,366,196"/>
+<area shape="rect" id="node7" href="$classKanbanBoard.html#a61a796eef245f4428d9a2ee90861742c" title="Método que verifica se uma coluna está vazia." alt="" coords="490,144,697,171"/>
+<area shape="rect" id="node9" href="$classKanbanBoard.html#a8b1a8c7ae9788d22aab51292b161d653" title="Método que verifica se um ID recebido já existe." alt="" coords="476,676,711,703"/>
+<area shape="rect" id="node13" href="$classKanbanBoard.html#a6a0df6660afcc91108d5f6ffd348251a" title="Método que encontra uma tarefa com base em seu ID." alt="" coords="508,407,679,433"/>
+<area shape="rect" id="node14" href="$classKanbanTask.html#af316e839e8504c7e956f7ee6196b8629" title="Método que retorna o título da tarefa junto com o ID." alt="" coords="504,575,683,601"/>
+<area shape="rect" id="node15" href="$functions_8cpp.html#a86d0de416ac3f84fbea7eafd2325946c" title="Função que solicita ao usuário a escolha de uma operação." alt="" coords="252,423,369,449"/>
+<area shape="rect" id="node16" href="$classKanbanBoard.html#a7307f5be7fac353ccc43599261083c49" title="Método que verifica se o Quadro Kanban possui tarefas." alt="" coords="489,220,697,247"/>
+<area shape="rect" id="node17" href="$classKanbanBoard.html#a8b2d80954ef37e1e067f432ad0d2ed34" title="Método que move uma tarefa de uma coluna para a outra." alt="" coords="219,372,402,399"/>
+<area shape="rect" id="node20" href="$classKanbanBoard.html#a13653cefc8ac7b1fb3b1b34e39c61b2b" title="Imprime o quadro Kanban." alt="" coords="218,524,403,551"/>
+<area shape="rect" id="node21" href="$classKanbanBoard.html#ad0cac8fde1059a5f0f3d2208a25752ee" title="Método que imprime as tarefas em uma coluna específica do Quadro Kanban." alt="" coords="212,625,409,652"/>
+<area shape="rect" id="node22" href="$menus_8h.html#a7ab907c433f9f51b038d0962c2159877" title="Imprime o menu para editar informações de uma tarefa." alt="" coords="247,676,374,703"/>
+<area shape="rect" id="node23" href="$menus_8h.html#a707396c394b23ba47a461a3423903a9b" title="Imprime o submenu para ordenar as tarefas." alt="" coords="241,727,381,753"/>
+<area shape="rect" id="node24" href="$menus_8h.html#af925906122711aca7c59ea138c248f0d" title="Imprime o submenu para salvar o quadro Kanban." alt="" coords="246,777,375,804"/>
+<area shape="rect" id="node25" href="$menus_8h.html#a3ebc3966cac22ea92469516f1f93c245" title="Imprime o submenu para editar uma tarefa." alt="" coords="247,828,375,855"/>
+<area shape="rect" id="node26" href="$classKanbanTask.html#af8db51050f3e27975c3bd6631ce3971e" title="Implementação do método virtual puro printTask() da classe base Task para imprimir os detalhes da tar..." alt="" coords="227,879,394,905"/>
+<area shape="rect" id="node27" href="$classKanbanBoard.html#a0c87862faa96b8225faeedc9de929812" title="Método que exclui uma tarefa." alt="" coords="213,473,409,500"/>
+<area shape="rect" id="node28" href="$classKanbanBoard.html#a0b38a51b177c2a45ec706cd98c8076a2" title="Salva as informações do Quadro Kanban em um arquivo &#39;.bin&#39;." alt="" coords="501,828,686,855"/>
+<area shape="rect" id="node33" href="$classKanbanBoard.html#ac52cb43d40eb69b8663f67ab4dc88647" title="Método que salva o Quadro Kanban em um arquivo &#39;.txt&#39; para a visualizaçao." alt="" coords="490,1047,697,1073"/>
+<area shape="rect" id="node34" href="$classTask.html#ae406177534ada5f25a57f87704f8b604" title="Método setter que define a descrição da tarefa." alt="" coords="239,1081,382,1108"/>
+<area shape="rect" id="node35" href="$classKanbanTask.html#a3176329dd62fafcd3a308dbc96a3ce54" title="Método setter que define o ID da tarefa." alt="" coords="241,1132,381,1159"/>
+<area shape="rect" id="node36" href="$classTask.html#aecc701a21bd98779172a1376dc03d096" title="Método setter que define a prioridade da tarefa." alt="" coords="238,1183,383,1209"/>
+<area shape="rect" id="node37" href="$classTask.html#a47f5d2599626b2dec1bc27be18adad09" title="Método setter que define o título da tarefa." alt="" coords="253,1233,369,1260"/>
+<area shape="rect" id="node38" href="$classTask.html#a5c248a9dae8386b36d896d607907e223" title="Método setter que define a data de vencimento da tarefa." alt="" coords="233,1284,389,1311"/>
+<area shape="rect" id="node39" href="$classKanbanBoard.html#a0c3f9292b3e44370fcdf66162beeef12" title="Método que ordena uma coluna escolhida com base na prioridade das taredas." alt="" coords="215,1031,407,1057"/>
+<area shape="rect" id="node3" href="$classListaDuplamenteEncadeada.html#a0706e7da8b9025cb6a98e12ef2e35f42" title="Método que adiciona um novo elemento no final da lista." alt="" coords="491,306,695,347"/>
+<area shape="rect" id="node8" href="$classListaDuplamenteEncadeada.html#a33bdec8304da84a90385565208807075" title="Método que verifica se a lista está vazia." alt="" coords="773,213,977,254"/>
+<area shape="rect" id="node10" href="$classListaDuplamenteEncadeada.html#ab31872ac12372cfca22051c24cdf066f" title="Método para obter o elemento em um índice específico da lista." alt="" coords="759,727,992,753"/>
+<area shape="rect" id="node11" href="$classKanbanTask.html#ad80bc5d5fd2e7866dc41d30452f04fe6" title="Método getter que retorna o ID da tarefa." alt="" coords="805,523,946,549"/>
+<area shape="rect" id="node12" href="$classListaDuplamenteEncadeada.html#ae2494348caf48de3d5b164c71f2dae73" title="Método que retorna o tamanho da lista." alt="" coords="773,639,977,681"/>
+<area shape="rect" id="node18" href="$classKanbanBoard.html#ae7f5eea9c72581a1e67621c65a43808f" title="Método que encontra a coluna de uma tarefa com base em seu ID." alt="" coords="483,457,703,484"/>
+<area shape="rect" id="node19" href="$classListaDuplamenteEncadeada.html#abeea4d2e76fca397e7ad5048d9ce3d65" title="Método que remove um valor específico da lista." alt="" coords="491,509,695,550"/>
+<area shape="rect" id="node29" href="$classTask.html#aef987b238c10ab8427885a65f8ec23bc" title="Método getter que retorna a descrição da tarefa." alt="" coords="803,929,947,956"/>
+<area shape="rect" id="node30" href="$classTask.html#a0da052621e550d4a26b0c3a276097cae" title="Método getter que retorna a prioridade da tarefa." alt="" coords="802,828,949,855"/>
+<area shape="rect" id="node31" href="$classTask.html#a2322021265eee6cc17865d0a832d712f" title="Método getter que retorna o título da tarefa." alt="" coords="817,879,934,905"/>
+<area shape="rect" id="node32" href="$classTask.html#a0fec1429f2e820fd564f9f13f0aec2e3" title="Método getter que retorna a data de vencimento da tarefa." alt="" coords="797,777,954,804"/>
+<area shape="rect" id="node40" href="$classAlgoritmosDeOrdenacao.html#af608538ac09a154c0bfcfdd27b05f7fa" title="Ordena a lista de forma crescente usando o Bubble Sort." alt="" coords="503,981,684,1022"/>
+<area shape="rect" id="node42" href="$classAlgoritmosDeOrdenacao.html#ae686ed3ba3f4850c855710f0fc6950b8" title="Ordena a lista de forma decrescente usando o Selection Sort." alt="" coords="503,915,684,957"/>
+<area shape="rect" id="node41" href="$classAlgoritmosDeOrdenacao.html#af0ac6625e3d403118691fd7808dbf6d4" title="Realiza a troca de duas tarefas." alt="" coords="785,981,966,1022"/>
+</map>

@@ -1,0 +1,297 @@
+\begin{quote}
+\+:construction\+: Projeto em finalização \+:construction\+: \end{quote}
+
+
+ 
+
+Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.
+
+
+
+ \hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md0}{}\doxysubsection{Índice}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md0}
+
+\begin{DoxyItemize}
+\item 🔨 \href{\#-funcionalidades-do-projeto}{\texttt{ Funcionalidades do projeto}}
+\item 📁 \href{\#-estrutura-do-projeto}{\texttt{ Estrutura do projeto}}
+\item 📊 \href{\#-diagrama-de-classes}{\texttt{ Diagrama de classes}}
+\item 💻 \href{\#-t\%C3\%A9cnicas-e-tecnologias-utilizadas}{\texttt{ Técnicas e tecnologias utilizadas}}
+\begin{DoxyItemize}
+\item 📚 \href{\#-bibliotecas}{\texttt{ Bibliotecas}}
+\item 🗃️ \href{\#\%EF\%B8\%8F-estruturas-de-tads-tipos-abstratos-de-dados}{\texttt{ Estruturas de TADs}}
+\item 🧩 \href{\#-templates}{\texttt{ Templates}}
+\end{DoxyItemize}
+\item 🔧 \href{\#-como-compilar}{\texttt{ Como compilar}}
+\item ⚠️ \href{\#\%EF\%B8\%8F-aviso}{\texttt{ Aviso}}
+\item 👥 \href{\#-autores}{\texttt{ Autores}}
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md1}{}\doxysection{🔨 Funcionalidades do projeto}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md1}
+  
+
+   
+
+O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Adicionar Coluna (Status)\+: 📊}} Os usuários podem adicionar novas colunas ao quadro Kanban para representar diferentes estados ou etapas do processo;
+\item {\bfseries{Adicionar Tarefas\+: ➕}} Os usuários podem adicionar novas tarefas ao quadro do Kanban, fornecendo informações como título, descrição, prioridade e data de vencimento;
+\item {\bfseries{Definir Prioridades\+: ⭐️}} Os usuários podem atribuir prioridades às tarefas, indicando sua importância ou urgência;
+\item {\bfseries{Agendar Datas\+: 📅}} Os usuários podem definir datas de vencimento ou prazos para as tarefas, ajudando a acompanhar o progresso e cumprir os prazos;
+\item {\bfseries{Movimentação de Tarefas\+: 🚀}} Os usuários poderão mover as tarefas entre as colunas do quadro Kanban, refletindo seu progresso e estágio atual;
+\item {\bfseries{Ordenação de Tarefas\+: 🔢}} O quadro Kanban oferece a opção de ordenar as tarefas de forma crescente ou decrescente com base em sua prioridade, permitindo uma melhor organização e visualização das tarefas mais importantes;
+\item {\bfseries{Editar Informações de uma Tarefa Existente\+: ✏️}} Os usuários podem editar as informações de uma tarefa existente no quadro Kanban, como título, descrição, prioridade ou data de vencimento;
+\item {\bfseries{Excluir uma Tarefa\+: 🗑️}} Os usuários podem remover uma tarefa do quadro Kanban, excluindo completamente suas informações;
+\item {\bfseries{Visualização Geral\+: 👀}} O aplicativo oferece uma visualização geral das tarefas, permitindo que os usuários vejam rapidamente todas as informações das tarefas em um único local, independentemente de sua localização no quadro Kanban;
+\item {\bfseries{Quadro Kanban\+: 📌}} O aplicativo exibirá as tarefas em um quadro Kanban, com colunas como \char`\"{}\+A fazer\char`\"{}, \char`\"{}\+Em progresso\char`\"{} e \char`\"{}\+Concluído\char`\"{}, permitindo que os usuários visualizem e gerenciem facilmente o status de cada tarefa;
+\item {\bfseries{Armazenamento em Arquivo Binário\+: 📁}} O quadro Kanban pode ser armazenado em um arquivo binário, permitindo salvar as informações do quadro para uso posterior;
+\item {\bfseries{Carregamento de Arquivo Binário\+: ⬆️}} Os usuários podem carregar as informações previamente salvas do quadro Kanban a partir de um arquivo binário, recuperando o estado anterior do quadro;
+\item {\bfseries{Gravação em Arquivo de Texto (txt)\+: 📝}} O aplicativo oferece a opção de exportar o quadro Kanban para um arquivo de texto, permitindo salvar as informações em um formato legível;
+\item {\bfseries{Interface de Linha de Comando\+: 💻}} O projeto tem uma interface de linha de comando (CLI) para interagir com o quadro Kanban, permitindo que os usuários executem ações e visualizem as informações por meio de comandos de texto.
+\end{DoxyItemize}
+
+Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e facilitar a adoção do Método Kanban em projetos com metodologias ágeis.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md2}{}\doxysection{📁 Estrutura do projeto}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item $\ast$$\ast$/bin\+:$\ast$$\ast$ Arquivos executáveis do projeto;
+\item $\ast$$\ast$/build\+:$\ast$$\ast$ Arquivos gerados e os arquivos objetos (.o);
+\item $\ast$$\ast$/data\+:$\ast$$\ast$ arquivos de dados salvos em binário (.bin) ou texto (.txt);
+\item $\ast$$\ast$/docs\+:$\ast$$\ast$ Documentação gerada em HTML, Latex e RTF, via Doxygen, incluindo o doxyfile;
+\item $\ast$$\ast$/imgs\+:$\ast$$\ast$ Imagens utilizada para a documentação;
+\item $\ast$$\ast$/include\+:$\ast$$\ast$ Arquivos cabeçalhos de extensão (.hpp) e (.h);
+\item $\ast$$\ast$/src\+:$\ast$$\ast$ Código fonte do projeto de arquivos (.cpp);
+\item $\ast$$\ast$.gitignore\+:$\ast$$\ast$ Arquivo do Git para ignorar arquivos no controle de versão;
+\item {\bfseries{Makefile\+:}} Comandos de compilação;
+\item {\bfseries{README.\+md\+:}} Documentação essencial do projeto em texto.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md3}{}\doxysection{📊 Diagrama de classes}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md3}
+O diagrama de classes UML é uma representação visual da estrutura e das relações entre as classes em um projeto. Ele fornece uma visão geral da organização das classes, seus atributos e métodos, bem como as associações, heranças e dependências entre elas. Este diagrama é uma ferramenta poderosa para entender a arquitetura do sistema, identificar as principais entidades e suas interações, e facilitar o desenvolvimento, a manutenção e a comunicação entre os membros da equipe. Se você deseja explorar mais detalhes do diagrama de classes \href{docs/diagrama/diagramaKanban.pdf}{\texttt{ clique aqui}} para ser redirecionado ao arquivo PDF correspondente.
+
+ 
+
+
+\begin{DoxyEnumerate}
+\item {\bfseries{\mbox{\hyperlink{classTask}{Task}}\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Classe abstrata que representa uma tarefa genérica;
+\item Possui atributos como titulo, descricao, prioridade e data\+Vencimento;
+\item Fornece construtores para criar tarefas com diferentes combinações de atributos;
+\item Possui métodos getters e setters para acessar e modificar os atributos;
+\item Define um método virtual puro print\+Task() para imprimir informações da tarefa, que será implementado pelas subclasses;
+\item Permite a criação de subclasses especializadas para tipos específicos de tarefas, como tarefas do Kanban.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{\mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Classe derivada da classe \mbox{\hyperlink{classTask}{Task}}, representando uma tarefa específica do Kanban;
+\item Adiciona o atributo ID à tarefa, identificando de forma única cada tarefa no quadro Kanban;
+\item Fornece construtores para criar tarefas Kanban com diferentes combinações de atributos;
+\item Sobrecarrega o operador de comparação \char`\"{}==\char`\"{} para comparar tarefas Kanban com base no ID;
+\item Sobrecarrega os operadores de inserção e extração para permitir a serialização da tarefa em arquivos;
+\item Possui métodos getters e setters para acessar e modificar o atributo ID;
+\item Implementa o método polimórfico print\+Task() para imprimir as informações da tarefa específicas do Kanban, incluindo o ID.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{\mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Classe responsável pelo gerenciamento do quadro Kanban;
+\item Representa um quadro Kanban que contém uma lista de colunas;
+\item Uma coluna representa uma Struct com o nome da coluna e uma lista de tarefas;
+\item Utiliza a classe \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}} para armazenar as tarefas e colunas;
+\item Fornece métodos para adicionar colunas ao quadro, adicionar tarefas a uma coluna específica, imprimir colunas e tarefas, mover tarefas entre colunas, ordenar colunas com base nas prioridades das tarefas, entre outros;
+\item Permite salvar o quadro Kanban em arquivos binários, carregar o quadro a partir de arquivos binários e salvar o quadro em um arquivo de texto para visualização;
+\item Oferece métodos para buscar tarefas pelo ID e localizar a coluna em que uma tarefa está localizada;
+\item Implementa funções auxiliares para verificar se o quadro ou uma coluna está vazio e se há IDs duplicados.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{Lista\+Duplamente\+Encadeada$<$\+T$>$\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Implementa uma lista duplamente encadeada;
+\item Utiliza os nós da classe \mbox{\hyperlink{classNo}{No}} para armazenar os elementos;
+\item Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da lista;
+\item Utilizado para criar uma Lista Duplamente Encadeada de colunas e de tarefas;
+\item Esse tópico é mais abordado em \href{\#\%EF\%B8\%8F-estruturas-de-tads-tipos-abstratos-de-dados}{\texttt{ Estruturas de TADs}}.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{Pilha$<$\+T$>$\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Implementa uma pilha utilizando uma lista encadeada;
+\item Utiliza os nós para armazenar os elementos da pilha;
+\item Possui um ponteiro para o elemento do topo (top) da pilha;
+\item Esse tópico é mais abordado em \href{\#\%EF\%B8\%8F-estruturas-de-tads-tipos-abstratos-de-dados}{\texttt{ Estruturas de TADs}}.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{Fila$<$\+T$>$\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Implementa uma fila utilizando uma lista encadeada;
+\item Utiliza os nós para armazenar os elementos da fila;
+\item Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da fila;
+\item Esse tópico é mais abordado em \href{\#\%EF\%B8\%8F-estruturas-de-tads-tipos-abstratos-de-dados}{\texttt{ Estruturas de TADs}}.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{Algoritmos\+De\+Ordenacao$<$\+T$>$\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Implementa algoritmos de ordenação genéricos, como Bubble Sort, Selection Sort e Merge Sort;
+\item Fornece métodos para realizar a ordenação de um array;
+\item Utilizado para ordenar as tarefas com base nas prioridades;
+\item Esse tópico é mais abordado em \href{\#-templates}{\texttt{ Templates}}.
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item {\bfseries{Algoritmos\+De\+Busca\+Binaria$<$\+T$>$\+:}} ~\newline
+
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item Implementa algoritmos de busca binária genéricos, incluindo versões iterativas e recursivas;
+\item Fornece métodos para buscar um elemento em um array ordenado e retornar o índice do elemento se encontrado.
+\item Esse tópico é mais abordado em \href{\#-templates}{\texttt{ Templates}}.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md4}{}\doxysection{💻 Técnicas e tecnologias utilizadas}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md4}
+         
+
+
+\begin{DoxyItemize}
+\item C++;
+\item VS Code;
+\item Doxygen;
+\item Makefile;
+\item Git \& Github;
+\item Diagrama UML;
+\item Modularização;
+\item Estrutura de dados;
+\item Código de escape ANSI;
+\item Separation of Concerns;
+\item Manipulação de arquivos;
+\item GNU Compiler Collection (GCC);
+\item Programação Orientada a Objetos.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md5}{}\doxysubsection{📚 Bibliotecas}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md5}
+
+\begin{DoxyItemize}
+\item {\bfseries{$<$iostream$>$\+:}} Biblioteca para entrada e saída de dados em C++;
+\item {\bfseries{$<$string$>$\+:}} Biblioteca para manipulação de strings;
+\item {\bfseries{$<$iomanip$>$\+:}} Biblioteca para formatação de saída;
+\item {\bfseries{$<$fstream$>$\+:}} Biblioteca para manipulação de arquivos;
+\item {\bfseries{$<$sstream$>$\+:}} Biblioteca para manipulação de strings como fluxos de entrada e saída;
+\item {\bfseries{$<$cstdlib$>$\+:}} Biblioteca para operações básicas no terminal;
+\item {\bfseries{$<$dirent.\+h$>$\+:}} Biblioteca para manipulação de diretórios em sistemas POSIX.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md6}{}\doxysubsection{🗃️ Estruturas de TADs (\+Tipos Abstratos de Dados)}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md6}
+Este assunto é implementado no arquivo \href{include/estruturas_tads.hpp}{\texttt{ estruturas\+\_\+tads.\+hpp}}. Consulte esse arquivo para obter mais detalhes e implementação relacionada.
+
+
+\begin{DoxyItemize}
+\item {\bfseries{🔗 Lista Duplamente Encadeada\+:}} ~\newline
+ Uma lista duplamente encadeada é uma estrutura de dados em que os nós são conectados em duas direções, por meio de ponteiros para o próximo nó e para o nó anterior. Isso significa que cada nó possui referências tanto para o nó anterior quanto para o próximo nó na sequência. Essa característica permite a navegação eficiente tanto para frente quanto para trás na lista. A lista duplamente encadeada oferece vantagens, como a capacidade de inserir e remover elementos de forma eficiente em qualquer posição, além de possibilitar a iteração reversa pelos elementos da lista. Os métodos da Lista Duplamente Encadeada são\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item {\ttfamily get\+Head()}\+: Retorna a \textquotesingle{}head\textquotesingle{} da lista; ~\newline
+
+\item {\ttfamily push\+Front()}\+: Adiciona um novo elemento no início da lista; ~\newline
+
+\item {\ttfamily push\+Back()}\+: Adiciona um novo elemento no final da lista; ~\newline
+
+\item {\ttfamily remove\+Front()}\+: Remove o primeiro elemento; ~\newline
+
+\item {\ttfamily remove\+Back()}\+: Remove o último elemento da lista; ~\newline
+
+\item {\ttfamily get()}\+: Retorna o valor do índice recebido; ~\newline
+
+\item {\ttfamily is\+Empity()}\+: Verifica se a lista está vazia; ~\newline
+
+\item {\ttfamily print()}\+: Imprime os elementos da lista; ~\newline
+
+\item {\ttfamily get\+Size()}\+: Retorna o tamanho da lista; ~\newline
+
+\item {\ttfamily remove\+Value()}\+: Remove um valor específico; ~\newline
+
+\item {\ttfamily clear()}\+: Remove todos os elementos da lista. ~\newline
+
+\end{DoxyEnumerate}
+\item {\bfseries{📚 \mbox{\hyperlink{classPilha}{Pilha}}}}\+: ~\newline
+ Uma pilha é uma estrutura de dados que segue a abordagem \char`\"{}último a entrar, primeiro a sair\char`\"{} (LIFO -\/ Last-\/\+In-\/\+First-\/\+Out). Os elementos são inseridos e removidos apenas em uma extremidade, chamada de topo da pilha. As operações básicas em uma pilha são {\ttfamily \char`\"{}push\char`\"{}} para adicionar um elemento no topo, {\ttfamily \char`\"{}pop\char`\"{}} para remover o elemento do topo, e {\ttfamily \char`\"{}peek\char`\"{}} para visualizar o elemento no topo sem removê-\/lo.
+\item {\bfseries{🚦 \mbox{\hyperlink{classFila}{Fila}}\+:}} ~\newline
+ Uma fila é uma estrutura de dados linear que segue a abordagem \char`\"{}primeiro a entrar, primeiro a sair\char`\"{} (FIFO -\/ First-\/\+In-\/\+First-\/\+Out). Os elementos são inseridos no final da fila e removidos do início da fila. As operações básicas em uma fila são {\ttfamily \char`\"{}enqueue\char`\"{}} para adicionar um elemento no final da fila e {\ttfamily \char`\"{}dequeue\char`\"{}} para remover o elemento do início da fila, e {\ttfamily \char`\"{}peek\char`\"{}} para visualizar o elemento na frente sem removê-\/lo. A fila segue um comportamento semelhante a uma fila real, onde o primeiro elemento a entrar é o primeiro a ser atendido.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md7}{}\doxysubsection{🧩 Templates}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md7}
+Este assunto é implementado no arquivo \href{include/templates.hpp}{\texttt{ templates.\+hpp}}. Consulte esse arquivo para obter mais detalhes e implementação relacionada. \hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md8}{}\doxysubsubsection{1. Algoritmos de Ordenação}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md8}
+
+\begin{DoxyItemize}
+\item {\bfseries{Bubble Sort\+:}} ~\newline
+ O Bubble Sort é um algoritmo de ordenação simples que percorre repetidamente a lista a ser ordenada, comparando pares de elementos adjacentes e realizando trocas se estiverem fora de ordem. Esse processo de comparação e troca é repetido até que a lista esteja completamente ordenada. O Bubble Sort possui uma complexidade de tempo de execução quadrática, ou seja, {\bfseries{O(n²)}}, onde \char`\"{}n\char`\"{} é o tamanho da lista. Isso significa que o tempo de execução do algoritmo aumenta rapidamente à medida que o tamanho da lista aumenta.
+\item {\bfseries{Selection Sort\+:}} ~\newline
+ O Selection Sort é um algoritmo de ordenação simples e intuitivo. Ele funciona selecionando repetidamente o elemento de menor valor da lista não ordenada e colocando-\/o no início da lista ordenada. Esse processo é repetido até que toda a lista esteja ordenada. O Selection Sort é eficiente para listas de tamanho pequeno a moderado, mas possui uma complexidade de tempo quadrática {\bfseries{O(n²)}}, o que o torna menos eficiente em grandes conjuntos de dados. \mbox{\hyperlink{classNo}{No}} entanto, sua simplicidade e facilidade de implementação o tornam uma opção viável em certos cenários.
+\item {\bfseries{Merge Sort\+:}} ~\newline
+ O Merge Sort é um algoritmo de ordenação eficiente e baseado no princípio \char`\"{}dividir para conquistar\char`\"{}. Ele divide a lista não ordenada em sublistas menores, recursivamente ordena cada sublista e, em seguida, combina as sublistas ordenadas para obter a lista final ordenada. O processo de combinação envolve mesclar duas sublistas ordenadas em uma única lista ordenada. O Merge Sort possui uma complexidade de tempo de {\bfseries{O(n log n)}}, tornando-\/o adequado para lidar com grandes conjuntos de dados. Sua eficiência e estabilidade tornam o Merge Sort uma opção popular em muitas aplicações de ordenação.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md9}{}\doxysubsubsection{2. Algoritmo de busca binária}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md9}
+A busca binária é um algoritmo eficiente para encontrar um elemento em uma lista ordenada. Ele divide repetidamente a lista ao meio e compara o elemento buscado com o elemento do meio. Se forem iguais, a busca é concluída. Caso contrário, a busca continua na metade superior ou inferior da lista, dependendo da comparação. Esse processo é repetido até encontrar o elemento ou reduzir a lista a zero. A busca binária tem uma complexidade de tempo de {\bfseries{O(log n)}}, tornando-\/a mais rápida que a busca linear para listas grandes. \mbox{\hyperlink{classNo}{No}} entanto, requer uma lista ordenada para funcionar corretamente.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md10}{}\doxysection{🔧 Como compilar?}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md10}
+O projeto utiliza um Makefile para automatizar o processo de compilação e criação do executável. O Makefile define o compilador, as opções de compilação e os diretórios para os arquivos objeto e executável. Siga as etapas abaixo para compilar o projeto usando o Makefile fornecido\+:\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md11}{}\doxysubsection{Pré-\/requisitos}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md11}
+Certifique-\/se de ter o compilador g++ instalado em seu sistema antes de prosseguir.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md12}{}\doxysubsubsection{Passo 1\+: Obtenha o código-\/fonte}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md12}
+Clone o repositório do projeto em seu ambiente local ou faça o download dos arquivos fonte em um diretório de sua escolha.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md13}{}\doxysubsubsection{Passo 2\+: Navegue para o diretório do projeto}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md13}
+Abra um terminal e navegue até o diretório raiz do projeto usando o comando cd\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd caminho/para/o/diretorio/do/projeto}
+
+\end{DoxyCode}
+\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md14}{}\doxysubsubsection{Passo 3\+: Compile o projeto}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md14}
+Execute o seguinte comando para compilar o projeto\+: ~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make all}
+
+\end{DoxyCode}
+ ~\newline
+ Isso irá compilar o código-\/fonte, criar os arquivos objeto (.o) na pasta \char`\"{}/build\char`\"{}, e gerar o executável na pasta \char`\"{}/bin\char`\"{}.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md15}{}\doxysubsubsection{Passo 4\+: Execute o programa}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md15}
+Após a compilação bem-\/sucedida, você pode executar o programa usando o seguinte comando\+:~\newline
+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make run}
+
+\end{DoxyCode}
+ ~\newline
+ Isso executará o programa com base no executável gerado.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md16}{}\doxysubsection{Compilando com um único comando}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md16}
+Execute esse comando para limpar os arquivos, compilar os arquivos novamente e, em seguida, executar o programa. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make build}
+
+\end{DoxyCode}
+ ~\newline
+\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md17}{}\doxysubsection{Comandos Disponíveis}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md17}
+{\ttfamily make}\+: ~\newline
+ Cria os diretórios necessários se ainda não existirem.
+
+{\ttfamily make all}\+: ~\newline
+ Compila o projeto, criando os arquivos objeto e o executável. Os diretórios necessários serão criados automaticamente, se ainda não existirem.
+
+{\ttfamily make run}\+: ~\newline
+ Executa o programa após a compilação. Certifique-\/se de ter compilado o projeto antes de executar este comando.
+
+{\ttfamily make build}\+: ~\newline
+ O comando \textquotesingle{}make build\textquotesingle{} compila, executa e limpa os arquivos, proporcionando um processo completo para construir e executar o programa.
+
+{\ttfamily make clean}\+: ~\newline
+ Remove todos os arquivos gerados durante a compilação, incluindo arquivos objeto, arquivo executável e os diretórios.
+
+{\ttfamily make clean\+\_\+files}\+:~\newline
+ Remove apenas os arquivos gerados durante a compilação, mantendo os diretórios de build e bin.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md18}{}\doxysubsubsection{Em caso de dúvidas}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md18}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make help}
+
+\end{DoxyCode}
+ Utilize esse comando para exibir um guia de ajuda com uma lista dos comandos disponíveis, fornecendo informações sobre como utilizar o Makefile de forma eficaz.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md19}{}\doxysubsection{Observações}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md19}
+
+\begin{DoxyItemize}
+\item Certifique-\/se de que o arquivo Makefile esteja no diretório raiz do projeto antes de executar os comandos;
+\item Após a compilação bem-\/sucedida, o arquivo executável kanban será criado no diretório bin;
+\item Ao executar o programa com o comando make run, certifique-\/se de estar no diretório raiz do projeto.
+\end{DoxyItemize}\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md20}{}\doxysection{⚠️ Aviso}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md20}
+Este projeto utiliza o terminal para imprimir e receber dados, o que pode resultar em desalinhamentos em alguns terminais, dependendo de suas configurações individuais. Gostaríamos de ressaltar que isso é uma limitação inerente ao uso de terminais e está além do controle deste projeto. Além disso, o projeto também utiliza sequências de escape ANSI para exibir cores no terminal. \mbox{\hyperlink{classNo}{No}} entanto, é importante notar que nem todos os terminais ou sistemas operacionais suportam totalmente a exibição de fonte colorida com ANSI. Se você encontrar problemas com a exibição das cores ou caracteres estranhos, verifique se o seu terminal é compatível com a exibição de ANSI ou considere utilizar outro terminal que suporte essa funcionalidade. Caso contrário, o texto será exibido sem as cores especificadas ou com desalinhamentos. Se for necessário, é possível ajustar a largura das palavras exibidas no gerenciador, você pode modificar o espaçamento entre as colunas no arquivo \href{src/kanbanboard.cpp}{\texttt{ kanbanboard.\+cpp}}, mais precisamente no método \char`\"{}print\+Board()\char`\"{}.\hypertarget{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md21}{}\doxysection{👥 Autores}\label{md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README_autotoc_md21}
+$\vert$ \href{https://github.com/cyberisa}{\texttt{ \textsubscript{Isabela Gomes}}} $\vert$ \href{https://github.com/matheusvidal21}{\texttt{ \textsubscript{Matheus Vidal}}} $\vert$ $\vert$ \+:---\+: $\vert$ \+:---\+: $\vert$ 

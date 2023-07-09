@@ -1,0 +1,6 @@
+<map id="KanbanBoard::getNumColumns" name="KanbanBoard::getNumColumns">
+<area shape="rect" id="node1" title="Método que retorna o número de colunas do Quadro Kanban." alt="" coords="491,56,717,83"/>
+<area shape="rect" id="node2" href="$functions_8h.html#a1ea6093903cc01b2fec1e1db7f6bfe9d" title="Função que solicita ao usuário o número da coluna em que se deseja realizar alguma operação." alt="" coords="296,5,443,32"/>
+<area shape="rect" id="node3" href="$functions_8h.html#a44b96e022f354245afa90fae9d21575e" title="Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban." alt="" coords="108,56,248,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o programa do gerenciador de tarefas Kanban." alt="" coords="5,81,60,108"/>
+</map>

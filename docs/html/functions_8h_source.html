@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kanban: Código-Fonte de /home/isa/Área de Trabalho/Kanban/include/functions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logodoxygen.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kanban
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">functions.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="functions_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef FUNCTIONS_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define FUNCTIONS_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span> </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;dirent.h&gt;</span> </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="menus_8h.html">menus.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kanbanboard_8h.html">kanbanboard.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="estruturas__tads_8hpp.html">estruturas_tads.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="templates_8hpp.html">templates.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Definição de cores</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="functions_8h.html#af77a445894f2f750d43cf2182cd29e55">   21</a></span>&#160;<span class="preprocessor">#define ANSI_RESET &quot;\033[0m&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="functions_8h.html#a7f026776e12ac1b5e7736c24b756085d">   22</a></span>&#160;<span class="preprocessor">#define ANSI_RED &quot;\033[31m&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="functions_8h.html#ad050fd71ced44460a0c723a1715c40e5">   23</a></span>&#160;<span class="preprocessor">#define ANSI_GREEN &quot;\033[32m&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="functions_8h.html#af6e8b5c7b35e8bff4c581efd8019c798">   24</a></span>&#160;<span class="preprocessor">#define ANSI_YELLOW &quot;\033[33m&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="functions_8h.html#a50a197ede59d7694515c3dad4557cf00">   25</a></span>&#160;<span class="preprocessor">#define ANSI_BLUE &quot;\033[34m&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="classListaDuplamenteEncadeada.html">ListaDuplamenteEncadeada&lt;std::string&gt;</a> <a class="code" href="functions_8h.html#aa1fbbb2203c4879b8bf3566732284ac3">listarArquivos</a>(<span class="keyword">const</span> std::string&amp; pasta);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">int</span> <a class="code" href="functions_8h.html#ae0e51e3688204d8be9b0c6fc6786585f">receiveNumColumns</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a90237cd431706bf89edc6d2df56555d9">receiveColumns</a>(<a class="code" href="classKanbanBoard.html">KanbanBoard</a> *kanbanBoard, <span class="keywordtype">int</span> numColunas);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a228d1e0c636daad6578c44e22644fbc5">stringMaiusculo</a>(std::string &amp;texto);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#aad531f6562212b82c481588c13bfa284">clearTerminal</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">int</span> <a class="code" href="functions_8h.html#a1ea6093903cc01b2fec1e1db7f6bfe9d">askForValidColumn</a>(<span class="keyword">const</span> <a class="code" href="classKanbanBoard.html">KanbanBoard</a> &amp;kanbanBoard, <span class="keywordtype">int</span> flag);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keywordtype">int</span> <a class="code" href="functions_8h.html#a86d0de416ac3f84fbea7eafd2325946c">getUserChoice</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="keywordtype">void</span> <a class="code" href="functions_8h.html#a44b96e022f354245afa90fae9d21575e">executarOperacao</a>(<span class="keywordtype">int</span> choice, <a class="code" href="classKanbanBoard.html">KanbanBoard</a> *kanbanBoard);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassKanbanBoard_html"><div class="ttname"><a href="classKanbanBoard.html">KanbanBoard</a></div><div class="ttdoc">Classe KanbanBoard representa o Quadro Kanban que contém colunas e tarefas.</div><div class="ttdef"><b>Definition:</b> kanbanboard.h:54</div></div>
+<div class="ttc" id="aclassListaDuplamenteEncadeada_html"><div class="ttname"><a href="classListaDuplamenteEncadeada.html">ListaDuplamenteEncadeada</a></div><div class="ttdoc">Classe que implementa uma lista duplamente encadeada.</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:48</div></div>
+<div class="ttc" id="aestruturas__tads_8hpp_html"><div class="ttname"><a href="estruturas__tads_8hpp.html">estruturas_tads.hpp</a></div><div class="ttdoc">Implementação de templates dos Tipos Abstratos de Dados: Lista Duplamente Encadeada,...</div></div>
+<div class="ttc" id="afunctions_8h_html_a1ea6093903cc01b2fec1e1db7f6bfe9d"><div class="ttname"><a href="functions_8h.html#a1ea6093903cc01b2fec1e1db7f6bfe9d">askForValidColumn</a></div><div class="ttdeci">int askForValidColumn(const KanbanBoard &amp;kanbanBoard, int flag)</div><div class="ttdoc">Função que solicita ao usuário o número da coluna em que se deseja realizar alguma operação.</div><div class="ttdef"><b>Definition:</b> functions.cpp:92</div></div>
+<div class="ttc" id="afunctions_8h_html_a228d1e0c636daad6578c44e22644fbc5"><div class="ttname"><a href="functions_8h.html#a228d1e0c636daad6578c44e22644fbc5">stringMaiusculo</a></div><div class="ttdeci">void stringMaiusculo(std::string &amp;texto)</div><div class="ttdoc">Função que converte uma string em letras maiúsculas.</div><div class="ttdef"><b>Definition:</b> functions.cpp:68</div></div>
+<div class="ttc" id="afunctions_8h_html_a44b96e022f354245afa90fae9d21575e"><div class="ttname"><a href="functions_8h.html#a44b96e022f354245afa90fae9d21575e">executarOperacao</a></div><div class="ttdeci">void executarOperacao(int choice, KanbanBoard *kanbanBoard)</div><div class="ttdoc">Essa função é um grande switch case utilizado para manejar as operações no Quadro Kanban.</div><div class="ttdef"><b>Definition:</b> functions.cpp:142</div></div>
+<div class="ttc" id="afunctions_8h_html_a86d0de416ac3f84fbea7eafd2325946c"><div class="ttname"><a href="functions_8h.html#a86d0de416ac3f84fbea7eafd2325946c">getUserChoice</a></div><div class="ttdeci">int getUserChoice()</div><div class="ttdoc">Função que solicita ao usuário a escolha de uma operação.</div><div class="ttdef"><b>Definition:</b> functions.cpp:132</div></div>
+<div class="ttc" id="afunctions_8h_html_a90237cd431706bf89edc6d2df56555d9"><div class="ttname"><a href="functions_8h.html#a90237cd431706bf89edc6d2df56555d9">receiveColumns</a></div><div class="ttdeci">void receiveColumns(KanbanBoard *kanbanBoard, int numColunas)</div><div class="ttdoc">Solicita ao usuário os nomes das colunas do quadro Kanban.</div><div class="ttdef"><b>Definition:</b> functions.cpp:53</div></div>
+<div class="ttc" id="afunctions_8h_html_aa1fbbb2203c4879b8bf3566732284ac3"><div class="ttname"><a href="functions_8h.html#aa1fbbb2203c4879b8bf3566732284ac3">listarArquivos</a></div><div class="ttdeci">ListaDuplamenteEncadeada&lt; std::string &gt; listarArquivos(const std::string &amp;pasta)</div><div class="ttdoc">Função que retorna uma lista dos arquivos em uma pasta. Utilizado para listar os nomes dos arquivos (...</div><div class="ttdef"><b>Definition:</b> functions.cpp:14</div></div>
+<div class="ttc" id="afunctions_8h_html_aad531f6562212b82c481588c13bfa284"><div class="ttname"><a href="functions_8h.html#aad531f6562212b82c481588c13bfa284">clearTerminal</a></div><div class="ttdeci">void clearTerminal()</div><div class="ttdoc">Função que limpa o terminal em diferentes sistemas operacionais.</div><div class="ttdef"><b>Definition:</b> functions.cpp:81</div></div>
+<div class="ttc" id="afunctions_8h_html_ae0e51e3688204d8be9b0c6fc6786585f"><div class="ttname"><a href="functions_8h.html#ae0e51e3688204d8be9b0c6fc6786585f">receiveNumColumns</a></div><div class="ttdeci">int receiveNumColumns()</div><div class="ttdoc">Solicita ao usuário qual número de colunas do Quadro Kanban que o mesmo deseja.</div><div class="ttdef"><b>Definition:</b> functions.cpp:41</div></div>
+<div class="ttc" id="akanbanboard_8h_html"><div class="ttname"><a href="kanbanboard_8h.html">kanbanboard.h</a></div><div class="ttdoc">Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban.</div></div>
+<div class="ttc" id="amenus_8h_html"><div class="ttname"><a href="menus_8h.html">menus.h</a></div><div class="ttdoc">Este arquivo contém funções para imprimir os menus de operações do Quadro Kanban.</div></div>
+<div class="ttc" id="atemplates_8hpp_html"><div class="ttname"><a href="templates_8hpp.html">templates.hpp</a></div><div class="ttdoc">Código-fonte auxiliar com templates genéricos de algoritmos de ordenação e busca.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="functions_8h.html">functions.h</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

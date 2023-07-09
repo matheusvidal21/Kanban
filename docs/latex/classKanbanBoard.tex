@@ -1,0 +1,1134 @@
+\hypertarget{classKanbanBoard}{}\doxysection{Referência da Classe Kanban\+Board}
+\label{classKanbanBoard}\index{KanbanBoard@{KanbanBoard}}
+
+
+Classe \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} representa o Quadro Kanban que contém colunas e tarefas.  
+
+
+
+
+{\ttfamily \#include $<$kanbanboard.\+h$>$}
+
+
+
+Diagrama de colaboração para Kanban\+Board\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classKanbanBoard__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}
+\begin{DoxyCompactList}\small\item\em Estrutura interna que representa uma coluna do quadro Kanban. Cada coluna possui um nome e uma lista duplamente encadeada de tarefas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKanbanBoard_a059bfee7806ea52a72a9bb9b48868f4d}{Kanban\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKanbanBoard_a18c629c5ed060609c35259bf9cdd9d32}{$\sim$\+Kanban\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor padrão da classe \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0}{add\+Column}} (const std\+::string \&column\+Name)
+\begin{DoxyCompactList}\small\item\em Método que adiciona uma nova coluna ao Quadro Kanban. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b}{add\+Task\+To\+Column}} (int column\+Index, const \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} \&task)
+\begin{DoxyCompactList}\small\item\em Método que adiciona uma tarefa a uma coluna específica do Quadro Kanban. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}{print\+Column}} (int column\+Index) const
+\begin{DoxyCompactList}\small\item\em Método que imprime as tarefas em uma coluna específica do Quadro Kanban. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_a8b2d80954ef37e1e067f432ad0d2ed34}{move\+Task}} (int task\+Id, int idcoluna\+Destino)
+\begin{DoxyCompactList}\small\item\em Método que move uma tarefa de uma coluna para a outra. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}{sort\+Column}} (int column\+Index, int flag)
+\begin{DoxyCompactList}\small\item\em Método que ordena uma coluna escolhida com base na prioridade das taredas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae}{get\+Num\+Columns}} () const
+\begin{DoxyCompactList}\small\item\em Método que retorna o número de colunas do Quadro Kanban. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKanbanBoard_a0c87862faa96b8225faeedc9de929812}{remove\+Task}} (int task\+Id)
+\begin{DoxyCompactList}\small\item\em Método que exclui uma tarefa. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKanbanBoard_a7307f5be7fac353ccc43599261083c49}{is\+Board\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Método que verifica se o Quadro Kanban possui tarefas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c}{column\+Empty}} (int column\+Index) const
+\begin{DoxyCompactList}\small\item\em Método que verifica se uma coluna está vazia. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653}{existe\+Id\+Duplicado}} (int id) const
+\begin{DoxyCompactList}\small\item\em Método que verifica se um ID recebido já existe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}{print\+Board}} () const
+\begin{DoxyCompactList}\small\item\em Imprime o quadro Kanban. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2}{save\+To\+File}} (const std\+::string \&filename) const
+\begin{DoxyCompactList}\small\item\em Salva as informações do Quadro Kanban em um arquivo \textquotesingle{}.bin\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_af172b2c66ddd65f49ba2f4aa765a7480}{load\+From\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Lê um Quadro Kanban a partir de um arquivo \textquotesingle{}.bin\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classKanbanBoard_ac52cb43d40eb69b8663f67ab4dc88647}{save\+To\+File\+Txt}} (const std\+::string \&file\+Name) const
+\begin{DoxyCompactList}\small\item\em Método que salva o Quadro Kanban em um arquivo \textquotesingle{}.txt\textquotesingle{} para a visualizaçao. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} $\ast$ \mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{find\+Task}} (int id)
+\begin{DoxyCompactList}\small\item\em Método que encontra uma tarefa com base em seu ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}} $\ast$ \mbox{\hyperlink{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f}{find\+Task\+Column}} (int task\+Id) const
+\begin{DoxyCompactList}\small\item\em Método que encontra a coluna de uma tarefa com base em seu ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$ \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}} $>$ \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}} representa o Quadro Kanban que contém colunas e tarefas. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   \textcolor{keyword}{struct }KanbanColumn\{}
+\DoxyCodeLine{     std::string \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a48304f90be7e54848711553b87510ec5}{name}};}
+\DoxyCodeLine{     \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<KanbanTask>}} \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a3b32183eb126cf8b32588601b462ca3b}{tasks}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_ad65db22137fe4c4d7211e200c7876b1e}{KanbanColumn}}(\textcolor{keyword}{const} std::string\& columnName) : \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a48304f90be7e54848711553b87510ec5}{name}}(columnName) \{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{   \textcolor{comment}{// Método para obter a lista de tarefas da coluna}}
+\DoxyCodeLine{    \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<KanbanTask>}}\& \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_aa70ad225040752cc10c94eb75c4efeeb}{getTasks}}()}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{        \textcolor{keywordflow}{return} \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn_a3b32183eb126cf8b32588601b462ca3b}{tasks}};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{  \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<KanbanColumn>}} \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}};}
+
+\end{DoxyCode}
+
+
+Essa classe possui dois atributos privados que merecem menção especial\+:
+\begin{DoxyEnumerate}
+\item Struct \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}} Esse struct foi construído afim de definir uma coluna do Quadro Kanban, possui dois membros\+:
+\begin{DoxyItemize}
+\item Uma string \char`\"{}nome\char`\"{} que armazena o nome da coluna
+\item Uma lista duplamente encadeada do tipo \char`\"{}\+Kanban\+Task\char`\"{} que armazena as tarefas associadas a coluna
+\end{DoxyItemize}
+\item Lista duplamente encadeada \char`\"{}columns\char`\"{} Essa é uma lista encadeada do tipo \char`\"{}\+Kanban\+Column\char`\"{}, ou seja, uma lista de colunas composta pelo struct \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}, que por sua vez contém uma lista de tarefas. 
+\end{DoxyEnumerate}
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classKanbanBoard_a059bfee7806ea52a72a9bb9b48868f4d}\label{classKanbanBoard_a059bfee7806ea52a72a9bb9b48868f4d}} 
+\index{KanbanBoard@{KanbanBoard}!KanbanBoard@{KanbanBoard}}
+\index{KanbanBoard@{KanbanBoard}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{KanbanBoard()}{KanbanBoard()}}
+{\footnotesize\ttfamily Kanban\+Board\+::\+Kanban\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classKanbanBoard_a18c629c5ed060609c35259bf9cdd9d32}\label{classKanbanBoard_a18c629c5ed060609c35259bf9cdd9d32}} 
+\index{KanbanBoard@{KanbanBoard}!````~KanbanBoard@{$\sim$KanbanBoard}}
+\index{````~KanbanBoard@{$\sim$KanbanBoard}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{$\sim$KanbanBoard()}{~KanbanBoard()}}
+{\footnotesize\ttfamily Kanban\+Board\+::$\sim$\+Kanban\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor padrão da classe \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0}\label{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0}} 
+\index{KanbanBoard@{KanbanBoard}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::add\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{column\+Name }\end{DoxyParamCaption})}
+
+
+
+Método que adiciona uma nova coluna ao Quadro Kanban. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column\+Name} & String de referência ao nome escolhido pelo usuário para a coluna.\\
+\hline
+\end{DoxyParams}
+Cria-\/se um novo struct \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}} com o nome passado como parâmetro e adiciona-\/se o mesmo ao final da lista encadeada \char`\"{}columns\char`\"{} com o método pushback. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21   KanbanColumn column(columnName);}
+\DoxyCodeLine{22   \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.pushBack(column);}
+\DoxyCodeLine{23 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b}\label{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b}} 
+\index{KanbanBoard@{KanbanBoard}!addTaskToColumn@{addTaskToColumn}}
+\index{addTaskToColumn@{addTaskToColumn}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{addTaskToColumn()}{addTaskToColumn()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::add\+Task\+To\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index,  }\item[{const \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} \&}]{task }\end{DoxyParamCaption})}
+
+
+
+Método que adiciona uma tarefa a uma coluna específica do Quadro Kanban. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column\+Index} & Índice da coluna em que deseja-\/se adicionar a tarefa. \\
+\hline
+{\em task} & Variável do tipo \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}, que contém a tarefa que será adicionada a uma coluna.\\
+\hline
+\end{DoxyParams}
+A lógica proposta é de através do índice informado descobrir a coluna de destino e adicionar a tarefa através do método push back. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28   KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(columnIndex); \textcolor{comment}{// Retorna a coluna desejada}}
+\DoxyCodeLine{29   column.tasks.pushBack(task);}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c}\label{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c}} 
+\index{KanbanBoard@{KanbanBoard}!columnEmpty@{columnEmpty}}
+\index{columnEmpty@{columnEmpty}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{columnEmpty()}{columnEmpty()}}
+{\footnotesize\ttfamily bool Kanban\+Board\+::column\+Empty (\begin{DoxyParamCaption}\item[{int}]{column\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Método que verifica se uma coluna está vazia. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column\+Index} & Índice da coluna em que deseja-\/se realizar a verificação.\\
+\hline
+\end{DoxyParams}
+Após obter a coluna através do seu índice, usa-\/se o método de lista duplamente encadeada is\+Empty(). \begin{DoxyReturn}{Retorna}
+true caso a coluna esteja vazia e false caso a coluna já possua tarefas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134   \textcolor{keyword}{const} KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(columnIndex);}
+\DoxyCodeLine{135   \textcolor{keywordflow}{if} (column.tasks.isEmpty())}
+\DoxyCodeLine{136   \{}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{138   \}}
+\DoxyCodeLine{139   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{140   \{}
+\DoxyCodeLine{141     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{142   \}}
+\DoxyCodeLine{143 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a61a796eef245f4428d9a2ee90861742c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653}\label{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653}} 
+\index{KanbanBoard@{KanbanBoard}!existeIdDuplicado@{existeIdDuplicado}}
+\index{existeIdDuplicado@{existeIdDuplicado}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{existeIdDuplicado()}{existeIdDuplicado()}}
+{\footnotesize\ttfamily bool Kanban\+Board\+::existe\+Id\+Duplicado (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Método que verifica se um ID recebido já existe. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & ID a ser verificado.\\
+\hline
+\end{DoxyParams}
+Percorre-\/se cada coluna comparando o ID passado como parâmetro com o ID de cada tarefa existente. \begin{DoxyReturn}{Retorna}
+true caso o ID recebido já exista e false caso contrário. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147 \{}
+\DoxyCodeLine{148   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); ++i)}
+\DoxyCodeLine{149   \{}
+\DoxyCodeLine{150     \textcolor{keyword}{const} KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i);}
+\DoxyCodeLine{151     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < column.tasks.getSize(); ++j)}
+\DoxyCodeLine{152     \{}
+\DoxyCodeLine{153       \textcolor{keyword}{const} \mbox{\hyperlink{classKanbanTask}{KanbanTask}} \&task = column.tasks.get(j);}
+\DoxyCodeLine{154       \textcolor{keywordflow}{if} (task.\mbox{\hyperlink{classKanbanTask_ad80bc5d5fd2e7866dc41d30452f04fe6}{getId}}() == \textcolor{keywordtype}{id})}
+\DoxyCodeLine{155       \{}
+\DoxyCodeLine{156         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{157       \}}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159   \}}
+\DoxyCodeLine{160   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{161 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a8b1a8c7ae9788d22aab51292b161d653_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}\label{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}} 
+\index{KanbanBoard@{KanbanBoard}!findTask@{findTask}}
+\index{findTask@{findTask}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{findTask()}{findTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}} $\ast$ Kanban\+Board\+::find\+Task (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Método que encontra uma tarefa com base em seu ID. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & ID da tarefa a ser encontrada \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro de \mbox{\hyperlink{classKanbanTask}{Kanban\+Task}}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item O método percorre todas as colunas do quadro Kanban e, para cada coluna, verifica se existem tarefas nessa coluna.
+\item Se a coluna não estiver vazia, o método percorre todas as tarefas da coluna em busca da tarefa com o ID fornecido.
+\item Se a tarefa for encontrada, um ponteiro para essa tarefa é retornado. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{437 \{}
+\DoxyCodeLine{438   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); ++j)}
+\DoxyCodeLine{439   \{}
+\DoxyCodeLine{440     KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(j);}
+\DoxyCodeLine{441     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < column.tasks.getSize(); ++i)}
+\DoxyCodeLine{442     \{}
+\DoxyCodeLine{443       \textcolor{keywordflow}{if} (\textcolor{keywordtype}{id} == column.tasks.get(i).getId() \&\& column.tasks.isEmpty() == \textcolor{keyword}{false})}
+\DoxyCodeLine{444       \{}
+\DoxyCodeLine{445         \textcolor{keywordflow}{return} \&column.tasks.get(i);}
+\DoxyCodeLine{446       \}}
+\DoxyCodeLine{447     \}}
+\DoxyCodeLine{448   \}}
+\DoxyCodeLine{449   \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{450 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f}\label{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f}} 
+\index{KanbanBoard@{KanbanBoard}!findTaskColumn@{findTaskColumn}}
+\index{findTaskColumn@{findTaskColumn}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{findTaskColumn()}{findTaskColumn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}$\ast$ Kanban\+Board\+::find\+Task\+Column (\begin{DoxyParamCaption}\item[{int}]{task\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Método que encontra a coluna de uma tarefa com base em seu ID. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em task\+Id} & ID da tarefa a qual será encontrada a coluna \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro de \mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}
+\end{DoxyReturn}
+
+\begin{DoxyItemize}
+\item Percorre todas as colunas do quadro Kanban e, para cada coluna, verifica se existem tarefas nessa coluna.
+\item Se a coluna não estiver vazia, o método percorre todas as tarefas da coluna em busca da tarefa com o ID fornecido.
+\item Se a tarefa for encontrada, um ponteiro para a coluna correspondente é retornado. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{259   \{}
+\DoxyCodeLine{260     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); i++)}
+\DoxyCodeLine{261     \{}
+\DoxyCodeLine{262       KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i);}
+\DoxyCodeLine{263       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < column.tasks.getSize(); j++)}
+\DoxyCodeLine{264       \{}
+\DoxyCodeLine{265         \textcolor{keywordflow}{if} (column.tasks.get(j).getId() == taskId)}
+\DoxyCodeLine{266         \{}
+\DoxyCodeLine{267           \textcolor{keywordflow}{return} \&column;}
+\DoxyCodeLine{268         \}}
+\DoxyCodeLine{269       \}}
+\DoxyCodeLine{270     \}}
+\DoxyCodeLine{271     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{272   \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae}\label{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae}} 
+\index{KanbanBoard@{KanbanBoard}!getNumColumns@{getNumColumns}}
+\index{getNumColumns@{getNumColumns}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{getNumColumns()}{getNumColumns()}}
+{\footnotesize\ttfamily int Kanban\+Board\+::get\+Num\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método que retorna o número de colunas do Quadro Kanban. 
+
+O número de colunas é encontrado através do método get\+Size() da lista duplamente encadeada. \begin{DoxyReturn}{Retorna}
+O número de colunas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{100 \{}
+\DoxyCodeLine{101   \textcolor{keywordflow}{return} \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize();}
+\DoxyCodeLine{102 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_aa7f6f54e145aa7c3cea1f0ab1d5585ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a7307f5be7fac353ccc43599261083c49}\label{classKanbanBoard_a7307f5be7fac353ccc43599261083c49}} 
+\index{KanbanBoard@{KanbanBoard}!isBoardEmpty@{isBoardEmpty}}
+\index{isBoardEmpty@{isBoardEmpty}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{isBoardEmpty()}{isBoardEmpty()}}
+{\footnotesize\ttfamily bool Kanban\+Board\+::is\+Board\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Método que verifica se o Quadro Kanban possui tarefas. 
+
+Um laço \textquotesingle{}for\textquotesingle{} percorre coluna por coluna verificando se estão vazias ou não. \begin{DoxyReturn}{Retorna}
+true caso o quadro esteja vazio e false caso o quadro já possua tarefas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); ++i)}
+\DoxyCodeLine{121   \{}
+\DoxyCodeLine{122     KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i);}
+\DoxyCodeLine{123     \textcolor{keywordflow}{if} (!column.tasks.isEmpty())}
+\DoxyCodeLine{124     \{}
+\DoxyCodeLine{125       \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{126     \}}
+\DoxyCodeLine{127   \}}
+\DoxyCodeLine{128   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{129 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a7307f5be7fac353ccc43599261083c49_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a7307f5be7fac353ccc43599261083c49_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_af172b2c66ddd65f49ba2f4aa765a7480}\label{classKanbanBoard_af172b2c66ddd65f49ba2f4aa765a7480}} 
+\index{KanbanBoard@{KanbanBoard}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Lê um Quadro Kanban a partir de um arquivo \textquotesingle{}.bin\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filename} & Nome do arquivo a ser lido.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Observação}
+Este método substituirá o estado atual do quadro Kanban com os dados lidos do arquivo.
+\end{DoxyNote}
+
+\begin{DoxyItemize}
+\item O método abre o arquivo especificado em modo binário para leitura dos dados do quadro Kanban.
+\item Antes de carregar os dados, o método limpa o quadro atual utilizando o método {\ttfamily clear()} para garantir que o quadro esteja vazio antes do carregamento.
+\item O método percorre cada coluna e lê os dados da coluna e suas tarefas associadas do arquivo.
+\item Para cada coluna, o tamanho do nome da coluna é lido, seguido pela leitura do nome da coluna em si.
+\item Uma nova coluna é adicionada ao quadro Kanban utilizando o método {\ttfamily \mbox{\hyperlink{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0}{add\+Column()}}} com o nome da coluna lido.
+\item Em seguida, o número de tarefas na coluna é lido e, para cada tarefa, são lidos os dados da tarefa do arquivo e a tarefa é adicionada à coluna utilizando o método {\ttfamily \mbox{\hyperlink{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b}{add\+Task\+To\+Column()}}}. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327 \{}
+\DoxyCodeLine{328     std::ifstream file(filename.c\_str(), std::ios::binary);}
+\DoxyCodeLine{329 }
+\DoxyCodeLine{330     \textcolor{keywordflow}{if} (!file) \{}
+\DoxyCodeLine{331         std::cout << \textcolor{stringliteral}{"{}Erro ao abrir o arquivo de carregamento."{}} << std::endl;}
+\DoxyCodeLine{332         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{333     \}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335     \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.clear(); \textcolor{comment}{// Limpa o quadro antes de carregar os dados}}
+\DoxyCodeLine{336 }
+\DoxyCodeLine{337     \textcolor{keywordtype}{int} numColumns;}
+\DoxyCodeLine{338     file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&numColumns), \textcolor{keyword}{sizeof}(numColumns));}
+\DoxyCodeLine{339 }
+\DoxyCodeLine{340     \textcolor{comment}{// Faz a leitura dos dados}}
+\DoxyCodeLine{341     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColumns; i++) \{}
+\DoxyCodeLine{342         \textcolor{keywordtype}{int} columnNameSize;}
+\DoxyCodeLine{343         file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&columnNameSize), \textcolor{keyword}{sizeof}(columnNameSize));}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345         std::string columnName(columnNameSize, \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{346         file.read(\&columnName[0], columnNameSize);}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348         \mbox{\hyperlink{classKanbanBoard_ab9d36038c7308e28792da1563f5b4dc0}{addColumn}}(columnName);}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350         \textcolor{keywordtype}{int} columnSize;}
+\DoxyCodeLine{351         file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&columnSize), \textcolor{keyword}{sizeof}(columnSize));}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{353         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < columnSize; j++) \{}
+\DoxyCodeLine{354             \mbox{\hyperlink{classKanbanTask}{KanbanTask}} task;}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356             \textcolor{comment}{// Ler os dados da tarefa do arquivo}}
+\DoxyCodeLine{357             \textcolor{keywordtype}{int} taskId;}
+\DoxyCodeLine{358             file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskId), \textcolor{keyword}{sizeof}(taskId));}
+\DoxyCodeLine{359             task.\mbox{\hyperlink{classKanbanTask_a3176329dd62fafcd3a308dbc96a3ce54}{setId}}(taskId);}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{361             \textcolor{keywordtype}{int} taskTitleSize;}
+\DoxyCodeLine{362             file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskTitleSize), \textcolor{keyword}{sizeof}(taskTitleSize));}
+\DoxyCodeLine{363             std::string taskTitle(taskTitleSize, \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{364             file.read(\&taskTitle[0], taskTitleSize);}
+\DoxyCodeLine{365             task.\mbox{\hyperlink{classTask_a47f5d2599626b2dec1bc27be18adad09}{setTitulo}}(taskTitle);}
+\DoxyCodeLine{366 }
+\DoxyCodeLine{367             \textcolor{keywordtype}{int} taskDescriptionSize;}
+\DoxyCodeLine{368             file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskDescriptionSize), \textcolor{keyword}{sizeof}(taskDescriptionSize));}
+\DoxyCodeLine{369             std::string taskDescription(taskDescriptionSize, \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{370             file.read(\&taskDescription[0], taskDescriptionSize);}
+\DoxyCodeLine{371             task.\mbox{\hyperlink{classTask_ae406177534ada5f25a57f87704f8b604}{setDescricao}}(taskDescription);}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373             \textcolor{keywordtype}{int} taskPriority;}
+\DoxyCodeLine{374             file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskPriority), \textcolor{keyword}{sizeof}(taskPriority));}
+\DoxyCodeLine{375             task.\mbox{\hyperlink{classTask_aecc701a21bd98779172a1376dc03d096}{setPrioridade}}(taskPriority);}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{377             \textcolor{keywordtype}{int} taskDueDateSize;}
+\DoxyCodeLine{378             file.read(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskDueDateSize), \textcolor{keyword}{sizeof}(taskDueDateSize));}
+\DoxyCodeLine{379             std::string taskDueDate(taskDueDateSize, \textcolor{charliteral}{'\(\backslash\)0'});}
+\DoxyCodeLine{380             file.read(\&taskDueDate[0], taskDueDateSize);}
+\DoxyCodeLine{381             task.\mbox{\hyperlink{classTask_a5c248a9dae8386b36d896d607907e223}{setVencimento}}(taskDueDate);}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383             \mbox{\hyperlink{classKanbanBoard_a901d595d906b4532b32718f4d8e0757b}{addTaskToColumn}}(i, task);}
+\DoxyCodeLine{384         \}}
+\DoxyCodeLine{385     \}}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387     file.close();}
+\DoxyCodeLine{388 }
+\DoxyCodeLine{389     std::cout << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}Quadro Kanban restaurado do arquivo '"{}} << filename << \textcolor{stringliteral}{"{}' com sucesso."{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{390 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_af172b2c66ddd65f49ba2f4aa765a7480_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{classKanbanBoard_af172b2c66ddd65f49ba2f4aa765a7480_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a8b2d80954ef37e1e067f432ad0d2ed34}\label{classKanbanBoard_a8b2d80954ef37e1e067f432ad0d2ed34}} 
+\index{KanbanBoard@{KanbanBoard}!moveTask@{moveTask}}
+\index{moveTask@{moveTask}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{moveTask()}{moveTask()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::move\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+Id,  }\item[{int}]{idcoluna\+Destino }\end{DoxyParamCaption})}
+
+
+
+Método que move uma tarefa de uma coluna para a outra. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em task\+Id} & VID da tarefa a ser movida \\
+\hline
+{\em idcoluna\+Destino} & ID da coluna de destino.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item A tarefa a ser movida é encontrada através da chamada da função find\+Task
+\item Encontra-\/se a coluna de origem com a chamada da função find\+Task\+Column
+\item Adiciona-\/se a tarefa a coluna de destino com o método pushback e deleta-\/se a tarefa da coluna de origem com o método remove\+Value. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49   \mbox{\hyperlink{classKanbanTask}{KanbanTask}} *tarefa = \mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{findTask}}(taskId); \textcolor{comment}{// ponteiro apontando para a tarefa}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   \textcolor{keywordflow}{if} (tarefa == NULL)}
+\DoxyCodeLine{52   \{}
+\DoxyCodeLine{53     std::cout << \textcolor{stringliteral}{"{}Tarefa não encontrada."{}} << std::endl;}
+\DoxyCodeLine{54     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{55   \}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   KanbanColumn *colunaOrigem = \mbox{\hyperlink{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f}{findTaskColumn}}(taskId);}
+\DoxyCodeLine{58   \textcolor{keywordflow}{if} (colunaOrigem == NULL)}
+\DoxyCodeLine{59   \{}
+\DoxyCodeLine{60     std::cout << \textcolor{stringliteral}{"{}Coluna de origem não encontrada para a tarefa."{}} << std::endl;}
+\DoxyCodeLine{61     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{62   \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   KanbanColumn \&colunaDestino = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(idcolunaDestino);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   colunaDestino.tasks.pushBack(*tarefa);}
+\DoxyCodeLine{67   colunaOrigem-\/>tasks.removeValue(*tarefa);}
+\DoxyCodeLine{68 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a8b2d80954ef37e1e067f432ad0d2ed34_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a8b2d80954ef37e1e067f432ad0d2ed34_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}\label{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b}} 
+\index{KanbanBoard@{KanbanBoard}!printBoard@{printBoard}}
+\index{printBoard@{printBoard}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{printBoard()}{printBoard()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::print\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Imprime o quadro Kanban. 
+
+Este método imprime o quadro Kanban com as colunas e tarefas associadas, formatando-\/o de acordo com a quantidade de colunas e tarefas presentes. A formatação do quadro é ajustada automaticamente para melhorar a legibilidade.
+
+\begin{DoxyNote}{Observação}
+Este método assume que as colunas e tarefas já foram devidamente configuradas no objeto \mbox{\hyperlink{classKanbanBoard}{Kanban\+Board}}.
+\end{DoxyNote}
+O método utiliza técnicas de formatação para alinhar as colunas e tarefas na saída do console. Ele também ajusta a largura das colunas de acordo com o número de colunas presentes no quadro Kanban.
+
+A responsividade do quadro é implementada através de uma lógica que define a largura das colunas com base na quantidade de colunas existentes. A quantidade máxima de tarefas em uma coluna é determinada para garantir a correta exibição das tarefas em todas as colunas.
+
+A saída do quadro Kanban inclui os títulos das colunas e as tarefas de cada coluna, organizadas em linhas. Se uma coluna não possui uma tarefa em uma determinada linha, é exibido um espaço em branco para manter a formatação correta. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{166 \{}
+\DoxyCodeLine{167  }
+\DoxyCodeLine{168   \textcolor{comment}{// RESPONSIVIDADE}}
+\DoxyCodeLine{169   \textcolor{keywordtype}{int} numColumn = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize();}
+\DoxyCodeLine{170   \textcolor{keywordtype}{int} columnWidth = 0;}
+\DoxyCodeLine{171   \textcolor{keywordflow}{switch} (numColumn)}
+\DoxyCodeLine{172   \{}
+\DoxyCodeLine{173   \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{174     columnWidth = 72;}
+\DoxyCodeLine{175     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{176   \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{177     columnWidth = 48;}
+\DoxyCodeLine{178     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{179   \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{180     columnWidth = 35;}
+\DoxyCodeLine{181     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{182   \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{183     columnWidth = 32;}
+\DoxyCodeLine{184     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{185   \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{186     columnWidth = 24;}
+\DoxyCodeLine{187     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{188   \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{189     columnWidth = 21;}
+\DoxyCodeLine{190     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{191   \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{192     columnWidth = 18;}
+\DoxyCodeLine{193     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{194   \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{195     columnWidth = 25;}
+\DoxyCodeLine{196     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{197   \}}
+\DoxyCodeLine{198 }
+\DoxyCodeLine{199   \textcolor{keywordtype}{int} firstColumnWidth = 0;}
+\DoxyCodeLine{200   \textcolor{keywordflow}{if}(numColumn <= 4)\{}
+\DoxyCodeLine{201     firstColumnWidth = columnWidth -\/ 14;}
+\DoxyCodeLine{202   \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{203     firstColumnWidth = columnWidth -\/ 7;}
+\DoxyCodeLine{204   \}}
+\DoxyCodeLine{205 }
+\DoxyCodeLine{206   \textcolor{keywordflow}{if}(numColumn < 4)\{}
+\DoxyCodeLine{207      std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{208     std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{209     std::cout << \textcolor{stringliteral}{"{}|                                              "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}GERENCIADOR DE TAREFAS KANBAN"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}                                              |\(\backslash\)n"{}};}
+\DoxyCodeLine{210     std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{211   \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{212      std::cout << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{213     std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{214     std::cout << \textcolor{stringliteral}{"{}|                                                      "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}GERENCIADOR DE TAREFAS KANBAN"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}                                                      |\(\backslash\)n"{}};}
+\DoxyCodeLine{215     std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{216   \}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218   std::cout << std::right << std::setw(firstColumnWidth) << \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{219   \textcolor{comment}{// Imprime os títulos das colunas lado a lado}}
+\DoxyCodeLine{220   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); i++)}
+\DoxyCodeLine{221   \{}
+\DoxyCodeLine{222     std::cout << std::left << std::setw(columnWidth) << std::setfill(\textcolor{charliteral}{' '}) << \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i).name;}
+\DoxyCodeLine{223   \}}
+\DoxyCodeLine{224   std::cout << std::endl;}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226   \textcolor{comment}{// Encontra a maior quantidade de tarefas em uma coluna}}
+\DoxyCodeLine{227   \textcolor{keywordtype}{int} maxTasks = 0;}
+\DoxyCodeLine{228   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); ++i)}
+\DoxyCodeLine{229   \{}
+\DoxyCodeLine{230     \textcolor{keywordtype}{int} columnSize = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i).tasks.getSize();}
+\DoxyCodeLine{231     \textcolor{keywordflow}{if} (columnSize > maxTasks)}
+\DoxyCodeLine{232     \{}
+\DoxyCodeLine{233       maxTasks = columnSize;}
+\DoxyCodeLine{234     \}}
+\DoxyCodeLine{235   \}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237   \textcolor{comment}{// Imprime as tarefas de cada linha em todas as colunas abaixo dos títulos}}
+\DoxyCodeLine{238   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < maxTasks; ++i)}
+\DoxyCodeLine{239   \{}
+\DoxyCodeLine{240     std::cout << std::right << std::setw(firstColumnWidth) << \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{241     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); ++j)}
+\DoxyCodeLine{242     \{}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244       \textcolor{keywordflow}{if} (i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(j).tasks.getSize())}
+\DoxyCodeLine{245       \{ \textcolor{comment}{// se i for menor que o número de tarefas de uma coluna}}
+\DoxyCodeLine{246         std::cout << std::left << std::setw(columnWidth + 9) << std::setfill(\textcolor{charliteral}{' '});}
+\DoxyCodeLine{247         \textcolor{keyword}{const} \mbox{\hyperlink{classKanbanTask}{KanbanTask}} \&task = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(j).tasks.get(i); \textcolor{comment}{// pegando a tarefa}}
+\DoxyCodeLine{248         std::string taskTitle = task.\mbox{\hyperlink{classKanbanTask_af316e839e8504c7e956f7ee6196b8629}{getTituloId}}();}
+\DoxyCodeLine{249         std::cout << taskTitle;}
+\DoxyCodeLine{250       \}}
+\DoxyCodeLine{251       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{252       \{}
+\DoxyCodeLine{253         std::cout << std::left << std::setw(columnWidth) << std::setfill(\textcolor{charliteral}{' '});}
+\DoxyCodeLine{254         std::cout << \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{255       \}}
+\DoxyCodeLine{256     \}}
+\DoxyCodeLine{257     std::cout << std::endl;}
+\DoxyCodeLine{258   \}}
+\DoxyCodeLine{259 }
+\DoxyCodeLine{260   \textcolor{keywordflow}{if}(numColumn < 4)\{}
+\DoxyCodeLine{261     std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{262   \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{263     std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{264   \}}
+\DoxyCodeLine{265 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a13653cefc8ac7b1fb3b1b34e39c61b2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}\label{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee}} 
+\index{KanbanBoard@{KanbanBoard}!printColumn@{printColumn}}
+\index{printColumn@{printColumn}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{printColumn()}{printColumn()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::print\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index }\end{DoxyParamCaption}) const}
+
+
+
+Método que imprime as tarefas em uma coluna específica do Quadro Kanban. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column\+Index} & Índice da coluna que deseja-\/se imprimir.\\
+\hline
+\end{DoxyParams}
+Após descobrir qual a coluna desejada pelo usuário através do índice, um \textquotesingle{}for\textquotesingle{} percorre a lista de tarefas utilizando o método get\+Titulo\+Id para imprimir o título e id de cada tarefa. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35   \textcolor{keyword}{const} KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(columnIndex);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   std::cout << \textcolor{stringliteral}{"{}Coluna "{}} << (columnIndex + 1) << \textcolor{stringliteral}{"{} -\/ "{}} << column.name << \textcolor{stringliteral}{"{}:\(\backslash\)n"{}};}
+\DoxyCodeLine{38   for (\textcolor{keywordtype}{int} i = 0; i < column.tasks.getSize(); ++i)}
+\DoxyCodeLine{39   \{}
+\DoxyCodeLine{40     \textcolor{keyword}{const} \mbox{\hyperlink{classKanbanTask}{KanbanTask}} \&task = column.tasks.get(i);}
+\DoxyCodeLine{41     std::cout << task.\mbox{\hyperlink{classKanbanTask_af316e839e8504c7e956f7ee6196b8629}{getTituloId}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{42   \}}
+\DoxyCodeLine{43   std::cout << std::endl;}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ad0cac8fde1059a5f0f3d2208a25752ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a0c87862faa96b8225faeedc9de929812}\label{classKanbanBoard_a0c87862faa96b8225faeedc9de929812}} 
+\index{KanbanBoard@{KanbanBoard}!removeTask@{removeTask}}
+\index{removeTask@{removeTask}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{removeTask()}{removeTask()}}
+{\footnotesize\ttfamily bool Kanban\+Board\+::remove\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+Id }\end{DoxyParamCaption})}
+
+
+
+Método que exclui uma tarefa. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em task\+Id} & ID da tarefa a ser excluída.\\
+\hline
+\end{DoxyParams}
+A tarefa é encontrada com a chamada do método \mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{find\+Task()}} e depois excluída com o método remove\+Value(). \begin{DoxyReturn}{Retorna}
+true ou false, dependendo se a tarefa foi removido com sucesso ou não. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106 \{}
+\DoxyCodeLine{107   \mbox{\hyperlink{classKanbanTask}{KanbanTask}} *tarefa = \mbox{\hyperlink{classKanbanBoard_a6a0df6660afcc91108d5f6ffd348251a}{findTask}}(taskId);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109   \textcolor{keywordflow}{if} (tarefa == NULL)}
+\DoxyCodeLine{110     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   KanbanColumn *coluna = \mbox{\hyperlink{classKanbanBoard_ae7f5eea9c72581a1e67621c65a43808f}{findTaskColumn}}(taskId);}
+\DoxyCodeLine{113   coluna-\/>tasks.removeValue(*tarefa);}
+\DoxyCodeLine{114   \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a0c87862faa96b8225faeedc9de929812_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a0c87862faa96b8225faeedc9de929812_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2}\label{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2}} 
+\index{KanbanBoard@{KanbanBoard}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption}) const}
+
+
+
+Salva as informações do Quadro Kanban em um arquivo \textquotesingle{}.bin\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em filename} & Nome do arquivo em que deseja-\/se salvar o quadro.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item O método cria um arquivo de saída com o nome fornecido e o abre em modo binário para gravação dos dados do quadro Kanban.
+\item Em seguida, o número de colunas do quadro é gravado no arquivo como um valor inteiro.
+\item O método percorre cada coluna do quadro e grava os dados da coluna e suas tarefas associadas no arquivo.
+\item Em seguida, cada tarefa é percorrida e seus dados, como ID, título, descrição, prioridade e data de vencimento, são gravados no arquivo.
+\item Após a gravação de todos os dados, o arquivo é fechado. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{270 \{}
+\DoxyCodeLine{271     std::ofstream file(filename.c\_str(), std::ios::binary);}
+\DoxyCodeLine{272     \textcolor{keywordflow}{if} (!file) \{}
+\DoxyCodeLine{273         std::cout << \textcolor{stringliteral}{"{}Erro ao abrir o arquivo de salvamento."{}} << std::endl;}
+\DoxyCodeLine{274         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{275     \}}
+\DoxyCodeLine{276 }
+\DoxyCodeLine{277     \textcolor{keywordtype}{int} numColumns = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize();}
+\DoxyCodeLine{278     file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&numColumns), \textcolor{keyword}{sizeof}(numColumns));}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280     \textcolor{comment}{// Faz a gravação dos dados}}
+\DoxyCodeLine{281     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < numColumns; i++)}
+\DoxyCodeLine{282     \{}
+\DoxyCodeLine{283         \textcolor{keyword}{const} KanbanColumn\& column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i);}
+\DoxyCodeLine{284         \textcolor{keywordtype}{int} columnNameSize = column.name.size();}
+\DoxyCodeLine{285         file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&columnNameSize), \textcolor{keyword}{sizeof}(columnNameSize));}
+\DoxyCodeLine{286         file.write(column.name.c\_str(), columnNameSize);}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288         \textcolor{keyword}{const} \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<KanbanTask>}}\& tasks = column.tasks;}
+\DoxyCodeLine{289         \textcolor{keywordtype}{int} columnSize = tasks.\mbox{\hyperlink{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}{getSize}}();}
+\DoxyCodeLine{290         file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&columnSize), \textcolor{keyword}{sizeof}(columnSize));}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{292         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < columnSize; j++)\{}
+\DoxyCodeLine{293             \textcolor{keyword}{const} \mbox{\hyperlink{classKanbanTask}{KanbanTask}}\& task = tasks.\mbox{\hyperlink{classListaDuplamenteEncadeada_ab31872ac12372cfca22051c24cdf066f}{get}}(j);}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295             \textcolor{comment}{// Escrever os dados da tarefa no arquivo}}
+\DoxyCodeLine{296             \textcolor{keywordtype}{int} taskId = task.\mbox{\hyperlink{classKanbanTask_ad80bc5d5fd2e7866dc41d30452f04fe6}{getId}}();}
+\DoxyCodeLine{297             file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskId), \textcolor{keyword}{sizeof}(taskId));}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299             std::string taskTitle = task.\mbox{\hyperlink{classTask_a2322021265eee6cc17865d0a832d712f}{getTitulo}}();}
+\DoxyCodeLine{300             \textcolor{keywordtype}{int} taskTitleSize = taskTitle.size();}
+\DoxyCodeLine{301             file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskTitleSize), \textcolor{keyword}{sizeof}(taskTitleSize));}
+\DoxyCodeLine{302             file.write(taskTitle.c\_str(), taskTitleSize);}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304             std::string taskDescription = task.\mbox{\hyperlink{classTask_aef987b238c10ab8427885a65f8ec23bc}{getDescricao}}();}
+\DoxyCodeLine{305             \textcolor{keywordtype}{int} taskDescriptionSize = taskDescription.size();}
+\DoxyCodeLine{306             file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskDescriptionSize), \textcolor{keyword}{sizeof}(taskDescriptionSize));}
+\DoxyCodeLine{307             file.write(taskDescription.c\_str(), taskDescriptionSize);}
+\DoxyCodeLine{308 }
+\DoxyCodeLine{309             \textcolor{keywordtype}{int} taskPriority = task.\mbox{\hyperlink{classTask_a0da052621e550d4a26b0c3a276097cae}{getPrioridade}}();}
+\DoxyCodeLine{310             file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskPriority), \textcolor{keyword}{sizeof}(taskPriority));}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{312             std::string taskDueDate = task.\mbox{\hyperlink{classTask_a0fec1429f2e820fd564f9f13f0aec2e3}{getVencimento}}();}
+\DoxyCodeLine{313             \textcolor{keywordtype}{int} taskDueDateSize = taskDueDate.size();}
+\DoxyCodeLine{314             file.write(\textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{char}*\textcolor{keyword}{>}(\&taskDueDateSize), \textcolor{keyword}{sizeof}(taskDueDateSize));}
+\DoxyCodeLine{315             file.write(taskDueDate.c\_str(), taskDueDateSize);}
+\DoxyCodeLine{316         \}}
+\DoxyCodeLine{317     \}}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319     file.close();}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{321     std::cout << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}Quadro Kanban salvo no arquivo '"{}} << filename << \textcolor{stringliteral}{"{}' com sucesso."{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{322 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a0b38a51b177c2a45ec706cd98c8076a2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_ac52cb43d40eb69b8663f67ab4dc88647}\label{classKanbanBoard_ac52cb43d40eb69b8663f67ab4dc88647}} 
+\index{KanbanBoard@{KanbanBoard}!saveToFileTxt@{saveToFileTxt}}
+\index{saveToFileTxt@{saveToFileTxt}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{saveToFileTxt()}{saveToFileTxt()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::save\+To\+File\+Txt (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Método que salva o Quadro Kanban em um arquivo \textquotesingle{}.txt\textquotesingle{} para a visualizaçao. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & O nome do arquivo no qual será gravado o quadro.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item O método cria um arquivo de saída com o nome fornecido e o abre em modo de texto para gravação dos dados do quadro Kanban.
+\item O método percorre cada coluna do quadro e grava as informações da coluna e suas tarefas associadas no arquivo de texto.
+\item Para cada coluna, é gravado um cabeçalho indicando o número da coluna e o nome da coluna.
+\item Em seguida, cada tarefa é percorrida e suas informações, como título e descrição, são gravadas no arquivo de texto.
+\item Cada tarefa é delimitada por uma linha horizontal para melhorar a legibilidade. 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{395 \{}
+\DoxyCodeLine{396           std::ofstream file(fileName.c\_str());}
+\DoxyCodeLine{397           }
+\DoxyCodeLine{398           \textcolor{keywordflow}{if} (!file) \{}
+\DoxyCodeLine{399               std::cout << \textcolor{stringliteral}{"{}Erro ao abrir o arquivo "{}} << fileName << std::endl;}
+\DoxyCodeLine{400               \textcolor{keywordflow}{return};}
+\DoxyCodeLine{401           \}}
+\DoxyCodeLine{402 }
+\DoxyCodeLine{403           \textcolor{keywordtype}{int} numTasks = 1;}
+\DoxyCodeLine{404           \textcolor{comment}{// Imprime no arquivo txt}}
+\DoxyCodeLine{405           \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize(); i++) \{}
+\DoxyCodeLine{406               \textcolor{keyword}{const} KanbanColumn\& column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(i);}
+\DoxyCodeLine{407               file << \textcolor{stringliteral}{"{}*======================================*\(\backslash\)n"{}};}
+\DoxyCodeLine{408               file << \textcolor{stringliteral}{"{}           Coluna "{}} << (i + 1) << \textcolor{stringliteral}{"{}: "{}} << column.name << std::endl;}
+\DoxyCodeLine{409               file << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << std::endl;}
+\DoxyCodeLine{410               \textcolor{keyword}{const} \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<KanbanTask>}}\& tasks = column.tasks;}
+\DoxyCodeLine{411               for (\textcolor{keywordtype}{int} j = 0; j < tasks.getSize(); j++) \{}
+\DoxyCodeLine{412                   \textcolor{keyword}{const} \mbox{\hyperlink{classKanbanTask}{KanbanTask}}\& task = tasks.get(j);}
+\DoxyCodeLine{413                   \textcolor{comment}{/*file << "{}  -\/ Tarefa "{} << (j + 1) << "{}: "{} << task.getDescricao() << std::endl;}}
+\DoxyCodeLine{414 \textcolor{comment}{                  file << "{}  -\/ Tarefa "{} << (numTasks) << "{}: "{} << task.getTitulo() << std::endl;}}
+\DoxyCodeLine{415 \textcolor{comment}{                  file << "{}          "{} << task.getDescricao() << std::endl;*/}}
+\DoxyCodeLine{416                   file << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{417                   file << \textcolor{stringliteral}{"{}|              Tarefa "{}} << numTasks << \textcolor{stringliteral}{"{}               |\(\backslash\)n"{}}; }
+\DoxyCodeLine{418                   file << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n"{}};}
+\DoxyCodeLine{419                   file << \textcolor{stringliteral}{"{} Título: "{}} << task.\mbox{\hyperlink{classTask_a2322021265eee6cc17865d0a832d712f}{getTitulo}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{420                   file << \textcolor{stringliteral}{"{} Descrição: "{}} << task.\mbox{\hyperlink{classTask_aef987b238c10ab8427885a65f8ec23bc}{getDescricao}}() << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{421                   file << \textcolor{stringliteral}{"{}+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/+\(\backslash\)n\(\backslash\)n"{}};}
+\DoxyCodeLine{422                   numTasks++; }
+\DoxyCodeLine{423               \}}
+\DoxyCodeLine{424               file << std::endl;}
+\DoxyCodeLine{425               file << \textcolor{stringliteral}{"{}*======================================*\(\backslash\)n"{}};}
+\DoxyCodeLine{426               file << \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << std::endl;}
+\DoxyCodeLine{427           \}}
+\DoxyCodeLine{428 }
+\DoxyCodeLine{429           file.close();}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431           std::cout << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}Tabela salva no arquivo "{}} << fileName << \textcolor{stringliteral}{"{} com sucesso."{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << std::endl;}
+\DoxyCodeLine{432 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ac52cb43d40eb69b8663f67ab4dc88647_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_ac52cb43d40eb69b8663f67ab4dc88647_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}\label{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12}} 
+\index{KanbanBoard@{KanbanBoard}!sortColumn@{sortColumn}}
+\index{sortColumn@{sortColumn}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{sortColumn()}{sortColumn()}}
+{\footnotesize\ttfamily void Kanban\+Board\+::sort\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index,  }\item[{int}]{flag }\end{DoxyParamCaption})}
+
+
+
+Método que ordena uma coluna escolhida com base na prioridade das taredas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em column\+Index} & Índice da coluna que deseja-\/se ordenar. \\
+\hline
+{\em flag} & Flag para sinalizar se a ordenação deve ser por prioridade crescente ou decrescente.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyItemize}
+\item A tarefa a ser movida é encontrada através da chamada da função find\+Task
+\item Encontra-\/se a coluna de origem com a chamada da função find\+Task\+Column
+\item Adiciona-\/se a tarefa a coluna de destino com o método pushback e deleta-\/se a tarefa da coluna de origem com o método remove\+Value(). 
+\end{DoxyItemize}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                                                      \{}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   \textcolor{keywordflow}{if} (columnIndex < 0 || columnIndex >= \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.getSize())\{}
+\DoxyCodeLine{73     std::cout << \textcolor{stringliteral}{"{}Coluna inválida."{}} << std::endl;}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{75   \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77   KanbanColumn \&column = \mbox{\hyperlink{classKanbanBoard_a5da4be0acb446b8c357619350437e853}{columns}}.get(columnIndex);}
+\DoxyCodeLine{78   \mbox{\hyperlink{classListaDuplamenteEncadeada}{ListaDuplamenteEncadeada<KanbanTask>}} \&tasks = column.tasks;}
+\DoxyCodeLine{79   \textcolor{keywordtype}{int} numTasks = tasks.\mbox{\hyperlink{classListaDuplamenteEncadeada_ae2494348caf48de3d5b164c71f2dae73}{getSize}}();}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \textcolor{comment}{// Chama o algoritmo de ordenação apropriado com base na flag}}
+\DoxyCodeLine{82   \textcolor{keywordflow}{switch} (flag)\{}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84   \textcolor{keywordflow}{case} 1: \textcolor{comment}{// Ordenar da prioridade mais baixa para a mais alta (crescente)}}
+\DoxyCodeLine{85     \mbox{\hyperlink{classAlgoritmosDeOrdenacao_af608538ac09a154c0bfcfdd27b05f7fa}{AlgoritmosDeOrdenacao<KanbanTask>::bubbleSort}}(tasks, numTasks);}
+\DoxyCodeLine{86     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88   \textcolor{keywordflow}{case} 2: \textcolor{comment}{// Ordenar da prioridade mais alta para a mais baixa (decrescente)}}
+\DoxyCodeLine{89     \mbox{\hyperlink{classAlgoritmosDeOrdenacao_ae686ed3ba3f4850c855710f0fc6950b8}{AlgoritmosDeOrdenacao<KanbanTask>::selectionSort}}(tasks, numTasks);}
+\DoxyCodeLine{90     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92   \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{93     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{94   \}}
+\DoxyCodeLine{95 \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKanbanBoard_a0c3f9292b3e44370fcdf66162beeef12_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classKanbanBoard_a5da4be0acb446b8c357619350437e853}\label{classKanbanBoard_a5da4be0acb446b8c357619350437e853}} 
+\index{KanbanBoard@{KanbanBoard}!columns@{columns}}
+\index{columns@{columns}!KanbanBoard@{KanbanBoard}}
+\doxysubsubsection{\texorpdfstring{columns}{columns}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classListaDuplamenteEncadeada}{Lista\+Duplamente\+Encadeada}}$<$\mbox{\hyperlink{structKanbanBoard_1_1KanbanColumn}{Kanban\+Column}}$>$ Kanban\+Board\+::columns\hspace{0.3cm}{\ttfamily [private]}}
+
+Lista duplamente encadeada de colunas do quadro Kanban 
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+/home/isa/Área de Trabalho/\+Kanban/include/\mbox{\hyperlink{kanbanboard_8h}{kanbanboard.\+h}}\item 
+/home/isa/Área de Trabalho/\+Kanban/src/\mbox{\hyperlink{kanbanboard_8cpp}{kanbanboard.\+cpp}}\end{DoxyCompactItemize}

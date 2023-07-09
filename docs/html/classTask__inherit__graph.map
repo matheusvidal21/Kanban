@@ -1,0 +1,4 @@
+<map id="Task" name="Task">
+<area shape="rect" id="node1" title="Classe abstrata Task representa uma tarefa." alt="" coords="30,5,81,32"/>
+<area shape="rect" id="node2" href="$classKanbanTask.html" title="Classe KanbanTask representa uma tarefa específica para o Kanban." alt="" coords="5,80,105,107"/>
+</map>

@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kanban: Referência do &lt;em&gt;Template&lt;/em&gt; da Classe Fila&lt; T &gt;</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logodoxygen.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kanban
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classFila.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a> &#124;
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="classFila-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do &lt;em&gt;Template&lt;/em&gt; da Classe Fila&lt; T &gt;</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe que implementa uma fila utilizando a estrutura de lista encadeada.  
+ <a href="classFila.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="estruturas__tads_8hpp_source.html">estruturas_tads.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para Fila&lt; T &gt;:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFila__coll__graph.png" border="0" usemap="#aFila_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
+<map name="aFila_3_01T_01_4_coll__map" id="aFila_3_01T_01_4_coll__map">
+<area shape="rect" title="Classe que implementa uma fila utilizando a estrutura de lista encadeada." alt="" coords="19,109,101,136"/>
+<area shape="rect" href="structFila_1_1No.html" title="Classe que representa um nó da fila." alt="" coords="5,5,115,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFila_1_1No.html">No</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que representa um nó da fila.  <a href="structFila_1_1No.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:af202231829ccd3849a28f61eb20e5ebc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#af202231829ccd3849a28f61eb20e5ebc">Fila</a> ()</td></tr>
+<tr class="memdesc:af202231829ccd3849a28f61eb20e5ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="classFila.html" title="Classe que implementa uma fila utilizando a estrutura de lista encadeada.">Fila</a>.  <a href="classFila.html#af202231829ccd3849a28f61eb20e5ebc">Mais...</a><br /></td></tr>
+<tr class="separator:af202231829ccd3849a28f61eb20e5ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a066d10db52b8281f2859da76e8995"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#ad7a066d10db52b8281f2859da76e8995">~Fila</a> ()</td></tr>
+<tr class="memdesc:ad7a066d10db52b8281f2859da76e8995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="classFila.html" title="Classe que implementa uma fila utilizando a estrutura de lista encadeada.">Fila</a>. Remove todos os elementos da fila.  <a href="classFila.html#ad7a066d10db52b8281f2859da76e8995">Mais...</a><br /></td></tr>
+<tr class="separator:ad7a066d10db52b8281f2859da76e8995"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d40b11117c7b3883420ed176c05e5e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">isEmpty</a> () const</td></tr>
+<tr class="memdesc:ac3d40b11117c7b3883420ed176c05e5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a fila está vazia.  <a href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">Mais...</a><br /></td></tr>
+<tr class="separator:ac3d40b11117c7b3883420ed176c05e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79932de4fbf4304272a946f1423f96c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#a79932de4fbf4304272a946f1423f96c3">enqueue</a> (T value)</td></tr>
+<tr class="memdesc:a79932de4fbf4304272a946f1423f96c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um elemento no final da fila.  <a href="classFila.html#a79932de4fbf4304272a946f1423f96c3">Mais...</a><br /></td></tr>
+<tr class="separator:a79932de4fbf4304272a946f1423f96c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a477ea7bc08844b0e0632f33e690de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#a76a477ea7bc08844b0e0632f33e690de">dequeue</a> ()</td></tr>
+<tr class="memdesc:a76a477ea7bc08844b0e0632f33e690de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove o elemento na frente da fila. Se a fila estiver vazia, uma mensagem de erro é exibida.  <a href="classFila.html#a76a477ea7bc08844b0e0632f33e690de">Mais...</a><br /></td></tr>
+<tr class="separator:a76a477ea7bc08844b0e0632f33e690de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf817e6fe2ab8ff436f27a1503d5db4d"><td class="memItemLeft" align="right" valign="top">T &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#adf817e6fe2ab8ff436f27a1503d5db4d">peek</a> ()</td></tr>
+<tr class="memdesc:adf817e6fe2ab8ff436f27a1503d5db4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o elemento da frente da fila.  <a href="classFila.html#adf817e6fe2ab8ff436f27a1503d5db4d">Mais...</a><br /></td></tr>
+<tr class="separator:adf817e6fe2ab8ff436f27a1503d5db4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:acf0dbf62b75d02f75fbcee9d81cd1ea9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFila_1_1No.html">No</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a></td></tr>
+<tr class="separator:acf0dbf62b75d02f75fbcee9d81cd1ea9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa991ecbe0d6bac27b24ac701c33e7419"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFila_1_1No.html">No</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">tail</a></td></tr>
+<tr class="separator:aa991ecbe0d6bac27b24ac701c33e7419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+class Fila&lt; T &gt;</h3>
+
+<p>Classe que implementa uma fila utilizando a estrutura de lista encadeada. </p>
+<dl class="tparams"><dt>Parâmetros do <em>template</em></dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>O tipo de dado armazenado na fila. </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="af202231829ccd3849a28f61eb20e5ebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af202231829ccd3849a28f61eb20e5ebc">&#9670;&nbsp;</a></span>Fila()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFila.html">Fila</a>&lt; T &gt;::<a class="el" href="classFila.html">Fila</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor da classe <a class="el" href="classFila.html" title="Classe que implementa uma fila utilizando a estrutura de lista encadeada.">Fila</a>. </p>
+<div class="fragment"><div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;: <a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a>(NULL), <a class="code" href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">tail</a>(NULL){}</div>
+<div class="ttc" id="aclassFila_html_aa991ecbe0d6bac27b24ac701c33e7419"><div class="ttname"><a href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">Fila::tail</a></div><div class="ttdeci">No * tail</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:431</div></div>
+<div class="ttc" id="aclassFila_html_acf0dbf62b75d02f75fbcee9d81cd1ea9"><div class="ttname"><a href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">Fila::head</a></div><div class="ttdeci">No * head</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:430</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad7a066d10db52b8281f2859da76e8995"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7a066d10db52b8281f2859da76e8995">&#9670;&nbsp;</a></span>~Fila()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classFila.html">Fila</a>&lt; T &gt;::~<a class="el" href="classFila.html">Fila</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destrutor da classe <a class="el" href="classFila.html" title="Classe que implementa uma fila utilizando a estrutura de lista encadeada.">Fila</a>. Remove todos os elementos da fila. </p>
+<div class="fragment"><div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;           {</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;      <span class="keywordflow">while</span>(!<a class="code" href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">isEmpty</a>()) {</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        <a class="code" href="classFila.html#a76a477ea7bc08844b0e0632f33e690de">dequeue</a>();</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;      }</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    }</div>
+<div class="ttc" id="aclassFila_html_a76a477ea7bc08844b0e0632f33e690de"><div class="ttname"><a href="classFila.html#a76a477ea7bc08844b0e0632f33e690de">Fila::dequeue</a></div><div class="ttdeci">void dequeue()</div><div class="ttdoc">Remove o elemento na frente da fila. Se a fila estiver vazia, uma mensagem de erro é exibida.</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:486</div></div>
+<div class="ttc" id="aclassFila_html_ac3d40b11117c7b3883420ed176c05e5e"><div class="ttname"><a href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">Fila::isEmpty</a></div><div class="ttdeci">bool isEmpty() const</div><div class="ttdoc">Verifica se a fila está vazia.</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:457</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a76a477ea7bc08844b0e0632f33e690de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a477ea7bc08844b0e0632f33e690de">&#9670;&nbsp;</a></span>dequeue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classFila.html">Fila</a>&lt; T &gt;::dequeue </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Remove o elemento na frente da fila. Se a fila estiver vazia, uma mensagem de erro é exibida. </p>
+<div class="fragment"><div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                  {</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">isEmpty</a>()){</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        std::cout &lt;&lt; <span class="stringliteral">&quot;A fila está vazia.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;      }</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;      <a class="code" href="classNo.html">No</a>* temp = <a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a>;</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;      <a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a> = <a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a>-&gt;<a class="code" href="structFila_1_1No.html#a6ac34197d0c0b0967e3dbb9e54113cdc">next</a>;</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a> == NULL){</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <a class="code" href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">tail</a> = NULL;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;      }</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;      <span class="keyword">delete</span> temp;</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;    }</div>
+<div class="ttc" id="aclassNo_html"><div class="ttname"><a href="classNo.html">No</a></div><div class="ttdoc">Classe que representa um nó da lista duplamente encadeada.</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:22</div></div>
+<div class="ttc" id="astructFila_1_1No_html_a6ac34197d0c0b0967e3dbb9e54113cdc"><div class="ttname"><a href="structFila_1_1No.html#a6ac34197d0c0b0967e3dbb9e54113cdc">Fila::No::next</a></div><div class="ttdeci">No * next</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:420</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a79932de4fbf4304272a946f1423f96c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79932de4fbf4304272a946f1423f96c3">&#9670;&nbsp;</a></span>enqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classFila.html">Fila</a>&lt; T &gt;::enqueue </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Adiciona um elemento no final da fila. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>O valor do elemento a ser adicionado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                         {</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;      <a class="code" href="classNo.html">No</a>* newNo = <span class="keyword">new</span> <a class="code" href="classNo.html">No</a>(value);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">isEmpty</a>()){</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a> = <a class="code" href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">tail</a> = newNo;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;      }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <a class="code" href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">tail</a>-&gt;<a class="code" href="structFila_1_1No.html#a6ac34197d0c0b0967e3dbb9e54113cdc">next</a> = newNo;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        <a class="code" href="classFila.html#aa991ecbe0d6bac27b24ac701c33e7419">tail</a> = newNo;</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;      }</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac3d40b11117c7b3883420ed176c05e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d40b11117c7b3883420ed176c05e5e">&#9670;&nbsp;</a></span>isEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classFila.html">Fila</a>&lt; T &gt;::isEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica se a fila está vazia. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true se a fila estiver vazia, false caso contrário. </dd></dl>
+<div class="fragment"><div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                         {</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a> == NULL){</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;      }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;      }</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adf817e6fe2ab8ff436f27a1503d5db4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf817e6fe2ab8ff436f27a1503d5db4d">&#9670;&nbsp;</a></span>peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T&amp; <a class="el" href="classFila.html">Fila</a>&lt; T &gt;::peek </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna o elemento da frente da fila. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Uma referência para o elemento da frente. </dd></dl>
+<dl class="exception"><dt>Exceções</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Se a fila estiver vazia. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;             {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classFila.html#ac3d40b11117c7b3883420ed176c05e5e">isEmpty</a>()) {</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;            <span class="keywordflow">throw</span> std::runtime_error(<span class="stringliteral">&quot;A fila está vazia.&quot;</span>);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;        }</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classFila.html#acf0dbf62b75d02f75fbcee9d81cd1ea9">head</a>-&gt;<a class="code" href="structFila_1_1No.html#af883424f42a52c737b39ad5bb56fd967">valor</a>;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    }</div>
+<div class="ttc" id="astructFila_1_1No_html_af883424f42a52c737b39ad5bb56fd967"><div class="ttname"><a href="structFila_1_1No.html#af883424f42a52c737b39ad5bb56fd967">Fila::No::valor</a></div><div class="ttdeci">T valor</div><div class="ttdef"><b>Definition:</b> estruturas_tads.hpp:419</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="acf0dbf62b75d02f75fbcee9d81cd1ea9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0dbf62b75d02f75fbcee9d81cd1ea9">&#9670;&nbsp;</a></span>head</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structFila_1_1No.html">No</a>* <a class="el" href="classFila.html">Fila</a>&lt; T &gt;::head</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa991ecbe0d6bac27b24ac701c33e7419"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa991ecbe0d6bac27b24ac701c33e7419">&#9670;&nbsp;</a></span>tail</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structFila_1_1No.html">No</a>* <a class="el" href="classFila.html">Fila</a>&lt; T &gt;::tail</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<li>/home/isa/Área de Trabalho/Kanban/include/<a class="el" href="estruturas__tads_8hpp_source.html">estruturas_tads.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classFila.html">Fila</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+\hypertarget{menus_8cpp}{}\doxysection{Referência do Arquivo /home/isa/Área de Trabalho/\+Kanban/src/menus.cpp}
+\label{menus_8cpp}\index{/home/isa/Área de Trabalho/Kanban/src/menus.cpp@{/home/isa/Área de Trabalho/Kanban/src/menus.cpp}}
+
+
+Este arquivo contém a implementação das funções que imprimem os menus.  
+
+
+{\ttfamily \#include \char`\"{}../include/menus.\+h\char`\"{}}\newline
+Gráfico de dependência de inclusões para menus.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{menus_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menus_8cpp_ab13e858612c64eeef73aff1d8a03945e}{print\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o menu principal do sistema Kanban. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8cpp_a7ab907c433f9f51b038d0962c2159877}{print\+Menu\+Editar}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o menu para editar informações de uma tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8cpp_a3ebc3966cac22ea92469516f1f93c245}{print\+Menu\+Tarefa}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o submenu para editar uma tarefa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8cpp_a707396c394b23ba47a461a3423903a9b}{print\+Menu\+Ordenar}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o submenu para ordenar as tarefas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8cpp_af925906122711aca7c59ea138c248f0d}{print\+Menu\+Salvar}} ()
+\begin{DoxyCompactList}\small\item\em Imprime o submenu para salvar o quadro Kanban. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Este arquivo contém a implementação das funções que imprimem os menus. 
+
+\begin{DoxyAuthor}{Autor}
+Isabela Gomes Mendes 
+
+Matheus Costa Vidal 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+14/06/2023 
+\end{DoxySince}
+\begin{DoxyDate}{Data}
+08/07/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{menus_8cpp_ab13e858612c64eeef73aff1d8a03945e}\label{menus_8cpp_ab13e858612c64eeef73aff1d8a03945e}} 
+\index{menus.cpp@{menus.cpp}!printMenu@{printMenu}}
+\index{printMenu@{printMenu}!menus.cpp@{menus.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenu()}{printMenu()}}
+{\footnotesize\ttfamily void print\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o menu principal do sistema Kanban. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15   std::cout << std::endl;}
+\DoxyCodeLine{16   std::cout << \textcolor{stringliteral}{"{}*=========================================*"{}} << std::endl;}
+\DoxyCodeLine{17   std::cout << \textcolor{stringliteral}{"{}|         "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}MENU DE OPERAÇÕES KANBAN"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}        |"{}} << std::endl;}
+\DoxyCodeLine{18   std::cout << \textcolor{stringliteral}{"{}*=========================================*"{}} << std::endl;}
+\DoxyCodeLine{19   std::cout << \textcolor{stringliteral}{"{}|  Escolha a operação desejada:           |"{}} << std::endl;}
+\DoxyCodeLine{20   std::cout << \textcolor{stringliteral}{"{}|                                         |"{}} << std::endl;}
+\DoxyCodeLine{21   std::cout << \textcolor{stringliteral}{"{}|  1. Adicionar nova tarefa               |"{}} << std::endl;}
+\DoxyCodeLine{22   std::cout << \textcolor{stringliteral}{"{}|  2. Editar tarefa existente             |"{}} << std::endl;}
+\DoxyCodeLine{23   std::cout << \textcolor{stringliteral}{"{}|  3. Ver informações de uma tarefa       |"{}} << std::endl;}
+\DoxyCodeLine{24   std::cout << \textcolor{stringliteral}{"{}|  4. Ordernar tarefas por prioridade     |"{}} << std::endl;}
+\DoxyCodeLine{25   std::cout << \textcolor{stringliteral}{"{}|  5. Exibir o quadro Kanban              |"{}} << std::endl;}
+\DoxyCodeLine{26   std::cout << \textcolor{stringliteral}{"{}|  6. Salvar o quadro Kanban              |"{}} << std::endl;}
+\DoxyCodeLine{27   std::cout << \textcolor{stringliteral}{"{}|  7. Sair                                |"{}} << std::endl;}
+\DoxyCodeLine{28   std::cout << \textcolor{stringliteral}{"{}|                                         |"{}} << std::endl;}
+\DoxyCodeLine{29   std::cout << \textcolor{stringliteral}{"{}*=========================================*"{}} << std::endl;}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{menus_8cpp_ab13e858612c64eeef73aff1d8a03945e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8cpp_a7ab907c433f9f51b038d0962c2159877}\label{menus_8cpp_a7ab907c433f9f51b038d0962c2159877}} 
+\index{menus.cpp@{menus.cpp}!printMenuEditar@{printMenuEditar}}
+\index{printMenuEditar@{printMenuEditar}!menus.cpp@{menus.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenuEditar()}{printMenuEditar()}}
+{\footnotesize\ttfamily void print\+Menu\+Editar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o menu para editar informações de uma tarefa. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35   std::cout << std::endl;}
+\DoxyCodeLine{36   std::cout << \textcolor{stringliteral}{"{}*===================================*"{}} << std::endl;}
+\DoxyCodeLine{37   std::cout << \textcolor{stringliteral}{"{}|           "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}EDITAR TAREFA"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}           |"{}} << std::endl;}
+\DoxyCodeLine{38   std::cout << \textcolor{stringliteral}{"{}*===================================*"{}} << std::endl;}
+\DoxyCodeLine{39   std::cout << \textcolor{stringliteral}{"{}|  Escolha a alteração desejada:    |"{}} << std::endl;}
+\DoxyCodeLine{40   std::cout << \textcolor{stringliteral}{"{}|                                   |"{}} << std::endl;}
+\DoxyCodeLine{41   std::cout << \textcolor{stringliteral}{"{}|  1. Editar ID                     |"{}} << std::endl;}
+\DoxyCodeLine{42   std::cout << \textcolor{stringliteral}{"{}|  2. Editar título                 |"{}} << std::endl;}
+\DoxyCodeLine{43   std::cout << \textcolor{stringliteral}{"{}|  3. Editar descrição              |"{}} << std::endl;}
+\DoxyCodeLine{44   std::cout << \textcolor{stringliteral}{"{}|  4. Editar prioridade             |"{}} << std::endl;}
+\DoxyCodeLine{45   std::cout << \textcolor{stringliteral}{"{}|  5. Editar data de vencimento     |"{}} << std::endl;}
+\DoxyCodeLine{46   std::cout << \textcolor{stringliteral}{"{}|  6. Voltar                        |"{}} << std::endl;}
+\DoxyCodeLine{47   std::cout << \textcolor{stringliteral}{"{}|                                   |"{}} << std::endl;}
+\DoxyCodeLine{48   std::cout << \textcolor{stringliteral}{"{}*===================================*"{}} << std::endl;}
+\DoxyCodeLine{49 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8cpp_a7ab907c433f9f51b038d0962c2159877_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8cpp_a707396c394b23ba47a461a3423903a9b}\label{menus_8cpp_a707396c394b23ba47a461a3423903a9b}} 
+\index{menus.cpp@{menus.cpp}!printMenuOrdenar@{printMenuOrdenar}}
+\index{printMenuOrdenar@{printMenuOrdenar}!menus.cpp@{menus.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenuOrdenar()}{printMenuOrdenar()}}
+{\footnotesize\ttfamily void print\+Menu\+Ordenar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o submenu para ordenar as tarefas. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75   std::cout << std::endl}
+\DoxyCodeLine{76             << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{77   std::cout << \textcolor{stringliteral}{"{}*========================================*        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{78   std::cout << \textcolor{stringliteral}{"{}|        MENU DE OPERAÇÕES KANBAN        |        |         "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}ORDENAR TAREFAS"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}         |"{}} << std::endl;}
+\DoxyCodeLine{79   std::cout << \textcolor{stringliteral}{"{}*========================================*        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{80   std::cout << \textcolor{stringliteral}{"{}|  Escolha a operação desejada:          |        |  Escolha a ordenação desejada:  |"{}} << std::endl;}
+\DoxyCodeLine{81   std::cout << \textcolor{stringliteral}{"{}|                                        |        |                                 |"{}} << std::endl;}
+\DoxyCodeLine{82   std::cout << \textcolor{stringliteral}{"{}|  1. Adicionar nova tarefa              |        |  1. Ordenação crescente "{}} << \mbox{\hyperlink{functions_8h_ad050fd71ced44460a0c723a1715c40e5}{ANSI\_GREEN}} << \textcolor{stringliteral}{"{}(1-\/3)"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}   |"{}} << std::endl;}
+\DoxyCodeLine{83   std::cout << \textcolor{stringliteral}{"{}|  2. Editar tarefa existente            |        |  2. Ordenação decrescente "{}} << \mbox{\hyperlink{functions_8h_a7f026776e12ac1b5e7736c24b756085d}{ANSI\_RED}} << \textcolor{stringliteral}{"{}(3-\/1)"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{} |"{}} << std::endl;}
+\DoxyCodeLine{84   std::cout << \textcolor{stringliteral}{"{}|  3. Ver informações de uma tarefa      |        |  3. Ordenar todas as colunas    |"{}} << std::endl;}
+\DoxyCodeLine{85   std::cout << \textcolor{stringliteral}{"{}|  "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}4. Ordernar tarefas por prioridade -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/>"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{} |  4. Voltar                      |"{}} << std::endl;}
+\DoxyCodeLine{86   std::cout << \textcolor{stringliteral}{"{}|  5. Exibir o quadro Kanban             |        |                                 |"{}} << std::endl;}
+\DoxyCodeLine{87   std::cout << \textcolor{stringliteral}{"{}|  6. Salvar o quadro Kanban             |        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{88   std::cout << \textcolor{stringliteral}{"{}|  7. Sair                               |"{}} << std::endl;}
+\DoxyCodeLine{89   std::cout << \textcolor{stringliteral}{"{}|                                        |                                           "{}} << std::endl;}
+\DoxyCodeLine{90   std::cout << \textcolor{stringliteral}{"{}*========================================*                                           "{}} << std::endl;}
+\DoxyCodeLine{91 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8cpp_a707396c394b23ba47a461a3423903a9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8cpp_af925906122711aca7c59ea138c248f0d}\label{menus_8cpp_af925906122711aca7c59ea138c248f0d}} 
+\index{menus.cpp@{menus.cpp}!printMenuSalvar@{printMenuSalvar}}
+\index{printMenuSalvar@{printMenuSalvar}!menus.cpp@{menus.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenuSalvar()}{printMenuSalvar()}}
+{\footnotesize\ttfamily void print\+Menu\+Salvar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o submenu para salvar o quadro Kanban. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95 \{}
+\DoxyCodeLine{96   std::cout << std::endl << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{97   std::cout << \textcolor{stringliteral}{"{}*========================================*"{}} << std::endl;}
+\DoxyCodeLine{98   std::cout << \textcolor{stringliteral}{"{}|        MENU DE OPERAÇÕES KANBAN        |        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{99   std::cout << \textcolor{stringliteral}{"{}*========================================*        |         "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}SALVAR O QUADRO"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}         |"{}} << std::endl;}
+\DoxyCodeLine{100   std::cout << \textcolor{stringliteral}{"{}|  Escolha a operação desejada:          |        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{101   std::cout << \textcolor{stringliteral}{"{}|                                        |        |  Escolha como deseja salvar:    |"{}} << std::endl;}
+\DoxyCodeLine{102   std::cout << \textcolor{stringliteral}{"{}|  1. Adicionar nova tarefa              |        |                                 |"{}} << std::endl;}
+\DoxyCodeLine{103   std::cout << \textcolor{stringliteral}{"{}|  2. Editar tarefa existente            |        |  1. Arquivo 'bin' existente     |"{}} << std::endl;}
+\DoxyCodeLine{104   std::cout << \textcolor{stringliteral}{"{}|  3. Ver informações de uma tarefa      |        |  2. Arquivo 'bin' novo          |"{}} << std::endl;}
+\DoxyCodeLine{105   std::cout << \textcolor{stringliteral}{"{}|  4. Ordernar tarefas por prioridade    |        |  3. Arquivo 'txt'               |"{}} << std::endl;}
+\DoxyCodeLine{106   std::cout << \textcolor{stringliteral}{"{}|  5. Exibir o quadro Kanban             |        |  4. Voltar                      |"{}} << std::endl;}
+\DoxyCodeLine{107   std::cout << \textcolor{stringliteral}{"{}|  "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}6. Salvar o quadro Kanban -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/>"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{} |                                 |"{}} << std::endl;}
+\DoxyCodeLine{108   std::cout << \textcolor{stringliteral}{"{}|  7. Sair                               |        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{109   std::cout << \textcolor{stringliteral}{"{}|                                        |"{}} << std::endl;}
+\DoxyCodeLine{110   std::cout << \textcolor{stringliteral}{"{}*========================================*                                            "{}} << std::endl;}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8cpp_af925906122711aca7c59ea138c248f0d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{menus_8cpp_a3ebc3966cac22ea92469516f1f93c245}\label{menus_8cpp_a3ebc3966cac22ea92469516f1f93c245}} 
+\index{menus.cpp@{menus.cpp}!printMenuTarefa@{printMenuTarefa}}
+\index{printMenuTarefa@{printMenuTarefa}!menus.cpp@{menus.cpp}}
+\doxysubsubsection{\texorpdfstring{printMenuTarefa()}{printMenuTarefa()}}
+{\footnotesize\ttfamily void print\+Menu\+Tarefa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime o submenu para editar uma tarefa. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54   std::cout << std::endl}
+\DoxyCodeLine{55             << \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{56   std::cout << \textcolor{stringliteral}{"{}*========================================*        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{57   std::cout << \textcolor{stringliteral}{"{}|        MENU DE OPERAÇÕES KANBAN        |        |          "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}EDITAR TAREFA"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{}          |"{}} << std::endl;}
+\DoxyCodeLine{58   std::cout << \textcolor{stringliteral}{"{}*========================================*        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{59   std::cout << \textcolor{stringliteral}{"{}|  Escolha a operação desejada:          |        |  Escolha a alteração desejada:  |"{}} << std::endl;}
+\DoxyCodeLine{60   std::cout << \textcolor{stringliteral}{"{}|                                        |        |                                 |"{}} << std::endl;}
+\DoxyCodeLine{61   std::cout << \textcolor{stringliteral}{"{}|  1. Adicionar nova tarefa              |        |  1. Editar informações          |"{}} << std::endl;}
+\DoxyCodeLine{62   std::cout << \textcolor{stringliteral}{"{}|  "{}} << \mbox{\hyperlink{functions_8h_a50a197ede59d7694515c3dad4557cf00}{ANSI\_BLUE}} << \textcolor{stringliteral}{"{}2. Editar tarefa existente -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/>"{}} << \mbox{\hyperlink{functions_8h_af77a445894f2f750d43cf2182cd29e55}{ANSI\_RESET}} << \textcolor{stringliteral}{"{} |  2. Mover tarefa                |"{}} << std::endl;}
+\DoxyCodeLine{63   std::cout << \textcolor{stringliteral}{"{}|  3. Ver informações de uma tarefa      |        |  3. Excluir tarefa              |"{}} << std::endl;}
+\DoxyCodeLine{64   std::cout << \textcolor{stringliteral}{"{}|  4. Ordernar tarefas por prioridade    |        |  4. Voltar                      |"{}} << std::endl;}
+\DoxyCodeLine{65   std::cout << \textcolor{stringliteral}{"{}|  5. Exibir o quadro Kanban             |        |                                 |"{}} << std::endl;}
+\DoxyCodeLine{66   std::cout << \textcolor{stringliteral}{"{}|  6. Salvar o quadro Kanban             |        *=================================*"{}} << std::endl;}
+\DoxyCodeLine{67   std::cout << \textcolor{stringliteral}{"{}|  7. Sair                               |"{}} << std::endl;}
+\DoxyCodeLine{68   std::cout << \textcolor{stringliteral}{"{}|                                        |                                           "{}} << std::endl;}
+\DoxyCodeLine{69   std::cout << \textcolor{stringliteral}{"{}*========================================*                                           "{}} << std::endl;}
+\DoxyCodeLine{70 \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menus_8cpp_a3ebc3966cac22ea92469516f1f93c245_icgraph}
+\end{center}
+\end{figure}
