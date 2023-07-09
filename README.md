@@ -1,6 +1,8 @@
 > :construction: Projeto em finalização :construction:
 
-# :clipboard: Kanban
+<p>
+<img src="docs/imgs/logo2.png" alt="Logo Kanban" height="70">
+</p>
 Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.
 
 <p align="center">
@@ -24,7 +26,7 @@ Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com supor
 
 <p align="center">
   <img src="docs/imgs/menu.png" alt="Menu principal">
-    <img src="docs/imgs/preenchertask.png" alt="Menu principal">
+  <img src="docs/imgs/preenchertask.png" alt="Preencher tarefa">
 </p>
 
 <p align="center">
@@ -32,9 +34,6 @@ Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com supor
       <img src="docs/imgs/menuordenar.png" alt="Menu: ordenar o quadro">
       <img src="docs/imgs/menusalvar.png" alt="Menu: salvar o quadri">
 </p>
-
-
-
 
 
 O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban possui as seguintes funcionalidades:
@@ -45,7 +44,7 @@ O projeto do Gerenciador de Tarefas de Metodologia Ágil com Método Kanban poss
 
 - **Definir Prioridades: ⭐️** Os usuários podem atribuir prioridades às tarefas, indicando sua importância ou urgência;
 
-- **Agendar datas: 📅** Os usuários podem definir datas de vencimento ou prazos para as tarefas, ajudando a acompanhar o progresso e cumprir os prazos;
+- **Agendar Datas: 📅** Os usuários podem definir datas de vencimento ou prazos para as tarefas, ajudando a acompanhar o progresso e cumprir os prazos;
 
 - **Movimentação de Tarefas: 🚀** Os usuários poderão mover as tarefas entre as colunas do quadro Kanban, refletindo seu progresso e estágio atual;
 
@@ -75,7 +74,7 @@ Essas funcionalidades foram desenvolvidas para melhorar a gestão de tarefas e f
 
 - **/build:** Arquivos gerados e os arquivos objetos (.o);
 
-- **/data:** arquivos de dados salvos em binário (.bin) ou texto (.txt).
+- **/data:** arquivos de dados salvos em binário (.bin) ou texto (.txt);
 
 - **/docs:** Documentação gerada em HTML, Latex e RTF, via Doxygen, incluindo o doxyfile;
 
@@ -130,30 +129,30 @@ O diagrama de classes UML é uma representação visual da estrutura e das rela�
 - Utiliza os nós da classe No para armazenar os elementos;
 - Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da lista;
 - Utilizado para criar uma Lista Duplamente Encadeada de colunas e de tarefas;
-- Esse tópico é melhor abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
+- Esse tópico é mais abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
 
 5. **Pilha<T>:** <br>
 - Implementa uma pilha utilizando uma lista encadeada;
 - Utiliza os nós para armazenar os elementos da pilha;
 - Possui um ponteiro para o elemento do topo (top) da pilha;
-- Esse tópico é melhor abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
+- Esse tópico é mais abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
 
 6. **Fila<T>:** <br>
 - Implementa uma fila utilizando uma lista encadeada;
 - Utiliza os nós para armazenar os elementos da fila;
 - Possui ponteiros para o primeiro elemento (head) e o último elemento (tail) da fila;
-- Esse tópico é melhor abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
+- Esse tópico é mais abordado em [Estruturas de TADs](#%EF%B8%8F-estruturas-de-tads-tipos-abstratos-de-dados).
 
 7. **AlgoritmosDeOrdenacao<T>:** <br>
 - Implementa algoritmos de ordenação genéricos, como Bubble Sort, Selection Sort e Merge Sort;
 - Fornece métodos para realizar a ordenação de um array;
 - Utilizado para ordenar as tarefas com base nas prioridades;
-Esse tópico é melhor abordado em [Templates](#-templates).
+- Esse tópico é mais abordado em [Templates](#-templates).
 
 8. **AlgoritmosDeBuscaBinaria<T>:** <br>
 - Implementa algoritmos de busca binária genéricos, incluindo versões iterativas e recursivas;
 - Fornece métodos para buscar um elemento em um array ordenado e retornar o índice do elemento se encontrado.
-Esse tópico é melhor abordado em [Templates](#-templates).
+- Esse tópico é mais abordado em [Templates](#-templates).
 
 # 💻 Técnicas e tecnologias utilizadas
 <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
@@ -166,7 +165,6 @@ Esse tópico é melhor abordado em [Templates](#-templates).
   <img src="docs/imgs/uml.png" alt="Logo UML" height="70" style="margin-right: 20px;">
   <img src="docs/imgs/doxygen.png" alt="Logo Doxygen" height="50" style="margin-right: 20px;">
 </div>
-
 
 
 - C++;
