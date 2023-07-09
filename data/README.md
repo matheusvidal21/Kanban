@@ -1,0 +1,3 @@
+⚠️ Aviso: Uso do diretório "/data"
+
+Este projeto utiliza esse diretório "/data" para armazenar arquivos binários, que são usados para salvar os dados do quadro Kanban, e arquivos de texto, que são usados para visualização legível do quadro Kanban. É importante garantir que o diretório "data" exista e tenha permissões adequadas de leitura e gravação para o correto funcionamento do projeto. Certifique-se de não excluir ou modificar os arquivos contidos no diretório "data" a menos que você esteja familiarizado com sua estrutura e funcionalidade.
