@@ -1,6 +1,8 @@
 > :construction: Projeto em finalização :construction:
 
-# :clipboard: Kanban
+<p>
+<img src="docs/imgs/logo2.png" alt="Logo Kanban" height="70">
+</p>
 Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com suporte ao Método Kanban. O Kanban é um quadro visual que ajuda a organizar e acompanhar o progresso das tarefas. Com este aplicativo, você pode facilmente adicionar tarefas, definir prioridades, agendar datas de vencimento e ordenar suas tarefas de forma eficiente usando algoritmos de ordenação. O usuário poderá aproveitar uma abordagem ágil para gerenciar suas tarefas e aumentar sua produtividade.
 
 <p align="center">
@@ -24,7 +26,7 @@ Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com supor
 
 <p align="center">
   <img src="docs/imgs/menu.png" alt="Menu principal">
-    <img src="docs/imgs/preenchertask.png" alt="Menu principal">
+  <img src="docs/imgs/preenchertask.png" alt="Menu principal">
 </p>
 
 <p align="center">
@@ -32,8 +34,6 @@ Um aplicativo de gerenciamento de tarefas baseado na Metodologia Ágil com supor
       <img src="docs/imgs/menuordenar.png" alt="Menu: ordenar o quadro">
       <img src="docs/imgs/menusalvar.png" alt="Menu: salvar o quadri">
 </p>
-
-
 
 
 
