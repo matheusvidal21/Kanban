@@ -1,0 +1,45 @@
+digraph "/home/matheus/Área de Trabalho/Kanban/include/functions.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/matheus/Área\l de Trabalho/Kanban\l/include/functions.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com ..."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="cstdlib",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="dirent.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="menus.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$menus_8h.html",tooltip="Este arquivo contém funções para imprimir os menus de operações do Quadro Kanban."];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="kanbanboard.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kanbanboard_8h.html",tooltip="Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban."];
+  Node7 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="iomanip",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="kanbantask.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kanbantask_8h.html",tooltip="Este arquivo contém a declaração da classe KanbanTask, que representa uma tarefa específica do Kanban..."];
+  Node10 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="sstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="task.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$task_8h.html",tooltip="Este arquivo contém a declaração da classe abstrata Task, que representa uma tarefa genérica."];
+  Node12 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="estruturas_tads.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$estruturas__tads_8hpp.html",tooltip="Implementação de templates dos Tipos Abstratos de Dados: Lista Duplamente Encadeada,..."];
+  Node13 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="templates.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$templates_8hpp.html",tooltip="Código-fonte auxiliar com templates genéricos de algoritmos de ordenação e busca."];
+  Node14 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+}

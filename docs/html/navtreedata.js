@@ -25,35 +25,35 @@
 var NAVTREE =
 [
   [ "Kanban", "index.html", [
-    [ "README", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_data_README.html", null ],
-    [ "README", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html", [
-      [ "🔨 Funcionalidades do projeto", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md1", null ],
-      [ "📁 Estrutura do projeto", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md2", null ],
-      [ "📊 Diagrama de classes", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md3", null ],
-      [ "💻 Técnicas e tecnologias utilizadas", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md4", [
-        [ "Índice", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md0", null ],
-        [ "📚 Bibliotecas", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md5", null ],
-        [ "🗃️ Estruturas de TADs (Tipos Abstratos de Dados)", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md6", null ],
-        [ "🧩 Templates", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md7", [
-          [ "1. Algoritmos de Ordenação", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md8", null ],
-          [ "2. Algoritmo de busca binária", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md9", null ]
+    [ "README", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_data_README.html", null ],
+    [ "README", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html", [
+      [ "🔨 Funcionalidades do projeto", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md1", null ],
+      [ "📁 Estrutura do projeto", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md2", null ],
+      [ "📊 Diagrama de classes", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md3", null ],
+      [ "💻 Técnicas e tecnologias utilizadas", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md4", [
+        [ "Índice", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md0", null ],
+        [ "📚 Bibliotecas", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md5", null ],
+        [ "🗃️ Estruturas de TADs (Tipos Abstratos de Dados)", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md6", null ],
+        [ "🧩 Templates", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md7", [
+          [ "1. Algoritmos de Ordenação", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md8", null ],
+          [ "2. Algoritmo de busca binária", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md9", null ]
         ] ]
       ] ],
-      [ "🔧 Como compilar?", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md10", [
-        [ "Pré-requisitos", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md11", [
-          [ "Passo 1: Obtenha o código-fonte", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md12", null ],
-          [ "Passo 2: Navegue para o diretório do projeto", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md13", null ],
-          [ "Passo 3: Compile o projeto", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md14", null ],
-          [ "Passo 4: Execute o programa", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md15", null ]
+      [ "🔧 Como compilar?", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md10", [
+        [ "Pré-requisitos", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md11", [
+          [ "Passo 1: Obtenha o código-fonte", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md12", null ],
+          [ "Passo 2: Navegue para o diretório do projeto", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md13", null ],
+          [ "Passo 3: Compile o projeto", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md14", null ],
+          [ "Passo 4: Execute o programa", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md15", null ]
         ] ],
-        [ "Compilando com um único comando", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md16", null ],
-        [ "Comandos Disponíveis", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md17", [
-          [ "Em caso de dúvidas", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md18", null ]
+        [ "Compilando com um único comando", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md16", null ],
+        [ "Comandos Disponíveis", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md17", [
+          [ "Em caso de dúvidas", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md18", null ]
         ] ],
-        [ "Observações", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md19", null ]
+        [ "Observações", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md19", null ]
       ] ],
-      [ "⚠️ Aviso", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md20", null ],
-      [ "👥 Autores", "md__home_isa__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md21", null ]
+      [ "⚠️ Aviso", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md20", null ],
+      [ "👥 Autores", "md__home_matheus__xC3_x81rea_de_Trabalho_Kanban_README.html#autotoc_md21", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Lista de Classes", "annotated.html", "annotated_dup" ],

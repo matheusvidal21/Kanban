@@ -1,0 +1,20 @@
+digraph "/home/matheus/Área de Trabalho/Kanban/include/kanbantask.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/matheus/Área\l de Trabalho/Kanban\l/include/kanbantask.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Este arquivo contém a declaração da classe KanbanTask, que representa uma tarefa específica do Kanban..."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="/home/matheus/Área\l de Trabalho/Kanban\l/include/kanbanboard.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kanbanboard_8h.html",tooltip="Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="/home/matheus/Área\l de Trabalho/Kanban\l/include/functions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$functions_8h.html",tooltip="Funções desenvolvidas a fim de modularizar a função Main, em sua maioria se tratam de interações com ..."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="/home/matheus/Área\l de Trabalho/Kanban\l/src/functions.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$functions_8cpp.html",tooltip="Este arquivo contém a implementação das funções desenvolvidas."];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="/home/matheus/Área\l de Trabalho/Kanban\l/src/main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html",tooltip="Arquivo principal que inicia e maneja todo programa do gerenciador de tarefas Kanban."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="/home/matheus/Área\l de Trabalho/Kanban\l/src/kanbanboard.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kanbanboard_8cpp.html",tooltip="Este arquivo contém a implementação da classe KanbanBoard."];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="/home/matheus/Área\l de Trabalho/Kanban\l/src/kanbantask.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kanbantask_8cpp.html",tooltip="Este arquivo contém a implementação da classe KanbanTask."];
+}

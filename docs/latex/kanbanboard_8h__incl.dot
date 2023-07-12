@@ -1,0 +1,32 @@
+digraph "/home/matheus/Área de Trabalho/Kanban/include/kanbanboard.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/home/matheus/Área\l de Trabalho/Kanban\l/include/kanbanboard.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Este arquivo contém a declaração da classe KanbanBoard, que representa o Quadro Kanban."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="iostream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="iomanip",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="fstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="kanbantask.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$kanbantask_8h.html",tooltip="Este arquivo contém a declaração da classe KanbanTask, que representa uma tarefa específica do Kanban..."];
+  Node6 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="sstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="task.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$task_8h.html",tooltip="Este arquivo contém a declaração da classe abstrata Task, que representa uma tarefa genérica."];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="estruturas_tads.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$estruturas__tads_8hpp.html",tooltip="Implementação de templates dos Tipos Abstratos de Dados: Lista Duplamente Encadeada,..."];
+  Node9 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="templates.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$templates_8hpp.html",tooltip="Código-fonte auxiliar com templates genéricos de algoritmos de ordenação e busca."];
+  Node10 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+}
