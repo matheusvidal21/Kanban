@@ -1,4 +1,4 @@
-> :construction: Projeto em finalização :construction:
+[![Finalizado](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen)](https://github.com/matheusvidal21/Kanban)
 
 <p>
 <img src="docs/imgs/logo2.png" alt="Logo Kanban" height="70">
